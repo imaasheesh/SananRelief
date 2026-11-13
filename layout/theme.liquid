@@ -302,6 +302,185 @@
       h1, h2, h3, h4, h5, h6 {
         font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
       }
+
+      /* 1. Exact Section Width & Page Container Alignment */
+      .page {
+        max-width: 1240px !important;
+        margin: 0 auto !important;
+        padding: 3rem 2rem 6rem !important;
+        position: relative !important;
+        z-index: 1 !important;
+        box-sizing: border-box !important;
+      }
+
+      .section-header {
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: space-between !important;
+        margin-bottom: 2rem !important;
+      }
+
+      .section-eyebrow {
+        font-size: 0.68rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.18em !important;
+        text-transform: uppercase !important;
+        color: var(--color-primary, #439798) !important;
+        margin-bottom: 0.35rem !important;
+      }
+
+      .section-title {
+        font-family: var(--font-heading, 'DM Serif Display', Georgia, serif) !important;
+        font-size: 2.25rem !important;
+        color: #1A3333 !important;
+        line-height: 1.2 !important;
+        margin: 0 !important;
+      }
+
+      .products-grid {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)) !important;
+        gap: 14px !important;
+        margin-bottom: 4rem !important;
+        overflow: visible !important;
+      }
+
+      /* 2. Prevent Dawn Base Button & Card Styles from Overriding Sanan Card Action Buttons */
+      button.benefit-cart-btn,
+      .benefit-cart-btn {
+        position: absolute !important;
+        bottom: 14px !important;
+        right: 14px !important;
+        width: 66px !important;
+        height: 66px !important;
+        min-width: 66px !important;
+        min-height: 66px !important;
+        max-width: 66px !important;
+        max-height: 66px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        background: #1A3D3E !important;
+        color: #FFFFFF !important;
+        border: none !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1.55rem !important;
+        font-weight: 700 !important;
+        box-shadow: 0 8px 24px rgba(26, 61, 62, 0.35) !important;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        z-index: 6 !important;
+      }
+
+      button.benefit-cart-btn:before,
+      .benefit-cart-btn:before {
+        display: none !important;
+      }
+
+      button.product-external-cart-btn,
+      .product-external-cart-btn {
+        position: absolute !important;
+        bottom: 12px !important;
+        right: 12px !important;
+        width: 58px !important;
+        height: 58px !important;
+        min-width: 58px !important;
+        min-height: 58px !important;
+        max-width: 58px !important;
+        max-height: 58px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        background: #EFE8DE !important;
+        color: #1C2B2B !important;
+        border: none !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 6px 20px rgba(138, 122, 100, 0.22) !important;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        z-index: 6 !important;
+      }
+
+      button.product-external-cart-btn:before,
+      .product-external-cart-btn:before {
+        display: none !important;
+      }
+
+      button.product-external-cart-btn svg,
+      .product-external-cart-btn svg {
+        width: 20px !important;
+        height: 20px !important;
+        stroke-width: 1.8 !important;
+        fill: none !important;
+        stroke: currentColor !important;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+
+      /* Hover States */
+      .benefit-card-wrapper:hover button.benefit-cart-btn,
+      button.benefit-cart-btn:hover {
+        background: #439798 !important;
+        transform: scale(1.12) !important;
+        box-shadow: 0 12px 32px rgba(67, 151, 152, 0.5) !important;
+      }
+
+      .benefit-card-wrapper:hover button.benefit-cart-btn .arrow-icon,
+      button.benefit-cart-btn:hover .arrow-icon {
+        transform: translate(3px, -3px) !important;
+      }
+
+      .product-card-wrapper:hover button.product-external-cart-btn,
+      button.product-external-cart-btn:hover {
+        background: #1A3D3E !important;
+        color: #FFFFFF !important;
+        transform: scale(1.1) !important;
+        box-shadow: 0 10px 30px rgba(26, 61, 62, 0.4) !important;
+      }
+
+      .product-card-wrapper:hover button.product-external-cart-btn svg,
+      button.product-external-cart-btn:hover svg {
+        stroke: #FFFFFF !important;
+        transform: scale(1.12) !important;
+      }
+
+      /* Ensure card wrapper overflow is visible so buttons emerge cleanly */
+      .product-card-wrapper,
+      .benefit-card-wrapper {
+        position: relative !important;
+        overflow: visible !important;
+      }
+
+      .product-card,
+      .benefit-card {
+        overflow: hidden !important;
+      }
+
+      /* Notch placement guarantee */
+      .product-card-notch {
+        position: absolute !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        width: 90px !important;
+        height: 90px !important;
+        border-top-left-radius: 45px !important;
+        background: #F0F6F5 !important;
+        z-index: 3 !important;
+        pointer-events: none !important;
+      }
+
+      .benefit-card-notch {
+        position: absolute !important;
+        bottom: 0 !important;
+        right: 0 !important;
+        width: 104px !important;
+        height: 104px !important;
+        border-top-left-radius: 52px !important;
+        background: #F0F6F5 !important;
+        z-index: 3 !important;
+        pointer-events: none !important;
+      }
     </style>
 
     <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
