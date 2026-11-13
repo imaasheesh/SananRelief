@@ -295,12 +295,45 @@
       }
       body {
         font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif) !important;
-        background-color: var(--color-background, #F7FBFB) !important;
+        background-color: #F0F6F5 !important;
         color: var(--color-primary-text, #111111) !important;
         letter-spacing: normal !important;
+        position: relative !important;
+        min-height: 100vh !important;
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+      }
+
+      /* Ambient background glow orbs */
+      .ambient-bg {
+        position: fixed !important;
+        inset: 0 !important;
+        pointer-events: none !important;
+        z-index: 0 !important;
+        overflow: hidden !important;
+      }
+      .orb-1 {
+        position: absolute !important;
+        width: 500px !important;
+        height: 500px !important;
+        border-radius: 50% !important;
+        filter: blur(90px) !important;
+        background: radial-gradient(circle, #5BBCBD 0%, #439798 70%) !important;
+        top: -80px !important;
+        left: -100px !important;
+        opacity: 0.45 !important;
+      }
+      .orb-2 {
+        position: absolute !important;
+        width: 450px !important;
+        height: 450px !important;
+        border-radius: 50% !important;
+        filter: blur(90px) !important;
+        background: radial-gradient(circle, #E87A79 0%, #A92827 80%) !important;
+        top: 40% !important;
+        right: -100px !important;
+        opacity: 0.35 !important;
       }
 
       /* 1. Exact Section Width & Page Container Alignment */
@@ -528,6 +561,11 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    <!-- AMBIENT GLOW ORBS (Showcases backdrop-filter blur & ambient background) -->
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="orb-1"></div>
+      <div class="orb-2"></div>
+    </div>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
