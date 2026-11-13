@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#122627"/>
+      <stop offset="35%" stop-color="#1E3E3E"/>
+      <stop offset="70%" stop-color="#466A65"/>
+      <stop offset="100%" stop-color="#9A8567"/>
+    </linearGradient>
+    <radialGradient id="sunGlow1" cx="62%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#FFF2D6" stop-opacity="0.9"/>
+      <stop offset="25%" stop-color="#F2D19D" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#9A8567" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#122627" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mountainFar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D4D4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#172B2B"/>
+    </linearGradient>
+    <linearGradient id="mountainMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22403F"/>
+      <stop offset="100%" stop-color="#102121"/>
+    </linearGradient>
+    <linearGradient id="terraceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A3331"/>
+      <stop offset="50%" stop-color="#264A47"/>
+      <stop offset="100%" stop-color="#0E1E1D"/>
+    </linearGradient>
+    <filter id="mistBlur">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="675" fill="url(#skyGrad1)"/>
+
+  <!-- Morning Sun Glow -->
+  <circle cx="740" cy="300" r="280" fill="url(#sunGlow1)"/>
+
+  <!-- Distant Himalayan Ridge -->
+  <path d="M0,320 L120,280 L280,340 L440,240 L590,310 L740,200 L910,290 L1080,220 L1200,270 L1200,675 L0,675 Z" fill="url(#mountainFar)"/>
+
+  <!-- Alpine Mist Layer -->
+  <ellipse cx="600" cy="360" rx="650" ry="45" fill="#CDE2DB" opacity="0.25" filter="url(#mistBlur)"/>
+
+  <!-- Mid-distance Ridge -->
+  <path d="M0,390 L160,350 L340,410 L520,330 L720,400 L880,320 L1040,380 L1200,340 L1200,675 L0,675 Z" fill="url(#mountainMid)"/>
+
+  <!-- Golden Morning Light Ray -->
+  <polygon points="740,200 400,675 900,675" fill="#FFE8C2" opacity="0.12"/>
+
+  <!-- Foreground Foothills & Terraces -->
+  <path d="M-50,470 Q250,430 500,490 T1050,460 Q1150,480 1250,470 L1250,675 L-50,675 Z" fill="url(#terraceGrad)"/>
+  <path d="M-50,540 Q300,500 650,550 T1250,520 L1250,675 L-50,675 Z" fill="#132726"/>
+
+  <!-- Botanical Hemp & Flora Silhouettes in Foreground -->
+  <g fill="#0A1615" opacity="0.95">
+    <!-- Center-right large fan leaves -->
+    <path d="M960,675 C960,550 940,460 920,440 C940,465 970,510 985,675 Z"/>
+    <path d="M920,440 C870,410 820,415 790,430 C830,445 880,455 920,460 Z"/>
+    <path d="M920,440 C900,380 870,340 840,320 C870,360 895,405 920,440 Z"/>
+    <path d="M920,440 C945,360 965,300 970,260 C980,320 975,390 945,440 Z"/>
+    <path d="M925,440 C970,370 1020,330 1060,310 C1025,355 985,410 945,445 Z"/>
+    <path d="M930,445 C990,410 1050,400 1100,410 C1050,435 995,450 940,455 Z"/>
+
+    <!-- Left cluster -->
+    <path d="M180,675 C180,580 150,510 130,490 C150,510 180,560 195,675 Z"/>
+    <path d="M130,490 C90,460 40,465 10,480 C50,495 100,505 130,510 Z"/>
+    <path d="M130,490 C110,430 80,390 50,370 C80,410 105,455 130,490 Z"/>
+    <path d="M130,490 C155,410 175,350 180,310 C190,370 185,440 155,490 Z"/>
+    <path d="M135,490 C180,420 230,380 270,360 C235,405 195,460 155,495 Z"/>
+  </g>
+
+  <!-- Ambient Light Particles / Dewdrops -->
+  <circle cx="880" cy="380" r="2.5" fill="#FFFFFF" opacity="0.75"/>
+  <circle cx="820" cy="420" r="2" fill="#FFE8C2" opacity="0.6"/>
+  <circle cx="940" cy="310" r="3" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="780" cy="340" r="1.5" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="680" cy="460" r="2.5" fill="#FFE8C2" opacity="0.7"/>
+</svg>
+

@@ -1,19 +1,15 @@
 {
   "sections": {
-    "main": {
-      "type": "main-blog",
+    "blog_content": {
+      "type": "sanan-blog",
       "settings": {
-        "layout": "collage",
-        "show_image": true,
-        "image_height": "medium",
-        "show_date": true,
-        "show_author": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "eyebrow": "THE SANAN JOURNAL • BOTANICAL SCIENCE",
+        "heading": "Evidence-Led Ayurvedic Healing & Clinical Research",
+        "subheading": "Explore in-depth articles by Ayurvedic physicians, cannabinoid pharmacognosists, and holistic health practitioners."
       }
     }
   },
   "order": [
-    "main"
+    "blog_content"
   ]
 }

@@ -1,0 +1,74 @@
+{{ 'sanan-account.css' | asset_url | stylesheet_tag }}
+
+<div class="sanan-account-wrapper">
+  <div class="sanan-account-container">
+
+    <nav class="sanan-account-breadcrumbs" aria-label="Breadcrumb">
+      <a href="{{ routes.root_url }}">Home</a>
+      <span>/</span>
+      <a href="{{ routes.account_url }}">Patient Account</a>
+      <span>/</span>
+      <span style="color:var(--color-secondary); font-weight:600;">Saved Addresses</span>
+    </nav>
+
+    <div class="account-card" style="margin-top: 2rem;">
+      <div class="account-card-header">
+        <h2 class="account-card-title">Saved Delivery Addresses</h2>
+        <a href="{{ routes.account_url }}" class="account-card-action">&larr; Return to Dashboard</a>
+      </div>
+
+      <div class="address-grid">
+        {%- for address in customer.addresses -%}
+          <div class="address-box {% if address == customer.default_address %}is-default{% endif %}">
+            {%- if address == customer.default_address -%}
+              <span class="default-badge">DEFAULT DISPATCH ADDRESS</span>
+            {%- endif -%}
+            <h4 class="address-name">{{ address.name }}</h4>
+            <div class="address-lines">
+              {{ address.address1 }}<br>
+              {%- if address.address2 != blank -%}{{ address.address2 }}<br>{%- endif -%}
+              {{ address.city }}, {{ address.province_code }} {{ address.zip }}<br>
+              {{ address.country }}<br>
+              {%- if address.phone != blank -%}Phone: {{ address.phone }}{%- endif -%}
+            </div>
+            <div class="address-actions" style="margin-top: 1rem; display: flex; gap: 10px;">
+              <button type="button" class="btn-secondary-dock" style="font-size: 12px; padding: 6px 14px;">Edit</button>
+            </div>
+          </div>
+        {%- else -%}
+          <p style="color: var(--color-text-secondary); padding: 1.5rem;">No saved addresses found. Add an address during checkout.</p>
+        {%- endfor -%}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Customer Addresses",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 64
+    }
+  ]
+}
+{% endschema %}
+

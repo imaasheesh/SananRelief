@@ -1,0 +1,546 @@
+/*
+ * ============================================================
+ * THEME TOKENS — SananRelief Custom Theme
+ * Design system foundation: colors, typography, spacing,
+ * layout, components, motion. No hardcoded values elsewhere.
+ * ============================================================
+ */
+
+/* ============================================================
+   1. COLOR TOKENS
+   ============================================================ */
+:root {
+  /* Primitive palette — raw values only used here */
+  --palette-black:     0, 0, 0;
+  --palette-white:     255, 255, 255;
+  --palette-neutral-50:  248, 248, 248;
+  --palette-neutral-100: 240, 240, 240;
+  --palette-neutral-200: 220, 220, 220;
+  --palette-neutral-400: 160, 160, 160;
+  --palette-neutral-600: 100, 100, 100;
+  --palette-neutral-800: 40,  40,  40;
+  --palette-neutral-900: 15,  15,  15;
+
+  /* ── Sanan Relief Brand Colors ── */
+  /* Primary Teal: #439798 */
+  --color-primary:          #439798;
+  --color-primary-rgb:      67, 151, 152;
+  --color-primary-dark:     #2D6E6F;
+  --color-primary-light:    #6DBCBD;
+  --color-primary-soft:     #E6F4F4;
+  --color-primary-gradient: linear-gradient(135deg, #5BBCBD 0%, #439798 50%, #357C7D 100%);
+
+  /* Accent Red: #A92827 */
+  --color-accent:           #A92827;
+  --color-accent-rgb:       169, 40, 39;
+  --color-accent-dark:      #841E1D;
+  --color-accent-light:     #C94342;
+  --color-accent-soft:      #FAEAEA;
+  --color-accent-gradient:  linear-gradient(135deg, #C94342 0%, #A92827 50%, #841E1D 100%);
+
+  /* Secondary: Deep teal for headings */
+  --color-secondary:        #1A4A4B;
+  --color-secondary-rgb:    26, 74, 75;
+
+  /* Backgrounds */
+  --color-background:       #F7FBFB;
+  --color-background-rgb:   247, 251, 251;
+  --color-surface:          #FFFFFF;
+  --color-surface-soft:     #F0F8F8;
+  --color-surface-alt:      #E6F4F4;
+  --color-cream:            #FBF8F5;
+  --color-cream-border:     #EFEAE3;
+
+  /* Accent Badges & Special Colors */
+  --color-lime-badge:       #84CC16;
+  --color-gold:             #D97706;
+  --color-gold-dark:        #B45309;
+  --color-gold-gradient:    linear-gradient(135deg, #D97706 0%, #B45309 35%, #78350F 100%);
+
+  /* Text */
+  --color-text-primary:     #1A3333;
+  --color-text-secondary:   #4B5563;
+  --color-text-muted:       #8AABAB;
+  --color-text-inverse:     #FFFFFF;
+
+  --color-border:           #D4E8E8;
+  --color-border-subtle:    #E5E7EB;
+  --color-border-strong:    #439798;
+
+  --color-success:          rgb(22, 163, 74);
+  --color-warning:          rgb(234, 179, 8);
+  --color-error:            rgb(220, 38, 38);
+  --color-error-bg:         rgb(254, 242, 242);
+  --color-info:             rgb(59, 130, 246);
+
+  /* Overlay */
+  --color-overlay-light:    rgba(255, 255, 255, 0.85);
+  --color-overlay-dark:     rgba(0, 0, 0, 0.60);
+  --color-overlay-medium:   rgba(0, 0, 0, 0.40);
+
+  /* ── Glassmorphism Tokens ── */
+  --glass-blur-sm:          8px;
+  --glass-blur-md:          16px;
+  --glass-blur-lg:          24px;
+  --glass-blur-xl:          36px;
+  
+  --glass-bg-light:         rgba(255, 255, 255, 0.72);
+  --glass-bg-subtle:        rgba(255, 255, 255, 0.45);
+  --glass-bg-surface:       rgba(244, 248, 247, 0.68);
+  --glass-bg-teal:          rgba(67, 151, 152, 0.12);
+  --glass-bg-teal-hover:    rgba(67, 151, 152, 0.20);
+  --glass-bg-accent:        rgba(169, 40, 39, 0.10);
+  --glass-bg-accent-hover:  rgba(169, 40, 39, 0.18);
+  --glass-bg-dark:          rgba(26, 74, 75, 0.78);
+  
+  --glass-border-light:     rgba(255, 255, 255, 0.65);
+  --glass-border-subtle:    rgba(212, 232, 232, 0.65);
+  --glass-border-teal:      rgba(67, 151, 152, 0.35);
+  --glass-border-accent:    rgba(169, 40, 39, 0.25);
+  
+  --glass-shadow-sm:        0 4px 16px 0 rgba(26, 74, 75, 0.06);
+  --glass-shadow-md:        0 10px 30px 0 rgba(26, 74, 75, 0.08);
+  --glass-shadow-lg:        0 20px 50px 0 rgba(26, 74, 75, 0.14);
+  --glass-inner-glow:       inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
+  --glass-inner-glow-dark:  inset 0 1px 1px 0 rgba(255, 255, 255, 0.20);
+}
+
+/* ============================================================
+   GLASSMORPHISM UTILITIES
+   ============================================================ */
+.glass-panel {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(var(--glass-blur-md)) saturate(160%);
+  -webkit-backdrop-filter: blur(var(--glass-blur-md)) saturate(160%);
+  border: 1px solid var(--glass-border-light);
+  box-shadow: var(--glass-shadow-md), var(--glass-inner-glow);
+}
+
+.glass-surface {
+  background: var(--glass-bg-surface);
+  backdrop-filter: blur(var(--glass-blur-lg)) saturate(150%);
+  -webkit-backdrop-filter: blur(var(--glass-blur-lg)) saturate(150%);
+  border: 1px solid var(--glass-border-subtle);
+  box-shadow: var(--glass-shadow-sm), var(--glass-inner-glow);
+}
+
+.glass-teal {
+  background: var(--glass-bg-teal);
+  backdrop-filter: blur(var(--glass-blur-md));
+  -webkit-backdrop-filter: blur(var(--glass-blur-md));
+  border: 1px solid var(--glass-border-teal);
+  box-shadow: var(--glass-shadow-sm), var(--glass-inner-glow);
+}
+
+.glass-accent {
+  background: var(--glass-bg-accent);
+  backdrop-filter: blur(var(--glass-blur-md));
+  -webkit-backdrop-filter: blur(var(--glass-blur-md));
+  border: 1px solid var(--glass-border-accent);
+  box-shadow: var(--glass-shadow-sm), var(--glass-inner-glow);
+}
+
+.glass-dark {
+  background: var(--glass-bg-dark);
+  backdrop-filter: blur(var(--glass-blur-lg)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur-lg)) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: var(--glass-shadow-lg), var(--glass-inner-glow-dark);
+  color: var(--color-text-inverse);
+}
+
+/* ============================================================
+   2. TYPOGRAPHY TOKENS
+   ============================================================ */
+:root {
+  /* Font families — self-hosted via assets/fonts.css */
+  --font-heading:   'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-body:      'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-ui:        'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:      'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  --font-nav:       var(--font-ui);
+
+  /* Fluid type scale using clamp(min, preferred, max) */
+  --text-xs:        clamp(0.70rem, 0.65rem + 0.25vw, 0.75rem);
+  --text-sm:        clamp(0.80rem, 0.75rem + 0.25vw, 0.875rem);
+  --text-base:      clamp(1.00rem, 0.95rem + 0.25vw, 1.0625rem);
+  --text-md:        clamp(1.10rem, 1.00rem + 0.50vw, 1.25rem);
+  --text-lg:        clamp(1.20rem, 1.10rem + 0.50vw, 1.50rem);
+  --text-xl:        clamp(1.40rem, 1.20rem + 1.00vw, 2.00rem);
+  --text-2xl:       clamp(1.75rem, 1.50rem + 1.25vw, 2.75rem);
+  --text-3xl:       clamp(2.25rem, 1.75rem + 2.50vw, 4.00rem);
+  --text-4xl:       clamp(3.00rem, 2.25rem + 3.75vw, 6.00rem);
+  --text-display:   clamp(3.50rem, 2.50rem + 5.00vw, 8.00rem);
+
+  /* Font weights */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    900;
+
+  /* Line heights */
+  --leading-tight:   1.1;
+  --leading-snug:    1.3;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.75;
+
+  /* Letter spacing */
+  --tracking-tight:  -0.03em;
+  --tracking-snug:   -0.01em;
+  --tracking-normal: 0em;
+  --tracking-wide:   0.05em;
+  --tracking-wider:  0.10em;
+  --tracking-widest: 0.20em;
+}
+
+/* ============================================================
+   3. SPACING & LAYOUT TOKENS
+   ============================================================ */
+:root {
+  /* Base spacing unit — 4px grid */
+  --space-1:   0.25rem;    /* 4px */
+  --space-2:   0.50rem;    /* 8px */
+  --space-3:   0.75rem;    /* 12px */
+  --space-4:   1.00rem;    /* 16px */
+  --space-5:   1.25rem;    /* 20px */
+  --space-6:   1.50rem;    /* 24px */
+  --space-8:   2.00rem;    /* 32px */
+  --space-10:  2.50rem;    /* 40px */
+  --space-12:  3.00rem;    /* 48px */
+  --space-16:  4.00rem;    /* 64px */
+  --space-20:  5.00rem;    /* 80px */
+  --space-24:  6.00rem;    /* 96px */
+  --space-32:  8.00rem;    /* 128px */
+  --space-40:  10.00rem;   /* 160px */
+  --space-48:  12.00rem;   /* 192px */
+
+  /* Fluid section spacing */
+  --section-gap-sm:   clamp(3rem, 2rem + 5vw, 6rem);
+  --section-gap:      clamp(5rem, 3rem + 8vw, 10rem);
+  --section-gap-lg:   clamp(7rem, 4rem + 10vw, 15rem);
+
+  /* Container widths */
+  --container-narrow: 720px;
+  --container-base:   1200px;
+  --container-wide:   1440px;
+  --container-full:   100%;
+
+  /* Container horizontal padding */
+  --container-padding-x: clamp(1rem, 4vw, 4rem);
+
+  /* Grid */
+  --grid-cols:   12;
+  --grid-gap:    clamp(0.75rem, 1.5vw, 1.5rem);
+  --grid-gap-lg: clamp(1.25rem, 2.5vw, 2.5rem);
+
+  /* Breakpoints (reference — not usable in CSS calc but documented here) */
+  /* --bp-xs: 375px | --bp-sm: 640px | --bp-md: 768px | --bp-lg: 1024px | --bp-xl: 1280px | --bp-2xl: 1536px */
+}
+
+/* ============================================================
+   4. COMPONENT TOKENS
+   ============================================================ */
+:root {
+  /* Buttons */
+  --btn-height-sm:   2.25rem;
+  --btn-height-md:   2.875rem;
+  --btn-height-lg:   3.375rem;
+  --btn-padding-x:   var(--space-8);
+  --btn-radius:      50px;
+  --btn-radius-pill: 50px;
+  --btn-font-size:   var(--text-sm);
+  --btn-font-weight: var(--weight-semibold);
+  --btn-tracking:    0.01em;
+
+  /* Cards */
+  --card-radius-sm:  8px;
+  --card-radius-md:  14px;
+  --card-radius-lg:  20px;
+  --card-radius-xl:  24px;
+  --card-radius:     20px;
+  --card-padding:    var(--space-6);
+  --card-bg:         var(--color-surface);
+
+  /* Inputs & Form Controls */
+  --input-height:       3.25rem; /* 52px */
+  --input-radius:       50px;    /* Pill form inputs */
+  --input-radius-card:  12px;    /* Rounded card inputs */
+  --input-border:       1.5px solid var(--color-border);
+  --input-bg:           #FFFFFF;
+  --input-padding-x:    1.5rem;
+  --input-focus-ring:   0 0 0 3px rgba(67, 151, 152, 0.18);
+
+  /* Borders & Selectors */
+  --border-thin:        1px;
+  --border-base:        1.5px;
+  --border-thick:       2px;
+  --border-radius:      20px;
+  --selector-radius:    4px;     /* Crisp Image 1 variant selectors */
+  --pill-radius:        9999px;
+
+  /* Shadows */
+  --shadow-sm:  0 2px 6px rgba(26, 74, 75, 0.04);
+  --shadow-md:  0 8px 24px rgba(26, 74, 75, 0.07);
+  --shadow-lg:  0 16px 36px rgba(67, 151, 152, 0.12);
+  --shadow-xl:  0 24px 60px rgba(26, 74, 75, 0.18);
+  --shadow-glow: 0 8px 24px rgba(67, 151, 152, 0.35);
+
+  /* Z-index scale */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+  --z-top:      999;
+
+  /* Overlay opacity */
+  --overlay-opacity-light:  0.4;
+  --overlay-opacity-medium: 0.6;
+  --overlay-opacity-heavy:  0.8;
+}
+
+/* ============================================================
+   5. MOTION TOKENS
+   ============================================================ */
+:root {
+  /* Durations */
+  --duration-instant:  100ms;
+  --duration-fast:     200ms;
+  --duration-base:     350ms;
+  --duration-slow:     600ms;
+  --duration-slower:   900ms;
+  --duration-slowest:  1400ms;
+
+  /* Easings */
+  --ease-linear:    linear;
+  --ease-in:        cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:       cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-standard:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-entrance:  cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-exit:      cubic-bezier(0.4, 0.0, 1, 1);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);  /* slight overshoot */
+
+  /* Reveal offsets */
+  --reveal-offset-y-sm: 20px;
+  --reveal-offset-y:    40px;
+  --reveal-offset-y-lg: 70px;
+  --reveal-offset-x:    40px;
+}
+
+/* Respect prefers-reduced-motion — override all durations to near-zero */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant:  0ms;
+    --duration-fast:     0ms;
+    --duration-base:     0ms;
+    --duration-slow:     0ms;
+    --duration-slower:   0ms;
+    --duration-slowest:  0ms;
+  }
+}
+
+/* ============================================================
+   6. HEADER / NAVIGATION TOKENS
+   ============================================================ */
+:root {
+  --header-height:         64px;
+  --header-height-desktop: 80px;
+  --header-bg:             var(--color-background);
+  --header-bg-transparent: transparent;
+  --header-border:         1px solid var(--color-border);
+  --header-z:              var(--z-sticky);
+
+  --announcement-height:   40px;
+  --announcement-bg:       var(--color-primary);
+  --announcement-color:    var(--color-text-inverse);
+}
+
+/* ============================================================
+   7. CORE BUTTON SYSTEM & HOVER MOTION ENGINE
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: var(--btn-height-md);
+  padding: 0 var(--btn-padding-x);
+  border-radius: var(--btn-radius);
+  font-family: var(--font-body);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  letter-spacing: var(--btn-tracking);
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  outline: none;
+  white-space: nowrap;
+  text-decoration: none;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: 
+    color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animated chevron icon inside button */
+.btn .chevron {
+  display: inline-block;
+  font-style: normal;
+  font-size: 0.9em;
+  line-height: 1;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn:hover:not(:disabled) .chevron {
+  transform: translateX(4px);
+}
+
+/* Specular light sweep reflection overlay */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 1;
+  transition: left 0.75s ease;
+}
+.btn:hover:not(:disabled)::after {
+  left: 160%;
+}
+
+/* ── Primary Button (Teal Gradient Glow) ── */
+.btn-primary {
+  background: linear-gradient(135deg, #5BBCBD 0%, #439798 55%, #357C7D 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px 0 rgba(67, 151, 152, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.45);
+}
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #6ED5D6 0%, #4FA6A7 55%, #3C8A8B 100%);
+  box-shadow: 0 10px 28px -2px rgba(67, 151, 152, 0.55), 0 0 16px 2px rgba(91, 188, 189, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.75);
+  transform: translateY(-2.5px) scale(1.015);
+}
+.btn-primary:active:not(:disabled) {
+  background: linear-gradient(135deg, #2D6E6F 0%, #1E5859 100%);
+  box-shadow: 0 2px 8px 0 rgba(67, 151, 152, 0.25), inset 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(1px) scale(0.985);
+}
+
+/* ── Secondary / Accent Button (Soft Pink to Glowing Red on Hover) ── */
+.btn-accent {
+  background: rgba(250, 234, 234, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #A92827;
+  border-color: rgba(232, 180, 180, 0.75);
+  box-shadow: 0 3px 12px 0 rgba(169, 40, 39, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+}
+.btn-accent:hover:not(:disabled) {
+  background: linear-gradient(135deg, #DE5352 0%, #A92827 60%, #8A1E1D 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 10px 28px -2px rgba(169, 40, 39, 0.50), 0 0 16px 2px rgba(222, 83, 82, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.65);
+  transform: translateY(-2.5px) scale(1.015);
+}
+.btn-accent:active:not(:disabled) {
+  background: linear-gradient(135deg, #8A1E1D 0%, #6E1514 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 2px 8px 0 rgba(169, 40, 39, 0.25);
+  transform: translateY(1px) scale(0.985);
+}
+
+/* ── Outline Teal Button ── */
+.btn-outline {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #439798;
+  border-color: #439798;
+  box-shadow: 0 2px 10px 0 rgba(67, 151, 152, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
+}
+.btn-outline:hover:not(:disabled) {
+  background: rgba(230, 246, 246, 0.92);
+  color: #2D6E6F;
+  border-color: #357C7D;
+  box-shadow: 0 8px 24px -2px rgba(67, 151, 152, 0.28), inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+  transform: translateY(-2.5px) scale(1.015);
+}
+.btn-outline:active:not(:disabled) {
+  background: #439798;
+  color: #FFFFFF;
+  border-color: #439798;
+  box-shadow: 0 2px 8px 0 rgba(67, 151, 152, 0.2);
+  transform: translateY(1px) scale(0.985);
+}
+
+/* ── Outline Accent Red Button ── */
+.btn-outline-accent {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #A92827;
+  border-color: #A92827;
+  box-shadow: 0 2px 10px 0 rgba(169, 40, 39, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
+}
+.btn-outline-accent:hover:not(:disabled) {
+  background: rgba(254, 240, 240, 0.92);
+  color: #841E1D;
+  border-color: #C94342;
+  box-shadow: 0 8px 24px -2px rgba(169, 40, 39, 0.25), inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+  transform: translateY(-2.5px) scale(1.015);
+}
+.btn-outline-accent:active:not(:disabled) {
+  background: #A92827;
+  color: #FFFFFF;
+  border-color: #A92827;
+  box-shadow: 0 2px 8px 0 rgba(169, 40, 39, 0.2);
+  transform: translateY(1px) scale(0.985);
+}
+
+/* ── Text Button ── */
+.btn-text {
+  background: transparent;
+  color: #439798;
+  border: none;
+  padding: 0 0.5rem;
+  height: auto;
+  border-radius: 4px;
+}
+.btn-text:hover:not(:disabled) {
+  color: #2D6E6F;
+  transform: translateX(3px);
+}
+.btn-text:active:not(:disabled) {
+  color: #1A4A4B;
+}
+
+/* ── Disabled State ── */
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none !important;
+  transform: none !important;
+}
+

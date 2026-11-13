@@ -1,0 +1,248 @@
+{% comment %}
+  Cinematic Full-Width Image Carousel Section
+  Edge-to-edge, zero-gap continuous carousel with center-focused scale effect,
+  glassmorphism details, and smooth infinite autoplay.
+{% endcomment %}
+
+{{ 'storefront.css' | asset_url | stylesheet_tag }}
+
+<section class="cinematic-carousel-section section-{{ section.id }}-padding" id="Cinematic-{{ section.id }}">
+  {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+    <div class="cinematic-header text-center">
+      {%- if section.settings.subheading != blank -%}
+        <div class="cinematic-header-pill">
+          {% render 'icon', name: 'leaf', size: 14 %}
+          <span>{{ section.settings.subheading | escape }}</span>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h2 class="cinematic-section-title">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <p class="cinematic-section-desc">{{ section.settings.description | escape }}</p>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <div class="cinematic-carousel-wrapper">
+    <!-- Swiper Container (Auto-scrolling 6 cards with center focus and full width) -->
+    <div class="swiper cinematic-swiper">
+      <div class="swiper-wrapper">
+        {%- if section.blocks.size > 0 -%}
+          {%- for block in section.blocks -%}
+            <div class="swiper-slide cinematic-slide" {{ block.shopify_attributes }}>
+              <div class="cinematic-card-inner">
+                {%- if block.settings.image != blank -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 1400
+                    | image_tag: loading: 'lazy', class: 'cinematic-media', alt: block.settings.title
+                  }}
+                {%- else -%}
+                  {%- assign fallback_idx = forloop.index | modulo: 6 | plus: 1 -%}
+                  {%- assign fallback_name = 'cinematic-slide-' | append: fallback_idx | append: '.svg' -%}
+                  <img src="{{ fallback_name | asset_url }}" alt="{{ block.settings.title | default: 'Cinematic Botanical' | escape }}" class="cinematic-media" width="600" height="900" loading="lazy">
+                {%- endif -%}
+
+                <div class="cinematic-card-caption">
+                  <h3 class="cinematic-card-title">{{ block.settings.title | default: 'Botanical Wisdom' | escape }}</h3>
+                  {%- if block.settings.subtitle != blank -%}
+                    <p class="cinematic-card-desc">{{ block.settings.subtitle | escape }}</p>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- else -%}
+          <!-- Default Pre-built 6 Slides (Duplicated for seamless infinite loop on wide displays) -->
+          {%- for i in (1..3) -%}
+            <div class="swiper-slide cinematic-slide">
+              <div class="cinematic-card-inner">
+                <img src="{{ 'cinematic-slide-1.svg' | asset_url }}" alt="Sacred Himalayan Harvest" class="cinematic-media" width="600" height="900" loading="lazy">
+                <div class="cinematic-card-caption">
+                  <h3 class="cinematic-card-title">Sacred Himalayan Harvest</h3>
+                  <p class="cinematic-card-desc">Wildcrafted at 8,000 ft</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide cinematic-slide">
+              <div class="cinematic-card-inner">
+                <img src="{{ 'cinematic-slide-2.svg' | asset_url }}" alt="Supercritical Extraction" class="cinematic-media" width="600" height="900" loading="lazy">
+                <div class="cinematic-card-caption">
+                  <h3 class="cinematic-card-title">Supercritical Extraction</h3>
+                  <p class="cinematic-card-desc">Pure Sub-Zero CO2 Alchemy</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide cinematic-slide">
+              <div class="cinematic-card-inner">
+                <img src="{{ 'cinematic-slide-3.svg' | asset_url }}" alt="Wildcrafted Ashwagandha" class="cinematic-media" width="600" height="900" loading="lazy">
+                <div class="cinematic-card-caption">
+                  <h3 class="cinematic-card-title">Wildcrafted Ashwagandha</h3>
+                  <p class="cinematic-card-desc">Ancient Stone-Ground Roots</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide cinematic-slide">
+              <div class="cinematic-card-inner">
+                <img src="{{ 'cinematic-slide-4.svg' | asset_url }}" alt="Virgin Seed Elixirs" class="cinematic-media" width="600" height="900" loading="lazy">
+                <div class="cinematic-card-caption">
+                  <h3 class="cinematic-card-title">Virgin Seed Elixirs</h3>
+                  <p class="cinematic-card-desc">Cold-Pressed Golden Omegas</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide cinematic-slide">
+              <div class="cinematic-card-inner">
+                <img src="{{ 'cinematic-slide-5.svg' | asset_url }}" alt="Restorative Celestial Drops" class="cinematic-media" width="600" height="900" loading="lazy">
+                <div class="cinematic-card-caption">
+                  <h3 class="cinematic-card-title">Restorative Celestial Drops</h3>
+                  <p class="cinematic-card-desc">Deep Circadian Recovery</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide cinematic-slide">
+              <div class="cinematic-card-inner">
+                <img src="{{ 'cinematic-slide-6.svg' | asset_url }}" alt="Triphala Vitality Cleanse" class="cinematic-media" width="600" height="900" loading="lazy">
+                <div class="cinematic-card-caption">
+                  <h3 class="cinematic-card-title">Triphala Cleanse Vitality</h3>
+                  <p class="cinematic-card-desc">Tri-Fruit Synergy</p>
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cinematic Image Carousel",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "BOTANICAL EXCELLENCE"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Art of <em>Holistic Healing</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "From sun-drenched Himalayan slopes to clean supercritical alchemy — explore our uncompromising dedication to pure Ayurvedic potency."
+    },
+    {
+      "type": "range",
+      "id": "autoplay_interval",
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "unit": "s",
+      "label": "Autoplay Interval (seconds)",
+      "default": 4
+    }
+  ],
+  "blocks": [
+    {
+      "type": "cinematic_slide",
+      "name": "Cinematic Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Landscape Image (16:9)"
+        },
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Category Label",
+          "default": "Origin · Sacred Ridge"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Sacred Himalayan Harvest"
+        },
+        {
+          "type": "textarea",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Hand-gathered at dawn above 8,000 feet in the pristine Parvati valley."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Slide Link (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cinematic Image Carousel",
+      "category": "Promotional",
+      "blocks": [
+        {
+          "type": "cinematic_slide",
+          "settings": {
+            "category": "Origin · Himalayas",
+            "title": "Sacred Himalayan Harvest",
+            "subtitle": "Sustainably wild-harvested at dawn across misty alpine ridges."
+          }
+        },
+        {
+          "type": "cinematic_slide",
+          "settings": {
+            "category": "Science · Alchemy",
+            "title": "Supercritical Extraction",
+            "subtitle": "Pure CO2 botanical processing preserving delicate full-spectrum terpenes."
+          }
+        },
+        {
+          "type": "cinematic_slide",
+          "settings": {
+            "category": "Herbology · Adaptogens",
+            "title": "Wildcrafted Ashwagandha",
+            "subtitle": "Ancient roots stone-ground in classical Ayurvedic mortars."
+          }
+        },
+        {
+          "type": "cinematic_slide",
+          "settings": {
+            "category": "Purity · Cold-Press",
+            "title": "Virgin Seed Elixirs",
+            "subtitle": "Slow granite pressing yielding unrefined Omega 3-6-9 golden oil."
+          }
+        },
+        {
+          "type": "cinematic_slide",
+          "settings": {
+            "category": "Ritual · Night Rest",
+            "title": "Restorative Celestial Drops",
+            "subtitle": "Soothing botanical infusions for deep circadian rhythm recovery."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

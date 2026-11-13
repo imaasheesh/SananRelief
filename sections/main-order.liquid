@@ -1,0 +1,106 @@
+{{ 'sanan-account.css' | asset_url | stylesheet_tag }}
+
+<div class="sanan-account-wrapper">
+  <div class="sanan-account-container">
+
+    <nav class="sanan-account-breadcrumbs" aria-label="Breadcrumb">
+      <a href="{{ routes.root_url }}">Home</a>
+      <span>/</span>
+      <a href="{{ routes.account_url }}">Patient Account</a>
+      <span>/</span>
+      <span style="color:var(--color-secondary); font-weight:600;">Order {{ order.name }}</span>
+    </nav>
+
+    <div class="account-card" style="margin-top: 2rem;">
+      <div class="account-card-header">
+        <div>
+          <h2 class="account-card-title">Order {{ order.name }}</h2>
+          <span style="font-size: 13px; color: var(--color-text-secondary);">Placed on {{ order.created_at | date: "%B %d, %Y at %I:%M %p" }}</span>
+        </div>
+        <a href="{{ routes.account_url }}" class="account-card-action">&larr; Return to Orders</a>
+      </div>
+
+      <!-- Itemized Table -->
+      <div class="order-card" style="margin-top: 1.5rem;">
+        <div class="order-card-body">
+          {%- for line_item in order.line_items -%}
+            <div class="order-item-row" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px dashed rgba(45,110,111,0.15);">
+              <div class="order-item-left" style="display: flex; gap: 14px; align-items: center;">
+                {%- if line_item.image -%}
+                  <img src="{{ line_item.image | image_url: width: 112 }}" alt="{{ line_item.title }}" class="order-item-img" width="56" height="56" loading="lazy">
+                {%- endif -%}
+                <div>
+                  <div class="order-item-title" style="font-weight: 700; color: var(--color-primary-text);">{{ line_item.product.title }}</div>
+                  <div class="order-item-variant" style="font-size: 12px; color: var(--color-text-secondary);">{{ line_item.variant.title }} &bull; Qty: {{ line_item.quantity }}</div>
+                </div>
+              </div>
+              <div class="order-item-total" style="font-weight: 700; color: var(--color-primary);">
+                {{ line_item.final_line_price | money }}
+              </div>
+            </div>
+          {%- endfor -%}
+
+          <!-- Order Financial Summary -->
+          <div style="margin-top: 1.5rem; max-width: 380px; margin-left: auto;">
+            <div style="display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px;">
+              <span>Subtotal:</span>
+              <span>{{ order.line_items_subtotal_price | money }}</span>
+            </div>
+            {%- for discount in order.discounts -%}
+              <div style="display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; color: #059669;">
+                <span>Discount ({{ discount.code }}):</span>
+                <span>-{{ discount.amount | money }}</span>
+              </div>
+            {%- endfor -%}
+            {%- for shipping_method in order.shipping_methods -%}
+              <div style="display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px;">
+                <span>Shipping ({{ shipping_method.title }}):</span>
+                <span>{{ shipping_method.price | money }}</span>
+              </div>
+            {%- endfor -%}
+            {%- for tax_line in order.tax_lines -%}
+              <div style="display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px;">
+                <span>GST Tax ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%):</span>
+                <span>{{ tax_line.price | money }}</span>
+              </div>
+            {%- endfor -%}
+            <div style="display: flex; justify-content: space-between; padding: 10px 0; font-size: 16px; font-weight: 800; border-top: 1.5px solid rgba(45,110,111,0.2); margin-top: 8px;">
+              <span>Grand Total:</span>
+              <span style="color: var(--color-primary);">{{ order.total_price | money }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Customer Order Detail",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 64
+    }
+  ]
+}
+{% endschema %}
+

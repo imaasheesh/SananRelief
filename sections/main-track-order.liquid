@@ -1,0 +1,95 @@
+{{ 'sanan-track-order.css' | asset_url | stylesheet_tag }}
+
+<div class="track-order-wrapper">
+  <div class="track-order-container">
+    
+    <!-- Hero Header -->
+    <section class="track-hero">
+      <div class="track-kicker">
+        <span>✈</span> {{ section.settings.kicker | default: 'Real-Time Consignment Tracker' }}
+      </div>
+      <h1 class="track-title">{{ section.settings.title | default: 'Track Your Ayurvedic Remedy' }}</h1>
+      <p class="track-subtitle">
+        {{ section.settings.subtitle | default: 'Enter your Sanan Relief Order ID alongside your registered mobile number or email address to verify dispatch and real-time transit status.' }}
+      </p>
+    </section>
+
+    <!-- Lookup Form Glass Card -->
+    <section class="track-lookup-card">
+      <form class="track-lookup-form" id="trackOrderForm">
+        <div class="track-field-group">
+          <label for="trackOrderId" class="track-field-label">Order Number</label>
+          <input type="text" id="trackOrderId" name="order_id" class="track-input" placeholder="e.g. #SR-88429" required>
+        </div>
+
+        <div class="track-field-group">
+          <label for="trackContact" class="track-field-label">Registered Phone or Email</label>
+          <input type="text" id="trackContact" name="contact" class="track-input" placeholder="e.g. +91 98765 43210" required>
+        </div>
+
+        <button type="submit" class="btn-primary-dock" style="height: 52px;">
+          Track Consignment &rarr;
+        </button>
+      </form>
+    </section>
+
+    <!-- Support Help & Doctor Consultation Assistance -->
+    <div class="track-support-grid">
+      <div class="track-support-card">
+        <div class="track-support-icon">💬</div>
+        <div>
+          <h4>Need Transit Assistance?</h4>
+          <p>Our dedicated patient dispatch concierge is available Monday through Saturday from 9 AM to 8 PM IST.</p>
+          <a href="https://wa.me/{{ section.settings.whatsapp_number | default: '919876543210' }}" target="_blank" class="btn-whatsapp-dock" style="padding:8px 16px; font-size:12px;">
+            WhatsApp Dispatch Team
+          </a>
+        </div>
+      </div>
+
+      <div class="track-support-card">
+        <div class="track-support-icon">🩺</div>
+        <div>
+          <h4>Speak with an Ayurvedic Doctor</h4>
+          <p>Have questions about your titration protocol before your medicine arrives? Our physicians are here to help.</p>
+          <a href="/pages/contact" class="btn-secondary-dock" style="padding:8px 16px; font-size:12px;">
+            Book Free Consult &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Track Order Page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Kicker Pill",
+      "default": "Real-Time Consignment Tracker"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Track Your Ayurvedic Remedy"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Enter your Sanan Relief Order ID alongside your registered mobile number or email address to verify dispatch and real-time transit status."
+    },
+    {
+      "type": "text",
+      "id": "whatsapp_number",
+      "label": "WhatsApp Support Number",
+      "default": "919876543210"
+    }
+  ]
+}
+{% endschema %}
+

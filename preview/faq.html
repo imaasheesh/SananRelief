@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions — Sanan Relief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/theme-tokens.css">
+  <link rel="stylesheet" href="../assets/storefront.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <a href="storefront.html"><img src="../assets/logo.png" alt="Sanan Relief"></a>
+    <nav class="header-nav">
+      <a href="storefront.html">Home</a>
+      <a href="blog.html">Journal</a>
+      <a href="faq.html" style="color:var(--color-primary); font-weight:700;">FAQs</a>
+      <a href="legal.html">Legal &amp; Policies</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="header-actions">
+    <a href="faq.html" class="header-icon-btn" title="FAQs">?</a>
+    <a href="contact.html" class="btn btn-primary" style="height:2.2rem; padding:0 1rem; font-size:0.75rem;">Doctor Helpline</a>
+  </div>
+</header>
+
+<main class="page">
+  <section class="faq-page-section" id="faq-page">
+    <div class="faq-container">
+
+      <!-- FAQ Hero Banner -->
+      <div class="faq-header">
+        <div class="faq-eyebrow-pill">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          <span>KNOWLEDGE BASE &amp; GUIDES</span>
+        </div>
+        <h1 class="faq-title">Frequently Asked Questions</h1>
+        <p class="faq-subtitle">Find answers regarding our standardized Ayurvedic Vijaya formulations, dosages, AYUSH licensing, prescriptions, and pan-India express delivery.</p>
+
+        <!-- Live Search Bar (Matching User Request) -->
+        <div class="faq-search-box">
+          <svg class="faq-search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="FaqSearchInput" class="faq-search-input" placeholder="Search keywords (e.g. dosage, insomnia, legal, prescription)..." aria-label="Search FAQs">
+          <button type="button" id="FaqSearchClear" class="faq-search-clear" aria-label="Clear search" style="display: none;">&times;</button>
+        </div>
+      </div>
+
+      <!-- 2-Column FAQ Layout: Fixed / Sticky Side Menu + Accordions (Matching User Request) -->
+      <div class="faq-main-layout">
+
+        <!-- LEFT COLUMN: Fixed / Sticky Category Navigation -->
+        <aside class="faq-sidebar-sticky">
+          <div class="faq-nav-card">
+            <h2 class="faq-nav-heading">FAQ Categories</h2>
+            <ul class="faq-category-list">
+              <li class="faq-cat-item">
+                <button class="faq-cat-btn active" data-category="all">
+                  <span class="faq-cat-name">All Questions</span>
+                  <span class="faq-cat-count">10</span>
+                </button>
+              </li>
+              <li class="faq-cat-item">
+                <button class="faq-cat-btn" data-category="science">
+                  <span class="faq-cat-name">Vijaya Science &amp; Entourage</span>
+                  <span class="faq-cat-count">2</span>
+                </button>
+              </li>
+              <li class="faq-cat-item">
+                <button class="faq-cat-btn" data-category="dosage">
+                  <span class="faq-cat-name">Dosage &amp; How to Use</span>
+                  <span class="faq-cat-count">2</span>
+                </button>
+              </li>
+              <li class="faq-cat-item">
+                <button class="faq-cat-btn" data-category="quality">
+                  <span class="faq-cat-name">Quality, Licensure &amp; COAs</span>
+                  <span class="faq-cat-count">2</span>
+                </button>
+              </li>
+              <li class="faq-cat-item">
+                <button class="faq-cat-btn" data-category="orders">
+                  <span class="faq-cat-name">Prescriptions &amp; Shipping</span>
+                  <span class="faq-cat-count">2</span>
+                </button>
+              </li>
+              <li class="faq-cat-item">
+                <button class="faq-cat-btn" data-category="consult">
+                  <span class="faq-cat-name">Doctor Consultations</span>
+                  <span class="faq-cat-count">2</span>
+                </button>
+              </li>
+            </ul>
+
+            <!-- Doctor Advisory Callout Box -->
+            <div class="faq-sidebar-callout">
+              <div class="faq-callout-avatar-row">
+                <img src="../assets/doctor-2.jpg" alt="Doctor" class="faq-callout-avatar" width="48" height="48" loading="lazy">
+                <div>
+                  <h4 class="faq-callout-title">Need Clinical Advice?</h4>
+                  <span class="faq-callout-sub">Free 15-min consultation</span>
+                </div>
+              </div>
+              <p class="faq-callout-text">Unsure which formulation or strength is right for your condition? Our licensed Ayurvedic doctors can guide you.</p>
+              <a href="contact.html" class="btn-faq-consult">Consult a Doctor &rarr;</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- RIGHT COLUMN: Accordion Questions Area -->
+        <div class="faq-content-area">
+
+          <!-- Category Section 1: Science & Entourage -->
+          <div class="faq-group-block" data-category="science">
+            <h2 class="faq-group-title">Vijaya Science &amp; Entourage Effect</h2>
+
+            <div class="faq-accordion-item">
+              <button class="faq-question-btn" aria-expanded="false">
+                <span class="faq-q-text">What is Vijaya and how does it differ from ordinary hemp seed oil?</span>
+                <span class="faq-q-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+              </button>
+              <div class="faq-answer-pane">
+                <div class="faq-answer-inner">
+                  <p>Vijaya is the classical Ayurvedic Sanskrit name for the whole Cannabis Sativa plant leaf, recognized in Charaka Samhita and Sushruta Samhita for centuries. While ordinary hemp seed oil is purely dietary fatty acids (Omega 3 &amp; 6) with zero active cannabinoids, Sanan's Vijaya formulations utilize pure whole-leaf extracts containing standardized cannabinoids (CBD, CBG, CBC, trace phytocannabinoids) and natural botanical terpenes that work synergistically via the Entourage Effect to interact with your body&rsquo;s Endocannabinoid System (ECS).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="faq-question-btn" aria-expanded="false">
+                <span class="faq-q-text">Will Sanan Relief formulations produce an intoxicating high?</span>
+                <span class="faq-q-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+              </button>
+              <div class="faq-answer-pane">
+                <div class="faq-answer-inner">
+                  <p>No. When used in accordance with our physician guidelines, our broad-spectrum and standardized drops do not cause recreational intoxication. They are formulated for non-impairing therapeutic benefits &mdash; alleviating physical inflammation, restoring restorative sleep architecture, and soothing autonomic nervous system anxiety.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Section 2: Dosage & Guidelines -->
+          <div class="faq-group-block" data-category="dosage">
+            <h2 class="faq-group-title">Dosage &amp; How to Use</h2>
+
+            <div class="faq-accordion-item">
+              <button class="faq-question-btn" aria-expanded="false">
+                <span class="faq-q-text">How do I determine the right starting dosage for drops?</span>
+                <span class="faq-q-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+              </button>
+              <div class="faq-answer-pane">
+                <div class="faq-answer-inner">
+                  <p>We advise following the Ayurvedic principle of <em>Yukti</em> (gradual titration): start low and slow. Place 2–3 drops sublingually (under your tongue) and hold for 60 to 90 seconds before swallowing to ensure maximum mucosal bioavailability. Maintain this for 3–4 days before progressively adjusting upwards by 1 drop if needed, or speak with our in-house doctor for a tailored dosage protocol.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="faq-question-btn" aria-expanded="false">
+                <span class="faq-q-text">Can topicals like the Herbal Joint Salve be used alongside drops?</span>
+                <span class="faq-q-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+              </button>
+              <div class="faq-answer-pane">
+                <div class="faq-answer-inner">
+                  <p>Yes, absolutely. In Ayurvedic medicine, dual-action protocols (internal sublingual balancing paired with external transdermal relief) are highly effective. Apply the Herbal Joint Salve directly over localized stiffness, knees, or sore muscles while taking the sublingual drops for systemic inflammation relief.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Section 3: Quality & Licensure -->
+          <div class="faq-group-block" data-category="quality">
+            <h2 class="faq-group-title">Quality, Licensure &amp; COAs</h2>
+
+            <div class="faq-accordion-item">
+              <button class="faq-question-btn" aria-expanded="false">
+                <span class="faq-q-text">Are Sanan Relief formulations legally licensed by AYUSH?</span>
+                <span class="faq-q-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+              </button>
+              <div class="faq-answer-pane">
+                <div class="faq-answer-inner">
+                  <p>Yes. Sanan operates under India's first legal Vijaya license holder dating back to 1985. All our remedies are officially manufactured in accordance with the Drugs and Cosmetics Act (1940) and regulated under the Ministry of AYUSH, Government of India, adhering to strict Good Manufacturing Practices (GMP).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="faq-question-btn" aria-expanded="false">
+                <span class="faq-q-text">How can I inspect the third-party Certificate of Analysis (COA)?</span>
+                <span class="faq-q-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+              </button>
+              <div class="faq-answer-pane">
+                <div class="faq-answer-inner">
+                  <p>We practice 100% batch transparency. Each product bottle includes a printed batch number and QR code on the packaging. Scanning the code directs you immediately to the third-party NABL-accredited laboratory test report verifying cannabinoid potency, pesticide absence, heavy metal purity, and solvent-free extraction.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Section 4: Prescriptions & Shipping -->
+          <div class="faq-group-block" data-category="orders">
+            <h2 class="faq-group-title">Prescriptions &amp; Shipping</h2>
+
+            <div class="faq-accordion-item">
+              <button class="faq-question-btn" aria-expanded="false">
+                <span class="faq-q-text">Do I require a doctor's prescription to order from Sanan?</span>
+                <span class="faq-q-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+              </button>
+              <div class="faq-answer-pane">
+                <div class="faq-answer-inner">
+                  <p>Topical salves, skincare balms, and classical churna supplements do not require a prescription. For potent concentrated Vijaya extracts and tinctures regulated under Schedule E-1, an Ayurvedic prescription is required by law. If you do not have one, we provide an automatic, complimentary prescription consultation with our licensed BAMS physicians during checkout at no extra charge.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="faq-question-btn" aria-expanded="false">
+                <span class="faq-q-text">Is shipping safe and discreet across all states in India?</span>
+                <span class="faq-q-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+              </button>
+              <div class="faq-answer-pane">
+                <div class="faq-answer-inner">
+                  <p>Yes. We ship to all valid PIN codes across India using premier express logistics (BlueDart, Delhivery, DTDC). All shipments are packed in neutral, tamper-proof, temperature-stable outer boxes with zero external mention of botanical compounds to ensure complete privacy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Section 5: Doctor Consultations -->
+          <div class="faq-group-block" data-category="consult">
+            <h2 class="faq-group-title">Doctor Consultations</h2>
+
+            <div class="faq-accordion-item">
+              <button class="faq-question-btn" aria-expanded="false">
+                <span class="faq-q-text">What happens during a Sanan Ayurvedic tele-consultation?</span>
+                <span class="faq-q-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+              </button>
+              <div class="faq-answer-pane">
+                <div class="faq-answer-inner">
+                  <p>You will speak directly with an experienced BAMS (Bachelor of Ayurvedic Medicine &amp; Surgery) physician. The doctor evaluates your Prakriti (dosha constitution), health goals (e.g., chronic pain, insomnia, anxiety), current medications, and recommends a calibrated milligram dosage protocol tailored to your physiology.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-accordion-item">
+              <button class="faq-question-btn" aria-expanded="false">
+                <span class="faq-q-text">Is the doctor consultation truly complimentary?</span>
+                <span class="faq-q-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </span>
+              </button>
+              <div class="faq-answer-pane">
+                <div class="faq-answer-inner">
+                  <p>Yes! As part of our healthcare mission to democratize authentic Ayurvedic therapeutics, all 15-minute introductory dosage consultations are 100% free with no purchase obligation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- No Results Fallback (for search) -->
+          <div class="faq-no-results" style="display: none;">
+            <p class="faq-no-res-title">No matching questions found</p>
+            <p class="faq-no-res-desc">Try searching for other terms like <em>dosage</em>, <em>insomnia</em>, <em>shipping</em>, or contact our medical advisory team directly.</p>
+            <a href="contact.html" class="btn-faq-ask">Ask Our Doctor Directly &rarr;</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="../assets/storefront.js"></script>
+</body>
+</html>
+

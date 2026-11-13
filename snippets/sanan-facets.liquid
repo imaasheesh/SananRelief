@@ -1,0 +1,248 @@
+{% comment %}
+  Renders the premium Sanan Relief facets and filter controls.
+
+  Accepts:
+  - results: {Object} Collection or Search object (required)
+  - enable_filtering: {Boolean} Show filter controls
+  - enable_sorting: {Boolean} Show sort controls
+  - filter_type: {String} 'horizontal' or 'vertical'
+{% endcomment %}
+
+{%- liquid
+  assign sort_by = results.sort_by | default: results.default_sort_by
+  assign total_active_filters = 0
+  for filter in results.filters
+    assign total_active_filters = total_active_filters | plus: filter.active_values.size
+    if filter.type == 'price_range'
+      if filter.min_value.value != nil or filter.max_value.value != nil
+        assign total_active_filters = total_active_filters | plus: 1
+      endif
+    endif
+  endfor
+-%}
+
+<facet-filters-form class="sanan-facets-controller">
+  <form id="FacetFiltersForm" class="sanan-facets-form">
+    {%- if results.terms -%}
+      <input type="hidden" name="q" value="{{ results.terms | escape }}">
+      <input name="options[prefix]" type="hidden" value="last">
+    {%- endif -%}
+
+    {%- if enable_filtering and results.filters != empty -%}
+      <!-- Horizontal Filter Bar (Desktop) -->
+      <div class="sanan-horizontal-filters">
+        {%- for filter in results.filters -%}
+          <div class="sanan-filter-dropdown" data-index="{{ forloop.index }}">
+            <button type="button" class="sanan-filter-btn" aria-expanded="false">
+              <span>{{ filter.label | escape }}</span>
+              {%- if filter.active_values.size > 0 -%}
+                <span class="active-count">{{ filter.active_values.size }}</span>
+              {%- endif -%}
+              <svg class="filter-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+
+            <div class="sanan-filter-popover">
+              <div class="sanan-filter-popover-header">
+                <span class="sanan-filter-popover-title">{{ filter.label | escape }}</span>
+                {%- if filter.active_values.size > 0 -%}
+                  <a href="{{ filter.url_to_remove }}" class="sanan-filter-popover-reset">Reset</a>
+                {%- endif -%}
+              </div>
+
+              {%- case filter.type -%}
+                {%- when 'boolean', 'list' -%}
+                  <ul class="sanan-filter-list">
+                    {%- for value in filter.values -%}
+                      <li class="sanan-filter-item">
+                        <label class="sanan-filter-label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                          <div class="sanan-filter-checkbox-wrap">
+                            <input
+                              type="checkbox"
+                              name="{{ value.param_name }}"
+                              value="{{ value.value }}"
+                              id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                              class="sanan-filter-checkbox"
+                              {% if value.active %}checked{% endif %}
+                              {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                            >
+                            <span>{{ value.label | escape }}</span>
+                          </div>
+                          <span class="sanan-filter-item-count">({{ value.count }})</span>
+                        </label>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+
+                {%- when 'price_range' -%}
+                  <div class="sanan-price-range-wrap">
+                    {%- liquid
+                      assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+                      assign uses_comma_decimals = false
+                      if currencies_using_comma_decimals contains cart.currency.iso_code
+                        assign uses_comma_decimals = true
+                      endif
+                    -%}
+                    <div class="sanan-price-inputs">
+                      <div class="sanan-price-input-box">
+                        <span class="sanan-price-currency">{{ cart.currency.symbol }}</span>
+                        <input
+                          class="sanan-price-input sanan-price-min-input"
+                          name="{{ filter.min_value.param_name }}"
+                          id="Filter-{{ filter.label | escape }}-GTE"
+                          {%- if filter.min_value.value -%}
+                            {%- if uses_comma_decimals -%}
+                              value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
+                            {%- else -%}
+                              value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                            {%- endif %}
+                          {%- endif -%}
+                          type="number"
+                          placeholder="0"
+                          min="0"
+                          max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                        >
+                      </div>
+                      <span class="sanan-price-dash">&ndash;</span>
+                      <div class="sanan-price-input-box">
+                        <span class="sanan-price-currency">{{ cart.currency.symbol }}</span>
+                        <input
+                          class="sanan-price-input sanan-price-max-input"
+                          name="{{ filter.max_value.param_name }}"
+                          id="Filter-{{ filter.label | escape }}-LTE"
+                          {%- if filter.max_value.value -%}
+                            {%- if uses_comma_decimals -%}
+                              value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
+                            {%- else -%}
+                              value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
+                            {%- endif %}
+                          {%- else -%}
+                            value="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                          {%- endif -%}
+                          type="number"
+                          min="0"
+                          max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                        >
+                      </div>
+                    </div>
+                  </div>
+              {%- endcase -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    <!-- Active Filter Chips (Removable) -->
+    {%- if total_active_filters > 0 -%}
+      <div class="sanan-active-chips-bar">
+        {%- for filter in results.filters -%}
+          {%- for value in filter.active_values -%}
+            <a href="{{ value.url_to_remove }}" class="sanan-active-chip">
+              <span>{{ filter.label }}: <strong>{{ value.label }}</strong></span>
+              <span class="chip-remove-icon">&times;</span>
+            </a>
+          {%- endfor -%}
+
+          {% if filter.type == 'price_range' %}
+            {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+              <a href="{{ filter.url_to_remove }}" class="sanan-active-chip">
+                <span>Price: {{ filter.min_value.value | default: 0 | money }} - {{ filter.max_value.value | default: filter.range_max | money }}</span>
+                <span class="chip-remove-icon">&times;</span>
+              </a>
+            {%- endif -%}
+          {% endif %}
+        {%- endfor -%}
+
+        <a href="{{ results.url }}?sort_by={{ sort_by }}" class="sanan-clear-all-btn">
+          Clear all filters
+        </a>
+      </div>
+    {%- endif -%}
+  </form>
+</facet-filters-form>
+
+<!-- Mobile Filter Drawer -->
+<div class="sanan-mobile-drawer" id="SananMobileFilterDrawer" role="dialog" aria-modal="true" aria-label="Filters">
+  <div class="sanan-drawer-backdrop"></div>
+  <div class="sanan-drawer-panel">
+    <div class="sanan-drawer-header">
+      <h3>Filter &amp; Sort Formulations</h3>
+      <button type="button" class="sanan-drawer-close" aria-label="Close filters">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="sanan-drawer-body">
+      {%- for filter in results.filters -%}
+        <div class="sanan-sidebar-filter-group is-open">
+          <button type="button" class="sanan-sidebar-group-title">
+            <span>{{ filter.label | escape }}</span>
+            <svg class="group-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+
+          <div class="sanan-sidebar-group-content">
+            {%- case filter.type -%}
+              {%- when 'boolean', 'list' -%}
+                <ul class="sanan-filter-list">
+                  {%- for value in filter.values -%}
+                    <li class="sanan-filter-item">
+                      <label class="sanan-filter-label" for="Mobile-Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                        <div class="sanan-filter-checkbox-wrap">
+                          <input
+                            type="checkbox"
+                            name="{{ value.param_name }}"
+                            value="{{ value.value }}"
+                            id="Mobile-Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                            class="sanan-filter-checkbox"
+                            {% if value.active %}checked{% endif %}
+                            {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                          >
+                          <span>{{ value.label | escape }}</span>
+                        </div>
+                        <span class="sanan-filter-item-count">({{ value.count }})</span>
+                      </label>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- when 'price_range' -%}
+                <div class="sanan-price-range-wrap">
+                  <div class="sanan-price-inputs">
+                    <div class="sanan-price-input-box">
+                      <span class="sanan-price-currency">{{ cart.currency.symbol }}</span>
+                      <input
+                        class="sanan-price-input"
+                        name="{{ filter.min_value.param_name }}"
+                        type="number"
+                        placeholder="0"
+                        min="0"
+                        max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                        value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                      >
+                    </div>
+                    <span class="sanan-price-dash">&ndash;</span>
+                    <div class="sanan-price-input-box">
+                      <span class="sanan-price-currency">{{ cart.currency.symbol }}</span>
+                      <input
+                        class="sanan-price-input"
+                        name="{{ filter.max_value.param_name }}"
+                        type="number"
+                        min="0"
+                        max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                        value="{{ filter.max_value.value | default: filter.range_max | money_without_currency | replace: ',', '' }}"
+                      >
+                    </div>
+                  </div>
+                </div>
+            {%- endcase -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="sanan-drawer-footer">
+      <a href="{{ results.url }}?sort_by={{ sort_by }}" class="sanan-drawer-clear-btn" style="text-align:center;text-decoration:none;">Clear All</a>
+      <button type="button" class="sanan-drawer-apply-btn">Apply Filters ({{ total_active_filters }})</button>
+    </div>
+  </div>
+</div>
+

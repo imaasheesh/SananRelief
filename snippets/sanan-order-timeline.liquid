@@ -1,0 +1,37 @@
+{% comment %}
+  Sanan Relief — 4-Stage Visual Fulfillment Timeline Snippet
+  Reusable across Account Orders, Order Status, and Thank-You pages
+{% endcomment %}
+
+{%- assign step_status = fulfillment_status | default: 'in_transit' -%}
+
+<div class="sanan-timeline-widget" data-status="{{ step_status }}">
+  <div class="timeline-stepper">
+    <div class="timeline-stepper-progress"></div>
+
+    <div class="timeline-step is-done">
+      <div class="timeline-bubble">✓</div>
+      <div class="timeline-label">Order Placed</div>
+      <div class="timeline-desc">Payment Verified &bull; Invoice Generated</div>
+    </div>
+
+    <div class="timeline-step {% if step_status == 'confirmed' %}is-current{% elsif step_status == 'in_transit' or step_status == 'delivered' %}is-done{% endif %}">
+      <div class="timeline-bubble">🌿</div>
+      <div class="timeline-label">Doctor Rx Review</div>
+      <div class="timeline-desc">Ayush Panel Verified &bull; Batch Approved</div>
+    </div>
+
+    <div class="timeline-step {% if step_status == 'packed' %}is-current{% elsif step_status == 'in_transit' or step_status == 'delivered' %}is-done{% endif %}">
+      <div class="timeline-bubble">📦</div>
+      <div class="timeline-label">Compounded &amp; Packed</div>
+      <div class="timeline-desc">Cold-Chain Insulated Amber Flask</div>
+    </div>
+
+    <div class="timeline-step {% if step_status == 'in_transit' %}is-current{% elsif step_status == 'delivered' %}is-done{% endif %}">
+      <div class="timeline-bubble">🚚</div>
+      <div class="timeline-label">Discreet Delivery</div>
+      <div class="timeline-desc">Air Courier Dispatch &bull; Tamper Sealed</div>
+    </div>
+  </div>
+</div>
+

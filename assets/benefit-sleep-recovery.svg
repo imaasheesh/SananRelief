@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sleep-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1B29"/>
+      <stop offset="45%" stop-color="#1A2D3D"/>
+      <stop offset="85%" stop-color="#1A4A4B"/>
+      <stop offset="100%" stop-color="#2D5859"/>
+    </linearGradient>
+    <radialGradient id="moon-glow" cx="75%" cy="22%" r="55%">
+      <stop offset="0%" stop-color="#EDE9FE" stop-opacity="0.85"/>
+      <stop offset="30%" stop-color="#C4B5FD" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#4338CA" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#1A2D3D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#sleep-grad)"/>
+  <rect width="100%" height="100%" fill="url(#moon-glow)"/>
+
+  <!-- Crescent Moon -->
+  <g transform="translate(420, 100)">
+    <circle cx="50" cy="50" r="42" fill="#FAF5FF"/>
+    <circle cx="36" cy="40" r="38" fill="#172737"/>
+  </g>
+
+  <!-- Constellations & Night Stars -->
+  <g fill="#FFFFFF" opacity="0.65">
+    <circle cx="120" cy="140" r="1.8"/>
+    <circle cx="160" cy="180" r="1.4"/>
+    <circle cx="210" cy="150" r="2.2"/>
+    <circle cx="280" cy="200" r="1.5"/>
+    <circle cx="320" cy="130" r="2"/>
+    <circle cx="100" cy="280" r="1.6"/>
+    <circle cx="220" cy="320" r="1.4"/>
+    <circle cx="360" cy="270" r="1.8"/>
+  </g>
+
+  <!-- Restful Sleeping Silhouette & Cozy Pillows -->
+  <g fill="#0D1924" opacity="0.95">
+    <!-- Bed / Soft mattress curves -->
+    <path d="M 0 520 C 150 490 320 540 600 480 L 600 750 L 0 750 Z"/>
+    <!-- Pillow folds -->
+    <ellipse cx="280" cy="480" rx="130" ry="45" fill="#142433"/>
+    <!-- Resting profile / Serene head on pillow -->
+    <circle cx="310" cy="450" r="30" fill="#1C3042"/>
+    <path d="M 290 470 C 270 510 240 550 200 580 C 260 590 340 570 420 550 C 440 530 400 490 350 475 Z" fill="#182A3A"/>
+    <!-- Soft Linen Blanket Waves -->
+    <path d="M 0 560 Q 180 510 320 570 Q 460 630 600 550 L 600 750 L 0 750 Z" fill="#0B151F"/>
+  </g>
+
+  <!-- Botanical Lavender & Chamomile Silhouettes -->
+  <g fill="#070E15" opacity="0.9">
+    <path d="M 0 750 Q 60 620 120 540 C 95 570 65 640 40 750 Z"/>
+    <path d="M 50 750 Q 110 600 180 510 C 160 550 130 620 100 750 Z"/>
+    <!-- Lavender sprigs -->
+    <ellipse cx="120" cy="535" rx="5" ry="3.5" fill="#5B4870"/>
+    <ellipse cx="126" cy="538" rx="4.5" ry="3" fill="#6E5685"/>
+    <ellipse cx="115" cy="546" rx="5" ry="3.5" fill="#4B3B5C"/>
+    <ellipse cx="121" cy="550" rx="5" ry="3.5" fill="#5B4870"/>
+    <ellipse cx="180" cy="505" rx="5.5" ry="4" fill="#6E5685"/>
+    <ellipse cx="188" cy="508" rx="5" ry="3.5" fill="#7C6295"/>
+    <ellipse cx="174" cy="516" rx="5.5" ry="4" fill="#5B4870"/>
+  </g>
+</svg>

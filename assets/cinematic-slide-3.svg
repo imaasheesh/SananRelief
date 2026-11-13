@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="earthBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#211710"/>
+      <stop offset="40%" stop-color="#362518"/>
+      <stop offset="80%" stop-color="#4F3826"/>
+      <stop offset="100%" stop-color="#18110B"/>
+    </linearGradient>
+    <radialGradient id="sunbeam" cx="75%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#FFE0B2" stop-opacity="0.85"/>
+      <stop offset="35%" stop-color="#E2B176" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#A56E38" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#211710" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mortarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4D3F35"/>
+      <stop offset="60%" stop-color="#2E241E"/>
+      <stop offset="100%" stop-color="#18120D"/>
+    </linearGradient>
+    <linearGradient id="rootGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E5BE82"/>
+      <stop offset="50%" stop-color="#C29452"/>
+      <stop offset="100%" stop-color="#8F6327"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#earthBg)"/>
+
+  <!-- Golden hour sunbeam -->
+  <circle cx="850" cy="220" r="380" fill="url(#sunbeam)"/>
+
+  <!-- Dappled shadow shapes across background -->
+  <g fill="#140D09" opacity="0.4" transform="translate(450, -50)">
+    <path d="M120,40 C220,100 280,240 250,380 C180,290 120,200 60,140 Z"/>
+    <path d="M260,20 C360,90 400,220 370,350 C300,270 240,190 200,120 Z"/>
+    <path d="M380,10 C470,80 500,200 480,310 C410,240 370,160 320,90 Z"/>
+  </g>
+
+  <!-- Rustic Stone Plinth Surface -->
+  <path d="M0,510 Q350,490 700,515 T1200,500 L1200,675 L0,675 Z" fill="#1E150F"/>
+  <path d="M0,510 Q350,490 700,515 T1200,500 L1200,518 Q850,530 500,515 T0,528 Z" fill="#3D2D22" opacity="0.6"/>
+
+  <!-- Ancient Carved Stone Mortar & Pestle -->
+  <g transform="translate(680, 310)">
+    <!-- Mortar base bowl -->
+    <path d="M-90,160 C-105,100 -95,40 -40,30 L40,30 C95,40 105,100 90,160 C80,200 -80,200 -90,160 Z" fill="url(#mortarGrad)" stroke="#5E4F43" stroke-width="2"/>
+    <ellipse cx="0" cy="35" rx="75" ry="24" fill="#251C16" stroke="#5E4F43" stroke-width="2"/>
+
+    <!-- Ground Ashwagandha Herbal Powder in Mortar -->
+    <ellipse cx="0" cy="40" rx="58" ry="16" fill="#DDB678" opacity="0.85"/>
+
+    <!-- Carved Heavy Stone Pestle resting at an angle -->
+    <path d="M-20,-80 L15,-70 L-5,70 L-35,60 Z" fill="url(#mortarGrad)" stroke="#5E4F43" stroke-width="2" transform="rotate(22, 0, 0)"/>
+  </g>
+
+  <!-- Dried Raw Ashwagandha Roots around base -->
+  <g transform="translate(520, 480)">
+    <!-- Root 1 -->
+    <path d="M-70,30 Q-20,10 40,25 T140,18" fill="none" stroke="url(#rootGold)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M10,22 Q50,40 90,32" fill="none" stroke="url(#rootGold)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Root 2 -->
+    <path d="M20,40 Q90,55 170,42 T260,50" fill="none" stroke="url(#rootGold)" stroke-width="12" stroke-linecap="round"/>
+    <!-- Cinnamon bark stick -->
+    <path d="M180,28 L300,10 L308,22 L188,40 Z" fill="#6B371B" stroke="#4A230F" stroke-width="2"/>
+    <ellipse cx="304" cy="16" rx="4" ry="6" fill="#8C4924"/>
+  </g>
+
+  <!-- Fresh Botanical Sprigs with berries (Ashwagandha Withania Somnifera) -->
+  <g transform="translate(930, 380)">
+    <!-- Stems -->
+    <path d="M0,150 Q-30,60 20,-20" fill="none" stroke="#3D5A40" stroke-width="4"/>
+    <!-- Green leaves -->
+    <ellipse cx="35" cy="-10" rx="22" ry="10" fill="#4E7552" transform="rotate(-30, 35, -10)"/>
+    <ellipse cx="-15" cy="40" rx="26" ry="12" fill="#3D5F41" transform="rotate(20, -15, 40)"/>
+    <ellipse cx="25" cy="90" rx="28" ry="13" fill="#4E7552" transform="rotate(-15, 25, 90)"/>
+    <!-- Red calyx berries -->
+    <circle cx="15" cy="-25" r="9" fill="#D34836"/>
+    <circle cx="17" cy="-27" r="2.5" fill="#FFA590"/>
+    <circle cx="-5" cy="25" r="8" fill="#C23E2D"/>
+  </g>
+
+  <!-- Floating golden dust spores -->
+  <circle cx="780" cy="270" r="2.5" fill="#FFEAA8" opacity="0.8"/>
+  <circle cx="840" cy="320" r="2" fill="#FFEAA8" opacity="0.6"/>
+  <circle cx="700" cy="340" r="1.5" fill="#FFEAA8" opacity="0.7"/>
+  <circle cx="910" cy="240" r="3" fill="#FFEAA8" opacity="0.85"/>
+</svg>
+

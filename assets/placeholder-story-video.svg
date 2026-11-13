@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 860" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgStory" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8EFE9"/>
+      <stop offset="40%" stop-color="#F2EFE8"/>
+      <stop offset="80%" stop-color="#DEE7E2"/>
+      <stop offset="100%" stop-color="#CCD9D3"/>
+    </linearGradient>
+    <radialGradient id="sunbeam" cx="80%" cy="15%" r="65%">
+      <stop offset="0%" stop-color="#FFFDF7" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#FAF4E8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FAF4E8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base with Sunlight -->
+  <rect width="540" height="860" fill="url(#bgStory)"/>
+  <rect width="540" height="860" fill="url(#sunbeam)"/>
+
+  <!-- Balcony railing lines in background -->
+  <g stroke="#C8D4CE" stroke-width="2" opacity="0.6">
+    <line x1="0" y1="280" x2="540" y2="280"/>
+    <line x1="0" y1="360" x2="540" y2="360"/>
+    <line x1="60" y1="280" x2="60" y2="520"/>
+    <line x1="160" y1="280" x2="160" y2="520"/>
+    <line x1="260" y1="280" x2="260" y2="520"/>
+    <line x1="360" y1="280" x2="360" y2="520"/>
+    <line x1="460" y1="280" x2="460" y2="520"/>
+  </g>
+
+  <!-- Botanical Plant Leaves hanging from top and left -->
+  <g fill="#439798" opacity="0.25">
+    <path d="M0,0 C80,40 140,120 160,220 C110,180 50,130 0,110 Z"/>
+    <path d="M-20,90 C60,110 120,210 120,300 C80,240 30,190 -20,170 Z"/>
+    <path d="M500,0 C460,70 420,150 440,240 C470,170 510,120 540,90 Z"/>
+  </g>
+
+  <!-- Stylized Person Portrait / Silhouette Silhouette Holding Product -->
+  <g transform="translate(120, 240)">
+    <!-- Shoulders & Torso -->
+    <path d="M40,320 C50,220 90,190 150,190 C210,190 250,220 260,320 L270,440 L30,440 Z" fill="#6B7E76" opacity="0.85"/>
+    <path d="M120,190 L180,190 L165,240 L135,240 Z" fill="#E8D2BE"/>
+    
+    <!-- Face & Neck -->
+    <ellipse cx="150" cy="140" rx="65" ry="80" fill="#E8CBB3"/>
+    
+    <!-- Hair -->
+    <path d="M85,150 C75,60 140,50 170,50 C220,50 230,100 220,160 C205,110 180,95 150,95 C110,95 95,120 85,150 Z" fill="#2E2825"/>
+    <path d="M75,130 C70,170 80,220 95,260 C90,210 85,170 85,130 Z" fill="#2E2825"/>
+    <path d="M225,130 C230,170 220,220 205,260 C210,210 215,170 215,130 Z" fill="#2E2825"/>
+
+    <!-- Gentle Facial Features -->
+    <path d="M125,130 Q135,135 145,130" stroke="#7A5A4A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M165,130 Q175,135 185,130" stroke="#7A5A4A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M135,165 Q152,180 168,165" stroke="#9E4E4E" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- Hand holding product carton/bottle -->
+    <g transform="translate(185, 230)">
+      <!-- Herbal wellness package box -->
+      <rect x="0" y="0" width="75" height="110" rx="8" fill="#5A8874" filter="url(#softGlow)"/>
+      <rect x="8" y="10" width="59" height="90" rx="4" fill="#FAF6EE"/>
+      <!-- Label Graphic -->
+      <circle cx="37" cy="40" r="16" fill="#DEEAE2"/>
+      <path d="M37,28 C41,34 43,40 37,48 C31,40 33,34 37,28 Z" fill="#439798"/>
+      <rect x="20" y="65" width="35" height="4" rx="2" fill="#3D5A5A"/>
+      <rect x="24" y="73" width="27" height="3" rx="1.5" fill="#8AABAB"/>
+      <!-- Fingers wrapped around box -->
+      <ellipse cx="-4" cy="50" rx="8" ry="12" fill="#E8CBB3"/>
+      <ellipse cx="-4" cy="70" rx="8" ry="12" fill="#E8CBB3"/>
+    </g>
+  </g>
+
+  <!-- Ambient Bottom Vignette Gradient -->
+  <rect y="480" width="540" height="380" fill="url(#bgStory)" opacity="0.4"/>
+  <rect y="580" width="540" height="280" fill="linear-gradient(180deg, transparent 0%, rgba(15, 30, 32, 0.75) 100%)"/>
+</svg>

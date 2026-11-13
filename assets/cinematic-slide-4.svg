@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pressBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14211A"/>
+      <stop offset="40%" stop-color="#1E332A"/>
+      <stop offset="80%" stop-color="#2D4D3E"/>
+      <stop offset="100%" stop-color="#0E1712"/>
+    </linearGradient>
+    <radialGradient id="emeraldAura" cx="65%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#7AC9A8" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#439775" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#23523F" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#14211A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="oilStream" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EBF79E"/>
+      <stop offset="50%" stop-color="#93C942"/>
+      <stop offset="100%" stop-color="#427820"/>
+    </linearGradient>
+    <linearGradient id="amberDropper" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#733B10"/>
+      <stop offset="35%" stop-color="#B86D23"/>
+      <stop offset="70%" stop-color="#EB9E46"/>
+      <stop offset="100%" stop-color="#6B340B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#pressBg)"/>
+
+  <!-- Emerald botanical aura -->
+  <circle cx="750" cy="290" r="340" fill="url(#emeraldAura)"/>
+
+  <!-- Granite pressing table base -->
+  <path d="M0,530 L1200,510 L1200,675 L0,675 Z" fill="#0C1510"/>
+
+  <!-- Traditional Granite Cold-Press Churn & Spout -->
+  <g transform="translate(680, 180)">
+    <!-- Carved granite base block -->
+    <path d="M-80,330 L100,330 L120,240 L-100,240 Z" fill="#1C2E25" stroke="#375747" stroke-width="2"/>
+
+    <!-- Cold-press stone bowl -->
+    <ellipse cx="10" cy="240" rx="110" ry="32" fill="#14211A" stroke="#375747" stroke-width="2.5"/>
+
+    <!-- Rich whole hemp seeds heaped in press -->
+    <g fill="#423629" stroke="#2A2219" stroke-width="1">
+      <ellipse cx="-20" cy="235" rx="9" ry="6" transform="rotate(15, -20, 235)"/>
+      <ellipse cx="5" cy="230" rx="8" ry="5" transform="rotate(-30, 5, 230)"/>
+      <ellipse cx="30" cy="238" rx="9" ry="6" transform="rotate(45, 30, 238)"/>
+      <ellipse cx="-45" cy="240" rx="8" ry="5"/>
+      <ellipse cx="60" cy="235" rx="9" ry="6" transform="rotate(-10, 60, 235)"/>
+      <ellipse cx="15" cy="242" rx="8" ry="6" transform="rotate(25, 15, 242)"/>
+      <ellipse cx="-10" cy="245" rx="9" ry="5"/>
+      <ellipse cx="40" cy="244" rx="8" ry="6"/>
+    </g>
+
+    <!-- Stone Spout pouring raw green cold-pressed oil -->
+    <path d="M-55,255 L-85,290 L-70,295 L-45,260 Z" fill="#2E483A"/>
+    <!-- Flowing Stream of Oil -->
+    <path d="M-78,290 Q-76,360 -74,440" fill="none" stroke="url(#oilStream)" stroke-width="6" stroke-linecap="round"/>
+    <!-- Golden Oil Splashes and Ripples into Glass Beaker -->
+    <ellipse cx="-74" cy="440" rx="20" ry="7" fill="url(#oilStream)" opacity="0.8"/>
+  </g>
+
+  <!-- Large Apothecary Glass Dropper Bottle on Left of Table -->
+  <g transform="translate(420, 280)">
+    <!-- Amber Bottle Body -->
+    <rect x="-35" y="80" width="70" height="150" rx="14" fill="url(#amberDropper)"/>
+    <!-- Shoulder & Neck -->
+    <path d="M-35,80 Q-35,50 -12,45 L-12,20 L12,20 L12,45 Q35,50 35,80 Z" fill="url(#amberDropper)"/>
+    <!-- Black Ribbed Cap -->
+    <rect x="-16" y="5" width="32" height="18" rx="2" fill="#1C1B1A" stroke="#333" stroke-width="1"/>
+    <!-- Glass Pipette Tip with Drop -->
+    <rect x="-10" y="-15" width="20" height="20" rx="8" fill="#111"/>
+
+    <!-- Subtle luxury minimalist label -->
+    <rect x="-28" y="105" width="56" height="85" rx="3" fill="#F7F3EB" opacity="0.95"/>
+    <rect x="-24" y="115" width="48" height="2" fill="#2A3E38"/>
+    <text x="0" y="132" font-family="'DM Sans', sans-serif" font-size="7" font-weight="700" fill="#1A3331" text-anchor="middle" letter-spacing="1">SANAN RELIEF</text>
+    <text x="0" y="145" font-family="'DM Serif Display', serif" font-size="9" fill="#1A3331" text-anchor="middle">Vijaya Cold Press</text>
+    <rect x="-14" y="160" width="28" height="1" fill="#439798"/>
+    <text x="0" y="175" font-family="'DM Sans', sans-serif" font-size="6" fill="#666" text-anchor="middle">100% UNREFINED</text>
+  </g>
+
+  <!-- Fresh Hemp Fan Leaves draping over the scene -->
+  <g fill="#173125" opacity="0.9" transform="translate(850, 320)">
+    <path d="M0,0 C-40,-50 -70,-110 -80,-150 C-60,-110 -30,-60 0,0 Z"/>
+    <path d="M0,0 C-15,-60 -25,-140 -20,-190 C-5,-130 5,-70 0,0 Z"/>
+    <path d="M0,0 C15,-60 35,-130 50,-180 C40,-120 20,-60 0,0 Z"/>
+    <path d="M0,0 C35,-45 75,-95 105,-130 C75,-90 40,-45 0,0 Z"/>
+  </g>
+
+  <!-- Ambient light refractions -->
+  <circle cx="580" cy="460" r="3" fill="#D4F2AA" opacity="0.8"/>
+  <circle cx="620" cy="485" r="2" fill="#D4F2AA" opacity="0.6"/>
+  <circle cx="720" cy="400" r="2.5" fill="#FFFFFF" opacity="0.7"/>
+</svg>
+

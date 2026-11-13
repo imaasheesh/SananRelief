@@ -1,0 +1,138 @@
+{% comment %}
+  Dual Scrolling Marquee Text Section
+  Full-width kinetic text ticker with dual counter-scrolling rows (one LTR, one RTL),
+  featuring outlined stroke and solid bold typography.
+{% endcomment %}
+
+{{ 'storefront.css' | asset_url | stylesheet_tag }}
+
+<section class="dual-marquee-section section-{{ section.id }}-padding" id="Marquee-{{ section.id }}" style="background-color: {{ section.settings.bg_color | default: 'transparent' }};">
+  <div class="dual-marquee-container">
+
+    <!-- Row 1: Outlined Stroke Text (Scrolling Left to Right) -->
+    <div class="marquee-row marquee-row-outline" role="region" aria-label="Brand Highlights Ticker">
+      <div class="marquee-track marquee-track-ltr" style="animation-duration: {{ section.settings.speed_row_1 | default: 35 }}s;">
+        {%- capture row_1_text -%}
+          {%- if section.settings.row_1_text != blank -%}
+            {{ section.settings.row_1_text }}
+          {%- else -%}
+            <span>SUPERCRITICAL CO2 EXTRACTION</span>
+            <span class="marquee-bullet">•</span>
+            <span>MOLECULAR PURITY</span>
+            <span class="marquee-bullet">•</span>
+            <span>FULL-SPECTRUM VIJAYA</span>
+            <span class="marquee-bullet">•</span>
+            <span>ORGANIC BIO-ACTIVES</span>
+            <span class="marquee-bullet">•</span>
+            <span>STANDARDIZED POTENCY</span>
+            <span class="marquee-bullet">•</span>
+            <span>HERBAL ALCHEMY</span>
+            <span class="marquee-bullet">•</span>
+          {%- endif -%}
+        {%- endcapture -%}
+
+        <div class="marquee-content">
+          {{ row_1_text }}
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          {{ row_1_text }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: Solid Bold Text (Scrolling Right to Left) -->
+    <div class="marquee-row marquee-row-solid" role="region" aria-label="Brand Standards Ticker">
+      <div class="marquee-track marquee-track-rtl" style="animation-duration: {{ section.settings.speed_row_2 | default: 32 }}s;">
+        {%- capture row_2_text -%}
+          {%- if section.settings.row_2_text != blank -%}
+            {{ section.settings.row_2_text }}
+          {%- else -%}
+            <span>CLINICAL VALIDATION</span>
+            <span class="marquee-bullet">•</span>
+            <span>REGULATORY COMPLIANCE</span>
+            <span class="marquee-bullet">•</span>
+            <span>AYUSH LICENSED</span>
+            <span class="marquee-bullet">•</span>
+            <span>GMP CERTIFIED</span>
+            <span class="marquee-bullet">•</span>
+            <span>100% PLANT-BASED</span>
+            <span class="marquee-bullet">•</span>
+            <span>THIRD-PARTY TESTED</span>
+            <span class="marquee-bullet">•</span>
+          {%- endif -%}
+        {%- endcapture -%}
+
+        <div class="marquee-content">
+          {{ row_2_text }}
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          {{ row_2_text }}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Dual Scrolling Text",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Row 1 (Outlined Stroke - Left to Right)"
+    },
+    {
+      "type": "textarea",
+      "id": "row_1_text",
+      "label": "Row 1 Text HTML",
+      "info": "Leave blank to use default botanical statements."
+    },
+    {
+      "type": "range",
+      "id": "speed_row_1",
+      "min": 15,
+      "max": 60,
+      "step": 5,
+      "unit": "s",
+      "label": "Scroll Duration Row 1",
+      "default": 35
+    },
+    {
+      "type": "header",
+      "content": "Row 2 (Solid Bold - Right to Left)"
+    },
+    {
+      "type": "textarea",
+      "id": "row_2_text",
+      "label": "Row 2 Text HTML",
+      "info": "Leave blank to use default clinical compliance statements."
+    },
+    {
+      "type": "range",
+      "id": "speed_row_2",
+      "min": 15,
+      "max": 60,
+      "step": 5,
+      "unit": "s",
+      "label": "Scroll Duration Row 2",
+      "default": 30
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dual Scrolling Text",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}
+

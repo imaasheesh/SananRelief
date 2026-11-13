@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button & Glassmorphic System — Sanan Relief</title>
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../assets/theme-tokens.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      background-color: #F0F6F5;
+      color: var(--color-text-primary);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ─── AMBIENT BACKGROUND GLOW ORBS (to highlight frosted glass blur) ─── */
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.55;
+      animation: floatOrb 18s ease-in-out infinite alternate;
+    }
+    .orb-teal-1 {
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, #5BBCBD 0%, #439798 70%);
+      top: -120px;
+      left: -80px;
+    }
+    .orb-red-1 {
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, #E87A79 0%, #A92827 80%);
+      top: 25%;
+      right: -100px;
+      animation-duration: 22s;
+      animation-delay: -5s;
+    }
+    .orb-teal-2 {
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, #6DCECF 0%, #357C7D 80%);
+      bottom: 10%;
+      left: 15%;
+      animation-duration: 26s;
+      animation-delay: -10s;
+    }
+    .orb-soft-1 {
+      width: 380px;
+      height: 380px;
+      background: #D4E8E8;
+      top: 60%;
+      right: 25%;
+    }
+
+    @keyframes floatOrb {
+      0%   { transform: translate(0, 0) scale(1); }
+      50%  { transform: translate(40px, 30px) scale(1.08); }
+      100% { transform: translate(-30px, 60px) scale(0.95); }
+    }
+
+    /* ─── GLASSMORPHIC NAV ─── */
+    .nav {
+      background: var(--glass-bg-light);
+      backdrop-filter: blur(var(--glass-blur-lg)) saturate(180%);
+      -webkit-backdrop-filter: blur(var(--glass-blur-lg)) saturate(180%);
+      border-bottom: 1px solid var(--glass-border-light);
+      box-shadow: var(--glass-shadow-sm), var(--glass-inner-glow);
+      display: flex;
+      align-items: center;
+      padding: 0 2.5rem;
+      height: 68px;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .nav img { height: 42px; }
+    .nav-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 50px;
+      background: var(--glass-bg-teal);
+      color: #2D6E6F;
+      border: 1px solid var(--glass-border-teal);
+    }
+    .nav-links { display: flex; gap: 1.5rem; margin-left: auto; align-items: center; }
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--color-primary); }
+
+    /* ─── PAGE WRAPPER ─── */
+    .page {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── HERO BANNER (FROSTED GLASS CARD) ─── */
+    .hero {
+      background: linear-gradient(135deg, rgba(26, 74, 75, 0.88) 0%, rgba(45, 110, 111, 0.82) 50%, rgba(67, 151, 152, 0.78) 100%);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 20px 50px rgba(22, 42, 55, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+      border-radius: 24px;
+      padding: 3.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      right: -40px; top: -60px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-logo img { height: 90px; filter: brightness(0) invert(1); opacity: 0.95; }
+    .hero-text { flex: 1; }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: white;
+      line-height: 1.12;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+    .hero-title em { font-style: italic; color: #A8E8E8; }
+    .hero-sub {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1.75rem;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+    .hero-actions { display: flex; gap: 0.85rem; flex-wrap: wrap; }
+
+    /* ─── GLASS PANEL WRAPPER ─── */
+    .glass-card-main {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(24px) saturate(170%);
+      -webkit-backdrop-filter: blur(24px) saturate(170%);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 16px 40px rgba(26, 74, 75, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+      border-radius: 24px;
+      padding: 2.5rem 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ─── HEADER ROW ─── */
+    .page-header {
+      display: grid;
+      grid-template-columns: 1.2fr 1.1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(212, 232, 232, 0.6);
+    }
+    .page-header-left .brand {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-primary-dark);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .page-header-left h1 {
+      font-family: var(--font-heading);
+      font-size: 2.85rem;
+      font-weight: 400;
+      color: #1A3333;
+      line-height: 1.1;
+    }
+    .page-header-left p { font-size: 1rem; color: var(--color-text-muted); margin-top: 0.35rem; }
+    .tagline-bar {
+      display: flex; gap: 6px; margin-top: 1rem;
+    }
+    .tagline-bar span { display: block; height: 3px; width: 28px; border-radius: 2px; }
+    .bar-teal { background: var(--color-primary); }
+    .bar-red  { background: var(--color-accent); }
+
+    .page-header-desc {
+      color: var(--color-text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      padding-top: 0.75rem;
+    }
+
+    /* ─── GLASS COLOR CHIPS ─── */
+    .color-chips {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: flex-end;
+    }
+    .color-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 14px;
+      padding: 0.65rem 1.1rem;
+      box-shadow: 0 4px 16px rgba(26, 74, 75, 0.06), inset 0 1px 1px white;
+      min-width: 200px;
+    }
+    .chip-swatch {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    }
+    .chip-hex { font-size: 0.95rem; font-weight: 700; font-family: monospace; color: #1A3333; }
+    .chip-name { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text-muted); }
+    .chip-desc { font-size: 0.68rem; color: var(--color-text-muted); margin-top: 1px; }
+
+    /* ─── SECTION ROW ─── */
+    .btn-section {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(212, 232, 232, 0.5);
+    }
+    .section-meta .section-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 0.35rem;
+    }
+    .section-meta h2 { font-size: 1.15rem; font-weight: 700; color: #1A3333; margin-bottom: 0.35rem; }
+    .section-meta p  { font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5; }
+
+    .btn-states {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      align-items: center;
+    }
+    .btn-state { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+    .state-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #8AABAB;
+      font-weight: 600;
+    }
+
+    /* ─── ENHANCED BUTTON SYSTEM WITH TACTILE HOVER ENGINE ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      height: 2.875rem;
+      padding: 0 1.75rem;
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      outline: none;
+      white-space: nowrap;
+      text-decoration: none;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      transition: 
+        color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        background 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    /* Animated chevron */
+    .btn .chevron {
+      display: inline-block;
+      font-style: normal;
+      font-size: 0.9em;
+      line-height: 1;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn:hover:not(:disabled) .chevron,
+    .btn.hover .chevron {
+      transform: translateX(4px);
+    }
+
+    /* Specular light sweep reflection overlay */
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.32) 50%,
+        transparent 100%
+      );
+      transform: skewX(-25deg);
+      pointer-events: none;
+      z-index: 1;
+      transition: left 0.75s ease;
+    }
+    .btn:hover:not(:disabled)::after {
+      left: 160%;
+    }
+
+    /* 1. PRIMARY — Teal gradient with illuminated ambient glow */
+    .btn-primary {
+      background: linear-gradient(135deg, #5BBCBD 0%, #439798 55%, #357C7D 100%);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px 0 rgba(67, 151, 152, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.45);
+    }
+    .btn-primary:hover:not(:disabled),
+    .btn-primary.hover {
+      background: linear-gradient(135deg, #6ED5D6 0%, #4FA6A7 55%, #3C8A8B 100%);
+      box-shadow: 0 10px 28px -2px rgba(67, 151, 152, 0.55), 0 0 16px 2px rgba(91, 188, 189, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.75);
+      transform: translateY(-2.5px) scale(1.015);
+    }
+    .btn-primary:active:not(:disabled),
+    .btn-primary.pressed {
+      background: linear-gradient(135deg, #2D6E6F 0%, #1E5859 100%);
+      box-shadow: 0 2px 8px 0 rgba(67, 151, 152, 0.25), inset 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+      transform: translateY(1px) scale(0.985);
+    }
+    .btn-primary.disabled,
+    .btn-primary:disabled {
+      background: rgba(200, 222, 222, 0.6);
+      color: #8AABAB;
+      box-shadow: none !important;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    /* 2. SECONDARY / ACCENT — Soft frosted pink transforms to illuminated glowing red on hover */
+    .btn-accent {
+      background: rgba(250, 234, 234, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #A92827;
+      border: 1.5px solid rgba(232, 180, 180, 0.75);
+      box-shadow: 0 3px 12px 0 rgba(169, 40, 39, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+    }
+    .btn-accent:hover:not(:disabled),
+    .btn-accent.hover {
+      background: linear-gradient(135deg, #DE5352 0%, #A92827 60%, #8A1E1D 100%);
+      color: #FFFFFF;
+      border-color: transparent;
+      box-shadow: 0 10px 28px -2px rgba(169, 40, 39, 0.50), 0 0 16px 2px rgba(222, 83, 82, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.65);
+      transform: translateY(-2.5px) scale(1.015);
+    }
+    .btn-accent:active:not(:disabled),
+    .btn-accent.pressed {
+      background: linear-gradient(135deg, #8A1E1D 0%, #6E1514 100%);
+      color: #FFFFFF;
+      border-color: transparent;
+      box-shadow: 0 2px 8px 0 rgba(169, 40, 39, 0.25);
+      transform: translateY(1px) scale(0.985);
+    }
+    .btn-accent.disabled,
+    .btn-accent:disabled {
+      background: rgba(253, 240, 240, 0.5);
+      color: #DDB8B8;
+      border-color: rgba(237, 206, 206, 0.5);
+      box-shadow: none !important;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    /* 3. OUTLINE TEAL — Frosted Glass with Illuminated Teal Glow */
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #439798;
+      border: 1.5px solid #439798;
+      box-shadow: 0 2px 10px 0 rgba(67, 151, 152, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
+    }
+    .btn-outline:hover:not(:disabled),
+    .btn-outline.hover {
+      background: rgba(230, 246, 246, 0.92);
+      color: #2D6E6F;
+      border-color: #357C7D;
+      box-shadow: 0 8px 24px -2px rgba(67, 151, 152, 0.28), inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+      transform: translateY(-2.5px) scale(1.015);
+    }
+    .btn-outline:active:not(:disabled),
+    .btn-outline.pressed {
+      background: #439798;
+      color: #FFFFFF;
+      border-color: #439798;
+      box-shadow: 0 2px 8px 0 rgba(67, 151, 152, 0.2);
+      transform: translateY(1px) scale(0.985);
+    }
+    .btn-outline.disabled,
+    .btn-outline:disabled {
+      background: rgba(255, 255, 255, 0.4);
+      color: #AACCCC;
+      border-color: rgba(200, 222, 222, 0.6);
+      box-shadow: none !important;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    /* 4. OUTLINE ACCENT RED — Frosted Glass with Red Glow */
+    .btn-outline-accent {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #A92827;
+      border: 1.5px solid #A92827;
+      box-shadow: 0 2px 10px 0 rgba(169, 40, 39, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
+    }
+    .btn-outline-accent:hover:not(:disabled),
+    .btn-outline-accent.hover {
+      background: rgba(254, 240, 240, 0.92);
+      color: #841E1D;
+      border-color: #C94342;
+      box-shadow: 0 8px 24px -2px rgba(169, 40, 39, 0.25), inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+      transform: translateY(-2.5px) scale(1.015);
+    }
+    .btn-outline-accent:active:not(:disabled),
+    .btn-outline-accent.pressed {
+      background: #A92827;
+      color: #FFFFFF;
+      border-color: #A92827;
+      box-shadow: 0 2px 8px 0 rgba(169, 40, 39, 0.2);
+      transform: translateY(1px) scale(0.985);
+    }
+    .btn-outline-accent.disabled,
+    .btn-outline-accent:disabled {
+      background: rgba(255, 255, 255, 0.4);
+      color: #DDB8B8;
+      border-color: rgba(237, 206, 206, 0.6);
+      box-shadow: none !important;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    /* 5. TEXT BUTTON */
+    .btn-text {
+      background: transparent;
+      color: #439798;
+      border: none;
+      padding: 0 0.5rem;
+      height: auto;
+      border-radius: 4px;
+      position: relative;
+    }
+    .btn-text::before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0.5rem;
+      right: 0.5rem;
+      height: 2px;
+      background: #439798;
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-text:hover:not(:disabled)::before,
+    .btn-text.hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    .btn-text:hover:not(:disabled),
+    .btn-text.hover {
+      color: #2D6E6F;
+      transform: translateX(3px);
+    }
+    .btn-text:active:not(:disabled),
+    .btn-text.pressed {
+      color: #1A4A4B;
+      font-weight: 700;
+    }
+    .btn-text.disabled,
+    .btn-text:disabled {
+      color: #AACCCC;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    /* 5. TEXT BUTTON */
+    .btn-text { background: transparent; color: #439798; border: none; padding: 0 0.5rem; height: auto; }
+    .btn-text.hover, .btn-text:hover { color: #357C7D; transform: translateX(2px); }
+    .btn-text.pressed, .btn-text:active { color: #2D6E6F; font-weight: 700; }
+    .btn-text.disabled { color: #AACCCC; cursor: not-allowed; }
+
+    /* ─── BOTTOM ROW (Shapes & Icons) ─── */
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      padding: 2.5rem 0 0;
+    }
+    .sub-section h3 {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 0.35rem;
+    }
+    .sub-section h4 { font-size: 1.05rem; font-weight: 700; color: #1A3333; margin-bottom: 0.3rem; }
+    .sub-section p  { font-size: 0.78rem; color: var(--color-text-muted); margin-bottom: 1rem; line-height: 1.4; }
+
+    /* Shapes with Glass Glow */
+    .shapes-row { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+    .shape {
+      border-radius: 14px;
+      height: 46px;
+      width: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+    .shape:hover { transform: translateY(-2px); }
+    .shape-labels { display: flex; gap: 0.75rem; margin-top: 0.4rem; }
+    .shape-label  { font-size: 0.62rem; text-align: center; color: var(--color-text-muted); width: 72px; font-weight: 600; }
+
+    /* Frosted Icon buttons */
+    .icon-btn-row { display: flex; gap: 0.75rem; align-items: center; }
+    .icon-state   { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+    .icon-state .state-label { font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8AABAB; }
+    .icon-btn {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #439798;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
+      position: relative;
+      box-shadow: 0 4px 12px rgba(26, 74, 75, 0.06), inset 0 1px 1px white;
+    }
+    .icon-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(67, 151, 152, 0.2);
+    }
+    .icon-btn.active-teal {
+      background: linear-gradient(135deg, #5BBCBD 0%, #439798 100%);
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 6px 16px rgba(67, 151, 152, 0.35);
+    }
+    .icon-btn.active-red {
+      background: linear-gradient(135deg, #C94342 0%, #A92827 100%);
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 6px 16px rgba(169, 40, 39, 0.3);
+    }
+    .icon-btn .badge-count {
+      position: absolute;
+      top: -3px; right: -3px;
+      width: 17px; height: 17px;
+      background: #439798;
+      color: white;
+      border-radius: 50%;
+      font-size: 0.55rem;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700;
+      border: 1.5px solid white;
+    }
+
+    /* Icon+Text buttons */
+    .icon-text-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .btn-icon-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      height: 2.875rem;
+      padding: 0 1.5rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .btn-icon-text.teal {
+      background: linear-gradient(135deg, #5BBCBD 0%, #439798 100%);
+      color: white;
+      box-shadow: 0 6px 16px rgba(67,151,152,0.35), inset 0 1px 1px rgba(255,255,255,0.4);
+    }
+    .btn-icon-text.teal:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(67,151,152,0.45); }
+    .btn-icon-text.red {
+      background: linear-gradient(135deg, #C94342 0%, #A92827 100%);
+      color: white;
+      box-shadow: 0 6px 16px rgba(169,40,39,0.35), inset 0 1px 1px rgba(255,255,255,0.4);
+    }
+    .btn-icon-text.red:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(169,40,39,0.45); }
+
+    /* ─── DEDICATED GLASSMORPHIC SHOWCASE SECTION ─── */
+    .glass-showcase {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(212, 232, 232, 0.6);
+    }
+    .glass-showcase-title {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 400;
+      color: #1A3333;
+      margin-bottom: 0.5rem;
+    }
+    .glass-showcase-sub {
+      color: var(--color-text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    .glass-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+    .glass-product-card {
+      background: rgba(255, 255, 255, 0.68);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 1.75rem;
+      box-shadow: 0 14px 34px rgba(26, 74, 75, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .glass-product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(26, 74, 75, 0.14), inset 0 1px 2px white;
+      border-color: rgba(67, 151, 152, 0.4);
+    }
+    .card-media-box {
+      height: 180px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(67, 151, 152, 0.15) 0%, rgba(26, 74, 75, 0.1) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-badge-floating {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      padding: 0.25rem 0.65rem;
+      border-radius: 50px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #439798;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .glass-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      color: #1A3333;
+    }
+    .glass-card-price {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .price-now { font-size: 1.2rem; font-weight: 700; color: #439798; }
+    .price-was { font-size: 0.85rem; text-decoration: line-through; color: #8AABAB; }
+
+    /* Dark Glass Card */
+    .glass-dark-card {
+      background: rgba(26, 74, 75, 0.82);
+      backdrop-filter: blur(24px) saturate(190%);
+      -webkit-backdrop-filter: blur(24px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      padding: 2rem;
+      color: white;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .glass-dark-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .glass-dark-card p {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- AMBIENT GLOW ORBS (Showcases backdrop-filter blur) -->
+<div class="ambient-bg">
+  <div class="orb orb-teal-1"></div>
+  <div class="orb orb-red-1"></div>
+  <div class="orb orb-teal-2"></div>
+  <div class="orb orb-soft-1"></div>
+</div>
+
+<!-- GLASS NAV -->
+<nav class="nav">
+  <a href="#" class="nav-brand">
+    <img src="../assets/logo.png" alt="Sanan Relief">
+    <span class="nav-badge">Glass Edition</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Buttons &amp; Glass</a>
+    <a href="icons.html">Icons</a>
+    <a href="typography.html">Type</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO (FROSTED GLASS CONTAINER) -->
+  <div class="hero">
+    <div class="hero-logo"><img src="../assets/logo.png" alt="Sanan Relief"></div>
+    <div class="hero-text">
+      <p class="hero-eyebrow">✨ Sanan Relief · Design System</p>
+      <h1 class="hero-title">Feel Better,<br><em>Naturally.</em></h1>
+      <p class="hero-sub">Organic shapes, soft gradients, and translucent glassmorphism crafted for a calm, trustworthy wellness experience.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary">Shop Now <i class="chevron">›</i></button>
+        <button class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.45);background:rgba(255,255,255,0.12)">Explore Range <i class="chevron">›</i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN FROSTED GLASS CONTAINER -->
+  <div class="glass-card-main">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="page-header-left">
+        <p class="brand">Sanan Relief</p>
+        <h1>Button System</h1>
+        <p>Calm. Modern. Trustworthy.</p>
+        <div class="tagline-bar">
+          <span class="bar-teal"></span>
+          <span class="bar-red"></span>
+        </div>
+      </div>
+      <div class="page-header-desc">
+        Soft gradients, translucent surfaces, and organic squircle shapes engineered with modern CSS glassmorphism.
+      </div>
+      <div class="color-chips">
+        <div class="color-chip">
+          <div class="chip-swatch" style="background:#439798"></div>
+          <div class="chip-info">
+            <div class="chip-hex">#439798</div>
+            <div class="chip-name">Primary Teal</div>
+            <div class="chip-desc">Trust · Health · Calm</div>
+          </div>
+        </div>
+        <div class="color-chip">
+          <div class="chip-swatch" style="background:#A92827"></div>
+          <div class="chip-info">
+            <div class="chip-hex">#A92827</div>
+            <div class="chip-name">Accent Red</div>
+            <div class="chip-desc">Care · Energy · Alert</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── LIVE INTERACTIVE HOVER PLAYGROUND ─── -->
+    <div style="background: rgba(255,255,255,0.7); backdrop-filter: blur(16px); border: 1.5px solid rgba(67, 151, 152, 0.3); border-radius: 18px; padding: 1.5rem 2rem; margin-bottom: 2rem; box-shadow: 0 8px 24px rgba(26, 74, 75, 0.06);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem; flex-wrap:wrap; gap:0.5rem;">
+        <div>
+          <span style="font-size:0.65rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#439798;">Interactive Testing Area</span>
+          <h3 style="font-size:1.15rem; font-weight:700; color:#1A3333; margin-top:2px;">Hover &amp; Click Live Buttons</h3>
+        </div>
+        <span style="font-size:0.75rem; color:#8AABAB; background:rgba(67,151,152,0.1); padding:0.25rem 0.75rem; border-radius:50px; border:1px solid rgba(67,151,152,0.2);">✨ Light sweep · Ambient glow · Arrow slide · Tactile press</span>
+      </div>
+      <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+        <button class="btn btn-primary">Shop Now <i class="chevron">›</i></button>
+        <button class="btn btn-accent">Explore Products <i class="chevron">›</i></button>
+        <button class="btn btn-outline">Learn More <i class="chevron">›</i></button>
+        <button class="btn btn-outline-accent">View Offers <i class="chevron">›</i></button>
+        <button class="btn btn-text">Read Guide <i class="chevron">›</i></button>
+        <button class="btn-icon-text teal">🛒 Add to Cart <i class="chevron">›</i></button>
+      </div>
+    </div>
+
+    <!-- 1. PRIMARY BUTTONS -->
+    <div class="btn-section" id="buttons">
+      <div class="section-meta">
+        <p class="section-label">Primary Buttons</p>
+        <h2>Main Actions</h2>
+        <p>Key actions like Shop Now, Add to Cart, Book Consultation.</p>
+      </div>
+      <div class="btn-states">
+        <div class="btn-state">
+          <button class="btn btn-primary">Shop Now <i class="chevron">›</i></button>
+          <span class="state-label">Default</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-primary hover">Shop Now <i class="chevron">›</i></button>
+          <span class="state-label">Hover</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-primary pressed">Shop Now <i class="chevron">›</i></button>
+          <span class="state-label">Pressed</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-primary disabled" disabled>Shop Now <i class="chevron">›</i></button>
+          <span class="state-label">Disabled</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. SECONDARY / ACCENT BUTTONS -->
+    <div class="btn-section">
+      <div class="section-meta">
+        <p class="section-label">Secondary Buttons</p>
+        <h2>Accent Actions</h2>
+        <p>Translucent glass red for offers, campaigns and highlights.</p>
+      </div>
+      <div class="btn-states">
+        <div class="btn-state">
+          <button class="btn btn-accent">Explore Products <i class="chevron">›</i></button>
+          <span class="state-label">Default</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-accent hover">Explore Products <i class="chevron">›</i></button>
+          <span class="state-label">Hover</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-accent pressed">Explore Products <i class="chevron">›</i></button>
+          <span class="state-label">Pressed</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-accent disabled" disabled>Explore Products <i class="chevron">›</i></button>
+          <span class="state-label">Disabled</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. OUTLINE TEAL -->
+    <div class="btn-section">
+      <div class="section-meta">
+        <p class="section-label">Outline Buttons</p>
+        <h2>Supporting Actions</h2>
+        <p>Glass-backed outlines for secondary navigation.</p>
+      </div>
+      <div class="btn-states">
+        <div class="btn-state">
+          <button class="btn btn-outline">Learn More <i class="chevron">›</i></button>
+          <span class="state-label">Default</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-outline hover">Learn More <i class="chevron">›</i></button>
+          <span class="state-label">Hover</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-outline pressed">Learn More <i class="chevron">›</i></button>
+          <span class="state-label">Pressed</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-outline disabled" disabled>Learn More <i class="chevron">›</i></button>
+          <span class="state-label">Disabled</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. OUTLINE ACCENT RED -->
+    <div class="btn-section">
+      <div class="section-meta">
+        <p class="section-label">Outline Accent Buttons</p>
+        <h2>Highlight Outline</h2>
+        <p>For offers, alerts and low-emphasis actions.</p>
+      </div>
+      <div class="btn-states">
+        <div class="btn-state">
+          <button class="btn btn-outline-accent">View Offers <i class="chevron">›</i></button>
+          <span class="state-label">Default</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-outline-accent hover">View Offers <i class="chevron">›</i></button>
+          <span class="state-label">Hover</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-outline-accent pressed">View Offers <i class="chevron">›</i></button>
+          <span class="state-label">Pressed</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-outline-accent disabled" disabled>View Offers <i class="chevron">›</i></button>
+          <span class="state-label">Disabled</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. TEXT BUTTONS -->
+    <div class="btn-section" style="border-bottom:none">
+      <div class="section-meta">
+        <p class="section-label">Text Buttons</p>
+        <h2>Inline Actions</h2>
+        <p>For in-content links and subtle navigation.</p>
+      </div>
+      <div class="btn-states">
+        <div class="btn-state">
+          <button class="btn btn-text">Shop Now <i class="chevron">›</i></button>
+          <span class="state-label">Default</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-text hover" style="color:#357C7D">Shop Now <i class="chevron">›</i></button>
+          <span class="state-label">Hover</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-text pressed" style="color:#2D6E6F;font-weight:700">Shop Now <i class="chevron">›</i></button>
+          <span class="state-label">Pressed</span>
+        </div>
+        <div class="btn-state">
+          <button class="btn btn-text disabled" style="color:#AACCCC" disabled>Shop Now <i class="chevron">›</i></button>
+          <span class="state-label">Disabled</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM GRID -->
+    <div class="bottom-grid" id="shapes">
+      <!-- SHAPES -->
+      <div class="sub-section">
+        <h3>Button Shapes</h3>
+        <h4>Squircle Variations</h4>
+        <p>Consistent rounded shape with soft diffusion.</p>
+        <div class="shapes-row">
+          <div class="shape" style="background:#439798"></div>
+          <div class="shape" style="background:#A8D4D4"></div>
+          <div class="shape" style="background:#2D6E6F"></div>
+          <div class="shape" style="background:#A92827"></div>
+          <div class="shape" style="background:#E8AAAA"></div>
+        </div>
+        <div class="shape-labels">
+          <span class="shape-label">Primary</span>
+          <span class="shape-label">Soft</span>
+          <span class="shape-label">Dark</span>
+          <span class="shape-label">Accent</span>
+          <span class="shape-label">Soft Accent</span>
+        </div>
+      </div>
+
+      <!-- ICON BUTTONS -->
+      <div class="sub-section">
+        <h3>Icon Buttons</h3>
+        <h4>Frosted Glass Actions</h4>
+        <p>Translucent glass buttons with inner glow.</p>
+        <div class="icon-btn-row">
+          <div class="icon-state">
+            <button class="icon-btn">🔍</button>
+            <span class="state-label">Default</span>
+          </div>
+          <div class="icon-state">
+            <button class="icon-btn active-teal">🔍</button>
+            <span class="state-label">Hover</span>
+          </div>
+          <div class="icon-state">
+            <button class="icon-btn">♡</button>
+            <span class="state-label">Default</span>
+          </div>
+          <div class="icon-state">
+            <button class="icon-btn active-red">♥</button>
+            <span class="state-label">Active</span>
+          </div>
+          <div class="icon-state">
+            <button class="icon-btn" style="position:relative">🛒<span class="badge-count">2</span></button>
+            <span class="state-label">Default</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ICON + TEXT -->
+      <div class="sub-section">
+        <h3>Buttons with Icon</h3>
+        <h4>Icon + Text</h4>
+        <p>Flexible icon placement for conversions.</p>
+        <div class="icon-text-row">
+          <button class="btn-icon-text teal">🛒 Add to Cart <i class="chevron">›</i></button>
+          <button class="btn-icon-text red">✦ View Offer <i class="chevron">›</i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEDICATED GLASSMORPHISM STOREFRONT SHOWCASE -->
+    <div class="glass-showcase">
+      <h3 class="glass-showcase-title">Storefront Glassmorphism in Action</h3>
+      <p class="glass-showcase-sub">Real-world components with backdrop-filter blur, translucent borders, and multi-layered inner glow.</p>
+      
+      <div class="glass-grid">
+        <!-- Card 1: Product Card -->
+        <div class="glass-product-card">
+          <div class="card-media-box">
+            <span class="card-badge-floating">Bestseller</span>
+            <img src="../assets/logo.png" alt="Product" style="height:55px; opacity:0.85;">
+          </div>
+          <div>
+            <h4 class="glass-card-title">Botanical Pain Relief Oil</h4>
+            <p style="font-size:0.8rem; color:#8AABAB; margin: 0.2rem 0 0.8rem;">Full Spectrum CBD · 1000mg</p>
+            <div class="glass-card-price">
+              <span class="price-now">$48.00</span>
+              <span class="price-was">$64.00</span>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="width:100%; margin-top:0.5rem;">Add to Cart 🛒</button>
+        </div>
+
+        <!-- Card 2: Glass Notification / Fast Cart -->
+        <div class="glass-product-card" style="background: rgba(240, 248, 248, 0.75);">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <span style="font-size:0.7rem; font-weight:700; color:#439798; text-transform:uppercase; letter-spacing:0.1em;">Cart Preview</span>
+            <span style="font-size:0.75rem; color:#8AABAB;">1 item</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.7); border:1px solid rgba(255,255,255,0.9); border-radius:14px; padding:1rem; display:flex; gap:1rem; align-items:center;">
+            <div style="width:48px; height:48px; border-radius:10px; background:#E6F4F4; display:flex; align-items:center; justify-content:center;">🌿</div>
+            <div style="flex:1;">
+              <h5 style="font-size:0.85rem; font-weight:700;">Soothing Relief Cream</h5>
+              <p style="font-size:0.75rem; color:#8AABAB;">Qty: 1 · $36.00</p>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.9rem; padding: 0.5rem 0;">
+            <span style="color:#8AABAB;">Subtotal:</span>
+            <span style="font-weight:700; color:#1A3333;">$36.00</span>
+          </div>
+          <button class="btn btn-accent" style="width:100%;">Checkout Now <i class="chevron">›</i></button>
+        </div>
+
+        <!-- Card 3: Dark Glass Feature -->
+        <div class="glass-dark-card">
+          <div>
+            <span style="font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:#6DCECF; font-weight:700;">Purity Guaranteed</span>
+            <h3>Lab-Tested Transparency</h3>
+            <p>Every single batch is third-party lab tested with a certificate of analysis accessible via QR code on the bottle.</p>
+          </div>
+          <button class="btn btn-outline" style="background:rgba(255,255,255,0.1); color:white; border-color:rgba(255,255,255,0.4);">View Lab Results ↗</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

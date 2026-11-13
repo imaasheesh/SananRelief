@@ -1,0 +1,821 @@
+/* ==========================================================================
+   SANAN RELIEF — THANK YOU / ORDER CONFIRMATION STYLES
+   Design Token Compliant: DM Serif Display, Inter/Plus Jakarta, Glassmorphism,
+   Brand Teal (#1A3D3E, #2D6E6F), Cream (#FBF8F5), Lime (#84CC16), Gold (#D97706)
+   ========================================================================== */
+
+.thankyou-wrapper {
+  background: var(--color-background, #F7FBFB);
+  color: var(--color-primary-text, #111111);
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle botanical ambient glow */
+.thankyou-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(45, 110, 111, 0.08) 0%, rgba(247, 251, 251, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.thankyou-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   CELEBRATORY HERO BANNER
+   ========================================================================== */
+.thankyou-hero {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thankyou-check-pulse {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #E8F5E9;
+  border: 2px solid #84CC16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 0 0 10px rgba(132, 204, 22, 0.12), 0 12px 28px rgba(26, 61, 62, 0.08);
+  position: relative;
+  animation: gentlePulse 3s infinite ease-in-out;
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 10px rgba(132, 204, 22, 0.12), 0 12px 28px rgba(26, 61, 62, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 0 18px rgba(132, 204, 22, 0.22), 0 16px 36px rgba(26, 61, 62, 0.14);
+  }
+}
+
+.thankyou-check-pulse svg {
+  width: 40px;
+  height: 40px;
+  color: #1A3D3E;
+}
+
+.thankyou-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(45, 110, 111, 0.08);
+  border: 1px solid rgba(45, 110, 111, 0.2);
+  color: #1A3D3E;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.thankyou-kicker .pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #84CC16;
+}
+
+.thankyou-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: clamp(32px, 4vw, 44px);
+  color: #1A3D3E;
+  line-height: 1.15;
+  margin: 0 0 14px;
+}
+
+.thankyou-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4A5568;
+  margin: 0 0 24px;
+}
+
+.thankyou-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(45, 110, 111, 0.15);
+  border-radius: 50px;
+  font-size: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.thankyou-meta-bar span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1A3D3E;
+  font-weight: 500;
+}
+
+.thankyou-meta-bar strong {
+  font-weight: 700;
+  color: #111111;
+}
+
+/* ==========================================================================
+   2-COLUMN GRID LAYOUT
+   ========================================================================== */
+.thankyou-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .thankyou-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards Common Styling */
+.thankyou-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(45, 110, 111, 0.14);
+  border-radius: 20px;
+  padding: 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.thankyou-card:hover {
+  box-shadow: 0 14px 40px rgba(26, 61, 62, 0.08);
+}
+
+.thankyou-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(45, 110, 111, 0.08);
+}
+
+.thankyou-card-header h2,
+.thankyou-card-header h3 {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 22px;
+  color: #1A3D3E;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.thankyou-badge-gold {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #F59E0B;
+  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.thankyou-badge-lime {
+  background: #ECFCCB;
+  color: #3F6212;
+  border: 1px solid #84CC16;
+  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+/* ==========================================================================
+   DOCTOR CONSULTATION ONBOARDING PASS
+   ========================================================================== */
+.doctor-pass-card {
+  border: 2px solid rgba(217, 119, 6, 0.35);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.3) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.doctor-pass-card::after {
+  content: "AYUSH PRIVILEGE";
+  position: absolute;
+  top: 18px;
+  right: -32px;
+  background: #D97706;
+  color: #FFFFFF;
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  padding: 4px 36px;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-pass-content {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+  .doctor-pass-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.doctor-avatar-box {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #D97706;
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+.doctor-avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.doctor-verified-seal {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 26px;
+  height: 26px;
+  background: #1A3D3E;
+  color: #FFFFFF;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.doctor-pass-text h4 {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 20px;
+  color: #1A3D3E;
+  margin: 0 0 6px;
+}
+
+.doctor-pass-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4A5568;
+  margin: 0 0 10px;
+}
+
+.doctor-cred-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.doctor-cred-tag {
+  background: rgba(26, 61, 62, 0.08);
+  color: #1A3D3E;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+.doctor-booking-slots {
+  background: #FFFFFF;
+  border: 1px dashed rgba(217, 119, 6, 0.5);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.slots-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1A3D3E;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.slots-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.slot-pill {
+  border: 1px solid rgba(45, 110, 111, 0.2);
+  background: #F7FBFB;
+  color: #1A3D3E;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slot-pill:hover,
+.slot-pill.is-active {
+  background: #1A3D3E;
+  color: #FFFFFF;
+  border-color: #1A3D3E;
+}
+
+.doctor-booking-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   4-STAGE VISUAL ORDER TRACKING TIMELINE
+   ========================================================================== */
+.order-tracking-card {
+  padding: 32px;
+}
+
+.tracking-stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  margin: 28px 0 20px;
+}
+
+.tracking-stepper::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 12%;
+  right: 12%;
+  height: 3px;
+  background: #E2E8F0;
+  z-index: 0;
+}
+
+.tracking-stepper-progress {
+  position: absolute;
+  top: 24px;
+  left: 12%;
+  width: 38%; /* Progress through step 2 */
+  height: 3px;
+  background: linear-gradient(90deg, #1A3D3E 0%, #84CC16 100%);
+  z-index: 1;
+  transition: width 0.6s ease;
+}
+
+.tracking-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.step-bubble {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #CBD5E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tracking-step.is-done .step-bubble {
+  background: #1A3D3E;
+  border-color: #1A3D3E;
+  color: #84CC16;
+}
+
+.tracking-step.is-current .step-bubble {
+  background: #FFFFFF;
+  border-color: #84CC16;
+  color: #1A3D3E;
+  box-shadow: 0 0 0 6px rgba(132, 204, 22, 0.2);
+  animation: pulseBubble 2s infinite ease-in-out;
+}
+
+@keyframes pulseBubble {
+  0%, 100% {
+    box-shadow: 0 0 0 6px rgba(132, 204, 22, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(132, 204, 22, 0.35);
+  }
+}
+
+.step-label {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 15px;
+  color: #1A3D3E;
+  margin-bottom: 4px;
+}
+
+.step-desc {
+  font-size: 12px;
+  color: #64748B;
+  max-width: 130px;
+  line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+  .tracking-stepper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-left: 20px;
+  }
+  .tracking-stepper::before {
+    left: 44px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    right: auto;
+  }
+  .tracking-stepper-progress {
+    left: 44px;
+    top: 0;
+    width: 3px;
+    height: 45%;
+  }
+  .tracking-step {
+    flex-direction: row;
+    text-align: left;
+    gap: 16px;
+  }
+  .step-bubble {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .step-desc {
+    max-width: none;
+  }
+}
+
+/* ==========================================================================
+   PRESCRIPTION VAULT STATUS CARD
+   ========================================================================== */
+.rx-status-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.rx-status-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rx-file-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(26, 61, 62, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1A3D3E;
+  font-size: 20px;
+}
+
+.rx-file-name {
+  font-weight: 700;
+  color: #111111;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.rx-file-status {
+  font-size: 12px;
+  color: #059669;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: STICKY ORDER SUMMARY CARD
+   ========================================================================== */
+.sticky-summary {
+  position: sticky;
+  top: 140px;
+}
+
+.order-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.order-item-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed rgba(45, 110, 111, 0.12);
+}
+
+.order-item-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #F1F5F9;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+.order-item-details {
+  flex: 1;
+}
+
+.order-item-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 3px;
+  line-height: 1.3;
+}
+
+.order-item-variant {
+  font-size: 12px;
+  color: #64748B;
+  margin-bottom: 4px;
+}
+
+.order-item-pricing {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1A3D3E;
+}
+
+.receipt-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(45, 110, 111, 0.12);
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  color: #4A5568;
+}
+
+.receipt-row.is-discount {
+  color: #059669;
+  font-weight: 600;
+}
+
+.receipt-row.is-total {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1A3D3E;
+  padding-top: 10px;
+  border-top: 1px solid rgba(45, 110, 111, 0.18);
+}
+
+.delivery-details-box {
+  background: #F8FAFC;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  color: #4A5568;
+  line-height: 1.5;
+}
+
+.delivery-details-box strong {
+  color: #111111;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.order-actions-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ==========================================================================
+   BUTTONS & DESIGN TOKENS
+   ========================================================================== */
+.btn-primary-dock {
+  background: #1A3D3E;
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(26, 61, 62, 0.2);
+}
+
+.btn-primary-dock:hover {
+  background: #2D6E6F;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(45, 110, 111, 0.3);
+}
+
+.btn-secondary-dock {
+  background: transparent;
+  color: #1A3D3E;
+  border: 1px solid rgba(26, 61, 62, 0.3);
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary-dock:hover {
+  background: rgba(26, 61, 62, 0.06);
+  border-color: #1A3D3E;
+}
+
+.btn-whatsapp-dock {
+  background: #25D366;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-whatsapp-dock:hover {
+  background: #1EBE5D;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   CROSS-SELL FORMULATIONS
+   ========================================================================== */
+.thankyou-crosssell {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(45, 110, 111, 0.12);
+}
+
+.crosssell-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.crosssell-header h3 {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 26px;
+  color: #1A3D3E;
+  margin: 0 0 6px;
+}
+
+.crosssell-header p {
+  color: #64748B;
+  font-size: 14px;
+}
+
+.crosssell-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .crosssell-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.crosssell-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(45, 110, 111, 0.12);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.crosssell-card:hover {
+  transform: translateY(-3px);
+  border-color: #84CC16;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.crosssell-card img {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #F1F5F9;
+}
+
+.crosssell-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 4px;
+}
+
+.crosssell-info p {
+  font-size: 12px;
+  color: #64748B;
+  margin: 0 0 8px;
+}
+
+.crosssell-price {
+  font-weight: 700;
+  color: #1A3D3E;
+  font-size: 14px;
+}
+

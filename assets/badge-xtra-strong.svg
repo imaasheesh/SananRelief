@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <radialGradient id="xtraGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fdf4ff"/>
+      <stop offset="80%" stop-color="#f5d0fe"/>
+      <stop offset="100%" stop-color="#e879f9"/>
+    </radialGradient>
+    <filter id="rosetteShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#a855f7" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  
+  <!-- 24-point Scalloped Starburst Rosette -->
+  <path d="
+    M 80 10 
+    L 86 16 L 94 13 L 98 21 L 107 20 L 109 29 L 118 31 L 118 40 L 126 44 L 124 53 L 131 59 L 127 68 L 133 76 L 127 84 L 131 93 L 124 99 L 126 108 L 118 112 L 118 121 L 109 123 L 107 132 L 98 131 L 94 139 L 86 136 L 80 142 L 74 136 L 66 139 L 62 131 L 53 132 L 51 123 L 42 121 L 42 112 L 34 108 L 36 99 L 29 93 L 33 84 L 27 76 L 33 68 L 29 59 L 36 53 L 34 44 L 42 40 L 42 31 L 51 29 L 53 20 L 62 21 L 66 13 L 74 16 Z
+  " fill="url(#xtraGlow)" stroke="#c084fc" stroke-width="2.5" filter="url(#rosetteShadow)"/>
+  
+  <!-- Inner Dotted Stamp Ring -->
+  <circle cx="80" cy="76" r="48" fill="none" stroke="#7e22ce" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <circle cx="80" cy="76" r="44" fill="#faf5ff" opacity="0.9"/>
+  
+  <!-- Text Content -->
+  <text x="80" y="62" text-anchor="middle" font-family="'Plus Jakarta Sans', Impact, sans-serif" font-size="16" font-weight="900" fill="#6b21a8" letter-spacing="1">XTRA</text>
+  <text x="80" y="78" text-anchor="middle" font-family="'Plus Jakarta Sans', Impact, sans-serif" font-size="16" font-weight="900" fill="#6b21a8" letter-spacing="1">STRONG</text>
+  <line x1="56" y1="84" x2="104" y2="84" stroke="#9333ea" stroke-width="1"/>
+  <text x="80" y="96" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="800" fill="#7e22ce" letter-spacing="0.5">Ayurvedic</text>
+  <text x="80" y="108" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="700" fill="#9333ea" letter-spacing="0.5">Blend</text>
+</svg>

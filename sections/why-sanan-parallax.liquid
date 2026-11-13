@@ -1,0 +1,238 @@
+{% comment %}
+  Why SANAN — Full-Width Parallax Hero with Trust Stats Bar
+  Features GPU-accelerated botanical parallax background,
+  editorial typography, and 4 trust indicators with custom icons.
+{% endcomment %}
+
+{{ 'storefront.css' | asset_url | stylesheet_tag }}
+
+<section class="why-sanan-section section-{{ section.id }}-padding" id="WhySanan-{{ section.id }}">
+  <!-- Full-Width Parallax Hero Banner -->
+  <div class="why-sanan-hero">
+    <div class="why-sanan-bg-layer"
+      {% if section.settings.image != blank %}
+        style="background-image: url('{{ section.settings.image | image_url: width: 2200 }}');"
+      {% else %}
+        style="background-image: url('{{ 'why-sanan-parallax-bg.jpg' | asset_url }}');"
+      {% endif %}
+    ></div>
+
+    <div class="why-sanan-overlay"></div>
+
+    <div class="why-sanan-content-wrap">
+      <div class="why-sanan-content">
+        {%- if section.settings.eyebrow != blank -%}
+          <div class="why-sanan-eyebrow">
+            <span>{{ section.settings.eyebrow | escape }}</span>
+            <span class="why-sanan-line" aria-hidden="true"></span>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.heading != blank -%}
+          <h2 class="why-sanan-title">{{ section.settings.heading }}</h2>
+        {%- else -%}
+          <h2 class="why-sanan-title">Pioneering India's<br><em>Medicinal Cannabis</em><br>Industry</h2>
+        {%- endif -%}
+
+        {%- if section.settings.description != blank -%}
+          <p class="why-sanan-desc">{{ section.settings.description | escape }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.button_text != blank -%}
+          <a href="{{ section.settings.button_link | default: '#about-sanan' }}" class="btn-why-sanan">
+            <span>{{ section.settings.button_text | escape }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <!-- Trust Stats Bar with Icons (Why SANAN) Inside Parallax Hero -->
+    <div class="why-sanan-stats-bar">
+      <div class="why-sanan-stats-container">
+        {%- if section.blocks.size > 0 -%}
+          {%- for block in section.blocks -%}
+            <div class="why-stat-item" {{ block.shopify_attributes }}>
+              <div class="why-stat-icon-wrap">
+                {%- case block.settings.icon -%}
+                  {%- when 'license' -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline><circle cx="18" cy="18" r="3"></circle><path d="m20.5 20.5 1.5 1.5"></path></svg>
+                  {%- when 'research' -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L4.36 19.46A2 2 0 0 0 6.1 22h11.8a2 2 0 0 0 1.74-2.54L14 9.31V2"></path><line x1="8.5" y1="2" x2="15.5" y2="2"></line><line x1="14" y1="9" x2="10" y2="9"></line><circle cx="12" cy="16" r="1.5"></circle></svg>
+                  {%- when 'globe' -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  {%- when 'consumers' -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  {%- else -%}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                {%- endcase -%}
+              </div>
+              <div class="why-stat-info">
+                <h4 class="why-stat-title">{{ block.settings.title | escape }}</h4>
+                <span class="why-stat-sub">{{ block.settings.subtitle | escape }}</span>
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- else -%}
+          <!-- Default Pre-built 4 Trust Stats Matching Reference -->
+          <div class="why-stat-item">
+            <div class="why-stat-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline><circle cx="18" cy="18" r="3"></circle><path d="m20.5 20.5 1.5 1.5"></path></svg>
+            </div>
+            <div class="why-stat-info">
+              <h4 class="why-stat-title">India's first Vijaya Licence holder</h4>
+              <span class="why-stat-sub">SINCE 1985</span>
+            </div>
+          </div>
+
+          <div class="why-stat-item">
+            <div class="why-stat-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L4.36 19.46A2 2 0 0 0 6.1 22h11.8a2 2 0 0 0 1.74-2.54L14 9.31V2"></path><line x1="8.5" y1="2" x2="15.5" y2="2"></line><line x1="14" y1="9" x2="10" y2="9"></line><circle cx="12" cy="16" r="1.5"></circle></svg>
+            </div>
+            <div class="why-stat-info">
+              <h4 class="why-stat-title">40+ years</h4>
+              <span class="why-stat-sub">OF RESEARCH AND FORMULATION</span>
+            </div>
+          </div>
+
+          <div class="why-stat-item">
+            <div class="why-stat-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <div class="why-stat-info">
+              <h4 class="why-stat-title">Manufacturing partner for 38+ brands</h4>
+              <span class="why-stat-sub">GLOBALLY</span>
+            </div>
+          </div>
+
+          <div class="why-stat-item">
+            <div class="why-stat-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="why-stat-info">
+              <h4 class="why-stat-title">20+ million</h4>
+              <span class="why-stat-sub">CONSUMERS</span>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Why SANAN Parallax",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Parallax Background Image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow Text",
+      "default": "TRUSTED. RESEARCH-LED. IMPACT DRIVEN."
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Pioneering India's <em>Medicinal Cannabis</em> Industry"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Advancing plant-based therapeutics through research, innovation and responsible healthcare solutions."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Label",
+      "default": "Meet SANAN"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust_stat",
+      "name": "Trust Indicator",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "license", "label": "License / Document" },
+            { "value": "research", "label": "Research / Laboratory" },
+            { "value": "globe", "label": "Globe / Global Partner" },
+            { "value": "consumers", "label": "Consumers / People" }
+          ],
+          "default": "license"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "India's first Vijaya Licence holder"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "SINCE 1985"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why SANAN Parallax",
+      "category": "Story",
+      "blocks": [
+        {
+          "type": "trust_stat",
+          "settings": {
+            "icon": "license",
+            "title": "India's first Vijaya Licence holder",
+            "subtitle": "SINCE 1985"
+          }
+        },
+        {
+          "type": "trust_stat",
+          "settings": {
+            "icon": "research",
+            "title": "40+ years",
+            "subtitle": "OF RESEARCH AND FORMULATION"
+          }
+        },
+        {
+          "type": "trust_stat",
+          "settings": {
+            "icon": "globe",
+            "title": "Manufacturing partner for 38+ brands",
+            "subtitle": "GLOBALLY"
+          }
+        },
+        {
+          "type": "trust_stat",
+          "settings": {
+            "icon": "consumers",
+            "title": "20+ million",
+            "subtitle": "CONSUMERS"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

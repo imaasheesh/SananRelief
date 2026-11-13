@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <!-- Background studio light -->
+    <radialGradient id="v-bg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#FCF9F3"/>
+      <stop offset="60%" stop-color="#F2ECE1"/>
+      <stop offset="100%" stop-color="#E5DDD0"/>
+    </radialGradient>
+    
+    <!-- Stone Pedestal Gradients -->
+    <linearGradient id="v-pedestal-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFE8DE"/>
+      <stop offset="50%" stop-color="#E5DCCE"/>
+      <stop offset="100%" stop-color="#D9CEBD"/>
+    </linearGradient>
+    <linearGradient id="v-pedestal-front" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D5C9B7"/>
+      <stop offset="100%" stop-color="#B8A892"/>
+    </linearGradient>
+    
+    <!-- Travertine Texture Pattern -->
+    <filter id="v-stone-texture" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.8  0 0 0 0 0.75  0 0 0 0 0.68  0 0 0 0.25 0" in="noise" result="coloredNoise"/>
+      <feComposite operator="in" in="coloredNoise" in2="SourceGraphic" result="composite"/>
+      <feBlend mode="multiply" in="composite" in2="SourceGraphic"/>
+    </filter>
+
+    <!-- Amber Glass Bottle Gradient -->
+    <linearGradient id="v-amber-glass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3A1C08"/>
+      <stop offset="15%" stop-color="#6F3B10"/>
+      <stop offset="35%" stop-color="#A2581A"/>
+      <stop offset="50%" stop-color="#612F0A"/>
+      <stop offset="75%" stop-color="#9C5217"/>
+      <stop offset="90%" stop-color="#6F3B10"/>
+      <stop offset="100%" stop-color="#2D1505"/>
+    </linearGradient>
+
+    <!-- Glass Specular Highlight -->
+    <linearGradient id="v-glass-highlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="v-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#554433" flood-opacity="0.22"/>
+    </filter>
+    <filter id="v-botanical-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="2" dy="8" stdDeviation="6" flood-color="#443322" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Studio Background -->
+  <rect width="100%" height="100%" fill="url(#v-bg)"/>
+
+  <!-- Botanical Hemp Fan Leaf (Left & Behind) -->
+  <g filter="url(#v-botanical-shadow)" opacity="0.92">
+    <!-- Stem -->
+    <path d="M 60 380 Q 95 310 135 250" stroke="#486838" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Leaf 1 (Center) -->
+    <path d="M 135 250 C 130 180 80 140 65 110 C 85 140 120 190 135 250 Z" fill="#4B6E38"/>
+    <!-- Leaf 2 (Left Upper) -->
+    <path d="M 135 250 C 100 200 45 180 25 170 C 50 190 95 220 135 250 Z" fill="#588143"/>
+    <!-- Leaf 3 (Left Lower) -->
+    <path d="M 135 250 C 95 240 30 240 10 245 C 40 250 90 250 135 250 Z" fill="#3D5A2E"/>
+    <!-- Leaf 4 (Right Upper) -->
+    <path d="M 135 250 C 150 190 190 160 210 145 C 185 175 160 210 135 250 Z" fill="#588143"/>
+    <!-- Leaf 5 (Right Lower) -->
+    <path d="M 135 250 C 160 230 205 225 225 230 C 195 240 165 245 135 250 Z" fill="#3D5A2E"/>
+    <!-- Leaf veins -->
+    <path d="M 70 125 Q 100 185 135 250" stroke="#77A45C" stroke-width="1.2" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Travertine Stone Pedestal (Round layered slab) -->
+  <g filter="url(#v-shadow)">
+    <!-- Bottom layer front rim -->
+    <path d="M 80 370 C 80 370 120 420 200 420 C 280 420 320 370 320 370 L 320 405 C 320 405 280 455 200 455 C 120 455 80 405 80 405 Z" fill="url(#v-pedestal-front)"/>
+    <!-- Bottom layer top surface -->
+    <ellipse cx="200" cy="370" rx="120" ry="34" fill="url(#v-pedestal-top)"/>
+
+    <!-- Main top slab -->
+    <path d="M 95 345 C 95 345 130 385 200 385 C 270 385 305 345 305 345 L 305 365 C 305 365 270 405 200 405 C 130 405 95 365 95 365 Z" fill="url(#v-pedestal-front)"/>
+    <ellipse cx="200" cy="345" rx="105" ry="28" fill="url(#v-pedestal-top)"/>
+    <!-- Stone pits/pores for natural organic travertine look -->
+    <ellipse cx="145" cy="344" rx="4" ry="1.5" fill="#C4B6A0" opacity="0.6"/>
+    <ellipse cx="255" cy="348" rx="6" ry="2" fill="#C4B6A0" opacity="0.5"/>
+    <ellipse cx="220" cy="338" rx="3" ry="1" fill="#C4B6A0" opacity="0.6"/>
+    <ellipse cx="170" cy="350" rx="5" ry="1.8" fill="#C4B6A0" opacity="0.5"/>
+  </g>
+
+  <!-- Bottle Cast Shadow on Pedestal -->
+  <ellipse cx="200" cy="336" rx="42" ry="12" fill="#58432F" opacity="0.45" filter="url(#v-shadow)"/>
+
+  <!-- Bottle Body (Amber Glass) -->
+  <g filter="url(#v-shadow)">
+    <!-- Glass Base -->
+    <path d="M 166 220 Q 166 170 185 160 L 185 145 L 215 145 L 215 160 Q 234 170 234 220 L 234 326 C 234 334 226 338 200 338 C 174 338 166 334 166 326 Z" fill="url(#v-amber-glass)"/>
+    <!-- Specular light reflections along curved glass -->
+    <path d="M 170 220 Q 170 178 186 168 L 187 325 C 187 328 178 326 170 322 Z" fill="url(#v-glass-highlight)"/>
+    <path d="M 226 215 L 227 322 Q 231 324 231 320 L 230 215 Z" fill="#FFFFFF" opacity="0.3"/>
+
+    <!-- Dropper Collar & Pipette Top -->
+    <!-- Black ribbed collar -->
+    <rect x="183" y="142" width="34" height="12" rx="2" fill="#1C1D1D"/>
+    <line x1="187" y1="143" x2="187" y2="153" stroke="#333" stroke-width="1"/>
+    <line x1="192" y1="143" x2="192" y2="153" stroke="#333" stroke-width="1"/>
+    <line x1="197" y1="143" x2="197" y2="153" stroke="#333" stroke-width="1"/>
+    <line x1="203" y1="143" x2="203" y2="153" stroke="#333" stroke-width="1"/>
+    <line x1="208" y1="143" x2="208" y2="153" stroke="#333" stroke-width="1"/>
+    <line x1="213" y1="143" x2="213" y2="153" stroke="#333" stroke-width="1"/>
+
+    <!-- Rubber Squeeze Bulb (Black matte) -->
+    <path d="M 188 142 C 188 122 193 108 200 108 C 207 108 212 122 212 142 Z" fill="#181919"/>
+    <!-- Bulb highlight -->
+    <path d="M 194 136 C 194 122 196 112 199 111 C 198 118 197 128 197 136 Z" fill="#FFFFFF" opacity="0.25"/>
+
+    <!-- Premium Cream Label -->
+    <rect x="167" y="200" width="66" height="116" rx="2" fill="#FAF6EE"/>
+    <!-- Subtle label drop shadow/edge wrap -->
+    <rect x="167" y="200" width="4" height="116" fill="#000000" opacity="0.12"/>
+    <rect x="229" y="200" width="4" height="116" fill="#000000" opacity="0.12"/>
+
+    <!-- Label Content -->
+    <!-- Brand Mark -->
+    <path d="M 200 212 C 196 215 194 219 200 223 C 206 219 204 215 200 212 Z" fill="#439798"/>
+    <circle cx="200" cy="217" r="1.5" fill="#FAF6EE"/>
+    <!-- Brand Name -->
+    <text x="200" y="235" text-anchor="middle" font-family="'DM Sans', -apple-system, sans-serif" font-size="8" font-weight="800" fill="#1C2B2B" letter-spacing="1.5">SANAN</text>
+    <line x1="184" y1="240" x2="216" y2="240" stroke="#439798" stroke-width="0.8"/>
+    <!-- Product Name -->
+    <text x="200" y="254" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="11" font-weight="400" fill="#182626">Vijaya</text>
+    <text x="200" y="265" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="5.5" font-weight="700" fill="#439798" letter-spacing="0.8">WELLNESS OIL</text>
+    <text x="200" y="276" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="4.5" fill="#758282">1000mg Full Spectrum</text>
+    <text x="200" y="284" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="4.5" fill="#758282">Herbal Extract</text>
+    <!-- Volume -->
+    <text x="200" y="306" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="5" font-weight="600" fill="#1C2B2B">30 ml</text>
+  </g>
+</svg>

@@ -1,0 +1,332 @@
+{% comment %}
+  Doctor's Trusted Choice — Full-Width Parallax Hero with Floating Endorsement Cards
+  Inspired by immersive cinematic destination slider with dark botanical parallax background,
+  hero typography on the left, and floating vertical doctor endorsement cards on the right.
+{% endcomment %}
+
+{{ 'storefront.css' | asset_url | stylesheet_tag }}
+
+<section class="doctor-parallax-section section-{{ section.id }}-padding" id="DoctorParallax-{{ section.id }}">
+  <!-- Background Parallax Layer -->
+  <div
+    class="doctor-parallax-bg"
+    {% if section.settings.bg_image != blank %}
+      style="background-image: url('{{ section.settings.bg_image | image_url: width: 2400 }}');"
+    {% else %}
+      style="background-image: url('{{ 'why-sanan-parallax-bg.jpg' | asset_url }}');"
+    {% endif %}
+  ></div>
+
+  <!-- Ambient Dark Botanical Gradient Overlay -->
+  <div class="doctor-parallax-overlay"></div>
+
+  <!-- Organic Botanical Accent Element (Matching Reference Daisy/Chamomile motif) -->
+  <div class="doctor-parallax-botanical-accent" aria-hidden="true">
+    <svg width="220" height="220" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="14" fill="#EAB308" />
+      <g stroke="#F8FAFC" stroke-width="7" stroke-linecap="round" opacity="0.92">
+        <line x1="50" y1="28" x2="50" y2="6"/>
+        <line x1="50" y1="72" x2="50" y2="94"/>
+        <line x1="28" y1="50" x2="6" y2="50"/>
+        <line x1="72" y1="50" x2="94" y2="50"/>
+        <line x1="34.4" y1="34.4" x2="18.9" y2="18.9"/>
+        <line x1="65.6" y1="65.6" x2="81.1" y2="81.1"/>
+        <line x1="34.4" y1="65.6" x2="18.9" y2="81.1"/>
+        <line x1="65.6" y1="34.4" x2="81.1" y2="18.9"/>
+        <line x1="42.2" y1="29.2" x2="35.3" y2="8.9"/>
+        <line x1="57.8" y1="70.8" x2="64.7" y2="91.1"/>
+        <line x1="29.2" y1="57.8" x2="8.9" y2="64.7"/>
+        <line x1="70.8" y1="42.2" x2="91.1" y2="35.3"/>
+        <line x1="57.8" y1="29.2" x2="64.7" y2="8.9"/>
+        <line x1="42.2" y1="70.8" x2="35.3" y2="91.1"/>
+        <line x1="29.2" y1="42.2" x2="8.9" y2="35.3"/>
+        <line x1="70.8" y1="57.8" x2="91.1" y2="64.7"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="doctor-parallax-container">
+    <!-- Left Hero Column -->
+    <div class="doctor-parallax-left">
+      <div class="doctor-parallax-eyebrow">
+        <span class="doctor-eyebrow-dash"></span>
+        <span>{{ section.settings.eyebrow | default: 'CLINICAL EXPERTISE & AYURVEDA' | escape }}</span>
+      </div>
+
+      <h2 class="doctor-parallax-title">
+        {%- if section.settings.title != blank -%}
+          {{ section.settings.title }}
+        {%- else -%}
+          DOCTOR&rsquo;S<br>TRUSTED<br>CHOICE
+        {%- endif -%}
+      </h2>
+
+      <p class="doctor-parallax-desc">
+        {{ section.settings.description | default: 'Backed by clinical expertise and chosen for real results. Formulated with standardized Vijaya cannabinoids, verified third-party COAs, and validated by leading specialists, researchers, and veteran practitioners across India.' | escape }}
+      </p>
+
+      <div class="doctor-parallax-actions">
+        <div class="doctor-action-icons">
+          <span class="doc-badge-circle doc-badge-red" title="Ayush Certified">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </span>
+          <span class="doc-badge-circle doc-badge-gold" title="5-Star Medical Rating">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </span>
+        </div>
+
+        <a href="{{ section.settings.button_link | default: '#all-products' }}" class="btn-doctor-parallax-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>{{ section.settings.button_text | default: 'EXPLORE FORMULATIONS' | escape }}</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column: Floating Endorsement Cards Slider -->
+    <div class="doctor-parallax-right">
+      <div class="swiper doctor-cards-swiper">
+        <div class="swiper-wrapper">
+
+          {%- if section.blocks.size > 0 -%}
+            {%- for block in section.blocks -%}
+              <div class="swiper-slide" {{ block.shopify_attributes }}>
+                <div class="doctor-endorse-card">
+                  {%- if block.settings.image != blank -%}
+                    <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.doctor_name | escape }}" class="doctor-endorse-img" width="300" height="420" loading="lazy">
+                  {%- else -%}
+                    <img src="{{ 'doctor-1.jpg' | asset_url }}" alt="{{ block.settings.doctor_name | escape }}" class="doctor-endorse-img" width="300" height="420" loading="lazy">
+                  {%- endif -%}
+                  <div class="doctor-endorse-overlay"></div>
+                  <div class="doctor-endorse-info">
+                    <span class="doctor-endorse-tag">{{ block.settings.location_tag | escape }}</span>
+                    <h3 class="doctor-endorse-name">{{ block.settings.doctor_name | escape }}</h3>
+                    <p class="doctor-endorse-sub">{{ block.settings.doctor_degree | escape }}</p>
+                    {%- if block.settings.quote != blank -%}
+                      <p class="doctor-endorse-quote">&ldquo;{{ block.settings.quote | escape }}&rdquo;</p>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            {%- endfor -%}
+          {%- else -%}
+            <!-- Default 5 Cards (Exact Match to Reference Architecture) -->
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div class="doctor-endorse-card">
+                <img src="{{ 'doctor-1.jpg' | asset_url }}" alt="Dr. Arvind Swaminathan" class="doctor-endorse-img" width="300" height="420" loading="lazy">
+                <div class="doctor-endorse-overlay"></div>
+                <div class="doctor-endorse-info">
+                  <span class="doctor-endorse-tag">— Jaipur • Neuro-Pharmacology</span>
+                  <h3 class="doctor-endorse-name">DR. ARVIND SWAMINATHAN</h3>
+                  <p class="doctor-endorse-sub">BAMS, MD (Ayu), Ph.D. • 22+ Yrs Exp</p>
+                  <p class="doctor-endorse-quote">&ldquo;Standardized cannabinoids provide therapeutic consistency my patients rely on.&rdquo;</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+              <div class="doctor-endorse-card">
+                <img src="{{ 'doctor-2.jpg' | asset_url }}" alt="Dr. Rajeshwari Varma" class="doctor-endorse-img" width="300" height="420" loading="lazy">
+                <div class="doctor-endorse-overlay"></div>
+                <div class="doctor-endorse-info">
+                  <span class="doctor-endorse-tag">— Bengaluru • Chronic Pain</span>
+                  <h3 class="doctor-endorse-name">DR. RAJESHWARI VARMA</h3>
+                  <p class="doctor-endorse-sub">BAMS, MD (Kayachikitsa) • 15+ Yrs Exp</p>
+                  <p class="doctor-endorse-quote">&ldquo;Whole-plant Ayurvedic synergy noticeably enhances patient joint mobility.&rdquo;</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+              <div class="doctor-endorse-card">
+                <img src="{{ 'doctor-3.jpg' | asset_url }}" alt="Dr. Nikhil Deoskar" class="doctor-endorse-img" width="300" height="420" loading="lazy">
+                <div class="doctor-endorse-overlay"></div>
+                <div class="doctor-endorse-info">
+                  <span class="doctor-endorse-tag">— Mumbai • Integrative Medicine</span>
+                  <h3 class="doctor-endorse-name">DR. NIKHIL DEOSKAR</h3>
+                  <p class="doctor-endorse-sub">MBBS, MD, Cannabinoid Research • 18+ Yrs</p>
+                  <p class="doctor-endorse-quote">&ldquo;Third-party batch COAs give complete clinical prescription confidence.&rdquo;</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="swiper-slide">
+              <div class="doctor-endorse-card">
+                <img src="{{ 'doctor-4.jpg' | asset_url }}" alt="Dr. Ananya Sen Sharma" class="doctor-endorse-img" width="300" height="420" loading="lazy">
+                <div class="doctor-endorse-overlay"></div>
+                <div class="doctor-endorse-info">
+                  <span class="doctor-endorse-tag">— Kolkata • Sleep &amp; Stress</span>
+                  <h3 class="doctor-endorse-name">DR. ANANYA SEN SHARMA</h3>
+                  <p class="doctor-endorse-sub">BAMS, PGDCC, Holistic Health • 12+ Yrs</p>
+                  <p class="doctor-endorse-quote">&ldquo;Restores circadian rhythm and slow-wave sleep without synthetic grogginess.&rdquo;</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 (Advisory Panel) -->
+            <div class="swiper-slide">
+              <div class="doctor-endorse-card">
+                <img src="{{ 'doctor-trusted-banner.jpg' | asset_url }}" alt="Medical Advisory Council" class="doctor-endorse-img doctor-endorse-img-cover" width="300" height="420" loading="lazy">
+                <div class="doctor-endorse-overlay"></div>
+                <div class="doctor-endorse-info">
+                  <span class="doctor-endorse-tag">— All-India Advisory</span>
+                  <h3 class="doctor-endorse-name">CLINICAL VETERANS PANEL</h3>
+                  <p class="doctor-endorse-sub">Specialists, Researchers &amp; Formulators</p>
+                  <p class="doctor-endorse-quote">&ldquo;Pioneering India&rsquo;s medicinal cannabis therapeutics since 1985.&rdquo;</p>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+        </div>
+
+        <!-- Controls matching reference image: Circular Prev/Next + Slim Progress Line + Counter -->
+        <div class="doctor-cards-controls">
+          <div class="doctor-cards-nav">
+            <button class="doctor-cards-arrow doctor-cards-prev" aria-label="Previous card" title="Previous card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="doctor-cards-arrow doctor-cards-next" aria-label="Next card" title="Next card">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+
+          <div class="doctor-cards-progress-wrap">
+            <div class="doctor-cards-progress-track">
+              <div class="doctor-cards-progress-fill"></div>
+            </div>
+            <span class="doctor-cards-counter">05</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Doctor Trust Parallax",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Parallax Background Image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow Text",
+      "default": "CLINICAL EXPERTISE & AYURVEDA"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "DOCTOR'S<br>TRUSTED<br>CHOICE"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Backed by clinical expertise and chosen for real results. Formulated with standardized Vijaya cannabinoids, verified third-party COAs, and validated by leading specialists, researchers, and veteran practitioners across India."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "EXPLORE FORMULATIONS"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "doctor_card",
+      "name": "Doctor Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Doctor Photo"
+        },
+        {
+          "type": "text",
+          "id": "location_tag",
+          "label": "Location / Specialty Tag",
+          "default": "— Jaipur • Neuro-Pharmacology"
+        },
+        {
+          "type": "text",
+          "id": "doctor_name",
+          "label": "Doctor Name",
+          "default": "DR. ARVIND SWAMINATHAN"
+        },
+        {
+          "type": "text",
+          "id": "doctor_degree",
+          "label": "Credentials / Experience",
+          "default": "BAMS, MD (Ayu), Ph.D. • 22+ Yrs Exp"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Clinical Quote Snippet",
+          "default": "Standardized cannabinoids provide therapeutic consistency my patients rely on."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Doctor Trust Parallax",
+      "category": "Brand",
+      "blocks": [
+        {
+          "type": "doctor_card",
+          "settings": {
+            "location_tag": "— Jaipur • Neuro-Pharmacology",
+            "doctor_name": "DR. ARVIND SWAMINATHAN",
+            "doctor_degree": "BAMS, MD (Ayu), Ph.D. • 22+ Yrs Exp",
+            "quote": "Standardized cannabinoids provide therapeutic consistency my patients rely on."
+          }
+        },
+        {
+          "type": "doctor_card",
+          "settings": {
+            "location_tag": "— Bengaluru • Chronic Pain",
+            "doctor_name": "DR. RAJESHWARI VARMA",
+            "doctor_degree": "BAMS, MD (Kayachikitsa) • 15+ Yrs Exp",
+            "quote": "Whole-plant Ayurvedic synergy noticeably enhances patient joint mobility."
+          }
+        },
+        {
+          "type": "doctor_card",
+          "settings": {
+            "location_tag": "— Mumbai • Integrative Medicine",
+            "doctor_name": "DR. NIKHIL DEOSKAR",
+            "doctor_degree": "MBBS, MD, Cannabinoid Research • 18+ Yrs",
+            "quote": "Third-party batch COAs give complete clinical prescription confidence."
+          }
+        },
+        {
+          "type": "doctor_card",
+          "settings": {
+            "location_tag": "— Kolkata • Sleep & Stress",
+            "doctor_name": "DR. ANANYA SEN SHARMA",
+            "doctor_degree": "BAMS, PGDCC, Holistic Health • 12+ Yrs",
+            "quote": "Restores circadian rhythm and slow-wave sleep without synthetic grogginess."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

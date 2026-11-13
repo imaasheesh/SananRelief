@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="drkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="50%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="teaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="50%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <filter id="drkShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#78350F" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="400" height="320" rx="16" fill="url(#drkBg)"/>
+
+  <!-- Ceramic Teacup Top-Down / 3D Angle -->
+  <g transform="translate(200, 170)" filter="url(#drkShadow)">
+    <!-- Wooden Coaster -->
+    <ellipse cx="0" cy="55" rx="120" ry="25" fill="#B45309" opacity="0.3"/>
+    
+    <!-- Cup Outer Saucer -->
+    <ellipse cx="0" cy="35" rx="100" ry="32" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+    
+    <!-- Cup Body -->
+    <path d="M-75 0 C-75 60 75 60 75 0 Z" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    <ellipse cx="0" cy="0" rx="75" ry="26" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <!-- Steaming Amber Herbal Tea Surface -->
+    <ellipse cx="0" cy="4" rx="66" ry="21" fill="url(#teaGrad)"/>
+    <ellipse cx="-15" cy="2" rx="30" ry="10" fill="#FBBF24" opacity="0.35"/>
+
+    <!-- Lemon Slice Floating in Tea -->
+    <circle cx="25" cy="5" r="14" fill="#FACC15" stroke="#CA8A04" stroke-width="1"/>
+    <circle cx="25" cy="5" r="10" fill="#FEF08A"/>
+    <line x1="15" y1="5" x2="35" y2="5" stroke="#CA8A04" stroke-width="0.8"/>
+    <line x1="25" y1="-5" x2="25" y2="15" stroke="#CA8A04" stroke-width="0.8"/>
+
+    <!-- Cup Handle -->
+    <path d="M72 10 C95 10 95 40 70 42" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M72 10 C95 10 95 40 70 42" fill="none" stroke="#E2E8F0" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Botanical Aromatic Steam Curves -->
+  <path d="M185 110 C180 80 195 65 190 40" fill="none" stroke="#D97706" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>
+  <path d="M210 105 C215 75 205 60 212 35" fill="none" stroke="#D97706" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>
+  <path d="M230 115 C235 90 225 75 230 50" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+
+  <!-- Method Label Pill -->
+  <rect x="20" y="20" width="125" height="30" rx="15" fill="#FFFFFF" filter="url(#drkShadow)"/>
+  <text x="82" y="39" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#B45309" text-anchor="middle">IN YOUR DRINK</text>
+</svg>

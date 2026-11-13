@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "legal_content": {
+      "type": "sanan-legal",
+      "settings": {
+        "eyebrow": "LEGAL & AYUSH COMPLIANCE",
+        "heading": "Policies & Regulatory Transparency"
+      }
+    }
+  },
+  "order": [
+    "legal_content"
+  ]
+}

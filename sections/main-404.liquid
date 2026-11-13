@@ -1,23 +1,50 @@
-<style type="text/css">
-  .template-404 .title + * {
-    margin-top: 1rem;
-  }
+{{ 'sanan-404.css' | asset_url | stylesheet_tag }}
 
-  @media screen and (min-width: 750px) {
-    .template-404 .title + * {
-      margin-top: 2rem;
+<main class="page-404-wrapper">
+  <div class="page-404-container">
+    
+    <!-- Central Glass Card -->
+    <div class="page-404-card">
+      <div class="page-404-giant-number">404</div>
+
+      <div class="page-404-kicker">
+        <span>🌿</span> {{ 'templates.404.subtext' | t | default: 'Remedy Not Found • Sanan Archives' }}
+      </div>
+
+      <h1 class="page-404-title">{{ 'templates.404.title' | t | default: 'This Botanical Remedy Has Wandered' }}</h1>
+      <p class="page-404-desc">
+        {{ section.settings.description | default: 'The formulation, clinical article, or patient document you are seeking has been moved, archived, or dispensed under a revised nomenclature. Explore our active apothecary catalog below.' }}
+      </p>
+
+      <!-- Quick Search Bar -->
+      <div class="page-404-search-box">
+        <form action="{{ routes.search_url }}" method="get" class="page-404-search-form">
+          <input type="text" name="q" placeholder="{{ 'general.search.search' | t | default: 'Search formulations, ingredients, concerns...' }}">
+          <button type="submit">Search Remedy &rarr;</button>
+        </form>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="page-404-actions">
+        <a href="{{ routes.root_url }}" class="btn-primary-dock">{{ 'general.continue_shopping' | t | default: 'Return to Apothecary' }} &rarr;</a>
+        <a href="{{ routes.all_products_collection_url }}" class="btn-secondary-dock">Browse All Formulations</a>
+        <a href="/pages/contact" class="btn-secondary-dock">Speak with Doctor</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+{% schema %}
+{
+  "name": "404 Page",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "The formulation, clinical article, or patient document you are seeking has been moved, archived, or dispensed under a revised nomenclature. Explore our active apothecary catalog below."
     }
-  }
-</style>
-
-<div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
-</div>
+  ]
+}
+{% endschema %}

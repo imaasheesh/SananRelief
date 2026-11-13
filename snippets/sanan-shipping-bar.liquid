@@ -1,0 +1,38 @@
+{% comment %}
+  Sanan Relief — Dynamic Free Shipping & Doctor Consult Progress Bar Snippet
+{% endcomment %}
+
+{%- assign cart_total = cart.total_price | default: 934800 -%}
+{%- assign free_shipping_threshold = 150000 -%}
+{%- assign free_consult_threshold = 300000 -%}
+
+<div class="sanan-shipping-bar-widget" data-shipping-bar>
+  <div class="sanan-shipping-header">
+    <div class="sanan-shipping-icon">🚚</div>
+    <div class="sanan-shipping-text">
+      {%- if cart_total >= free_consult_threshold -%}
+        <strong>Unlocked!</strong> You qualify for <strong>FREE Cold-Chain Express Shipping</strong> &amp; <strong>Complimentary Doctor Consultation</strong>!
+      {%- elsif cart_total >= free_shipping_threshold -%}
+        <strong>Unlocked!</strong> Free Express Shipping. Add <strong>₹{{ free_consult_threshold | minus: cart_total | divided_by: 100 }}</strong> more for a <strong>Free Doctor Consultation</strong>.
+      {%- else -%}
+        Add <strong>₹{{ free_shipping_threshold | minus: cart_total | divided_by: 100 }}</strong> more for <strong>FREE Express Cold-Chain Shipping</strong>.
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="sanan-progress-track">
+    {%- assign progress_pct = cart_total | times: 100 | divided_by: free_consult_threshold -%}
+    {%- if progress_pct > 100 -%}{%- assign progress_pct = 100 -%}{%- endif -%}
+    <div class="sanan-progress-fill" style="width: {{ progress_pct }}%;"></div>
+  </div>
+
+  <div class="sanan-shipping-milestones">
+    <span class="milestone-step {% if cart_total >= free_shipping_threshold %}is-reached{% endif %}">
+      <span class="milestone-dot">✓</span> Free Shipping (₹1,500)
+    </span>
+    <span class="milestone-step {% if cart_total >= free_consult_threshold %}is-reached{% endif %}">
+      <span class="milestone-dot">✓</span> Free Doctor Consult (₹3,000)
+    </span>
+  </div>
+</div>
+

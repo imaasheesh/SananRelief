@@ -1,0 +1,125 @@
+{% comment %}
+  Shop by Concern / Category Orb Section
+  Online Store 2.0 section with merchant customizable categories, placeholder/image support, and floating icon badges.
+{% endcomment %}
+
+{{ 'storefront.css' | asset_url | stylesheet_tag }}
+
+<section class="concern-section section-{{ section.id }}-padding" id="Concern-{{ section.id }}">
+  <div class="page-width">
+    {%- if section.settings.subheading != blank -%}
+      <p class="concern-eyebrow">{{ section.settings.subheading | escape }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.title != blank -%}
+      <h2 class="concern-heading">{{ section.settings.title }}</h2>
+    {%- endif -%}
+
+    <div class="concern-slider-wrap">
+      <div class="concern-track" id="ConcernTrack-{{ section.id }}">
+        {%- for block in section.blocks -%}
+          <a href="{{ block.settings.link | default: '#' }}" class="concern-card" {{ block.shopify_attributes }}>
+            <div class="concern-orb-wrap">
+              <div class="concern-orb">
+                {%- if block.settings.image != blank -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 500
+                    | image_tag: loading: 'lazy', class: 'concern-media-img', alt: block.settings.title
+                  }}
+                {%- else -%}
+                  <div class="concern-placeholder-art">
+                    {% render 'icon', name: 'leaf', size: 26 %}
+                    <span>Photo</span>
+                  </div>
+                {%- endif -%}
+              </div>
+
+              <!-- Floating Overlapping Icon Badge -->
+              <div class="concern-badge">
+                {%- assign icon_name = block.settings.icon | default: 'sparkles' -%}
+                {% render 'icon', name: icon_name, size: 18 %}
+              </div>
+            </div>
+
+            <span class="concern-label">{{ block.settings.title | escape }}</span>
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Shop by Concern",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "SHOP BY CONCERN"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "Find What <em>Your Body Needs</em>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "concern_item",
+      "name": "Concern Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Title",
+          "default": "Immunity"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Floating Badge Icon",
+          "options": [
+            { "value": "shield-check", "label": "Shield (Immunity)" },
+            { "value": "clock", "label": "Moon / Clock (Sleep)" },
+            { "value": "leaf", "label": "Leaf (Stress / Mood)" },
+            { "value": "sparkles", "label": "Sparkles (Skin / Glow)" },
+            { "value": "plus", "label": "Plus (Vitality)" },
+            { "value": "package", "label": "Package (Digestion)" }
+          ],
+          "default": "leaf"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Category Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop by Concern",
+      "blocks": [
+        { "type": "concern_item", "settings": { "title": "Immunity", "icon": "shield-check" } },
+        { "type": "concern_item", "settings": { "title": "Sleep & Relaxation", "icon": "clock" } },
+        { "type": "concern_item", "settings": { "title": "Stress & Mood", "icon": "leaf" } },
+        { "type": "concern_item", "settings": { "title": "Energy & Vitality", "icon": "sparkles" } },
+        { "type": "concern_item", "settings": { "title": "Skin & Glow", "icon": "sparkles" } },
+        { "type": "concern_item", "settings": { "title": "Digestion & Gut Health", "icon": "package" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

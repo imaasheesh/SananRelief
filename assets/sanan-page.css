@@ -1,0 +1,340 @@
+/* ==========================================================================
+ * SANAN RELIEF — LUXURY STANDARD CONTENT PAGE STYLESHEET
+ * ========================================================================== */
+
+.sanan-page-body {
+  background-color: var(--color-background, #F7FBFB);
+  color: var(--color-text-primary, #1A3333);
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 1. Page Hero */
+.sanan-page-hero {
+  position: relative;
+  padding: calc(var(--sanan-header-dock-top, 102px) + 3rem) 1.5rem 3.5rem;
+  background: linear-gradient(180deg, rgba(67, 151, 152, 0.09) 0%, rgba(247, 251, 251, 0) 100%);
+  text-align: center;
+}
+
+.sanan-page-hero-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.sanan-page-breadcrumbs {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #6B7280;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.sanan-page-breadcrumbs a {
+  color: var(--color-primary, #439798);
+  text-decoration: none;
+}
+
+.sanan-page-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.sanan-page-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(67, 151, 152, 0.12);
+  color: var(--color-primary-dark, #2D6E6F);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.4rem 1.15rem;
+  border-radius: var(--btn-radius-pill, 50px);
+  margin-bottom: 1rem;
+}
+
+.sanan-page-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  color: var(--color-secondary, #1A4A4B);
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.015em;
+}
+
+.sanan-page-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  color: #6B7280;
+  flex-wrap: wrap;
+}
+
+.page-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* 2. Main 2-Column Content Layout */
+.sanan-page-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem 6rem;
+}
+
+.sanan-page-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Left Column: Pinned Sticky Table of Contents */
+.sanan-page-sidebar-sticky {
+  position: sticky;
+  top: calc(var(--sanan-header-dock-top, 102px) + 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sanan-toc-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid var(--color-border, #D4E8E8);
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(26, 74, 75, 0.04);
+}
+
+.toc-heading {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 1.25rem;
+  color: var(--color-secondary, #1A4A4B);
+  margin: 0 0 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1.5px solid #F0F6F6;
+}
+
+.toc-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-link {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6B7280;
+  text-decoration: none;
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  line-height: 1.35;
+}
+
+.toc-link:hover {
+  color: var(--color-primary, #439798);
+  background: rgba(67, 151, 152, 0.06);
+}
+
+.toc-link.is-active {
+  color: var(--color-secondary, #1A4A4B);
+  background: rgba(67, 151, 152, 0.12);
+  font-weight: 700;
+}
+
+.sidebar-consult-card {
+  background: linear-gradient(135deg, #1A4A4B 0%, #2D6E6F 100%);
+  color: #FFFFFF;
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+}
+
+.consult-card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.consult-card-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.consult-card-desc {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  line-height: 1.5;
+  margin: 0 0 1.25rem;
+}
+
+.btn-sidebar-doctor {
+  display: inline-block;
+  background: #FFFFFF;
+  color: var(--color-secondary, #1A4A4B);
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--btn-radius-pill, 50px);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-sidebar-doctor:hover {
+  background: #E5F0F0;
+  transform: translateY(-2px);
+}
+
+/* Right Column: Rich Editorial Article Content */
+.sanan-page-content {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border, #D4E8E8);
+  border-radius: 24px;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 8px 32px rgba(26, 74, 75, 0.04);
+}
+
+.sanan-page-section {
+  margin-bottom: 3.5rem;
+  scroll-margin-top: calc(var(--sanan-header-dock-top, 102px) + 30px);
+}
+
+.sanan-page-section:last-child {
+  margin-bottom: 0;
+}
+
+.page-section-heading {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 2rem;
+  color: var(--color-secondary, #1A4A4B);
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+.page-body-p {
+  font-size: 1.0625rem;
+  color: #374151;
+  line-height: 1.75;
+  margin: 0 0 1.5rem;
+}
+
+/* Callout Box */
+.sanan-editorial-callout {
+  background: #F0F8F8;
+  border-left: 4px solid var(--color-primary, #439798);
+  border-radius: 0 14px 14px 0;
+  padding: 1.5rem 1.75rem;
+  margin: 2rem 0;
+}
+
+.callout-title {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.callout-body {
+  font-size: 0.95rem;
+  color: #4B5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Scientific Comparison Table */
+.sanan-page-table-wrap {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border: 1px solid var(--color-border, #D4E8E8);
+  border-radius: 14px;
+}
+
+.sanan-page-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9375rem;
+}
+
+.sanan-page-table th {
+  background: #F0F8F8;
+  color: var(--color-secondary, #1A4A4B);
+  font-weight: 700;
+  padding: 1rem 1.25rem;
+  border-bottom: 1.5px solid var(--color-border, #D4E8E8);
+}
+
+.sanan-page-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #F3F4F6;
+  color: #4B5563;
+}
+
+.sanan-page-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Author / Medical Signoff */
+.sanan-page-signoff {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1.5px solid var(--color-border, #D4E8E8);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.signoff-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-primary, #439798);
+}
+
+.signoff-name {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+}
+
+.signoff-role {
+  font-size: 0.85rem;
+  color: #6B7280;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sanan-page-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .sanan-page-sidebar-sticky {
+    position: static;
+  }
+  .sanan-page-content {
+    padding: 2.25rem 2rem;
+  }
+}
+

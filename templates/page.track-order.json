@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-track-order",
+      "settings": {
+        "kicker": "Real-Time Consignment Tracker",
+        "title": "Track Your Ayurvedic Remedy",
+        "subtitle": "Enter your Sanan Relief Order ID alongside your registered mobile number or email address to verify dispatch and real-time transit status."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
+

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dgrad_cola" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#451A03"/>
+      <stop offset="100%" stop-color="#0F051D"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="36" fill="url(#dgrad_cola)"/>
+  <circle cx="400" cy="400" r="300" fill="none" stroke="#FBBF24" stroke-opacity="0.2" stroke-width="2"/>
+  
+  <text x="400" y="160" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#FBBF24" text-anchor="middle" letter-spacing="4">CLINICAL POTENCY DOSSIER</text>
+  <text x="400" y="210" font-family="'DM Serif Display', Georgia, serif" font-size="40" font-weight="700" fill="#FFFFFF" text-anchor="middle">RETRO SPICED COLA GUMMIES</text>
+  
+  <rect x="150" y="280" width="500" height="180" rx="24" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+  <text x="400" y="340" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#CBD5E1" text-anchor="middle" letter-spacing="2">ACTIVE BOTANICAL DOSE PER GUMMY</text>
+  <text x="400" y="415" font-family="'Plus Jakarta Sans', sans-serif" font-size="64" font-weight="900" fill="#FBBF24" text-anchor="middle">350mg</text>
+  
+  <rect x="150" y="490" width="235" height="140" rx="20" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <text x="267" y="540" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#94A3B8" text-anchor="middle">TOTAL EXTRACT</text>
+  <text x="267" y="590" font-family="'Plus Jakarta Sans', sans-serif" font-size="32" font-weight="800" fill="#FFFFFF" text-anchor="middle">5000mg</text>
+  
+  <rect x="415" y="490" width="235" height="140" rx="20" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <text x="532" y="540" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#94A3B8" text-anchor="middle">CHARACTER VIBE</text>
+  <text x="532" y="585" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="800" fill="#FBBF24" text-anchor="middle">VINTAGE FIZZ </text>
+
+  <text x="400" y="700" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="600" fill="#94A3B8" text-anchor="middle">NABL Certified • 100% Ayurvedic Vijaya • Lab Verified</text>
+</svg>

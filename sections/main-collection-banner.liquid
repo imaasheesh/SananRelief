@@ -1,45 +1,145 @@
-{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+{{ 'sanan-collection.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  @media screen and (max-width: 749px) {
-    .collection-hero--with-image .collection-hero__inner {
-      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
-    }
-  }
-{%- endstyle -%}
+<!-- 1. FULL WIDTH 450PX HERO IMAGE (FROM TOP OF PAGE) -->
+<div class="sanan-collection-hero-banner" role="banner" aria-label="{{ collection.title | escape }}">
+  {%- if collection.image -%}
+    {{
+      collection.image
+      | image_url: width: 2400
+      | image_tag:
+        class: 'sanan-hero-banner-img',
+        loading: 'eager',
+        widths: '750, 1100, 1500, 1780, 2000, 2400',
+        alt: collection.title
+    }}
+  {%- else -%}
+    <img
+      src="{{ 'hero-fullscreen-bg.jpg' | asset_url }}"
+      alt="{{ collection.title | escape }}"
+      class="sanan-hero-banner-img"
+      width="2400"
+      height="450"
+      loading="eager"
+    >
+  {%- endif -%}
+  <div class="sanan-hero-banner-overlay"></div>
+</div>
 
-<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
-  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    <div class="collection-hero__text-wrapper">
-      <h1 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
-      </h1>
+<!-- 2. BREADCRUMBS & HEALTH CONCERNS (BELOW 450PX HERO BANNER) -->
+<div class="sanan-collection-breadcrumbs-bar">
+  <div class="sanan-container">
+    {%- if section.settings.show_breadcrumbs -%}
+      <nav class="sanan-breadcrumbs" aria-label="Breadcrumb">
+        <a href="{{ routes.root_url }}">Home</a>
+        <span class="sanan-breadcrumbs-separator">&rsaquo;</span>
+        <a href="{{ routes.all_products_collection_url }}">Shop</a>
+        <span class="sanan-breadcrumbs-separator">&rsaquo;</span>
+        <span class="sanan-breadcrumbs-current">{{ collection.title | escape }}</span>
+      </nav>
+    {%- endif -%}
 
-      {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
-      {%- endif -%}
-    </div>
+    <!-- Visual Health Concern Scrolling Filter Tabs (Editorial Luxury Carousel) -->
+    {%- if section.settings.show_concern_pills -%}
+      <div class="sanan-concern-scroller-container">
+        <button type="button" class="sanan-tab-scroll-btn sanan-tab-scroll-prev" id="ConcernScrollPrev" aria-label="Scroll tabs left">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
 
-    {%- if section.settings.show_collection_image and collection.image -%}
-      <div class="collection-hero__image-container media gradient">
-        <img
-          srcset="
-            {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
-            {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
-            {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
-            {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-            {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {{ collection.image | image_url }} {{ collection.image.width }}w
-          "
-          src="{{ collection.image | image_url: width: 750 }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-          alt="{{ collection.image.alt | escape }}"
-          width="{{ collection.image.width }}"
-          height="{{ collection.image.height }}"
-        >
+        <div class="sanan-concern-tabs-track" id="SananConcernFilterPills" role="tablist" aria-label="Filter by Health Concern">
+          <!-- All Formulations -->
+          <button type="button" class="sanan-concern-tab is-active" data-concern="all" role="tab" aria-selected="true">
+            <div class="sanan-tab-thumb-wrap">
+              <img src="{{ 'product-vijaya-oil.svg' | asset_url }}" alt="All Formulations" class="sanan-tab-thumb" width="70" height="70" loading="eager">
+            </div>
+            <span class="sanan-tab-title">All Formulations</span>
+            <span class="sanan-tab-count" id="ConcernCountAll">({{ collection.all_products_count | default: 12 }})</span>
+            <span class="sanan-tab-active-dot"></span>
+          </button>
+
+          <!-- Pain & Muscle Recovery -->
+          <button type="button" class="sanan-concern-tab" data-concern="pain" role="tab" aria-selected="false">
+            <div class="sanan-tab-thumb-wrap">
+              <img src="{{ 'benefit-pain-relief.svg' | asset_url }}" alt="Pain &amp; Muscle Recovery" class="sanan-tab-thumb" width="70" height="70" loading="lazy">
+            </div>
+            <span class="sanan-tab-title">Pain &amp; Muscle</span>
+            <span class="sanan-tab-count">(6)</span>
+            <span class="sanan-tab-active-dot"></span>
+          </button>
+
+          <!-- Stress & Anxiety -->
+          <button type="button" class="sanan-concern-tab" data-concern="stress" role="tab" aria-selected="false">
+            <div class="sanan-tab-thumb-wrap">
+              <img src="{{ 'benefit-stress-anxiety.jpg' | asset_url }}" alt="Stress &amp; Anxiety" class="sanan-tab-thumb" width="70" height="70" loading="lazy">
+            </div>
+            <span class="sanan-tab-title">Stress &amp; Mood</span>
+            <span class="sanan-tab-count">(3)</span>
+            <span class="sanan-tab-active-dot"></span>
+          </button>
+
+          <!-- Sleep Management -->
+          <button type="button" class="sanan-concern-tab" data-concern="sleep" role="tab" aria-selected="false">
+            <div class="sanan-tab-thumb-wrap">
+              <img src="{{ 'benefit-sleep-recovery.svg' | asset_url }}" alt="Sleep Management" class="sanan-tab-thumb" width="70" height="70" loading="lazy">
+            </div>
+            <span class="sanan-tab-title">Sleep &amp; Rest</span>
+            <span class="sanan-tab-count">(3)</span>
+            <span class="sanan-tab-active-dot"></span>
+          </button>
+
+          <!-- Daily Wellness & Metabolism -->
+          <button type="button" class="sanan-concern-tab" data-concern="wellness" role="tab" aria-selected="false">
+            <div class="sanan-tab-thumb-wrap">
+              <img src="{{ 'product-radiance-serum.svg' | asset_url }}" alt="Daily Wellness &amp; Metabolism" class="sanan-tab-thumb" width="70" height="70" loading="lazy">
+            </div>
+            <span class="sanan-tab-title">Daily Wellness</span>
+            <span class="sanan-tab-count">(3)</span>
+            <span class="sanan-tab-active-dot"></span>
+          </button>
+
+          <!-- Unwind & Relax -->
+          <button type="button" class="sanan-concern-tab" data-concern="relax" role="tab" aria-selected="false">
+            <div class="sanan-tab-thumb-wrap">
+              <img src="{{ 'product-sleepwell-pulse.svg' | asset_url }}" alt="Unwind and Relax" class="sanan-tab-thumb" width="70" height="70" loading="lazy">
+            </div>
+            <span class="sanan-tab-title">Unwind &amp; Calm</span>
+            <span class="sanan-tab-count">(2)</span>
+            <span class="sanan-tab-active-dot"></span>
+          </button>
+
+          <!-- Cancer Care & Appetite -->
+          <button type="button" class="sanan-concern-tab" data-concern="cancer" role="tab" aria-selected="false">
+            <div class="sanan-tab-thumb-wrap">
+              <img src="{{ 'cta-product-3d.png' | asset_url }}" alt="Cancer Care &amp; Appetite" class="sanan-tab-thumb" width="70" height="70" loading="lazy">
+            </div>
+            <span class="sanan-tab-title">Cancer Palliative</span>
+            <span class="sanan-tab-count">(2)</span>
+            <span class="sanan-tab-active-dot"></span>
+          </button>
+
+          <!-- Mental Focus & ADHD -->
+          <button type="button" class="sanan-concern-tab" data-concern="mental-health" role="tab" aria-selected="false">
+            <div class="sanan-tab-thumb-wrap">
+              <img src="{{ 'product-ashwagandha.svg' | asset_url }}" alt="Mental Health &amp; Focus" class="sanan-tab-thumb" width="70" height="70" loading="lazy">
+            </div>
+            <span class="sanan-tab-title">Mental Focus</span>
+            <span class="sanan-tab-count">(2)</span>
+            <span class="sanan-tab-active-dot"></span>
+          </button>
+
+          <!-- Joints & Mobility -->
+          <button type="button" class="sanan-concern-tab" data-concern="joints" role="tab" aria-selected="false">
+            <div class="sanan-tab-thumb-wrap">
+              <img src="{{ 'product-herbal-balm.svg' | asset_url }}" alt="Joints &amp; Mobility" class="sanan-tab-thumb" width="70" height="70" loading="lazy">
+            </div>
+            <span class="sanan-tab-title">Joints &amp; Mobility</span>
+            <span class="sanan-tab-count">(2)</span>
+            <span class="sanan-tab-active-dot"></span>
+          </button>
+        </div>
+
+        <button type="button" class="sanan-tab-scroll-btn sanan-tab-scroll-next" id="ConcernScrollNext" aria-label="Scroll tabs right">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
       </div>
     {%- endif -%}
   </div>
@@ -47,29 +147,37 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-collection-banner.name",
+  "name": "Sanan Collection Header",
   "class": "section",
   "settings": [
     {
-      "type": "paragraph",
-      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "label": "Show Breadcrumbs",
+      "default": true
     },
     {
       "type": "checkbox",
       "id": "show_collection_description",
-      "default": true,
-      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+      "label": "Show Collection Description",
+      "default": true
     },
     {
       "type": "checkbox",
-      "id": "show_collection_image",
-      "default": false,
-      "label": "t:sections.main-collection-banner.settings.show_collection_image.label"
+      "id": "show_trust_badges",
+      "label": "Show Trust Badges",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_concern_pills",
+      "label": "Show Health Concern Quick Pills",
+      "default": true
     },
     {
       "type": "color_scheme",
       "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
+      "label": "Color Scheme",
       "default": "scheme-1"
     }
   ]

@@ -1,0 +1,71 @@
+{% comment %}
+  Sanan Relief — 3-Tier Luxury Variant Selector Snippet
+  Adheres strictly to Image 1 specs & Theme Tokens
+{% endcomment %}
+
+<div class="sanan-variant-suite" data-product-variants>
+  <!-- Tier 1: Select Type -->
+  <div class="sanan-selector-group">
+    <div class="sanan-group-header">
+      <span class="sanan-group-label">select type:</span>
+      <span class="sanan-group-active-value" id="activeTypeLabel">standard tincture</span>
+    </div>
+    <div class="sanan-type-grid">
+      <label class="sanan-type-card is-active">
+        <input type="radio" name="remedy_type" value="standard" checked>
+        <span class="sanan-type-radio-mark"></span>
+        <span class="sanan-type-name">Standard Tincture</span>
+        <span class="sanan-type-sub">30ml Amber Glass</span>
+      </label>
+      <label class="sanan-type-card">
+        <input type="radio" name="remedy_type" value="forte">
+        <span class="sanan-type-radio-mark"></span>
+        <span class="sanan-type-name">Forte Extra Strength</span>
+        <span class="sanan-type-sub">Double Extract 60ml</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Tier 2: Select Flavor / Profile -->
+  <div class="sanan-selector-group">
+    <div class="sanan-group-header">
+      <span class="sanan-group-label">select profile:</span>
+      <span class="sanan-group-active-value" id="activeProfileLabel">unflavoured raw</span>
+    </div>
+    <div class="sanan-flavor-pills">
+      <button type="button" class="sanan-flavor-pill is-active" data-flavor="unflavoured">Unflavoured Raw</button>
+      <button type="button" class="sanan-flavor-pill" data-flavor="peppermint">Himalayan Mint</button>
+      <button type="button" class="sanan-flavor-pill" data-flavor="cinnamon">Kashmir Cinnamon</button>
+    </div>
+  </div>
+
+  <!-- Tier 3: Select Count / Multipack with Lime Badges -->
+  <div class="sanan-selector-group">
+    <div class="sanan-group-header">
+      <span class="sanan-group-label">select pack size:</span>
+      <span class="sanan-group-active-value" id="activePackLabel">30 days supply</span>
+    </div>
+    <div class="sanan-pack-grid">
+      <div class="sanan-pack-card">
+        <span class="sanan-pack-title">1 Bottle (10 Days)</span>
+        <span class="sanan-pack-price">₹4,499</span>
+        <span class="sanan-pack-sub">starter trial</span>
+      </div>
+
+      <div class="sanan-pack-card is-active">
+        <span class="sanan-pack-badge sanan-badge-lime">SAVE 15%</span>
+        <span class="sanan-pack-title">2 Bottles (20 Days)</span>
+        <span class="sanan-pack-price">₹7,649</span>
+        <span class="sanan-pack-sub">most popular</span>
+      </div>
+
+      <div class="sanan-pack-card">
+        <span class="sanan-pack-badge sanan-badge-lime">SAVE 25%</span>
+        <span class="sanan-pack-title">3 Bottles (30 Days)</span>
+        <span class="sanan-pack-price">₹10,124</span>
+        <span class="sanan-pack-sub">best value</span>
+      </div>
+    </div>
+  </div>
+</div>
+

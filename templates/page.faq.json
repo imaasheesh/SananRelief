@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "faq_content": {
+      "type": "sanan-faq",
+      "settings": {
+        "eyebrow": "KNOWLEDGE BASE & GUIDES",
+        "heading": "Frequently Asked Questions",
+        "subheading": "Find answers regarding our standardized Ayurvedic Vijaya formulations, dosages, Ayush licensing, prescriptions, and pan-India express delivery."
+      }
+    }
+  },
+  "order": [
+    "faq_content"
+  ]
+}

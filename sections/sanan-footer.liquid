@@ -1,0 +1,379 @@
+{% comment %}
+  Sanan Luxury Glassmorphic Footer with Pinned Parallax Background
+  Features:
+  - Pinned/sticky panoramic botanical field background
+  - Deep frosted glassmorphism veil with specular highlight
+  - Column 1: Brand logo, wellness newsletter subscription, social icons, drug licence & contact credentials
+  - Column 2: Products (Gummies & Edibles, Pain Management, Full Spectrum Oil)
+  - Column 3: Health Goals (Targeted Relief, Ayurvedic Guidance)
+  - Column 4: Science & Trust (Clinical Studies, Lab COA, ECS Science)
+  - Column 5: Company (About, Support, Policies & Consent)
+  - Medical Disclaimer banner
+  - Legal Copyright & Policy navigation bar
+  - Sub-footer manufacturer & regulatory credentials bar
+  - Floating WhatsApp Ayurvedic support widget
+{% endcomment %}
+
+{{ 'storefront.css' | asset_url | stylesheet_tag }}
+
+<footer class="sanan-footer-section" id="SananFooter">
+  <!-- Pinned / Parallax Background Canvas -->
+  <div class="sanan-footer-pinned-bg" aria-hidden="true">
+    {%- if section.settings.bg_image != blank -%}
+      <img
+        src="{{ section.settings.bg_image | image_url: width: 2400 }}"
+        alt="Botanical Sanan Field"
+        loading="lazy"
+        class="footer-bg-media"
+        width="2400"
+        height="800"
+      >
+    {%- else -%}
+      <img
+        src="{{ 'footer-bg.jpg' | asset_url }}"
+        alt="Botanical Sanan Field"
+        loading="lazy"
+        class="footer-bg-media"
+        width="2400"
+        height="800"
+      >
+    {%- endif -%}
+  </div>
+
+  <!-- Glassmorphic Content Veil -->
+  <div class="sanan-footer-glass-veil">
+
+    <!-- Floating CTA Card: Half In / Half Out of Footer (Site Brand Colors) -->
+    <div class="sanan-footer-cta-wrapper">
+      <div class="sanan-footer-cta-card">
+
+        <!-- Left Column: Breakout 3D Product Visual with Floating Sparkles -->
+        <div class="sanan-cta-visual-col" aria-hidden="true">
+          <div class="sanan-cta-sparkle sparkle-1">✦</div>
+          <div class="sanan-cta-sparkle sparkle-2">✦</div>
+          <div class="sanan-cta-sparkle sparkle-3">✦</div>
+          {%- if section.settings.cta_image != blank -%}
+            <img
+              src="{{ section.settings.cta_image | image_url: width: 800 }}"
+              alt="Sanan Relief Formulations"
+              class="sanan-cta-breakout-img"
+              width="360"
+              height="480"
+              loading="lazy"
+            >
+          {%- else -%}
+            <img
+              src="{{ 'cta-product-3d.png' | asset_url }}"
+              alt="Sanan Relief Formulations"
+              class="sanan-cta-breakout-img"
+              width="360"
+              height="480"
+              loading="lazy"
+            >
+          {%- endif -%}
+        </div>
+
+        <!-- Right Column: Content & Integrated Pill Form -->
+        <div class="sanan-cta-content-col">
+          <h3 class="sanan-cta-title">
+            {{ section.settings.cta_title | default: 'Subscribe to our newsletter to get updates to our latest collections' | escape }}
+          </h3>
+          <p class="sanan-cta-subtitle">
+            {{ section.settings.cta_subtitle | default: 'Get 20% off on your first order just by subscribing to our newsletter' | escape }}
+          </p>
+
+          {% form 'customer', class: 'sanan-cta-form' %}
+            <input type="hidden" name="contact[tags]" value="newsletter,floating_cta">
+            <div class="sanan-cta-input-group">
+              <div class="sanan-cta-input-inner">
+                <svg class="sanan-cta-mail-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <input
+                  type="email"
+                  name="contact[email]"
+                  class="sanan-cta-email-input"
+                  placeholder="Enter your email"
+                  required
+                  aria-label="Enter your email"
+                  autocomplete="email"
+                >
+              </div>
+              <button type="submit" class="sanan-cta-submit-btn">
+                Subscribe
+              </button>
+            </div>
+            <div class="sanan-cta-footer-notes">
+              <p class="sanan-cta-note">You will be able to unsubscribe at any time.</p>
+              <p class="sanan-cta-note">
+                Read our privacy policy <a href="{{ section.settings.privacy_link | default: '/pages/legal#privacy' }}" class="sanan-cta-policy-link">here</a>.
+              </p>
+            </div>
+          {% endform %}
+        </div>
+
+      </div>
+    </div>
+
+    <div class="sanan-footer-container">
+
+      <!-- Top Multi-Column Grid -->
+      <div class="sanan-footer-grid">
+
+        <!-- Column 1: Brand, Mission, Social & Regulatory -->
+        <div class="sanan-footer-col sanan-col-brand">
+          <!-- Logo (Transparent, No Background, Sized Prominently) -->
+          <div class="footer-brand-header">
+            <a href="{{ routes.root_url }}" class="footer-logo-link" aria-label="Sanan Relief Home">
+              {%- if section.settings.logo != blank -%}
+                <img
+                  src="{{ section.settings.logo | image_url: width: 360 }}"
+                  alt="{{ shop.name | escape }}"
+                  class="footer-logo-img"
+                  width="160"
+                  height="96"
+                  loading="lazy"
+                >
+              {%- else -%}
+                <img
+                  src="{{ 'logo.png' | asset_url }}"
+                  alt="Sanan Relief"
+                  class="footer-logo-img"
+                  width="160"
+                  height="96"
+                  loading="lazy"
+                >
+              {%- endif -%}
+            </a>
+          </div>
+
+          <!-- Brand Mission -->
+          <p class="footer-brand-bio">
+            Pioneering standardized Vijaya and Ayurvedic clinical formulations for targeted chronic relief, restful sleep, and holistic physical vitality.
+          </p>
+
+          <!-- Social Icon Links -->
+          <div class="footer-social-strip" aria-label="Social Media">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-circle" aria-label="LinkedIn" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://medium.com" target="_blank" rel="noopener" class="footer-social-circle" aria-label="Medium" title="Medium">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="12" r="5"/><circle cx="15" cy="12" r="4"/><circle cx="21" cy="12" r="2"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-circle" aria-label="X (formerly Twitter)" title="X (Twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-circle" aria-label="Facebook" title="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-circle" aria-label="YouTube" title="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+
+          <!-- Corporate & License Credentials -->
+          <div class="footer-corporate-info">
+            <p class="corporate-copy-line">&copy; {{ 'now' | date: '%Y' }} Hemp Herbals Pvt. Ltd. All rights reserved.</p>
+            <p class="corporate-sub-line">Marketed by Hemp Herbals Pvt. Ltd., Indore &bull; Manufactured by Mehta Ayurvedic Sansthan, Indore.</p>
+            <p class="corporate-lic-line">Govt. Drug Lic: 25D/55/96 &bull; Excise Lic: 22/2022/0022</p>
+            <div class="corporate-contact-links">
+              <a href="mailto:support@sananindia.com" class="corporate-email">support@sananindia.com</a>
+              <span class="corp-dot">&bull;</span>
+              <a href="tel:+917898429977" class="corporate-phone">+91 78984 29977</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Products -->
+        <div class="sanan-footer-col">
+          <h4 class="footer-col-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="/pages/our-story" class="footer-nav-link">Why Sanan</a></li>
+          </ul>
+
+          <h5 class="footer-category-subtitle">GUMMIES &amp; EDIBLES</h5>
+          <ul class="footer-links-list">
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Gummy Vati (3% Mild)</a></li>
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Gummy Vati Plus (5% Balanced)</a></li>
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Gummy Vati Gold (7% Strong)</a></li>
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Mawa Modak Vati (10500mg)</a></li>
+          </ul>
+
+          <h5 class="footer-category-subtitle">PAIN MANAGEMENT</h5>
+          <ul class="footer-links-list">
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Pain Relief Oil 30 ml</a></li>
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Pain Relief Oil (50 ml)</a></li>
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Pain Relief Patch (Pack of 5)</a></li>
+          </ul>
+
+          <h5 class="footer-category-subtitle">FULL SPECTRUM OIL</h5>
+          <ul class="footer-links-list">
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Full Spectrum Vijaya 4500mg</a></li>
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Sublingual Whole-Plant Extracts</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Health Goals -->
+        <div class="sanan-footer-col">
+          <h4 class="footer-col-title">Health Goals</h4>
+
+          <h5 class="footer-category-subtitle">TARGETED RELIEF</h5>
+          <ul class="footer-links-list">
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Arthritis &amp; Joint Discomfort</a></li>
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Insomnia &amp; Night Sleep</a></li>
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Daily Stress &amp; Mental Calm</a></li>
+            <li><a href="{{ routes.all_products_collection_url }}" class="footer-nav-link">Digestive Cramps &amp; Gut Health</a></li>
+          </ul>
+
+          <h5 class="footer-category-subtitle">AYURVEDIC GUIDANCE</h5>
+          <ul class="footer-links-list">
+            <li><a href="https://wa.me/917898429977" target="_blank" rel="noopener" class="footer-nav-link">Doctor Support on WhatsApp</a></li>
+            <li><a href="/pages/faq" class="footer-nav-link">Dosage &amp; Strength Guide</a></li>
+            <li><a href="{{ routes.root_url }}" class="footer-nav-link">For Practitioners (sananrelief.com)</a></li>
+            <li><a href="/pages/contact" class="footer-nav-link">Ayurvedic Consultation Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Science & Trust -->
+        <div class="sanan-footer-col">
+          <h4 class="footer-col-title">Science &amp; Trust</h4>
+          <ul class="footer-links-list">
+            <li><a href="/pages/our-story" class="footer-nav-link">40 Years of Formulation (Est. 1985)</a></li>
+            <li><a href="/pages/article" class="footer-nav-link">CTRI Registered Clinical Study</a></li>
+            <li><a href="/pages/article" class="footer-nav-link">Published Orthopaedics Study</a></li>
+            <li><a href="/pages/legal#disclaimer" class="footer-nav-link">Lab Test Reports (COA)</a></li>
+            <li><a href="/pages/article" class="footer-nav-link">Whole-Plant vs Isolates</a></li>
+            <li><a href="/pages/article" class="footer-nav-link">Endocannabinoid System (ECS)</a></li>
+            <li><a href="/pages/faq" class="footer-nav-link">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Company -->
+        <div class="sanan-footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="/pages/our-story" class="footer-nav-link">About Sanan India</a></li>
+            <li><a href="/pages/contact" class="footer-nav-link">Contact Us</a></li>
+            <li><a href="/pages/contact" class="footer-nav-link">Track Your Order</a></li>
+            <li><a href="/pages/legal#shipping" class="footer-nav-link">Shipping Policy</a></li>
+            <li><a href="/pages/legal#returns" class="footer-nav-link">Return &amp; Refund Policy</a></li>
+            <li><a href="/pages/legal#terms" class="footer-nav-link">Terms &amp; Conditions</a></li>
+            <li><a href="/pages/legal#telemedicine" class="footer-nav-link">Patient Consent &amp; Telemedicine</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Medical Disclaimer Line & Legal Links in the Same Row -->
+      <div class="sanan-footer-disclaimer-row">
+        <div class="footer-disclaimer-container">
+          <p class="footer-disclaimer-text">
+            Our products help manage everyday discomfort. They are not intended to cure underlying conditions.
+          </p>
+          <nav class="footer-legal-inline-links" aria-label="Legal Navigation">
+            <a href="/pages/legal#shipping" class="legal-crumb-link">Shipping Policy</a>
+            <span class="legal-pipe">|</span>
+            <a href="/pages/legal#privacy" class="legal-crumb-link">Privacy Policy</a>
+            <span class="legal-pipe">|</span>
+            <a href="/pages/legal#returns" class="legal-crumb-link">Return &amp; Refund Policy</a>
+            <span class="legal-pipe">|</span>
+            <a href="/pages/legal#terms" class="legal-crumb-link">Terms &amp; Conditions</a>
+            <span class="legal-pipe">|</span>
+            <a href="/pages/our-story" class="legal-crumb-link">About Us</a>
+            <span class="legal-pipe">|</span>
+            <a href="/pages/contact" class="legal-crumb-link">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Unified Bottom Attribution & Copyright Bar -->
+    <div class="sanan-footer-bottom-bar">
+      <div class="footer-bottom-container">
+        <p class="footer-bottom-text">
+          &copy; {{ 'now' | date: '%Y' }} Hemp Herbals Pvt. Ltd. All rights reserved. &bull; Marketed by Hemp Herbals Pvt. Ltd., Indore &bull; Manufactured by Mehta Ayurvedic Sansthan, Indore.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Floating WhatsApp Ayurvedic Helpline Pill Button -->
+  <aside class="sanan-whatsapp-float" aria-label="WhatsApp Ayurvedic Support">
+    <a
+      href="https://wa.me/917898429977?text=Hello%20Sanan%20Relief%20Team,%20I%20would%20like%20to%20consult%20an%20Ayurvedic%20doctor."
+      target="_blank"
+      rel="noopener"
+      class="whatsapp-float-btn"
+      title="Chat with Ayurvedic Physician"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 17.58c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.217 8.217 0 0 1-1.26-4.32c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.69 8.24-8.23 8.24zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.13.17 1.74 2.65 4.21 3.72.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/>
+      </svg>
+      <span class="whatsapp-tooltip">Consult on WhatsApp</span>
+    </a>
+  </aside>
+</footer>
+
+{% schema %}
+{
+  "name": "Sanan Extensive Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Floating Newsletter CTA Card"
+    },
+    {
+      "type": "image_picker",
+      "id": "cta_image",
+      "label": "CTA Breakout 3D Product Image"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "CTA Heading",
+      "default": "Subscribe to our newsletter to get updates to our latest collections"
+    },
+    {
+      "type": "text",
+      "id": "cta_subtitle",
+      "label": "CTA Subtitle",
+      "default": "Get 20% off on your first order just by subscribing to our newsletter"
+    },
+    {
+      "type": "header",
+      "content": "Footer Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Pinned Background Image",
+      "info": "Scenic botanical / hemp sunrise field image"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Footer Brand Logo"
+    },
+    {
+      "type": "textarea",
+      "id": "newsletter_text",
+      "label": "Newsletter Subtitle",
+      "default": "Get our monthly wellness digest, clinical research updates, and new batch alerts straight to your inbox"
+    },
+    {
+      "type": "url",
+      "id": "privacy_link",
+      "label": "Privacy Policy Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sanan Extensive Footer"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,887 @@
+/* ─── 0. BASE NAV ITEM & HOVER BRIDGE ─── */
+.sanan-floating-header {
+  position: relative !important;
+}
+
+.sanan-header-card {
+  position: relative !important;
+  z-index: 1001 !important;
+}
+
+.sanan-nav-item {
+  position: relative;
+}
+
+/* ─── 1. FULL-WIDTH VIEWPORT MEGA MENUS (100vw Edge-to-Edge) ─── */
+.sanan-mega-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0 !important;
+  right: 0 !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin: 0 !important;
+  background: rgba(255, 255, 255, 0.985);
+  backdrop-filter: blur(36px) saturate(190%);
+  -webkit-backdrop-filter: blur(36px) saturate(190%);
+  border-radius: 0 0 32px 32px !important;
+  border: none !important;
+  border-bottom: 2px solid rgba(67, 151, 152, 0.22) !important;
+  box-shadow: 0 40px 90px rgba(18, 52, 53, 0.22), 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 3rem 0 3.5rem !important;
+  z-index: 1000 !important;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+/* Dual Activation: Both CSS :has() hover AND JS .is-active */
+.sanan-floating-header:has([data-mega-target="SmmScience"]:hover) #SmmScience,
+.sanan-floating-header:has(#SmmScience:hover) #SmmScience,
+#SmmScience.is-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+.sanan-floating-header:has([data-mega-target="SmmSupport"]:hover) #SmmSupport,
+.sanan-floating-header:has(#SmmSupport:hover) #SmmSupport,
+#SmmSupport.is-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+.sanan-floating-header:has([data-mega-target="SmmStory"]:hover) #SmmStory,
+.sanan-floating-header:has(#SmmStory:hover) #SmmStory,
+#SmmStory.is-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+/* ─── INVISIBLE HOVER BRIDGE ───
+   Covers the entire vertical gap between the header card and the mega menu
+   so the cursor never loses hover contact while moving downward. */
+.sanan-mega-menu::before {
+  content: '';
+  position: absolute;
+  top: -32px;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: transparent;
+  pointer-events: auto;
+}
+
+/* Active Nav Link Indicator */
+.sanan-floating-header:has([data-mega-target="SmmScience"]:hover) [data-mega-target="SmmScience"],
+.sanan-floating-header:has([data-mega-target="SmmSupport"]:hover) [data-mega-target="SmmSupport"],
+.sanan-floating-header:has([data-mega-target="SmmStory"]:hover) [data-mega-target="SmmStory"],
+.sanan-mega-trigger.is-active {
+  color: var(--color-primary-dark, #2D6E6F) !important;
+  font-weight: 700 !important;
+}
+
+.sanan-floating-header:has([data-mega-target="SmmScience"]:hover) [data-mega-target="SmmScience"] .nav-chevron,
+.sanan-floating-header:has([data-mega-target="SmmSupport"]:hover) [data-mega-target="SmmSupport"] .nav-chevron,
+.sanan-floating-header:has([data-mega-target="SmmStory"]:hover) [data-mega-target="SmmStory"] .nav-chevron,
+.sanan-mega-trigger.is-active .nav-chevron {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease;
+}
+
+/* Full Width Inner Constrained Container */
+.smm-inner-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4rem;
+  box-sizing: border-box;
+}
+
+/* Tab Panes in Full Screen Overlay */
+.sso-tab-pane {
+  display: none;
+  width: 100%;
+}
+.sso-tab-pane.is-active {
+  display: grid;
+}
+
+/* ─── 2. MEGA MENU 1: CLINICAL SHOP / FORMULATIONS (Image 5 Reference) ─── */
+.smm-shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.25fr 1.25fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.smm-col-header {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1A3333;
+  margin: 0 0 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #2D6E6F;
+  display: inline-block;
+}
+
+.smm-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.smm-link {
+  font-size: 0.84rem;
+  color: #334155;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.35;
+}
+
+.smm-link:hover {
+  color: #2D6E6F;
+  transform: translateX(4px);
+  font-weight: 600;
+}
+
+.smm-view-all-link {
+  margin-top: 0.85rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #1A3333;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1.5px solid #1A3333;
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.smm-view-all-link:hover {
+  color: #2D6E6F;
+  border-color: #2D6E6F;
+  transform: translateX(3px);
+}
+
+/* Promo Product Cards */
+.smm-promo-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid rgba(67, 151, 152, 0.20);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(26, 74, 75, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.smm-promo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(26, 74, 75, 0.12);
+  border-color: #2D6E6F;
+}
+
+.smm-promo-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #0F172A;
+  color: #FFFFFF;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.smm-promo-img-wrap {
+  width: 100%;
+  height: 140px;
+  background: radial-gradient(circle at 50% 50%, #FFFFFF 0%, #F1F7F7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  box-sizing: border-box;
+}
+
+.smm-promo-img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.smm-promo-card:hover .smm-promo-img {
+  transform: scale(1.06);
+}
+
+.smm-promo-body {
+  padding: 1rem 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.smm-promo-title {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #1A3333;
+  margin: 0 0 0.35rem;
+}
+
+.smm-promo-desc {
+  font-size: 0.74rem;
+  color: #64748B;
+  line-height: 1.35;
+  margin: 0 0 0.85rem;
+  flex: 1;
+}
+
+.smm-promo-cta {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #1A3333;
+  text-transform: uppercase;
+  border-bottom: 1.5px solid #1A3333;
+  align-self: flex-start;
+  padding-bottom: 1px;
+  transition: all 0.2s ease;
+}
+
+.smm-promo-card:hover .smm-promo-cta {
+  color: #2D6E6F;
+  border-color: #2D6E6F;
+}
+
+/* ─── 3. MEGA MENU 2: VIJAYA SCIENCE / OPERATIONS (Image 1 Reference) ─── */
+.smm-ops-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.smm-ops-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.smm-ops-badge {
+  align-self: flex-start;
+  background: #EBF3FF;
+  color: #2563EB;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+}
+
+.smm-ops-title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.smm-ops-desc {
+  font-size: 0.86rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.smm-ops-stats {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #E2E8F0;
+}
+
+.smm-stat-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #2563EB;
+  display: block;
+  line-height: 1.1;
+}
+
+.smm-stat-lbl {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748B;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Ops 2x2 Feature Cards */
+.smm-ops-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.smm-ops-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 1.35rem 1.25rem;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.smm-ops-card:hover {
+  border-color: #2563EB;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.08);
+}
+
+.smm-ops-icon {
+  width: 24px;
+  height: 24px;
+  color: #2563EB;
+}
+
+.smm-ops-card-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.smm-ops-card-desc {
+  font-size: 0.78rem;
+  color: #64748B;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ─── 4. MEGA MENU 3: FIND SUPPORT / INNOVATION (Image 2 Reference) ─── */
+.smm-support-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.35fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.smm-support-visual {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  height: 230px;
+}
+
+.smm-support-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.smm-support-visual:hover .smm-support-img {
+  transform: scale(1.05);
+}
+
+.smm-support-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.smm-support-item {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #E2E8F0;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: #334155;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.smm-support-item:last-child {
+  border-bottom: none;
+}
+
+.smm-support-item:hover {
+  color: #2D6E6F;
+  padding-left: 6px;
+  font-weight: 600;
+}
+
+.smm-support-editorial {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-left: 1rem;
+  border-left: 1px solid #E2E8F0;
+}
+
+.smm-support-headline {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.smm-support-headline span {
+  text-decoration: underline;
+  text-decoration-color: #2D6E6F;
+}
+
+.smm-support-body {
+  font-size: 0.82rem;
+  color: #64748B;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.smm-support-cta {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #D97706;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.smm-support-cta:hover {
+  transform: translateX(4px);
+}
+
+/* ─── 5. MEGA MENU 4: OUR STORY (Image 4 Reference) ─── */
+.smm-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.smm-story-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.smm-story-card:hover {
+  transform: translateY(-4px);
+}
+
+.smm-story-thumb-wrap {
+  width: 100%;
+  height: 190px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+.smm-story-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.smm-story-card:hover .smm-story-thumb {
+  transform: scale(1.06);
+}
+
+.smm-story-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 0.4rem;
+  line-height: 1.25;
+}
+
+.smm-story-desc {
+  font-size: 0.78rem;
+  color: #64748B;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ─── 6. FULL-SCREEN "SHOP ALL" OVERLAY MENU (Image 3 Reference) ─── */
+.sanan-shop-all-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+  z-index: 999999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.sanan-shop-all-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+body.sanan-overlay-open {
+  overflow: hidden !important;
+}
+
+/* Overlay Header Bar */
+.sso-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  border-bottom: 1px solid rgba(67, 151, 152, 0.16);
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 10;
+}
+
+.sso-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sso-logo-img {
+  height: 48px;
+  width: auto;
+}
+
+.sso-title-group h2 {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1A3333;
+  margin: 0;
+}
+
+.sso-title-group p {
+  font-size: 0.78rem;
+  color: #64748B;
+  margin: 2px 0 0;
+}
+
+/* Close Button (✕) */
+.sso-close-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(67, 151, 152, 0.3);
+  border-radius: 9999px;
+  padding: 0.55rem 1.25rem;
+  cursor: pointer;
+  color: #1A3333;
+  font-size: 0.82rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(26, 74, 75, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.sso-close-btn:hover {
+  background: #1A3333;
+  color: #FFFFFF;
+  border-color: #1A3333;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sso-close-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.sso-close-btn:hover svg {
+  transform: rotate(90deg);
+}
+
+/* Overlay Body Container */
+.sso-body {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 3.5rem 4rem;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 3.5rem;
+  box-sizing: border-box;
+}
+
+/* Sidebar Filter Tabs */
+.sso-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-self: flex-start;
+  position: sticky;
+  top: 100px;
+}
+
+.sso-tab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  background: #F1F5F9;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.sso-tab-btn:hover {
+  background: #E2E8F0;
+  color: #1E293B;
+  transform: translateX(4px);
+}
+
+.sso-tab-btn.is-active {
+  background: #2D6E6F;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(45, 110, 111, 0.25);
+}
+
+/* 4x2 Visual Cards Grid (From Image 3 Reference) */
+.sso-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.sso-concern-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 0.75rem 0.75rem 1.15rem;
+  border: 1.5px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 14px rgba(26, 74, 75, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sso-concern-card:hover {
+  border-color: #2D6E6F;
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(26, 74, 75, 0.12);
+}
+
+.sso-concern-img-wrap {
+  width: 100%;
+  height: 135px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #F8FAFC;
+  margin-bottom: 0.85rem;
+}
+
+.sso-concern-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.sso-concern-card:hover .sso-concern-img {
+  transform: scale(1.08);
+}
+
+.sso-concern-title {
+  font-family: var(--font-heading, 'Playfair Display', Georgia, serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1A3333;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Special Combo Action Card */
+.sso-combo-card {
+  background: #F0FDF4;
+  border: 1.5px dashed #2D6E6F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.sso-combo-card:hover {
+  background: #DCFCE7;
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(45, 110, 111, 0.15);
+}
+
+.sso-combo-icon {
+  width: 44px;
+  height: 44px;
+  color: #2D6E6F;
+  margin-bottom: 0.75rem;
+}
+
+.sso-combo-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #2D6E6F;
+  margin: 0;
+}
+
+/* Bottom Fast-Track Banner inside Overlay */
+.sso-footer-banner {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #1A3333 0%, #2D6E6F 100%);
+  color: #FFFFFF;
+  border-radius: 20px;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.sso-fb-text h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sso-fb-text p {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin: 0.2rem 0 0;
+}
+
+.sso-fb-btn {
+  background: #FFFFFF;
+  color: #1A3333;
+  padding: 0.65rem 1.35rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.sso-fb-btn:hover {
+  background: #F1F5F9;
+  transform: scale(1.05);
+}
+
+/* ─── 7. RESPONSIVE BEHAVIOR ─── */
+@media (max-width: 1200px) {
+  .smm-shop-grid {
+    grid-template-columns: repeat(3, 1fr) 1.2fr;
+  }
+  .smm-shop-grid .smm-promo-card:last-child {
+    display: none;
+  }
+  .sso-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .sanan-mega-menu {
+    display: none !important; /* Mobile uses dedicated drawer */
+  }
+  .sso-body {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1.5rem 3rem;
+  }
+  .sso-sidebar {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  .sso-tab-btn {
+    white-space: nowrap;
+  }
+  .sso-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sso-header-bar {
+    padding: 1rem 1.25rem;
+  }
+  .sso-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .sso-footer-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Library — Sanan Relief</title>
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../assets/theme-tokens.css">
+  <script src="../assets/lucide.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+      background: #F4F8F7;
+      color: #1A3333;
+    }
+
+    /* NAV */
+    .nav {
+      background: white;
+      border-bottom: 1px solid #D4E8E8;
+      display: flex;
+      align-items: center;
+      padding: 0 2.5rem;
+      height: 64px;
+      gap: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav img { height: 40px; }
+    .nav-title { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8AABAB; margin-left: 0.5rem; }
+    .nav-links { display: flex; gap: 1.5rem; margin-left: auto; }
+    .nav-links a {
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #8AABAB; text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #439798; }
+
+    /* SEARCH BAR */
+    .search-bar {
+      background: white;
+      border-bottom: 1px solid #D4E8E8;
+      padding: 1rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .search-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #F0F8F8;
+      border: 1.5px solid #D4E8E8;
+      border-radius: 50px;
+      padding: 0 1rem;
+      flex: 1;
+      max-width: 400px;
+    }
+    .search-input-wrap input {
+      border: none;
+      background: transparent;
+      outline: none;
+      height: 2.5rem;
+      font-size: 0.875rem;
+      color: #1A3333;
+      flex: 1;
+    }
+    .search-input-wrap input::placeholder { color: #8AABAB; }
+    .size-controls { display: flex; gap: 0.5rem; margin-left: auto; }
+    .size-btn {
+      height: 2.25rem; width: 2.25rem; border-radius: 50%;
+      border: 1.5px solid #D4E8E8; background: white;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 600; color: #439798;
+      transition: all 0.2s;
+    }
+    .size-btn.active, .size-btn:hover { background: #439798; color: white; border-color: #439798; }
+    .color-controls { display: flex; gap: 0.5rem; }
+    .color-dot {
+      width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+      border: 2px solid transparent; transition: all 0.2s;
+    }
+    .color-dot:hover, .color-dot.active { border-color: #1A3333; transform: scale(1.15); }
+
+    /* LAYOUT */
+    .page { max-width: 1200px; margin: 0 auto; padding: 2.5rem 2rem 5rem; }
+
+    .page-header { margin-bottom: 2.5rem; }
+    .page-header h1 { font-size: 2.25rem; font-weight: 800; color: #1A3333; margin-bottom: 0.4rem; }
+    .page-header p  { font-size: 0.95rem; color: #8AABAB; }
+    .page-header .meta { display: flex; gap: 1.5rem; margin-top: 1rem; }
+    .meta-chip {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: white; border: 1px solid #D4E8E8; border-radius: 50px;
+      padding: 0.3rem 0.9rem; font-size: 0.75rem; color: #439798; font-weight: 600;
+    }
+
+    /* CATEGORY */
+    .category { margin-bottom: 2.5rem; }
+    .category-title {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: #8AABAB;
+      margin-bottom: 1rem; padding-bottom: 0.5rem;
+      border-bottom: 1px solid #E8F0F0;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .category-title::after {
+      content: attr(data-count);
+      background: #E6F4F4; color: #439798;
+      font-size: 0.6rem; padding: 0.15rem 0.5rem;
+      border-radius: 50px; font-weight: 700;
+    }
+
+    /* ICON GRID */
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 0.75rem;
+    }
+    .icon-card {
+      background: white;
+      border: 1.5px solid #E8F0F0;
+      border-radius: 12px;
+      padding: 1.25rem 0.75rem 0.875rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
+      position: relative;
+      overflow: hidden;
+    }
+    .icon-card:hover {
+      border-color: #439798;
+      background: #F0F8F8;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(67,151,152,0.12);
+    }
+    .icon-card:hover .icon-name { color: #439798; }
+    .icon-card.copied {
+      border-color: #439798;
+      background: #E6F4F4;
+    }
+    .icon-card .icon-wrap { color: #439798; display: flex; align-items: center; justify-content: center; }
+    .icon-card .icon-name {
+      font-size: 0.65rem;
+      color: #8AABAB;
+      text-align: center;
+      font-family: monospace;
+      line-height: 1.3;
+      transition: color 0.2s;
+      word-break: break-all;
+    }
+    .copied-badge {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(67,151,152,0.9);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.2s;
+      border-radius: 11px;
+    }
+    .icon-card.copied .copied-badge { opacity: 1; }
+
+    /* USAGE PANEL */
+    .usage-panel {
+      background: #1A3333;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .usage-panel h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #6DBCBD; margin-bottom: 1.25rem; }
+    .usage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .usage-block p { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; }
+    .code-block {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 0.875rem 1rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.78rem;
+      color: #A8DADC;
+      line-height: 1.6;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .code-block:hover { background: rgba(0,0,0,0.4); }
+    .code-comment { color: rgba(255,255,255,0.3); }
+    .code-tag     { color: #6DBCBD; }
+    .code-attr    { color: #FFD580; }
+    .code-val     { color: #FF8FA3; }
+
+    /* NO RESULTS */
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem;
+      color: #8AABAB;
+      font-size: 0.9rem;
+    }
+
+    /* FOOTER STRIP */
+    .footer-strip {
+      background: #439798;
+      color: white;
+      padding: 1rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      margin-top: 3rem;
+    }
+    .footer-strip strong { font-weight: 700; }
+    .footer-strip a { color: rgba(255,255,255,0.75); text-decoration: none; }
+    .footer-strip a:hover { color: white; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <img src="../assets/logo.png" alt="Sanan Relief">
+  <span class="nav-title">Icon Library</span>
+  <div class="nav-links">
+    <a href="index.html">Buttons</a>
+    <a href="icons.html" style="color:#439798">Icons</a>
+    <a href="#">Colors</a>
+  </div>
+</nav>
+
+<!-- SEARCH + CONTROLS -->
+<div class="search-bar">
+  <div class="search-input-wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8AABAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input type="text" id="searchInput" placeholder="Search icons… (e.g. cart, heart, arrow)">
+  </div>
+  <div class="size-controls">
+    <button class="size-btn" onclick="setSize(16)">16</button>
+    <button class="size-btn active" onclick="setSize(24)">24</button>
+    <button class="size-btn" onclick="setSize(32)">32</button>
+  </div>
+  <div class="color-controls">
+    <div class="color-dot active" style="background:#439798" onclick="setColor('#439798', this)" title="Brand Teal"></div>
+    <div class="color-dot" style="background:#A92827" onclick="setColor('#A92827', this)" title="Accent Red"></div>
+    <div class="color-dot" style="background:#1A3333" onclick="setColor('#1A3333', this)" title="Dark"></div>
+    <div class="color-dot" style="background:#8AABAB" onclick="setColor('#8AABAB', this)" title="Muted"></div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h1>Icon Library</h1>
+    <p>Lucide icons — MIT licensed. Click any icon to copy the Shopify Liquid snippet.</p>
+    <div class="meta">
+      <span class="meta-chip">✓ Lucide v0.460+</span>
+      <span class="meta-chip">✓ MIT License</span>
+      <span class="meta-chip">✓ SVG · 24×24 · 1.75px stroke</span>
+      <span class="meta-chip">✓ snippets/icon.liquid ready</span>
+    </div>
+  </div>
+
+  <!-- USAGE PANEL -->
+  <div class="usage-panel">
+    <h3>How to Use in Shopify Liquid</h3>
+    <div class="usage-grid">
+      <div class="usage-block">
+        <p>Basic usage in a Liquid file:</p>
+        <div class="code-block">
+          <span class="code-comment">{% comment %} Render an icon {% endcomment %}</span><br>
+          <span class="code-tag">{% render </span><span class="code-val">'icon'</span><span class="code-tag">,</span><br>
+          &nbsp;&nbsp;<span class="code-attr">name: </span><span class="code-val">'cart'</span><span class="code-tag">,</span><br>
+          &nbsp;&nbsp;<span class="code-attr">size: </span><span class="code-val">24</span><br>
+          <span class="code-tag">%}</span>
+        </div>
+      </div>
+      <div class="usage-block">
+        <p>With custom size and class:</p>
+        <div class="code-block">
+          <span class="code-comment">{% comment %} Custom size + class {% endcomment %}</span><br>
+          <span class="code-tag">{% render </span><span class="code-val">'icon'</span><span class="code-tag">,</span><br>
+          &nbsp;&nbsp;<span class="code-attr">name: </span><span class="code-val">'search'</span><span class="code-tag">,</span><br>
+          &nbsp;&nbsp;<span class="code-attr">size: </span><span class="code-val">20</span><span class="code-tag">,</span><br>
+          &nbsp;&nbsp;<span class="code-attr">class: </span><span class="code-val">'header-icon'</span><br>
+          <span class="code-tag">%}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ICON GALLERY (populated by JS) -->
+  <div id="iconGallery"></div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer-strip">
+  <span>Sanan Relief · Icon Library · <strong>Lucide Icons</strong></span>
+  <a href="https://lucide.dev" target="_blank">lucide.dev ↗</a>
+</div>
+
+<script>
+  // All icons organized by category
+  const categories = {
+    'Navigation': [
+      'menu','x','chevron-down','chevron-up','chevron-right','chevron-left',
+      'arrow-right','arrow-left','arrow-up','arrow-up-right'
+    ],
+    'Commerce': [
+      'shopping-cart','shopping-bag','heart','search','user','user-circle',
+      'star','tag','percent','gift','package','truck','shield-check'
+    ],
+    'Actions': [
+      'plus','minus','trash-2','edit-2','share-2','copy','download',
+      'external-link','refresh-cw','upload','check','x-circle','check-circle'
+    ],
+    'UI & Feedback': [
+      'info','alert-triangle','alert-circle','bell','loader','clock',
+      'eye','eye-off','lock','unlock','filter','sliders',
+      'grid','list','layout','sidebar'
+    ],
+    'Media': [
+      'play','pause','play-circle','volume-2','volume-x',
+      'zoom-in','zoom-out','image','video','camera','mic','mic-off'
+    ],
+    'Brand & Health': [
+      'leaf','sparkles','sun','moon','wind','droplets',
+      'activity','heart-pulse','thermometer','pill'
+    ],
+    'Communication': [
+      'mail','phone','message-circle','message-square',
+      'send','at-sign','link','link-2'
+    ],
+    'Location': [
+      'map-pin','map','navigation','compass','globe'
+    ],
+    'Social': [
+      'instagram','facebook','twitter','youtube','linkedin',
+      'github','rss'
+    ],
+    'Files & Data': [
+      'file','file-text','folder','bar-chart-2','pie-chart',
+      'trending-up','trending-down','calendar'
+    ]
+  };
+
+  let currentSize = 24;
+  let currentColor = '#439798';
+
+  function setSize(size) {
+    currentSize = size;
+    document.querySelectorAll('.size-btn').forEach(b => {
+      b.classList.toggle('active', b.textContent == size);
+    });
+    renderAll();
+  }
+
+  function setColor(color, el) {
+    currentColor = color;
+    document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
+    el.classList.add('active');
+    renderAll();
+  }
+
+  function copySnippet(name) {
+    const snippet = `{%- render 'icon', name: '${name}', size: 24 -%}`;
+    navigator.clipboard?.writeText(snippet).catch(() => {});
+    return snippet;
+  }
+
+  function renderIconCard(name) {
+    const displayName = name.replace(/-/g, ' ');
+    return `
+      <div class="icon-card" onclick="handleCopy('${name}', this)" title="Click to copy Liquid snippet">
+        <div class="icon-wrap" data-lucide-icon="${name}" style="color:${currentColor};width:${currentSize}px;height:${currentSize}px;">
+          <i data-lucide="${name}" style="width:${currentSize}px;height:${currentSize}px;stroke:${currentColor};"></i>
+        </div>
+        <span class="icon-name">${name}</span>
+        <div class="copied-badge">✓ Copied!</div>
+      </div>
+    `;
+  }
+
+  function handleCopy(name, card) {
+    copySnippet(name);
+    card.classList.add('copied');
+    setTimeout(() => card.classList.remove('copied'), 1500);
+  }
+
+  function renderAll(query = '') {
+    const gallery = document.getElementById('iconGallery');
+    gallery.innerHTML = '';
+
+    const q = query.toLowerCase().trim();
+    let totalVisible = 0;
+
+    for (const [cat, icons] of Object.entries(categories)) {
+      const filtered = q ? icons.filter(n => n.includes(q) || cat.toLowerCase().includes(q)) : icons;
+      if (filtered.length === 0) continue;
+      totalVisible += filtered.length;
+
+      const section = document.createElement('div');
+      section.className = 'category';
+      section.innerHTML = `
+        <div class="category-title" data-count="${filtered.length}">${cat}</div>
+        <div class="icon-grid">
+          ${filtered.map(renderIconCard).join('')}
+        </div>
+      `;
+      gallery.appendChild(section);
+    }
+
+    if (totalVisible === 0) {
+      gallery.innerHTML = '<div class="no-results">No icons found for "<strong>' + q + '</strong>"</div>';
+    }
+
+    // Activate Lucide icons
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  }
+
+  // Search
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    renderAll(e.target.value);
+  });
+
+  // Initial render
+  renderAll();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="salveBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141F1A"/>
+      <stop offset="45%" stop-color="#1E332A"/>
+      <stop offset="85%" stop-color="#2E4D3E"/>
+      <stop offset="100%" stop-color="#0E1612"/>
+    </linearGradient>
+    <radialGradient id="mintGlow" cx="65%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#8CE0B8" stop-opacity="0.6"/>
+      <stop offset="35%" stop-color="#439775" stop-opacity="0.3"/>
+      <stop offset="75%" stop-color="#1D4A37" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#141F1A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#salveBg)"/>
+  <circle cx="780" cy="240" r="340" fill="url(#mintGlow)"/>
+
+  <!-- Organic Slate Base -->
+  <path d="M0,530 Q600,510 1200,530 L1200,675 L0,675 Z" fill="#0C1410"/>
+
+  <!-- Amber Balm Jar & Cooling Camphor Crystals -->
+  <g transform="translate(680, 320)">
+    <!-- Round Amber Glass Salve Jar -->
+    <rect x="0" y="40" width="130" height="90" rx="16" fill="#8C4B18" stroke="#B86D2A" stroke-width="2"/>
+    <!-- Lid -->
+    <rect x="-5" y="20" width="140" height="25" rx="5" fill="#1C1814" stroke="#383028" stroke-width="1.5"/>
+    <!-- Mint & Arnica Herb Leaves -->
+    <ellipse cx="145" cy="115" rx="35" ry="16" fill="#439775" transform="rotate(-25, 145, 115)"/>
+    <ellipse cx="165" cy="100" rx="30" ry="14" fill="#66B896" transform="rotate(20, 165, 100)"/>
+  </g>
+
+  <!-- Ambient Specks -->
+  <circle cx="820" cy="290" r="2.5" fill="#C2F5DD" opacity="0.8"/>
+  <circle cx="740" cy="330" r="2" fill="#C2F5DD" opacity="0.6"/>
+</svg>
+

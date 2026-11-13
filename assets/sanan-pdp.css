@@ -1,0 +1,4212 @@
+/*
+ * ============================================================
+ * SANAN RELIEF — PRODUCT DETAIL PAGE (PDP)
+ * Reference Architecture: Vertical Gallery + Anchor Nav +
+ * 4-Way Usage + Doctor Guidance + Benefits + Golden Wave + FAQs
+ * ============================================================
+ */
+
+:root {
+  --sanan-teal-dark: var(--color-secondary, #1A4A4B);
+  --sanan-teal-primary: var(--color-primary-dark, #2D6E6F);
+  --sanan-teal-light: var(--color-primary, #439798);
+  --sanan-teal-soft: var(--color-primary-soft, #E6F4F4);
+  --sanan-teal-border: var(--color-border, #D4E8E8);
+
+  --sanan-gold-accent: var(--color-accent, #A92827);
+  --sanan-gold-soft: var(--color-accent-soft, #FAEAEA);
+  --sanan-gold-gradient: var(--color-accent-gradient, linear-gradient(135deg, #C94342 0%, #A92827 50%, #841E1D 100%));
+
+  --sanan-bg-page: var(--color-background, #FAFAFA);
+  --sanan-bg-subtle: var(--color-surface, #F0F8F8);
+  --sanan-bg-card-warm: #FAF8F5;
+
+  --sanan-text-main: var(--color-text-primary, #1A3333);
+  --sanan-text-muted: var(--color-text-secondary, #3D5A5A);
+  --sanan-text-subtle: var(--color-text-muted, #8AABAB);
+
+  --sanan-font-heading: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  --sanan-font-body: var(--font-body, 'DM Sans', -apple-system, sans-serif);
+
+  --sanan-radius-pill: var(--btn-radius-pill, 50px);
+  --sanan-radius-card: 20px;
+  --sanan-radius-img: 20px;
+}
+
+/* Page Wrapper */
+.sanan-pdp-wrapper {
+  background-color: var(--sanan-bg-page);
+  color: var(--sanan-text-main);
+  font-family: var(--sanan-font-body);
+  min-height: 100vh;
+  padding-top: 140px; /* Clean clearance below floating header */
+  padding-bottom: 5rem;
+  overflow-x: clip;
+}
+
+.sanan-pdp-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Breadcrumbs */
+.sanan-pdp-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--sanan-text-muted);
+  margin-bottom: 1rem;
+}
+
+.sanan-pdp-breadcrumbs a {
+  color: var(--sanan-text-muted);
+  text-decoration: none;
+}
+
+.sanan-pdp-breadcrumbs a:hover {
+  color: var(--sanan-teal-primary);
+}
+
+.sanan-pdp-breadcrumbs .sep {
+  color: #CBD5E1;
+}
+
+.sanan-pdp-breadcrumbs .current {
+  color: var(--sanan-teal-dark);
+  font-weight: 600;
+}
+
+/* ─── 1. HERO PRODUCT SECTION (LARGE IMAGES & THUMBNAILS GRID) ─── */
+.sanan-pdp-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  gap: 4.5rem;
+  align-items: start;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .sanan-pdp-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Left Gallery Column: Stage -> 3-Col Large Grid (Sticky Alongside Right Details Column) */
+.sanan-pdp-gallery-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 1025px) {
+  .sanan-pdp-gallery-col {
+    position: sticky;
+    top: calc(var(--sanan-header-dock-top, 102px) + 20px);
+    align-self: start;
+    height: fit-content;
+  }
+}
+
+/* Main Image Stage (Large featured view) */
+.sanan-pdp-stage-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #190F2C;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 16px 45px rgba(14, 7, 26, 0.16);
+}
+
+.sanan-pdp-stage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+/* Zen State Ribbon */
+.sanan-pdp-ribbon-bar {
+  background: #EFEAF8;
+  border-radius: 999px;
+  padding: 0.65rem 1.25rem;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(120, 88, 166, 0.2);
+}
+
+.sanan-ribbon-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ribbon-pill {
+  background: #7858A6;
+  color: #FFFFFF;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.ribbon-sep {
+  color: #7858A6;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.ribbon-text {
+  color: #4A154B;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+/* 3-Column Grid of Large Visible Images & Thumbnails (Exact Reference Match) */
+.sanan-pdp-large-thumbs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .sanan-pdp-large-thumbs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.sanan-pdp-thumb-card {
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #FAF7F2;
+  border: 2.5px solid transparent;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.sanan-pdp-thumb-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.sanan-pdp-thumb-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(13, 105, 112, 0.45);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.sanan-pdp-thumb-card:hover img {
+  transform: scale(1.05);
+}
+
+.sanan-pdp-thumb-card.is-active {
+  border-color: var(--color-primary, #439798);
+  box-shadow: 0 8px 24px rgba(13, 105, 112, 0.25);
+}
+
+.sanan-pdp-thumb-card.is-active::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--color-primary, #439798);
+  border-radius: 13px;
+  pointer-events: none;
+}
+
+/* Right: Buy Box */
+.sanan-pdp-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.sanan-pdp-product-header {
+  border-bottom: 1px solid rgba(45, 110, 111, 0.12);
+  padding-bottom: 0.95rem;
+}
+
+.sanan-pdp-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--sanan-text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.sanan-pdp-rating-row .stars {
+  color: #F59E0B;
+  letter-spacing: 2px;
+}
+
+.sanan-pdp-subkicker {
+  font-size: 0.85rem;
+  color: #4B5563;
+  margin-bottom: 0.45rem;
+}
+
+.sanan-pdp-save-badge-red {
+  display: inline-block;
+  background: #DC2626;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 0.45rem;
+}
+
+.sanan-pdp-product-title {
+  font-family: var(--sanan-font-heading);
+  font-size: 1.95rem;
+  font-weight: 700;
+  color: var(--sanan-teal-dark);
+  line-height: 1.25;
+  margin: 0.2rem 0 0.55rem;
+}
+
+.sanan-pdp-meta-row {
+  font-size: 0.85rem;
+  color: #6B7280;
+  margin-bottom: 0.55rem;
+}
+
+.sanan-pdp-meta-row strong {
+  color: #111827;
+  text-decoration: underline;
+}
+
+/* Pricing Row */
+.sanan-pdp-price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.35rem;
+}
+
+.sanan-pdp-main-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #DC2626;
+}
+
+.sanan-pdp-strike-price {
+  font-size: 1.25rem;
+  color: #9CA3AF;
+  text-decoration: line-through;
+}
+
+.sanan-pdp-tax-line {
+  font-size: 0.78125rem;
+  color: #6B7280;
+  width: 100%;
+  margin-top: -0.25rem;
+}
+
+/* Highlights Checkmarks */
+.sanan-pdp-highlights-row {
+  display: flex;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0.35rem 0;
+}
+
+.sanan-pdp-desc-container {
+  margin: 0.65rem 0 1rem;
+  position: relative;
+}
+
+.sanan-pdp-desc-wrapper {
+  max-height: 2.95em; /* Exactly 2 lines of text */
+  line-height: 1.48;
+  font-size: 0.84rem;
+  color: #4B5563;
+  overflow: hidden;
+  transition: max-height 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.sanan-pdp-desc-wrapper.is-expanded {
+  max-height: 520px; /* Smoothly reveals full text and secondary specs */
+}
+
+/* Subtle fade gradient at the bottom edge when collapsed */
+.sanan-pdp-desc-wrapper:not(.is-expanded)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.25em;
+  background: linear-gradient(180deg, rgba(240, 246, 245, 0) 0%, rgba(240, 246, 245, 0.98) 100%);
+  pointer-events: none;
+}
+
+.sanan-pdp-readmore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  border: none;
+  padding: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #0A4834;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.sanan-pdp-readmore-btn:hover {
+  color: #0F5E45;
+  text-decoration: underline;
+}
+
+.sanan-pdp-readmore-icon {
+  display: inline-block;
+  font-size: 0.72rem;
+  transition: transform 0.28s ease;
+}
+
+.sanan-pdp-desc-wrapper.is-expanded ~ .sanan-pdp-readmore-btn .sanan-pdp-readmore-icon {
+  transform: rotate(180deg);
+}
+
+.sanan-pdp-desc-short {
+  font-size: 0.84rem;
+  line-height: 1.48;
+  color: #4B5563;
+  margin: 0;
+}
+
+.sanan-pdp-terpene-specs {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: #374151;
+  background: #F8FAFC;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid var(--color-primary, #439798);
+}
+
+/* Moisture Notice Box */
+.sanan-pdp-notice-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  color: #64748B;
+}
+
+/* Potency Breakdown Accordion Box */
+.sanan-pdp-potency-box {
+  background: #FFFFFF;
+  border: 1px solid rgba(120, 88, 166, 0.25);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.sanan-pdp-potency-trigger {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+}
+
+.potency-trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.potency-circle-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #4A154B;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.potency-main-title {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.potency-sub-title {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.potency-trigger-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.potency-flavour-badge {
+  background: #F3E8FF;
+  color: #6B21A8;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.potency-chevron {
+  font-size: 0.9375rem;
+  color: #6B7280;
+  transition: transform 0.25s ease;
+}
+
+.sanan-pdp-potency-trigger.is-open .potency-chevron {
+  transform: rotate(180deg);
+}
+
+.sanan-pdp-potency-content {
+  padding: 0 1.15rem 1.15rem;
+  display: block;
+}
+
+.sanan-pdp-potency-box:not(.is-open) .sanan-pdp-potency-content {
+  display: none;
+}
+
+.potency-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.potency-stat-card {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.potency-stat-header {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #6B7280;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.2rem;
+}
+
+.potency-stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #374151;
+}
+
+.potency-stat-row strong {
+  color: #111827;
+}
+
+/* Pack Size Block */
+.sanan-pdp-pack-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sanan-pdp-pack-label {
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.sanan-pdp-pack-pills {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.sanan-pdp-pack-pill {
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 999px;
+  padding: 0.6rem 1.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sanan-pdp-pack-pill:hover {
+  border-color: var(--color-primary, #439798);
+}
+
+.sanan-pdp-pack-pill.is-active {
+  background: var(--color-primary, #439798);
+  color: #FFFFFF;
+  border-color: var(--color-primary, #439798);
+}
+
+/* Flavour Block */
+.sanan-pdp-flavour-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sanan-pdp-flavour-label {
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.sanan-pdp-flavour-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.sanan-pdp-flavour-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 999px;
+  padding: 0.55rem 1.15rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sanan-pdp-flavour-pill:hover {
+  border-color: var(--color-primary, #439798);
+}
+
+.sanan-pdp-flavour-pill.is-active {
+  background: var(--color-secondary, #1A4A4B);
+  color: #FFFFFF;
+  border-color: var(--color-secondary, #1A4A4B);
+}
+
+.flavour-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Prescription Required Card (Dark Box from Reference Image 2) */
+.sanan-pdp-rx-card {
+  background: var(--color-secondary, #1A4A4B);
+  color: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.1rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-shadow: 0 10px 25px rgba(8, 38, 40, 0.18);
+}
+
+.sanan-rx-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sanan-rx-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.sanan-rx-plus {
+  color: var(--color-primary, #439798);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.sanan-rx-card-title {
+  font-family: var(--sanan-font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.sanan-rx-download-link {
+  color: #38BDF8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sanan-rx-download-link:hover {
+  text-decoration: underline;
+}
+
+.sanan-rx-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.sanan-rx-radio-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sanan-rx-radio-option:hover,
+.sanan-rx-radio-option.is-selected {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+.sanan-rx-radio-input {
+  margin-top: 3px;
+  accent-color: #38BDF8;
+}
+
+.sanan-rx-option-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.sanan-rx-option-title {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: #FFFFFF;
+}
+
+.sanan-rx-option-desc {
+  font-size: 0.72rem;
+  color: #94A3B8;
+}
+
+/* Actions Row: Stepper + Add to Cart + Buy Now */
+.sanan-pdp-cta-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.sanan-pdp-stepper {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid var(--sanan-teal-border);
+  border-radius: 12px;
+  height: 54px;
+  padding: 0 0.5rem;
+}
+
+.sanan-pdp-step-btn {
+  background: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--sanan-teal-dark);
+}
+
+.sanan-pdp-step-input {
+  width: 40px;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-family: var(--sanan-font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--sanan-teal-dark);
+}
+
+.sanan-pdp-btn-cart {
+  flex: 1;
+  height: 54px;
+  border-radius: var(--btn-radius-pill, 50px);
+  background: var(--color-primary-gradient, linear-gradient(135deg, #5BBCBD 0%, #439798 55%, #357C7D 100%));
+  color: #FFFFFF;
+  border: none;
+  font-family: var(--font-body, var(--sanan-font-body));
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  box-shadow: 0 4px 14px 0 rgba(67, 151, 152, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.sanan-pdp-btn-cart:hover {
+  background: linear-gradient(135deg, #6ED5D6 0%, #4FA6A7 55%, #3C8A8B 100%);
+  box-shadow: 0 10px 28px -2px rgba(67, 151, 152, 0.55), 0 0 16px 2px rgba(91, 188, 189, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.75);
+  transform: translateY(-2px);
+}
+
+.sanan-pdp-btn-direct {
+  height: 50px;
+  padding: 0 1.5rem;
+  border-radius: 10px;
+  background: var(--sanan-teal-primary);
+  color: #FFFFFF;
+  border: none;
+  font-family: var(--sanan-font-body);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sanan-pdp-btn-direct:hover {
+  background: #245859;
+}
+
+/* ─── POST ADD-TO-CART SUITE (EXPERT ADVICE, WHATSAPP, 4-STEP JOURNEY, SOCIAL, CERTS) ─── */
+.sanan-pdp-post-cart-suite {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+/* 1. Doctor Advice Banner (Dark Green Pill/Card) */
+.sanan-pdp-expert-advice-banner {
+  background: #032A26;
+  border-radius: 16px;
+  padding: 1.15rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 8px 24px rgba(3, 42, 38, 0.25);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.sanan-pdp-expert-advice-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary, #439798), #06B6D4);
+}
+
+.expert-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  min-width: 0;
+}
+
+.expert-banner-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary, #439798);
+  flex-shrink: 0;
+}
+
+.expert-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.expert-banner-title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+}
+
+.expert-banner-sub {
+  color: #94A3B8;
+  font-size: 0.8125rem;
+  line-height: 1.3;
+}
+
+.expert-doc-link {
+  color: #34D399;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.expert-doc-link:hover {
+  color: #6EE7B7;
+}
+
+.expert-banner-cta {
+  background: var(--color-primary, #439798);
+  color: #032A26;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+
+.expert-banner-cta:hover {
+  background: #34D399;
+  transform: translateX(2px);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45);
+}
+
+/* 2. Still Confused? WhatsApp Support Card */
+.sanan-pdp-confused-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.15rem 1.35rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.confused-left {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  min-width: 0;
+}
+
+.confused-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--color-secondary, #1A4A4B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary, #439798);
+  flex-shrink: 0;
+}
+
+.confused-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.confused-title {
+  margin: 0;
+  font-family: var(--sanan-font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.confused-sub {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #64748B;
+}
+
+.confused-whatsapp-btn {
+  background: #25D366;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.confused-whatsapp-btn:hover {
+  background: #20BA5A;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+/* 3. 4-Step Order Journey Flow */
+.sanan-pdp-journey-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+  width: 100%;
+}
+
+.journey-step-card {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  padding: 1.45rem 0.6rem 0.95rem;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 175px;
+  min-width: 0;
+}
+
+.journey-step-badge {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2563EB;
+  color: #FFFFFF;
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 2.5px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.journey-step-icon {
+  margin: 0.4rem 0 0.5rem;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.journey-step-title {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: #1D4ED8;
+  margin-bottom: 0.3rem;
+  line-height: 1.25;
+}
+
+.journey-step-title.green {
+  color: #15803D;
+}
+
+.journey-step-desc {
+  font-size: 0.6875rem;
+  color: #64748B;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.journey-micro-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.45rem;
+}
+
+.journey-micro-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.journey-micro-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: #0284C7;
+}
+
+.journey-micro-circle.green {
+  color: #16A34A;
+  background: #ECFDF5;
+  border-color: #A7F3D0;
+}
+
+.journey-micro-label {
+  font-size: 0.5625rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.journey-arrow {
+  color: #0284C7;
+  font-size: 1.15rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 4. Social Share Row */
+.sanan-pdp-social-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.sanan-social-circle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F172A;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.sanan-social-circle-btn:hover {
+  border-color: var(--color-primary, #439798);
+  color: var(--color-primary, #439798);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 105, 112, 0.15);
+}
+
+/* 5. Certifications & Licenses Fieldset Box */
+.sanan-pdp-certs-box {
+  position: relative;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 14px;
+  padding: 1.6rem 1rem 1.15rem;
+  background: #FFFFFF;
+  margin-top: 0.65rem;
+}
+
+.certs-legend {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #FFFFFF;
+  padding: 0 8px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #475569;
+}
+
+.certs-badges-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cert-badge-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.cert-badge-item:hover {
+  transform: scale(1.08);
+}
+
+.cert-badge-img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .sanan-pdp-journey-flow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 0.75rem;
+  }
+  .journey-arrow {
+    display: none;
+  }
+}
+
+/* ─── 2. IN-PAGE STICKY MENU (SEAMLESS HEADER EXTENSION TRAY) ─── */
+.sanan-pdp-nav-strip,
+.sanan-pdp-inpage-nav {
+  position: sticky;
+  top: calc(var(--sanan-header-dock-top, 102px) - 1px);
+  z-index: 95;
+  width: 75%;
+  max-width: 75vw;
+  margin: 1.5rem auto 4.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.52) 100%);
+  backdrop-filter: blur(36px) saturate(220%) brightness(106%);
+  -webkit-backdrop-filter: blur(36px) saturate(220%) brightness(106%);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  padding: 0.65rem 2.2rem 0.85rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              max-width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-radius 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.28s ease,
+              background 0.28s ease;
+}
+
+/* Sticky Docked State: Seamlessly sticks right against bottom of floating header card, 10% narrower */
+.sanan-pdp-nav-strip.is-docked,
+.sanan-pdp-inpage-nav.is-docked {
+  width: 65%;
+  max-width: 65vw;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 46px;
+  border-bottom-right-radius: 46px;
+  border-top: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.55);
+  border-right: 1px solid rgba(255, 255, 255, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.68) 100%);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.09), inset 0 -1px 2px rgba(255, 255, 255, 0.45);
+}
+
+@media (max-width: 1200px) {
+  .sanan-pdp-nav-strip,
+  .sanan-pdp-inpage-nav {
+    width: 86%;
+    max-width: 86vw;
+  }
+  .sanan-pdp-nav-strip.is-docked,
+  .sanan-pdp-inpage-nav.is-docked {
+    width: 76%;
+    max-width: 76vw;
+  }
+}
+
+@media (max-width: 991px) {
+  .sanan-pdp-nav-strip,
+  .sanan-pdp-inpage-nav {
+    width: 94%;
+    max-width: 94vw;
+  }
+  .sanan-pdp-nav-strip.is-docked,
+  .sanan-pdp-inpage-nav.is-docked {
+    width: 84%;
+    max-width: 84vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .sanan-pdp-nav-strip,
+  .sanan-pdp-inpage-nav {
+    width: 96%;
+    max-width: 96vw;
+    border-radius: 9999px;
+    padding: 0.55rem 0.85rem 0.75rem;
+  }
+  .sanan-pdp-nav-strip.is-docked,
+  .sanan-pdp-inpage-nav.is-docked {
+    width: 86%;
+    max-width: 86vw;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+  }
+}
+
+.sanan-pdp-nav-list,
+.sanan-inpage-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sanan-pdp-nav-list::-webkit-scrollbar,
+.sanan-inpage-track::-webkit-scrollbar {
+  display: none;
+}
+
+.sanan-pdp-nav-pill,
+.sanan-inpage-link {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid var(--color-border, #D4E8E8);
+  border-radius: var(--btn-radius-pill, 50px);
+  padding: 0.45rem 1.35rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  color: var(--color-text-secondary, #3D5A5A);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(26, 74, 75, 0.04);
+}
+
+.sanan-pdp-nav-pill:hover,
+.sanan-inpage-link:hover {
+  border-color: var(--color-primary, #439798);
+  color: var(--color-primary-dark, #2D6E6F);
+  background: var(--color-primary-soft, #E6F4F4);
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px rgba(67, 151, 152, 0.14);
+}
+
+.sanan-pdp-nav-pill.is-active,
+.sanan-inpage-link.is-active {
+  background: var(--color-secondary, #1A4A4B);
+  color: #FFFFFF;
+  border-color: var(--color-secondary, #1A4A4B);
+  box-shadow: 0 4px 14px rgba(26, 74, 75, 0.28);
+}
+
+/* ─── 3. APPLICATION & SPECIFICATIONS (2-COLUMN SPLIT) ─── */
+.sanan-pdp-app-section {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 4.5rem;
+  align-items: center;
+  margin: 5rem 0;
+}
+
+@media (max-width: 900px) {
+  .sanan-pdp-app-section {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.sanan-pdp-app-media {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(26, 61, 62, 0.08);
+  aspect-ratio: 4 / 3;
+}
+
+.sanan-pdp-app-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sanan-pdp-app-dossier {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sanan-pdp-dossier-item {
+  border-bottom: 1px solid rgba(45, 110, 111, 0.15);
+}
+
+.sanan-pdp-dossier-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.35rem 0;
+  background: transparent;
+  border: none;
+  font-family: var(--sanan-font-heading);
+  font-size: 1.2rem;
+  color: var(--sanan-teal-dark);
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.sanan-pdp-dossier-trigger:hover {
+  color: var(--sanan-teal-primary);
+}
+
+.sanan-pdp-dossier-trigger .icon {
+  font-family: var(--sanan-font-body);
+  font-size: 1.25rem;
+  color: var(--sanan-teal-primary);
+  transition: transform 0.25s ease;
+}
+
+.sanan-pdp-dossier-item.is-open .icon {
+  transform: rotate(45deg);
+}
+
+.sanan-pdp-dossier-content {
+  display: none;
+  padding-bottom: 1.35rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--sanan-text-muted);
+}
+
+.sanan-pdp-dossier-item.is-open .sanan-pdp-dossier-content {
+  display: block;
+}
+
+/* ─── 4. FOUR WAYS TO USE IT (4-COL PHOTO GRID) ─── */
+.sanan-pdp-ways-section {
+  margin: 6rem 0;
+  text-align: center;
+}
+
+.sanan-pdp-section-kicker {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sanan-teal-primary);
+  margin-bottom: 0.5rem;
+}
+
+.sanan-pdp-section-heading {
+  font-family: var(--sanan-font-heading);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--sanan-teal-dark);
+  margin: 0 0 0.75rem;
+}
+
+.sanan-pdp-section-desc {
+  font-size: 0.9375rem;
+  color: var(--sanan-text-muted);
+  max-width: 580px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.sanan-pdp-ways-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .sanan-pdp-ways-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .sanan-pdp-ways-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sanan-pdp-way-card {
+  border-radius: var(--sanan-radius-card);
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(26, 61, 62, 0.05);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(45, 110, 111, 0.1);
+}
+
+.sanan-pdp-way-card:hover {
+  transform: translateY(-4px);
+}
+
+.sanan-pdp-way-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.sanan-pdp-way-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── 5. OUR DOCTORS RECOMMEND (3 DOCTOR CARDS) ─── */
+.sanan-pdp-doctors-section {
+  margin: 6rem 0;
+  text-align: center;
+}
+
+.sanan-pdp-doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: left;
+  margin-top: 3rem;
+}
+
+@media (max-width: 860px) {
+  .sanan-pdp-doctors-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sanan-pdp-doc-card {
+  background: var(--sanan-bg-card-warm);
+  border: 1px solid rgba(212, 163, 115, 0.25);
+  border-radius: var(--sanan-radius-card);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+}
+
+.sanan-pdp-doc-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sanan-pdp-doc-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sanan-pdp-doc-name {
+  font-family: var(--sanan-font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--sanan-teal-dark);
+}
+
+.sanan-pdp-doc-role {
+  font-size: 0.78125rem;
+  color: var(--sanan-gold-accent);
+  font-weight: 700;
+}
+
+.sanan-pdp-doc-quote {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--sanan-text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* ─── 6. TARGET BENEFITS (3 LIFESTYLE CARDS) ─── */
+.sanan-pdp-benefits-section {
+  margin: 6rem 0;
+  text-align: center;
+}
+
+.sanan-pdp-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  text-align: left;
+}
+
+@media (max-width: 860px) {
+  .sanan-pdp-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sanan-pdp-benefit-card {
+  border-radius: var(--sanan-radius-card);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(26, 61, 62, 0.06);
+  border: 1px solid rgba(45, 110, 111, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.sanan-pdp-benefit-card:hover {
+  transform: translateY(-4px);
+}
+
+.sanan-pdp-benefit-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── 7. CLEAN & CERTIFIED (5 CIRCLE ICONS ROW) ─── */
+.sanan-pdp-certified-strip {
+  margin: 5rem 0;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(45, 110, 111, 0.12);
+  border-bottom: 1px solid rgba(45, 110, 111, 0.12);
+}
+
+.sanan-pdp-certified-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.sanan-pdp-certified-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.sanan-pdp-cert-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--sanan-teal-soft);
+  color: var(--sanan-teal-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 1px solid rgba(45, 110, 111, 0.15);
+}
+
+.sanan-pdp-cert-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--sanan-teal-dark);
+}
+
+/* ─── 8. CINEMATIC GOLDEN WAVE BANNER ─── */
+.sanan-pdp-wave-banner {
+  margin: 6rem 0;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #DF9A3D 0%, #C4791E 50%, #9C5808 100%);
+  color: #FFFFFF;
+  padding: 4.5rem 3rem;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(184, 110, 20, 0.2);
+}
+
+.sanan-pdp-wave-heading {
+  font-family: var(--sanan-font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.sanan-pdp-wave-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+/* ─── 9. GOT QUESTIONS? FAQS ACCORDION ─── */
+.sanan-pdp-faq-wrap {
+  margin: 6rem 0;
+  background: var(--sanan-bg-card-warm);
+  border: 1px solid rgba(212, 163, 115, 0.25);
+  border-radius: 28px;
+  padding: 3.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sanan-pdp-faq-item {
+  border-bottom: 1px solid rgba(45, 110, 111, 0.12);
+}
+
+.sanan-pdp-faq-item:last-child {
+  border-bottom: none;
+}
+
+.sanan-pdp-faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  background: transparent;
+  border: none;
+  font-family: var(--sanan-font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--sanan-teal-dark);
+  text-align: left;
+  cursor: pointer;
+}
+
+.sanan-pdp-faq-trigger .icon {
+  font-family: var(--sanan-font-body);
+  font-size: 1.35rem;
+  color: var(--sanan-teal-primary);
+  transition: transform 0.25s ease;
+}
+
+.sanan-pdp-faq-item.is-open .icon {
+  transform: rotate(45deg);
+}
+
+.sanan-pdp-faq-body {
+  display: none;
+  padding-bottom: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--sanan-text-muted);
+}
+
+.sanan-pdp-faq-item.is-open .sanan-pdp-faq-body {
+  display: block;
+}
+
+/* ─── 10. CUSTOMER REVIEWS WITH PAGINATION (REFERENCE ARCHITECTURE) ─── */
+.sanan-reviews-section {
+  margin: 6.5rem 0 4rem;
+}
+
+.sanan-reviews-main-title {
+  font-family: var(--sanan-font-heading);
+  font-size: 1.85rem;
+  font-weight: 500;
+  color: var(--sanan-teal-dark);
+  text-align: center;
+  margin: 0 0 2.5rem;
+}
+
+/* 3-Column Summary Bar */
+.sanan-reviews-summary-bar {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  align-items: center;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 2.25rem 1rem;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .sanan-reviews-summary-bar {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .sanan-rev-col-score,
+  .sanan-rev-col-bars {
+    border-right: none !important;
+    padding-right: 0 !important;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 2rem;
+  }
+}
+
+.sanan-rev-col-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #E5E7EB;
+  padding-right: 2rem;
+  gap: 0.35rem;
+}
+
+.sanan-rev-stars {
+  color: #F59E0B;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.sanan-rev-score-text {
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.sanan-rev-score-text strong {
+  font-weight: 700;
+}
+
+.sanan-rev-count-text {
+  font-size: 0.8125rem;
+  color: #6B7280;
+}
+
+/* Star Breakdown Progress Bars */
+.sanan-rev-col-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-right: 1px solid #E5E7EB;
+  padding-right: 2.5rem;
+}
+
+.sanan-rev-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.8125rem;
+}
+
+.sanan-rev-bar-row .star-label {
+  color: #F59E0B;
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+  width: 75px;
+  flex-shrink: 0;
+}
+
+.sanan-rev-track {
+  flex: 1;
+  height: 9px;
+  background: #E5E7EB;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.sanan-rev-fill {
+  height: 100%;
+  background: var(--color-primary, #439798);
+  border-radius: 999px;
+}
+
+.sanan-rev-qty {
+  width: 36px;
+  text-align: right;
+  color: #6B7280;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Write a review button */
+.sanan-rev-col-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sanan-rev-write-btn {
+  background: #000000;
+  color: #FFFFFF;
+  border: none;
+  font-family: var(--sanan-font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 0.85rem 2.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.sanan-rev-write-btn:hover {
+  background: #2D6E6F;
+  transform: translateY(-2px);
+}
+
+/* Reviews Feed */
+.sanan-reviews-stream {
+  display: flex;
+  flex-direction: column;
+}
+
+.sanan-review-page {
+  display: none;
+  flex-direction: column;
+}
+
+.sanan-review-page.is-active {
+  display: flex;
+}
+
+.sanan-review-item {
+  border-bottom: 1px solid #F3F4F6;
+  padding: 2.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sanan-review-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sanan-review-stars-gold {
+  color: #F59E0B;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.sanan-review-date {
+  font-size: 0.8125rem;
+  color: #9CA3AF;
+}
+
+.sanan-review-author-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.15rem;
+}
+
+.sanan-review-author-name {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.sanan-review-verified-badge {
+  background: var(--color-primary, #439798);
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.sanan-review-heading {
+  font-family: var(--sanan-font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0.5rem 0 0.25rem;
+  line-height: 1.4;
+}
+
+.sanan-review-paragraph {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0;
+}
+
+.sanan-review-readmore {
+  color: var(--color-primary, #439798);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-top: 0.35rem;
+  display: inline-block;
+}
+
+/* Brand Reply Box (Exact reference match) */
+.sanan-review-reply-box {
+  background: #F4F5F6;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1rem;
+  border-left: 3px solid var(--color-primary, #439798);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sanan-reply-header {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+.sanan-reply-content {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #4B5563;
+  margin: 0;
+}
+
+.sanan-reply-signoff {
+  font-size: 0.8125rem;
+  color: #6B7280;
+  margin-top: 0.35rem;
+}
+
+/* Pagination Row (Exact reference match) */
+.sanan-reviews-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+}
+
+.sanan-rev-page-btn {
+  background: transparent;
+  border: none;
+  font-family: var(--sanan-font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary, #439798);
+  cursor: pointer;
+  padding: 0.35rem 0.65rem;
+  transition: all 0.2s ease;
+}
+
+.sanan-rev-page-btn:hover {
+  opacity: 0.7;
+}
+
+.sanan-rev-page-btn.is-active {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ─── WRITE A REVIEW MODAL ─── */
+.sanan-rev-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 26, 27, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.sanan-rev-modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sanan-rev-modal {
+  background: #FFFFFF;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(45, 110, 111, 0.15);
+  animation: modalPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPopIn {
+  from {
+    transform: scale(0.95) translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.sanan-rev-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: #F3F4F6;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #4B5563;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.sanan-rev-modal-close:hover {
+  background: #111827;
+  color: #FFFFFF;
+}
+
+.sanan-rev-modal-header {
+  margin-bottom: 1.75rem;
+}
+
+.sanan-rev-modal-title {
+  font-family: var(--sanan-font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--sanan-teal-dark);
+  margin: 0.35rem 0 0.5rem;
+}
+
+.sanan-rev-modal-sub {
+  font-size: 0.875rem;
+  color: #6B7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.sanan-rev-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sanan-rev-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .sanan-rev-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sanan-rev-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sanan-rev-form-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+.sanan-rev-star-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0;
+}
+
+.sanan-star-pick-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.75rem;
+  color: #D1D5DB;
+  cursor: pointer;
+  padding: 0 2px;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.sanan-star-pick-btn.is-selected {
+  color: #F59E0B;
+}
+
+.sanan-star-pick-btn:hover {
+  transform: scale(1.15);
+}
+
+.sanan-star-pick-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #4B5563;
+  margin-left: 0.75rem;
+}
+
+.sanan-rev-input,
+.sanan-rev-textarea {
+  width: 100%;
+  border: 1px solid #D1D5DB;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-family: var(--sanan-font-body);
+  font-size: 0.9375rem;
+  color: #111827;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.sanan-rev-input:focus,
+.sanan-rev-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary, #439798);
+  box-shadow: 0 0 0 3px rgba(13, 105, 112, 0.15);
+}
+
+.sanan-rev-textarea {
+  resize: vertical;
+}
+
+.sanan-rev-submit-btn {
+  background: #000000;
+  color: #FFFFFF;
+  border: none;
+  font-family: var(--sanan-font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.sanan-rev-submit-btn:hover {
+  background: var(--color-primary, #439798);
+  transform: translateY(-2px);
+}
+
+/* Toast alert notification */
+.sanan-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--color-primary, #439798);
+  color: #FFFFFF;
+  padding: 1rem 1.75rem;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(13, 105, 112, 0.35);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: toastSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes toastSlideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ─── 11. YOU MIGHT ALSO LIKE (STOREFRONT PRODUCT CARDS GRID) ─── */
+.sanan-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  overflow: visible;
+}
+
+@media (max-width: 1100px) {
+  .sanan-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sanan-related-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.product-save-badge {
+  background: rgba(13, 105, 112, 0.12);
+  color: var(--color-primary, #439798);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+/* ─── 12. STICKY FLOATING BOTTOM CART BAR (WIDTH MATCHING FLOATING HEADER) ─── */
+.sanan-floating-bar-wrapper {
+  position: fixed;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.sanan-floating-cart-bar {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(45, 110, 111, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 16px 45px rgba(10, 26, 27, 0.16);
+  padding: 0.85rem 1.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  pointer-events: auto;
+  transform: translateY(120px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  width: 75%;
+  max-width: 75vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.sanan-floating-bar-wrapper.is-visible .sanan-floating-cart-bar {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.sanan-float-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* Product Media & Info */
+.sanan-float-product {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.sanan-float-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #FAF7F2;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sanan-float-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sanan-float-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 170px;
+}
+
+.sanan-float-title {
+  font-family: var(--sanan-font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #111827;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+.sanan-float-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+}
+
+.sanan-float-price {
+  font-weight: 700;
+  color: var(--color-primary, #439798);
+}
+
+.sanan-float-strike {
+  color: #9CA3AF;
+  text-decoration: line-through;
+  font-size: 0.75rem;
+}
+
+/* Variant Selector Pill Select */
+.sanan-float-variant-wrap {
+  position: relative;
+}
+
+.sanan-float-variant-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 10px;
+  padding: 0.55rem 2rem 0.55rem 1rem;
+  font-family: var(--sanan-font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #1F2937;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.sanan-float-variant-select:focus,
+.sanan-float-variant-select:hover {
+  border-color: var(--color-primary, #439798);
+}
+
+.sanan-float-variant-wrap::after {
+  content: '⌄';
+  position: absolute;
+  right: 0.85rem;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: #6B7280;
+  pointer-events: none;
+}
+
+/* Stepper Pill */
+.sanan-float-stepper {
+  display: flex;
+  align-items: center;
+  background: #F9FAFB;
+  border: 1px solid #D1D5DB;
+  border-radius: 999px;
+  padding: 0.2rem 0.5rem;
+  gap: 0.4rem;
+}
+
+.sanan-float-step-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: #4B5563;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sanan-float-step-btn:hover {
+  background: #E5E7EB;
+  color: #111827;
+}
+
+.sanan-float-step-input {
+  width: 24px;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+/* Add To Cart Button (White Pill with Black Border matching reference) */
+.sanan-float-cart-btn {
+  background: var(--color-primary-gradient, linear-gradient(135deg, #5BBCBD 0%, #439798 50%, #357C7D 100%));
+  border: 1.5px solid transparent;
+  color: #FFFFFF;
+  border-radius: var(--btn-radius-pill, 50px);
+  padding: 0.65rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(67, 151, 152, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sanan-float-cart-btn:hover {
+  background: linear-gradient(135deg, #6ED5D6 0%, #4FA6A7 55%, #3C8A8B 100%);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(67, 151, 152, 0.5);
+}
+
+.sanan-float-cart-btn:active {
+  transform: translateY(1px);
+}
+
+/* Standalone Floating Scroll to Top Button (Fixed in Bottom Right Corner of Screen) */
+.sanan-float-scrolltop-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(45, 110, 111, 0.22);
+  color: var(--sanan-teal-dark, var(--color-secondary, #1A4A4B));
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sanan-float-scrolltop-btn.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.sanan-float-scrolltop-btn:hover {
+  background: var(--sanan-teal-dark, var(--color-secondary, #1A4A4B));
+  color: #FFFFFF;
+  border-color: var(--sanan-teal-dark, var(--color-secondary, #1A4A4B));
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 14px 32px rgba(8, 38, 40, 0.28);
+}
+
+.sanan-float-scrolltop-btn:active {
+  transform: translateY(0) scale(0.96);
+}
+
+@media (max-width: 1200px) {
+  .sanan-floating-cart-bar {
+    width: 86%;
+    max-width: 86vw;
+  }
+}
+
+@media (max-width: 991px) {
+  .sanan-floating-cart-bar {
+    width: 94%;
+    max-width: 94vw;
+  }
+  .sanan-float-variant-wrap {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .sanan-floating-cart-bar {
+    width: 96%;
+    max-width: 96vw;
+    border-radius: 16px;
+    padding: 0.65rem 0.95rem;
+  }
+  .sanan-float-info {
+    min-width: 0;
+    max-width: 120px;
+  }
+  .sanan-float-stepper {
+    display: none;
+  }
+  .sanan-float-cart-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+  }
+  .sanan-float-scrolltop-btn {
+    bottom: 20px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+
+/* ─── Hero Badges & Stage Overlays (Matching User Reference Screenshots) ─── */
+.sanan-pdp-badge-sharktank {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sanan-pdp-badge-sharktank:hover {
+  transform: translateY(-2px) scale(1.04);
+}
+.sanan-pdp-badge-sharktank img {
+  display: block;
+  width: 76px;
+  height: auto;
+}
+
+.sanan-pdp-badge-xtrastrong {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  filter: drop-shadow(0 6px 14px rgba(168, 85, 247, 0.35));
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sanan-pdp-badge-xtrastrong:hover {
+  transform: translateY(-2px) rotate(4deg) scale(1.05);
+}
+.sanan-pdp-badge-xtrastrong img {
+  display: block;
+  width: 82px;
+  height: auto;
+}
+
+.sanan-pdp-stage-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: #FFFFFF;
+  background: rgba(15, 7, 28, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.45rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  letter-spacing: 0.03em;
+  pointer-events: none;
+  z-index: 4;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Marquee Ticker Strip directly beneath stage box matching screenshot */
+.sanan-pdp-ticker-strip {
+  width: 100%;
+  background: #F3E8FF;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  margin: 0.85rem 0 1.25rem 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.sanan-pdp-ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  white-space: nowrap;
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #581C87;
+  text-transform: uppercase;
+  animation: sananTickerScroll 24s linear infinite;
+}
+
+@keyframes sananTickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-pill {
+  background: #7E22CE;
+  color: #FFFFFF;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 2px 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.ticker-dot {
+  color: #A855F7;
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+/* ─── Inline Left Scroll-To-Top Button (Matching Image 3) ─── */
+.sanan-float-scrolltop-left-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(45, 110, 111, 0.22);
+  color: var(--color-secondary, #1A4A4B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(14, 41, 41, 0.12);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+
+.sanan-float-scrolltop-left-btn:hover {
+  background: var(--color-secondary, #1A4A4B);
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(14, 41, 41, 0.2);
+}
+
+.sanan-float-scrolltop-left-btn:active {
+  transform: translateY(0) scale(0.96);
+}
+
+
+/* ─── Product Variations, Flavours & Prescription Highlight (Matching Reference Screenshot) ─── */
+.sanan-pdp-rx-highlight-card {
+  background: var(--color-primary-soft, #E6F4F4);
+  border: 1.5px solid var(--color-border-strong, #439798);
+  border-radius: 12px;
+  padding: 0.85rem 1.15rem;
+  margin: 1rem 0 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.rx-highlight-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.rx-highlight-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.rx-highlight-title {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--color-secondary, #1A4A4B);
+  letter-spacing: -0.01em;
+}
+
+.rx-highlight-sub {
+  font-family: var(--font-body);
+  font-size: 0.775rem;
+  color: var(--color-text-secondary, #3D5A5A);
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+.rx-highlight-badge {
+  background: var(--color-primary, #439798);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--btn-radius-pill, 50px);
+  white-space: nowrap;
+}
+
+/* Variant Groups */
+.sanan-variant-group {
+  margin: 1.35rem 0;
+}
+
+.sanan-variant-label {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-text-primary, #1A3333);
+  margin-bottom: 0.75rem;
+  display: block;
+  letter-spacing: -0.01em;
+}
+
+/* 1. Select Type: (Indica Chill, Hybrid Vibes, Sativa Surge - Matching Image 1 Reference) */
+.sanan-type-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.sanan-type-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 0.9rem 0.5rem 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sanan-type-card:hover {
+  border-color: #9CA3AF;
+}
+
+.sanan-type-card.is-active {
+  border: 2px solid #111111 !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.type-card-media {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.45rem;
+}
+
+.type-card-media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.type-card-title {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
+}
+
+/* 2. Select Flavor: (Matching Image 1 Reference) */
+.sanan-flavor-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.sanan-flavor-pill-btn {
+  flex: 1;
+  min-width: 140px;
+  height: 52px;
+  border-radius: 9999px;
+  border: 1.5px solid #E5E7EB;
+  background: #FFFFFF;
+  color: #4B5563;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: lowercase;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.sanan-flavor-pill-btn:hover {
+  border-color: #9CA3AF;
+  color: #111111;
+}
+
+.sanan-flavor-pill-btn.is-active {
+  border: 2px solid #111111 !important;
+  background: #FFFFFF !important;
+  color: #111111 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* 3. Select Count: (Matching Image 1 Reference) */
+.sanan-count-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  position: relative;
+  margin-top: 1.15rem;
+}
+
+.sanan-count-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 1.35rem 0.5rem 0.95rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 96px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sanan-count-card:hover {
+  border-color: #9CA3AF;
+}
+
+.sanan-count-card.is-active {
+  border: 2px solid #111111 !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.count-card-save-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #84CC16 !important;
+  color: #111111 !important;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  white-space: nowrap;
+  line-height: 1.2;
+  box-shadow: none !important;
+}
+
+.count-card-main {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.2;
+}
+
+.count-card-sub {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #4B5563;
+  margin-top: 3px;
+}
+
+.count-card-pill-tag {
+  font-family: 'DM Mono', monospace, 'Courier New', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #4B5563;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  margin-top: 6px;
+}
+
+/* 4. Patient Consent & Terms Checkbox */
+.sanan-patient-consent-wrap {
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  margin: 1.25rem 0 0.85rem;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.sanan-patient-consent-wrap.has-error {
+  border-color: #EF4444;
+  background: #FEF2F2;
+  animation: consentShake 0.4s ease;
+}
+
+@keyframes consentShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.sanan-consent-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+}
+
+.sanan-consent-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sanan-consent-box-custom {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--color-border, #D4E8E8);
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+
+.sanan-consent-checkbox-input:checked + .sanan-consent-box-custom {
+  background: var(--color-primary, #439798);
+  border-color: var(--color-primary, #439798);
+  box-shadow: 0 2px 8px rgba(67, 151, 152, 0.35);
+}
+
+.sanan-consent-box-custom svg {
+  display: none;
+}
+
+.sanan-consent-checkbox-input:checked + .sanan-consent-box-custom svg {
+  display: block;
+}
+
+.sanan-consent-text {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: #334155;
+}
+
+.sanan-consent-text a {
+  color: var(--color-secondary, #1A4A4B);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.sanan-consent-validation-msg {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #DC2626;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+
+/* ─── EXACT REFERENCE SECTIONS: Ingredients, How Does It Work, How Do I Use It, FAQs ─── */
+
+/* 1. INGREDIENTS SECTION */
+.sanan-pdp-ingredients-section {
+  padding: 5rem 0 3.5rem;
+  border-top: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.sanan-ingredients-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+.sanan-ingredients-kicker {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--color-primary-dark, #2D6E6F);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+}
+
+.sanan-ingredients-title {
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif));
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.85rem;
+}
+
+.sanan-ingredients-sub {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #4B5563;
+  margin: 0;
+}
+
+.sanan-ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.sanan-ingredient-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 1.85rem 1.65rem;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sanan-ingredient-card:hover {
+  border-color: var(--color-primary, #439798);
+  box-shadow: 0 12px 32px rgba(16, 185, 129, 0.08);
+  transform: translateY(-3px);
+}
+
+.ingredient-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.ingredient-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.ingredient-purity-tag {
+  font-family: monospace, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #065F46;
+  background: #D1FAE5;
+  padding: 3px 9px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.ingredient-name {
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif));
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.ingredient-desc {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #4B5563;
+  margin: 0 0 1rem;
+  flex: 1;
+}
+
+.ingredient-footer-tag {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--color-primary-dark, #2D6E6F);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-top: 1px dashed #E5E7EB;
+  padding-top: 0.85rem;
+}
+
+/* 2. HOW DOES IT WORK (2-COLUMN SECTION WITH IMAGE) */
+.sanan-pdp-how-works-section {
+  padding: 5.5rem 0;
+  border-top: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.sanan-how-works-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.sanan-how-works-media {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(14, 41, 41, 0.08);
+  border: 1px solid #E5E7EB;
+  background: #F5F3FF;
+}
+
+.sanan-how-works-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sanan-how-works-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sanan-how-works-kicker {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: #4338CA;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+}
+
+.sanan-how-works-title {
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif));
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.85rem;
+}
+
+.sanan-how-works-sub {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #4B5563;
+  margin: 0 0 2rem;
+}
+
+.sanan-how-works-accordion {
+  border-top: 1px solid #E5E7EB;
+}
+
+.how-works-item {
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.how-works-trigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1.35rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif));
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  transition: color 0.2s ease;
+}
+
+.how-works-trigger:hover {
+  color: #4338CA;
+}
+
+.how-works-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #EEF2FF;
+  color: #4338CA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: transform 0.25s ease, background 0.25s ease;
+  flex-shrink: 0;
+}
+
+.how-works-item.is-open .how-works-icon {
+  transform: rotate(45deg);
+  background: #C7D2FE;
+}
+
+.how-works-body {
+  display: none;
+  padding-bottom: 1.35rem;
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #4B5563;
+}
+
+.how-works-item.is-open .how-works-body {
+  display: block;
+}
+
+/* 3. HOW DO I USE IT (FULL-WIDTH SECTION WITH BIG IMAGES) */
+.sanan-pdp-how-use-section {
+  padding: 5.5rem 0;
+  border-top: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.sanan-how-use-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3.5rem;
+}
+
+.sanan-how-use-kicker {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--color-secondary, #1A4A4B);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+}
+
+.sanan-how-use-title {
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif));
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.85rem;
+}
+
+.sanan-how-use-sub {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #4B5563;
+  margin: 0;
+}
+
+/* ─── 3. HOW DO I USE IT (FULL-WIDTH SECTION WITH BIG IMAGES) ─── */
+.sanan-pdp-how-use-fullwidth {
+  width: 100%;
+  max-width: 100vw;
+  margin: 7rem 0 6.5rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.how-use-intro-centered {
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.how-use-fullbleed-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 1.25rem;
+  padding: 0 2.5vw;
+  box-sizing: border-box;
+}
+
+.how-use-col {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+.how-use-col-media {
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #E5E7EB;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.how-use-col-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.how-use-col:hover .how-use-col-media img {
+  transform: scale(1.05);
+}
+
+.how-use-col-body {
+  padding: 1.35rem 0.25rem 0.5rem;
+}
+
+.how-use-col-title {
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif));
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  margin: 0 0 0.55rem;
+}
+
+.how-use-col-text {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.90625rem;
+  line-height: 1.65;
+  color: #4B5563;
+  margin: 0;
+}
+
+/* ─── 4. FAQS SECTION (BACKGROUND REMOVED - TRANSPARENT CLEAN ACCORDION) ─── */
+.sanan-pdp-faq-wrap {
+  max-width: 860px !important;
+  margin: 6rem auto 5rem !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+}
+
+.sanan-faq-header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.sanan-faq-kicker {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--color-primary-dark, #2D6E6F);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+}
+
+.sanan-faq-title {
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif));
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.sanan-faq-sub {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.95rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.sanan-pdp-faq-item {
+  border-bottom: 1px solid rgba(14, 41, 41, 0.14) !important;
+  background: transparent !important;
+}
+
+.sanan-pdp-faq-item:first-child {
+  border-top: 1px solid rgba(14, 41, 41, 0.14) !important;
+}
+
+.sanan-pdp-faq-item:last-child {
+  border-bottom: 1px solid rgba(14, 41, 41, 0.14) !important;
+}
+
+.sanan-pdp-faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 0 !important;
+  background: transparent !important;
+  border: none !important;
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif)) !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: var(--color-secondary, #1A4A4B) !important;
+  text-align: left !important;
+  cursor: pointer !important;
+}
+
+.sanan-pdp-faq-trigger:hover {
+  color: var(--color-primary-dark, #2D6E6F) !important;
+}
+
+.sanan-pdp-faq-trigger .icon {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif)) !important;
+  font-size: 1.35rem !important;
+  color: var(--color-primary-dark, #2D6E6F) !important;
+  transition: transform 0.25s ease !important;
+}
+
+.sanan-pdp-faq-body {
+  padding-bottom: 1.4rem !important;
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif)) !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.7 !important;
+  color: #4B5563 !important;
+}
+
+/* ─── 5. TOP REVIEWS (TESTIMONIALS - FULL WIDTH) ─── */
+.sanan-pdp-testimonials-fullwidth {
+  width: 100% !important;
+  max-width: 100vw !important;
+  margin: 7rem auto 5rem !important;
+  padding: 0 3vw !important;
+  box-sizing: border-box !important;
+}
+
+.sanan-testimonials-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.25rem;
+  padding: 0 1rem;
+}
+
+.sanan-testimonials-kicker {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--color-primary-dark, #2D6E6F);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+}
+
+.sanan-testimonials-title {
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif));
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  letter-spacing: -0.02em;
+  margin: 0 0 0.65rem;
+}
+
+.sanan-testimonials-sub {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4B5563;
+  margin: 0;
+}
+
+.sanan-testimonials-grid-full {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  width: 100%;
+}
+
+.sanan-testimonial-card-wide {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
+  border: 1px solid rgba(212, 163, 115, 0.3);
+  border-radius: 20px;
+  padding: 2.35rem 2.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.sanan-testimonial-card-wide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  border-color: rgba(212, 163, 115, 0.5);
+}
+
+.testimonial-stars-gold {
+  color: #F59E0B;
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.85rem;
+}
+
+.testimonial-headline {
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif));
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  margin: 0 0 0.75rem;
+  line-height: 1.35;
+}
+
+.testimonial-quote {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #4B5563;
+  margin: 0 0 1.65rem;
+  flex: 1;
+}
+
+.testimonial-patient-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(14, 41, 41, 0.08);
+  padding-top: 1.15rem;
+}
+
+.patient-name {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-weight: 700;
+  font-size: 0.90625rem;
+  color: #111827;
+}
+
+.patient-badge {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary-dark, #2D6E6F);
+  background: rgba(4, 120, 87, 0.1);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+/* ─── 6. YOU MIGHT ALSO LIKE (FULL WIDTH) ─── */
+.sanan-pdp-related-fullwidth {
+  width: 100% !important;
+  max-width: 100vw !important;
+  margin: 7rem auto 5rem !important;
+  padding: 0 3vw !important;
+  box-sizing: border-box !important;
+}
+
+.sanan-related-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+  padding: 0 1rem;
+}
+
+.sanan-related-grid-full {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ─── 7. CUSTOMER REVIEWS (FULL WIDTH) ─── */
+.sanan-reviews-section {
+  width: 100% !important;
+  max-width: 100vw !important;
+  padding: 0 3vw !important;
+  margin: 6.5rem auto 4rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .how-use-fullbleed-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.25rem;
+    padding: 0 4vw;
+  }
+  .sanan-testimonials-grid-full {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .sanan-related-grid-full {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .how-use-fullbleed-strip {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    padding: 0 5vw;
+  }
+  .sanan-related-grid-full {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+
+/* ==========================================================================
+ * IMAGE 2 REFERENCE PDP SECTIONS ARCHITECTURE
+ * ========================================================================== */
+
+/* 1. Kicker Badges */
+.sanan-pill-badge-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #E8F5E9;
+  color: #2E7D32;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.95rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+/* 2. Ingredients 2-Column Section (Image on Left, Breakdown on Right) */
+.sanan-ingredients-2col-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin: 4.5rem 0;
+}
+
+.sanan-ingredients-2col-media {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(26, 74, 75, 0.08);
+  background: #F0F8F8;
+  aspect-ratio: 4 / 4.5;
+}
+
+.sanan-ingredients-2col-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sanan-ingredients-2col-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sanan-ingredients-2col-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 2.35rem;
+  font-weight: 400;
+  color: #111111;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.sanan-ingredients-2col-sub {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1.05rem;
+  color: #4B5563;
+  line-height: 1.6;
+  margin: 0 0 2rem;
+}
+
+.sanan-ingredients-list-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sanan-ingredient-row-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.sanan-ingredient-row-item:hover {
+  border-color: #439798;
+  box-shadow: 0 6px 18px rgba(67, 151, 152, 0.08);
+  transform: translateY(-2px);
+}
+
+.ingredient-row-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ingredient-row-name {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.35rem;
+}
+
+.ingredient-row-desc {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.875rem;
+  color: #4B5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 3. 4-Column Lifestyle Photo Usage Grid ("How Does It Work / How Do I Use It") */
+.sanan-usage-4col-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2.5rem 0 4rem;
+}
+
+.sanan-usage-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.sanan-usage-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #F3F4F6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.sanan-usage-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.sanan-usage-card:hover .sanan-usage-media img {
+  transform: scale(1.04);
+}
+
+.sanan-usage-title {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 0.4rem;
+}
+
+.sanan-usage-desc {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.875rem;
+  color: #4B5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 4. Our Customers Experience (3 Statistics Cards on Soft Cream Background) */
+.sanan-cust-experience-section {
+  background: #FBF8F5;
+  padding: 4.5rem 0;
+  margin: 4.5rem 0;
+  border-top: 1px solid #EFEAE3;
+  border-bottom: 1px solid #EFEAE3;
+}
+
+.sanan-cust-experience-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.sanan-cust-experience-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 2.25rem;
+  color: #111111;
+  margin: 0 0 0.5rem;
+}
+
+.sanan-cust-experience-sub {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1rem;
+  color: #6B7280;
+  margin: 0 0 3rem;
+}
+
+.sanan-cust-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.sanan-experience-card {
+  background: #FFFFFF;
+  border: 1px solid #EFEAE3;
+  border-radius: 12px;
+  padding: 2.25rem 1.75rem;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.sanan-experience-metric {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #1A4A4B;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.sanan-experience-headline {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.5rem;
+}
+
+.sanan-experience-desc {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.9rem;
+  color: #4B5563;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* 5. Customer Results (3 Photo Cards with Real Lifestyle Portraits) */
+.sanan-customer-results-section {
+  max-width: 1200px;
+  margin: 4.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.sanan-customer-results-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sanan-customer-results-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 2.25rem;
+  color: #111111;
+  margin: 0 0 0.5rem;
+}
+
+.sanan-customer-results-sub {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.sanan-customer-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.sanan-cust-result-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.sanan-cust-result-media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #F3F4F6;
+}
+
+.sanan-cust-result-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sanan-cust-result-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.sanan-cust-result-stars {
+  color: #F59E0B;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.sanan-cust-result-quote {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.95rem;
+  color: #1F2937;
+  line-height: 1.55;
+  font-style: italic;
+  margin: 0 0 1.25rem;
+  flex: 1;
+}
+
+.sanan-cust-result-author {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #F3F4F6;
+  padding-top: 0.85rem;
+}
+
+.cust-author-name {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.cust-author-cond {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.8rem;
+  color: #439798;
+  font-weight: 600;
+}
+
+/* 6. Smart Usage Tips (5 Circular Icons Row) */
+.sanan-smart-tips-section {
+  max-width: 1200px;
+  margin: 4.5rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.sanan-smart-tips-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 2.25rem;
+  color: #111111;
+  margin: 0 0 0.5rem;
+}
+
+.sanan-smart-tips-sub {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1rem;
+  color: #6B7280;
+  margin: 0 0 3rem;
+}
+
+.sanan-smart-tips-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.sanan-smart-tip-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.smart-tip-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #F0F8F8;
+  border: 1.5px solid #D4E8E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.sanan-smart-tip-item:hover .smart-tip-circle {
+  background: #439798;
+  color: #FFFFFF;
+  border-color: #439798;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(67, 151, 152, 0.2);
+}
+
+.smart-tip-label {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.35rem;
+}
+
+.smart-tip-desc {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.8rem;
+  color: #6B7280;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* 7. Full-Width Golden Amber Visual Ambient Banner */
+.sanan-pdp-amber-banner {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #D97706 0%, #B45309 35%, #78350F 100%);
+  overflow: hidden;
+  padding: 4.5rem 1.5rem;
+  box-sizing: border-box;
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.sanan-pdp-amber-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.25) 0%, rgba(0, 0, 0, 0.45) 100%);
+  pointer-events: none;
+}
+
+.amber-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.amber-banner-heading {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 2.75rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.amber-banner-sub {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1.15rem;
+  color: #FEF3C7;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 8. FAQs Clean Transparent Styling */
+.sanan-pdp-faq-wrap {
+  background: transparent !important;
+  max-width: 880px !important;
+  margin: 4.5rem auto !important;
+  padding: 0 1rem !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .sanan-ingredients-2col-wrap {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .sanan-usage-4col-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sanan-cust-experience-grid {
+    grid-template-columns: 1fr;
+  }
+  .sanan-customer-results-grid {
+    grid-template-columns: 1fr;
+  }
+  .sanan-smart-tips-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sanan-smart-tips-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .amber-banner-heading {
+    font-size: 2rem;
+  }
+}

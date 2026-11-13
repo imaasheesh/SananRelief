@@ -1,0 +1,435 @@
+/* ==========================================================================
+   SANAN RELIEF — TRACK ORDER STYLES
+   Design Tokens: DM Serif Display, Inter/Plus Jakarta, Glassmorphism,
+   Brand Teal (#1A3D3E, #2D6E6F), Cream (#FBF8F5), Lime (#84CC16), Gold (#D97706)
+   ========================================================================== */
+
+.track-order-wrapper {
+  background: var(--color-background, #F7FBFB);
+  color: var(--color-primary-text, #111111);
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.track-order-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(45, 110, 111, 0.08) 0%, rgba(247, 251, 251, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.track-order-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   HERO & SEARCH LOOKUP CARD
+   ========================================================================== */
+.track-hero {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+.track-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(45, 110, 111, 0.08);
+  border: 1px solid rgba(45, 110, 111, 0.2);
+  color: #1A3D3E;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.track-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: clamp(32px, 4vw, 42px);
+  color: #1A3D3E;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+.track-subtitle {
+  font-size: 15px;
+  color: #4A5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Lookup Form Glass Card */
+.track-lookup-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(45, 110, 111, 0.16);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px;
+}
+
+.track-lookup-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .track-lookup-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.track-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.track-field-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1A3D3E;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.track-input {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(45, 110, 111, 0.25);
+  border-radius: 50px;
+  padding: 14px 20px;
+  font-size: 15px;
+  color: #111111;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.track-input:focus {
+  border-color: #1A3D3E;
+  box-shadow: 0 0 0 4px rgba(26, 61, 62, 0.1);
+}
+
+.track-demo-pills {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #64748B;
+  flex-wrap: wrap;
+}
+
+.track-demo-btn {
+  background: rgba(45, 110, 111, 0.08);
+  border: 1px solid rgba(45, 110, 111, 0.15);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1A3D3E;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.track-demo-btn:hover {
+  background: #1A3D3E;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   LIVE ORDER STATUS RESULTS CARD
+   ========================================================================== */
+.track-results-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(45, 110, 111, 0.16);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+  margin-bottom: 32px;
+}
+
+.track-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(45, 110, 111, 0.12);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.track-order-id {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 26px;
+  color: #1A3D3E;
+  margin: 0 0 6px;
+}
+
+.track-order-meta {
+  font-size: 14px;
+  color: #64748B;
+}
+
+.track-carrier-badge {
+  background: #F0FDF4;
+  border: 1.5px solid #84CC16;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-align: right;
+}
+
+.track-carrier-badge strong {
+  display: block;
+  font-size: 14px;
+  color: #166534;
+}
+
+.track-carrier-badge span {
+  font-size: 12px;
+  color: #4B5563;
+  font-family: var(--font-mono, monospace);
+}
+
+/* 4-Stage Stepper */
+.track-visual-stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  margin: 36px 0 36px;
+}
+
+.track-visual-stepper::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 12%;
+  right: 12%;
+  height: 3px;
+  background: #E2E8F0;
+  z-index: 0;
+}
+
+.track-visual-progress {
+  position: absolute;
+  top: 24px;
+  left: 12%;
+  width: 62%; /* In Transit */
+  height: 3px;
+  background: linear-gradient(90deg, #1A3D3E 0%, #84CC16 100%);
+  z-index: 1;
+}
+
+.track-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.track-node-bubble {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #CBD5E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.track-node.is-done .track-node-bubble {
+  background: #1A3D3E;
+  border-color: #1A3D3E;
+  color: #84CC16;
+}
+
+.track-node.is-current .track-node-bubble {
+  background: #FFFFFF;
+  border-color: #84CC16;
+  color: #1A3D3E;
+  box-shadow: 0 0 0 6px rgba(132, 204, 22, 0.25);
+  animation: pulseBubble 2s infinite ease-in-out;
+}
+
+.track-node-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 15px;
+  color: #1A3D3E;
+  margin-bottom: 4px;
+}
+
+.track-node-time {
+  font-size: 12px;
+  color: #64748B;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .track-visual-stepper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-left: 20px;
+  }
+  .track-visual-stepper::before {
+    left: 44px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    right: auto;
+  }
+  .track-visual-progress {
+    left: 44px;
+    top: 0;
+    width: 3px;
+    height: 65%;
+  }
+  .track-node {
+    flex-direction: row;
+    text-align: left;
+    gap: 16px;
+  }
+  .track-node-bubble {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* ==========================================================================
+   DETAILED COURIER TRANSIT LOG
+   ========================================================================== */
+.transit-log-section {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 24px;
+  margin-top: 28px;
+}
+
+.transit-log-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 18px;
+  color: #1A3D3E;
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transit-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.transit-log-item {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed #CBD5E1;
+}
+
+.transit-log-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.transit-time {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  color: #64748B;
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.transit-status {
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 2px;
+}
+
+.transit-location {
+  font-size: 13px;
+  color: #4A5568;
+}
+
+/* Support Help Box */
+.track-support-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+  .track-support-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.track-support-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(45, 110, 111, 0.14);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.track-support-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(26, 61, 62, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #1A3D3E;
+  flex-shrink: 0;
+}
+
+.track-support-card h4 {
+  font-size: 16px;
+  margin: 0 0 4px;
+  color: #1A3D3E;
+}
+
+.track-support-card p {
+  font-size: 13px;
+  color: #64748B;
+  margin: 0 0 10px;
+}
+

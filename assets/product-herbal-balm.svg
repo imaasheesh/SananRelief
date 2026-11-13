@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <radialGradient id="balm-bg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#FCF9F3"/>
+      <stop offset="60%" stop-color="#F2EDE4"/>
+      <stop offset="100%" stop-color="#E5DDD0"/>
+    </radialGradient>
+    <linearGradient id="balm-pedestal-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFE8DE"/>
+      <stop offset="50%" stop-color="#E5DCCE"/>
+      <stop offset="100%" stop-color="#D9CEBD"/>
+    </linearGradient>
+    <linearGradient id="balm-pedestal-front" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D5C9B7"/>
+      <stop offset="100%" stop-color="#B8A892"/>
+    </linearGradient>
+
+    <!-- Celadon Sage Cream Jar Gradient -->
+    <linearGradient id="balm-jar-glass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6F8578"/>
+      <stop offset="20%" stop-color="#A5BEB0"/>
+      <stop offset="45%" stop-color="#D4E4DC"/>
+      <stop offset="70%" stop-color="#ADC5B8"/>
+      <stop offset="90%" stop-color="#8DA79A"/>
+      <stop offset="100%" stop-color="#5E7568"/>
+    </linearGradient>
+
+    <!-- Clean White Cap Gradient -->
+    <linearGradient id="balm-white-cap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8E8E8"/>
+      <stop offset="30%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F5F5F5"/>
+      <stop offset="100%" stop-color="#DDDDDD"/>
+    </linearGradient>
+
+    <filter id="balm-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#554433" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#balm-bg)"/>
+
+  <!-- Botanical Herb Leaves on Left -->
+  <g opacity="0.9">
+    <path d="M 130 300 Q 80 280 40 270" stroke="#486838" stroke-width="2.5" fill="none"/>
+    <path d="M 40 270 C 35 240 60 215 75 200 C 85 220 80 250 40 270 Z" fill="#4B6E38"/>
+    <path d="M 60 255 C 45 230 45 195 30 180 C 45 205 60 235 60 255 Z" fill="#5A8545"/>
+  </g>
+
+  <!-- Stone Pedestal -->
+  <g filter="url(#balm-shadow)">
+    <path d="M 80 370 C 80 370 120 420 200 420 C 280 420 320 370 320 370 L 320 405 C 320 405 280 455 200 455 C 120 455 80 405 80 405 Z" fill="url(#balm-pedestal-front)"/>
+    <ellipse cx="200" cy="370" rx="120" ry="34" fill="url(#balm-pedestal-top)"/>
+
+    <path d="M 95 345 C 95 345 130 385 200 385 C 270 385 305 345 305 345 L 305 365 C 305 365 270 405 200 405 C 130 405 95 365 95 365 Z" fill="url(#balm-pedestal-front)"/>
+    <ellipse cx="200" cy="345" rx="105" ry="28" fill="url(#balm-pedestal-top)"/>
+    <ellipse cx="145" cy="345" rx="5" ry="2" fill="#C4B6A0" opacity="0.6"/>
+    <ellipse cx="235" cy="348" rx="6" ry="2" fill="#C4B6A0" opacity="0.5"/>
+  </g>
+
+  <!-- Jar Shadow -->
+  <ellipse cx="200" cy="336" rx="56" ry="14" fill="#58432F" opacity="0.45" filter="url(#balm-shadow)"/>
+
+  <!-- Cream Jar -->
+  <g filter="url(#balm-shadow)">
+    <!-- Jar Body (Celadon Green) -->
+    <rect x="150" y="235" width="100" height="92" rx="10" fill="url(#balm-jar-glass)"/>
+    <path d="M 152 240 L 154 320 C 154 324 162 326 166 322 L 166 240 Z" fill="#FFFFFF" opacity="0.35"/>
+
+    <!-- White Cap -->
+    <rect x="146" y="205" width="108" height="34" rx="6" fill="url(#balm-white-cap)"/>
+    <line x1="148" y1="237" x2="252" y2="237" stroke="#CCC" stroke-width="0.8"/>
+
+    <!-- Clean Label on Front -->
+    <rect x="156" y="246" width="88" height="72" rx="4" fill="#FAF6EE"/>
+    <rect x="156" y="246" width="4" height="72" fill="#000000" opacity="0.08"/>
+    <rect x="240" y="246" width="4" height="72" fill="#000000" opacity="0.08"/>
+
+    <path d="M 200 256 C 196 259 194 263 200 267 C 206 263 204 259 200 256 Z" fill="#3B7A57"/>
+    <circle cx="200" cy="261" r="1.5" fill="#FAF6EE"/>
+    <text x="200" y="276" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="7.5" font-weight="800" fill="#1C2B2B" letter-spacing="1.5">SANAN</text>
+    <line x1="184" y1="280" x2="216" y2="280" stroke="#3B7A57" stroke-width="0.8"/>
+
+    <text x="200" y="293" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="10" font-weight="400" fill="#182626">Herbal Balm</text>
+    <text x="200" y="302" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="4.5" font-weight="700" fill="#3B7A57" letter-spacing="0.8">SOOTHING &amp; RESTORING</text>
+    <text x="200" y="311" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="4.2" fill="#758282">50 ml</text>
+  </g>
+</svg>

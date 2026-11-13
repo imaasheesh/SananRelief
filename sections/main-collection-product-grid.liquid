@@ -1,208 +1,228 @@
-{{ 'template-collection.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'sanan-collection.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'sanan-collection.js' | asset_url }}" defer="defer"></script>
 
-{% if section.settings.image_shape == 'blob' %}
-  {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
-{%- endif -%}
+{%- liquid
+  assign sort_by = collection.sort_by | default: collection.default_sort_by
+  assign total_active_filters = 0
+  for filter in collection.filters
+    assign total_active_filters = total_active_filters | plus: filter.active_values.size
+    if filter.type == 'price_range'
+      if filter.min_value.value != nil or filter.max_value.value != nil
+        assign total_active_filters = total_active_filters | plus: 1
+      endif
+    endif
+  endfor
+-%}
 
-{%- unless section.settings.quick_add == 'none' -%}
-  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
-{%- endunless -%}
-
-{%- if section.settings.quick_add == 'standard' -%}
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
-
-{%- if section.settings.quick_add == 'bulk' -%}
-  <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
-
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-<collection-component
-  view-event-payload="{{ collection | standard_event_data: 'view' | escape }}"
-  data-collection-id="{{ collection.id }}"
->
-  <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+<div class="sanan-collection-wrapper section-{{ section.id }}-padding" id="ProductGridContainer">
+  <div class="sanan-container">
     {%- paginate collection.products by section.settings.products_per_page -%}
-      {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
-      {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
-        <facet-filters-form class="facets facets-vertical-sort page-width small-hide">
-          <form class="facets-vertical-form" id="FacetSortForm">
-            <div class="facet-filters sorting caption">
-              <div class="facet-filters__field">
-                <h2 class="facet-filters__label caption-large text-body">
-                  <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-                </h2>
-                <div class="select">
-                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                  <select
-                    name="sort_by"
-                    class="facet-filters__sort select__select caption-large"
-                    id="SortBy"
-                    aria-describedby="a11y-refresh-page-message"
-                  >
-                    {%- for option in collection.sort_options -%}
-                      <option
-                        value="{{ option.value | escape }}"
-                        {% if option.value == sort_by %}
-                          selected="selected"
-                        {% endif %}
-                      >
-                        {{ option.name | escape }}
-                      </option>
-                    {%- endfor -%}
-                  </select>
-                  <span class="svg-wrapper">
-                    {{- 'icon-caret.svg' | inline_asset_content -}}
-                  </span>
-                </div>
-              </div>
-            </div>
 
-            <div class="product-count-vertical light" role="status">
-              <h2 class="product-count__text text-body">
-                <span id="ProductCountDesktop">
-                  {%- if collection.results_count -%}
-                    {{
-                      'templates.search.results_with_count'
-                      | t: terms: collection.terms, count: collection.results_count
-                    }}
-                  {%- elsif collection.products_count == collection.all_products_count -%}
-                    {{ 'products.facets.product_count_simple' | t: count: collection.products_count }}
-                  {%- else -%}
-                    {{
-                      'products.facets.product_count'
-                      | t: product_count: collection.products_count, count: collection.all_products_count
-                    }}
-                  {%- endif -%}
-                </span>
-              </h2>
-              {%- render 'loading-spinner' -%}
-            </div>
-          </form>
-        </facet-filters-form>
-      {%- endif -%}
+      <!-- ─── 1. COLLECTION TOOLBAR ─── -->
+      <div class="sanan-collection-toolbar" role="region" aria-label="Collection Controls">
+        <div class="sanan-toolbar-left">
+          <div class="sanan-product-count" id="ProductCountDesktop">
+            <span>Showing</span>
+            <span class="count-number">{{ collection.products_count }}</span>
+            <span>of {{ collection.all_products_count }} Formulations</span>
+          </div>
 
-      <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
-        {{ 'component-facets.css' | asset_url | stylesheet_tag }}
-        <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
-        {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-          <aside
-            aria-labelledby="verticalTitle"
-            class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-            id="main-collection-filters"
-            data-id="{{ section.id }}"
-          >
-            {% render 'facets',
-              results: collection,
-              enable_filtering: section.settings.enable_filtering,
-              enable_sorting: section.settings.enable_sorting,
-              filter_type: section.settings.filter_type
-            %}
-          </aside>
-        {%- endif -%}
+          {%- if total_active_filters > 0 -%}
+            <span class="sanan-active-filters-count">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>{{ total_active_filters }} Active Filter{% if total_active_filters > 1 %}s{% endif %}</span>
+            </span>
+          {%- endif -%}
+        </div>
 
-        <div
-          class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          id="ProductGridContainer"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-          {% endif %}
-        >
-          {%- if collection.products.size == 0 -%}
-            <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
-              <div class="loading-overlay gradient"></div>
-              <div class="title-wrapper center">
-                <h2 class="title title--primary">
-                  {{ 'sections.collection_template.empty' | t -}}
-                  <br>
-                  {{
-                    'sections.collection_template.use_fewer_filters_html'
-                    | t: link: collection.url, class: 'underlined-link link'
-                  }}
-                </h2>
-              </div>
-            </div>
-          {%- else -%}
-            <div
-              class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-            >
-              <div class="loading-overlay gradient"></div>
-              <ul
-                id="product-grid"
-                data-id="{{ section.id }}"
-                class="
-                  grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-                  grid--{{ section.settings.columns_desktop }}-col-desktop
-                  {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %}
-                "
-              >
-                {% assign skip_card_product_styles = false %}
-                {%- for product in collection.products -%}
-                  {% assign lazy_load = false %}
-                  {%- if forloop.index > 2 -%}
-                    {%- assign lazy_load = true -%}
-                  {%- endif -%}
-                  <li
-                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                    {% if settings.animations_reveal_on_scroll %}
-                      data-cascade
-                      style="--animation-order: {{ forloop.index }};"
-                    {% endif %}
-                  >
-                    {% render 'card-product',
-                      card_product: product,
-                      media_aspect_ratio: section.settings.image_ratio,
-                      image_shape: section.settings.image_shape,
-                      show_secondary_image: section.settings.show_secondary_image,
-                      show_vendor: section.settings.show_vendor,
-                      show_rating: section.settings.show_rating,
-                      lazy_load: lazy_load,
-                      skip_styles: skip_card_product_styles,
-                      quick_add: section.settings.quick_add,
-                      section_id: section.id,
-                      product_view_context: 'collection'
-                    %}
-                  </li>
-                  {%- assign skip_card_product_styles = true -%}
-                {%- endfor -%}
-              </ul>
-
-              {%- if paginate.pages > 1 -%}
-                {% render 'pagination', paginate: paginate, anchor: '' %}
+        <div class="sanan-toolbar-right">
+          <!-- Mobile Filter Drawer Trigger -->
+          {%- if section.settings.enable_filtering -%}
+            <button type="button" class="sanan-mobile-filter-trigger" aria-label="Open filter and sort drawer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+              <span>Filter &amp; Sort</span>
+              {%- if total_active_filters > 0 -%}
+                <span class="filter-badge">{{ total_active_filters }}</span>
               {%- endif -%}
+            </button>
+          {%- endif -%}
+
+          <!-- Sort By Selector -->
+          {%- if section.settings.enable_sorting -%}
+            <div class="sanan-sort-by-wrapper">
+              <label for="SortBy" class="sanan-sort-label">Sort by:</label>
+              <div class="sanan-select-wrapper">
+                <select name="sort_by" class="sanan-sort-select" id="SortBy" aria-label="Sort collection products">
+                  {%- for option in collection.sort_options -%}
+                    <option
+                      value="{{ option.value | escape }}"
+                      {% if option.value == sort_by %}selected="selected"{% endif %}
+                    >
+                      {{ option.name | escape }}
+                    </option>
+                  {%- endfor -%}
+                </select>
+                <svg class="sanan-select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+          {%- endif -%}
+
+          <!-- Grid Columns Switcher (Desktop) -->
+          {%- if section.settings.enable_grid_switcher -%}
+            <div class="sanan-grid-selector" role="group" aria-label="Grid column layout">
+              <button type="button" class="sanan-grid-btn {% if section.settings.columns_desktop == 4 %}is-active{% endif %}" data-cols="4" title="4 Columns Layout" aria-label="4 Columns">
+                <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="4" height="20" rx="1"/><rect x="7.33" y="2" width="4" height="20" rx="1"/><rect x="12.66" y="2" width="4" height="20" rx="1"/><rect x="18" y="2" width="4" height="20" rx="1"/></svg>
+              </button>
+              <button type="button" class="sanan-grid-btn {% if section.settings.columns_desktop == 3 %}is-active{% endif %}" data-cols="3" title="3 Columns Layout" aria-label="3 Columns">
+                <svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="2" width="5" height="20" rx="1"/><rect x="9.5" y="2" width="5" height="20" rx="1"/><rect x="16" y="2" width="5" height="20" rx="1"/></svg>
+              </button>
+              <button type="button" class="sanan-grid-btn {% if section.settings.columns_desktop == 2 %}is-active{% endif %}" data-cols="2" title="2 Columns Layout" aria-label="2 Columns">
+                <svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="2" width="8" height="20" rx="1"/><rect x="13" y="2" width="8" height="20" rx="1"/></svg>
+              </button>
             </div>
           {%- endif -%}
         </div>
       </div>
+
+      <!-- ─── 2. ADVANCED FACET FILTER CONTROLS ─── -->
+      {%- if section.settings.enable_filtering -%}
+        {% render 'sanan-facets',
+          results: collection,
+          enable_filtering: section.settings.enable_filtering,
+          enable_sorting: section.settings.enable_sorting
+        %}
+      {%- endif -%}
+
+      <!-- ─── 3. PRODUCT GRID & IN-GRID CALLOUT ─── -->
+      {%- if collection.products.size == 0 -%}
+        <!-- Empty State -->
+        <div class="sanan-empty-collection">
+          <div class="sanan-empty-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h2 class="sanan-empty-title">No Formulations Found</h2>
+          <p class="sanan-empty-desc">We couldn't find any products matching your selected filters. Try removing a few filters or resetting to view our full collection.</p>
+          <a href="{{ collection.url }}" class="sanan-empty-reset-btn">Reset All Filters</a>
+        </div>
+      {%- else -%}
+        <ul
+          id="product-grid"
+          data-id="{{ section.id }}"
+          class="sanan-product-grid grid--{{ section.settings.columns_desktop }}-col {% if section.settings.columns_mobile == '1' %}grid--mobile-1-col{% endif %}"
+        >
+          {%- for product in collection.products -%}
+            {%- assign lazy_load = false -%}
+            {%- if forloop.index > 4 -%}
+              {%- assign lazy_load = true -%}
+            {%- endif -%}
+
+            <li class="sanan-grid-item">
+              {% render 'sanan-product-card',
+                product: product,
+                show_secondary_image: section.settings.show_secondary_image,
+                show_vendor: section.settings.show_vendor,
+                show_rating: section.settings.show_rating,
+                show_badge: section.settings.show_badge,
+                lazy_load: lazy_load,
+                section_id: section.id
+              %}
+            </li>
+
+            <!-- In-Grid Editorial Promotional Card (shown after 4th product) -->
+            {%- if forloop.index == 4 and section.settings.show_promo_card -%}
+              <li class="sanan-promo-in-grid-card">
+                {%- if section.settings.promo_image != blank -%}
+                  <img
+                    src="{{ section.settings.promo_image | image_url: width: 800 }}"
+                    alt="Ayurvedic Doctor Consultation"
+                    class="sanan-promo-card-bg"
+                    width="400"
+                    height="500"
+                    loading="lazy"
+                  >
+                {%- endif -%}
+                <div class="sanan-promo-card-overlay"></div>
+                <div class="sanan-promo-card-content">
+                  <span class="sanan-promo-card-badge">Personalized Guidance</span>
+                  <h3 class="sanan-promo-card-title">{{ section.settings.promo_title | default: 'Unsure which formulation suits your health profile?' }}</h3>
+                  <p class="sanan-promo-card-desc">{{ section.settings.promo_desc | default: 'Our certified Ayush practitioners provide free confidential consultations on WhatsApp to help you choose the right dosage and extract.' }}</p>
+                  <a href="{{ section.settings.promo_link | default: '/pages/contact' }}" class="sanan-promo-card-btn">
+                    <span>{{ section.settings.promo_cta | default: 'Chat with Doctor (Free)' }} &rarr;</span>
+                  </a>
+                </div>
+              </li>
+            {%- endif -%}
+
+          {%- endfor -%}
+        </ul>
+
+        <!-- ─── 4. PAGINATION & LOAD MORE ─── -->
+        {%- if paginate.pages > 1 -%}
+          <div class="sanan-pagination-wrap">
+            {%- if section.settings.pagination_style == 'load_more' -%}
+              <div class="sanan-pagination-progress">
+                <div class="sanan-progress-text">Showing {{ paginate.current_page | times: paginate.page_size | at_most: collection.products_count }} of {{ collection.products_count }} formulations</div>
+                <div class="sanan-progress-bar-bg">
+                  <div class="sanan-progress-bar-fill" style="width: {{ paginate.current_page | times: paginate.page_size | times: 100.0 | divided_by: collection.products_count | at_most: 100 }}%;"></div>
+                </div>
+              </div>
+
+              {%- if paginate.next -%}
+                <button
+                  type="button"
+                  class="sanan-load-more-btn"
+                  data-next-url="{{ paginate.next.url }}"
+                  aria-label="Load more formulations"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                  <span>Load More Formulations</span>
+                </button>
+              {%- endif -%}
+
+            {%- else -%}
+              <!-- Numbered Pagination -->
+              <nav class="sanan-pagination-nav" aria-label="Pagination">
+                {%- if paginate.previous -%}
+                  <li class="sanan-page-item">
+                    <a href="{{ paginate.previous.url }}" aria-label="Previous page">&lsaquo;</a>
+                  </li>
+                {%- endif -%}
+
+                {%- for part in paginate.parts -%}
+                  {%- if part.is_link -%}
+                    <li class="sanan-page-item">
+                      <a href="{{ part.url }}">{{ part.title }}</a>
+                    </li>
+                  {%- else -%}
+                    <li class="sanan-page-item {% if part.title == paginate.current_page %}is-current{% endif %}">
+                      <span aria-current="page">{{ part.title }}</span>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+
+                {%- if paginate.next -%}
+                  <li class="sanan-page-item">
+                    <a href="{{ paginate.next.url }}" aria-label="Next page">&rsaquo;</a>
+                  </li>
+                {%- endif -%}
+              </nav>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+      {%- endif -%}
+
     {%- endpaginate -%}
-    {% if section.settings.image_shape == 'arch' %}
-      {{ 'mask-arch.svg' | inline_asset_content }}
-    {%- endif -%}
   </div>
-</collection-component>
+</div>
+
+<!-- Compact Variant Selection Modal -->
+{% render 'sanan-quick-add-modal' %}
 
 {% schema %}
 {
-  "name": "t:sections.main-collection-product-grid.name",
+  "name": "Sanan Product Grid",
   "class": "section",
   "settings": [
     {
@@ -212,203 +232,128 @@
       "max": 36,
       "step": 4,
       "default": 16,
-      "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+      "label": "Formulations Per Page"
     },
     {
       "type": "range",
       "id": "columns_desktop",
-      "min": 1,
-      "max": 6,
+      "min": 2,
+      "max": 4,
       "step": 1,
       "default": 4,
-      "label": "t:sections.main-collection-product-grid.settings.columns_desktop.label"
+      "label": "Desktop Columns"
     },
     {
       "type": "select",
       "id": "columns_mobile",
       "default": "2",
-      "label": "t:sections.main-collection-product-grid.settings.columns_mobile.label",
+      "label": "Mobile Columns",
       "options": [
         {
           "value": "1",
-          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__1.label"
+          "label": "1 Column"
         },
         {
           "value": "2",
-          "label": "t:sections.main-collection-product-grid.settings.columns_mobile.options__2.label"
+          "label": "2 Columns"
         }
       ]
     },
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "info": "t:sections.all.colors.has_cards_info",
-      "default": "scheme-1"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.main-collection-product-grid.settings.header__3.content"
-    },
-    {
-      "type": "select",
-      "id": "image_ratio",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__1.label"
-        },
-        {
-          "value": "portrait",
-          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__2.label"
-        },
-        {
-          "value": "square",
-          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
-        }
-      ],
-      "default": "adapt",
-      "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
-    },
-    {
-      "type": "select",
-      "id": "image_shape",
-      "options": [
-        {
-          "value": "default",
-          "label": "t:sections.all.image_shape.options__1.label"
-        },
-        {
-          "value": "arch",
-          "label": "t:sections.all.image_shape.options__2.label"
-        },
-        {
-          "value": "blob",
-          "label": "t:sections.all.image_shape.options__3.label"
-        },
-        {
-          "value": "chevronleft",
-          "label": "t:sections.all.image_shape.options__4.label"
-        },
-        {
-          "value": "chevronright",
-          "label": "t:sections.all.image_shape.options__5.label"
-        },
-        {
-          "value": "diamond",
-          "label": "t:sections.all.image_shape.options__6.label"
-        },
-        {
-          "value": "parallelogram",
-          "label": "t:sections.all.image_shape.options__7.label"
-        },
-        {
-          "value": "round",
-          "label": "t:sections.all.image_shape.options__8.label"
-        }
-      ],
-      "default": "default",
-      "label": "t:sections.all.image_shape.label"
-    },
-    {
       "type": "checkbox",
-      "id": "show_secondary_image",
-      "default": false,
-      "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_vendor",
-      "default": false,
-      "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_rating",
-      "default": false,
-      "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
-      "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
-    },
-    {
-      "type": "select",
-      "id": "quick_add",
-      "default": "none",
-      "label": "t:sections.main-collection-product-grid.settings.quick_add.label",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_1"
-        },
-        {
-          "value": "standard",
-          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_2"
-        },
-        {
-          "value": "bulk",
-          "label": "t:sections.main-collection-product-grid.settings.quick_add.options.option_3"
-        }
-      ]
-    },
-    {
-      "type": "header",
-      "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+      "id": "enable_grid_switcher",
+      "label": "Enable Grid Layout Switcher (4/3/2 cols)",
+      "default": true
     },
     {
       "type": "checkbox",
       "id": "enable_filtering",
-      "default": true,
-      "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
-      "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
-    },
-    {
-      "type": "select",
-      "id": "filter_type",
-      "options": [
-        {
-          "value": "horizontal",
-          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__1.label"
-        },
-        {
-          "value": "vertical",
-          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__2.label"
-        },
-        {
-          "value": "drawer",
-          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__3.label"
-        }
-      ],
-      "default": "horizontal",
-      "label": "t:sections.main-collection-product-grid.settings.filter_type.label"
+      "label": "Enable Storefront Filtering",
+      "default": true
     },
     {
       "type": "checkbox",
       "id": "enable_sorting",
-      "default": true,
-      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+      "label": "Enable Sorting Dropdown",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "label": "Show Secondary Image on Hover",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_badge",
+      "label": "Show Product Badges (Sale/Bestseller)",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show Star Ratings",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show Formulation Type",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "pagination_style",
+      "label": "Pagination Style",
+      "options": [
+        {
+          "value": "traditional",
+          "label": "Numbered Pages"
+        },
+        {
+          "value": "load_more",
+          "label": "Load More Button with Progress Bar"
+        }
+      ],
+      "default": "load_more"
     },
     {
       "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
+      "content": "In-Grid Promotional Card"
     },
     {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
+      "type": "checkbox",
+      "id": "show_promo_card",
+      "label": "Show In-Grid Doctor Consultation Card",
+      "default": true
     },
     {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "type": "text",
+      "id": "promo_title",
+      "label": "Promo Card Title",
+      "default": "Unsure which formulation suits your health profile?"
+    },
+    {
+      "type": "textarea",
+      "id": "promo_desc",
+      "label": "Promo Card Description",
+      "default": "Our certified Ayush practitioners provide free confidential consultations on WhatsApp to help you choose the right dosage and extract."
+    },
+    {
+      "type": "text",
+      "id": "promo_cta",
+      "label": "Promo Button Text",
+      "default": "Chat with Doctor (Free)"
+    },
+    {
+      "type": "url",
+      "id": "promo_link",
+      "label": "Promo Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "promo_image",
+      "label": "Promo Background Image"
     }
   ]
 }

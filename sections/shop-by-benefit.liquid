@@ -1,0 +1,169 @@
+{% comment %}
+  Shop by Benefit / Targeted Relief Section
+  Online Store 2.0 section featuring organic concave corner notch with action button outside the card.
+{% endcomment %}
+
+{{ 'storefront.css' | asset_url | stylesheet_tag }}
+
+<section class="benefit-section section-{{ section.id }}-padding" id="Benefit-{{ section.id }}">
+  <div class="page-width">
+    <div class="section-header" style="margin-bottom: 2rem;">
+      <div>
+        {%- if section.settings.subheading != blank -%}
+          <p class="section-eyebrow">{{ section.settings.subheading | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <h2 class="section-title">{{ section.settings.title }}</h2>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.description != blank -%}
+        <div>
+          <span style="font-size:0.85rem; color:#8AABAB;">{{ section.settings.description | escape }}</span>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2rem;">
+      {%- for block in section.blocks -%}
+        <div class="benefit-card-wrapper" {{ block.shopify_attributes }}>
+          <div class="benefit-card">
+            {%- if block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 800
+                | image_tag: loading: 'lazy', class: 'benefit-card-img', alt: block.settings.title
+              }}
+            {%- else -%}
+              <div class="benefit-card-img" style="background: linear-gradient(145deg, #1A3D3E 0%, #2A5859 100%);"></div>
+            {%- endif -%}
+
+            <div class="benefit-card-overlay"></div>
+
+            <div style="position:relative; z-index:2; display:flex; justify-content:space-between; align-items:flex-start;">
+              <h3 class="benefit-card-title">{{ block.settings.title }}</h3>
+              {%- if block.settings.badge != blank -%}
+                <span class="benefit-card-tag">{{ block.settings.badge | escape }}</span>
+              {%- endif -%}
+            </div>
+
+            {%- if block.settings.subtitle != blank -%}
+              <div style="position:relative; z-index:2;">
+                <p style="color:rgba(255,255,255,0.9); font-size:0.92rem; max-width:220px; line-height:1.5; text-shadow:0 1px 6px rgba(0,0,0,0.3);">
+                  {{ block.settings.subtitle | escape }}
+                </p>
+              </div>
+            {%- endif -%}
+
+            <!-- Concave Notch Scoop on Card Corner -->
+            <div class="benefit-card-notch"></div>
+          </div>
+
+          <!-- The Cart Button Placed OUTSIDE the Card in the Cutaway -->
+          <a
+            href="{{ block.settings.link | default: '#' }}"
+            class="benefit-cart-btn btn-add-to-cart"
+            title="{{ block.settings.title | escape }}"
+            aria-label="{{ block.settings.title | escape }}"
+          >
+            <span class="arrow-icon">↗</span>
+          </a>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Shop by Benefit",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Shop by Benefit"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "Targeted Relief Categories"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Featuring organic notched action corner"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit_card",
+      "name": "Benefit Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "STRESS & ANXIETY"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Pill Badge",
+          "default": "Daily Calm"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Description",
+          "default": "Botanical adaptogens for nervous system relaxation."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Collection Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop by Benefit",
+      "blocks": [
+        {
+          "type": "benefit_card",
+          "settings": {
+            "title": "STRESS & ANXIETY",
+            "badge": "Daily Calm",
+            "subtitle": "Botanical adaptogens for nervous system relaxation."
+          }
+        },
+        {
+          "type": "benefit_card",
+          "settings": {
+            "title": "PAIN & SORENESS",
+            "badge": "Topical Relief",
+            "subtitle": "Targeted formulas for joint, muscle & chronic tension."
+          }
+        },
+        {
+          "type": "benefit_card",
+          "settings": {
+            "title": "SLEEP & RECOVERY",
+            "badge": "Night Drops",
+            "subtitle": "Restorative evening botanicals for deep regenerative sleep."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

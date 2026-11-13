@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Remedy Not Found &bull; Sanan Relief Luxury Ayurvedic Pharmacopoeia</title>
+
+  <!-- Typography & Tokens -->
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../assets/theme-tokens.css">
+  <link rel="stylesheet" href="../assets/components.css">
+  <link rel="stylesheet" href="../assets/storefront.css">
+  <link rel="stylesheet" href="../assets/sanan-mega-menu.css">
+  <link rel="stylesheet" href="../assets/sanan-404.css">
+
+  <script src="../assets/storefront.js" defer></script>
+</head>
+<body>
+
+<!-- Translucent Frosted Glass Header -->
+<div class="sanan-header-wrapper header-overlay-mode" id="SananHeaderWrapper">
+  <aside class="sanan-announcement-bar" aria-label="Announcement">
+    <div class="sanan-announcement-container">
+      <div class="sanan-announcement-content">
+        <span class="announcement-promo-pill">SPECIAL OFFER</span>
+        <span class="announcement-leaf-icon">🍃</span>
+        <span class="announcement-text">Flat 15% Off Your First Clinical Vijaya Formulation</span>
+        <span class="announcement-dot">•</span>
+        <span class="announcement-code-label">Use Code:</span>
+        <span class="announcement-code-badge">SANAN15</span>
+        <a href="#featured-products" class="announcement-action-link">Shop Now &rarr;</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. MAIN HEADER FLOATING CONTAINER (Seamless, Borderless) -->
+  <header class="sanan-floating-header" id="SananGlassHeader">
+    <div class="sanan-header-card">
+
+      <!-- Left: Logo (Vertically Centered, Stacked Emblem + Brand Text) -->
+      <div class="sanan-logo-col">
+        <a href="storefront.html" class="sanan-logo-link" aria-label="Sanan Relief">
+          
+            <img
+              src="../assets/logo.png"
+              alt="Sanan Relief"
+              class="sanan-brand-logo"
+              width="120"
+              height="72"
+              loading="eager"
+            >
+          
+        </a>
+      </div>
+
+      <!-- Right: Two-Row Content Area -->
+      <div class="sanan-header-right-col">
+
+        <!-- Top Row: Compliance Bar (Borderless) -->
+        
+          <div class="sanan-utility-row">
+            <div class="sanan-utility-left">
+              <span class="utility-badge-item">
+                <svg class="utility-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>100% Certified Ayurvedic Vijaya &amp; Hemp Formulations</span>
+              </span>
+              <span class="utility-separator">•</span>
+              <span class="utility-badge-item">
+                <svg class="utility-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M3 10h18"></path><path d="M5 10v11"></path><path d="M19 10v11"></path><path d="M9 10v11"></path><path d="M15 10v11"></path><path d="M12 2L2 7h20L12 2z"></path></svg>
+                <span>Ministry of AYUSH Compliant &amp; Approved</span>
+              </span>
+              <a href="{{ section.settings.license_link | default: 'legal.html#disclaimer' }}" class="utility-compliance-link">
+                <span>Licences and Clinical reports &rarr;</span>
+              </a>
+            </div>
+
+            <div class="sanan-utility-right">
+              <a href="article.html" class="utility-quick-link">Blog</a>
+              <span class="utility-quick-pipe">|</span>
+              <a href="faq.html" class="utility-quick-link">FAQs</a>
+              <span class="utility-quick-pipe">|</span>
+              <a href="contact.html" class="utility-quick-link">Contact</a>
+            </div>
+          </div>
+        
+
+        <!-- Bottom Row: Navigation Row with In-line Glassmorphic Switch & Nav Island -->
+        <div class="sanan-nav-row">
+          <!-- Clean Glassmorphic Category Switch: Wellness & Medicinal -->
+          <div class="sanan-category-switch" role="group" aria-label="Product Category Focus">
+            <a href="collection.html?category=wellness" class="sanan-cat-btn is-active" aria-label="Wellness Formulations">
+              <span>Wellness</span>
+            </a>
+            <a href="collection.html?category=medicinal" class="sanan-cat-btn" aria-label="Medicinal Formulations">
+              <span>Medicinal</span>
+            </a>
+          </div>
+
+          <!-- Primary Navigation Pill Island -->
+          <nav class="sanan-pill-island" aria-label="Primary Navigation">
+            <ul class="sanan-nav-links">
+              <!-- 1. SHOP LINK (First link — Triggers Full Screen Overlay Menu with Close Button) -->
+              <li class="sanan-nav-item">
+                <a href="#shop" class="sanan-nav-link sanan-shop-trigger" id="SananShopNavTrigger" aria-label="Open Full Screen Shop Menu">
+                  <span>Shop</span>
+                  <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                </a>
+              </li>
+
+              <!-- 2. VIJAYA SCIENCE (Triggers Full-Width Mega Menu) -->
+              <li class="sanan-nav-item">
+                <a href="article.html" class="sanan-nav-link sanan-mega-trigger" data-mega-target="SmmScience">
+                  <span>Vijaya Science</span>
+                  <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                </a>
+              </li>
+
+              <!-- 3. FIND SUPPORT (Triggers Full-Width Mega Menu) -->
+              <li class="sanan-nav-item">
+                <a href="contact.html" class="sanan-nav-link sanan-mega-trigger" data-mega-target="SmmSupport">
+                  <span>Find Support</span>
+                  <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                </a>
+              </li>
+
+              <!-- 4. OUR STORY (Triggers Full-Width Mega Menu) -->
+              <li class="sanan-nav-item">
+                <a href="#about-sanan" class="sanan-nav-link sanan-mega-trigger" data-mega-target="SmmStory">
+                  <span>Our Story</span>
+                  <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                </a>
+              </li>
+
+              <!-- 5. LEARN DROPDOWN -->
+              <li class="sanan-nav-item has-dropdown">
+                <a href="faq.html" class="sanan-nav-link">
+                  <span>Learn</span>
+                  <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                </a>
+                <div class="sanan-dropdown-menu">
+                  <a href="faq.html" class="sanan-dropdown-item">Frequently Asked Questions</a>
+                  <a href="faq.html" class="sanan-dropdown-item">Prescription Requirements</a>
+                  <a href="faq.html" class="sanan-dropdown-item">Dosage &amp; Titration Guide</a>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Action Buttons: Search, Account, Cart, Consult, SALE -->
+            <div class="sanan-island-actions">
+              <button type="button" class="sanan-action-btn" title="Search" aria-label="Search" onclick="document.getElementById('FaqSearchInput')?.focus() || alert('Search dialog');">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </button>
+
+              <a href="contact.html" class="sanan-action-btn" title="Customer Account" aria-label="Account">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </a>
+
+              <button type="button" class="sanan-action-btn cart-drawer-trigger" title="Cart" aria-label="View Cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span class="cart-pill-count">2</span>
+              </button>
+
+              <!-- Teal Pill CTA: "Consult a Doctor" -->
+              <a href="contact.html" class="btn-consult-doctor">
+                <svg class="stethoscope-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3v5a7.5 7.5 0 0 0 15 0V3"></path><path d="M6 3h-3v3"></path><path d="M21 3h-3v3"></path><circle cx="12" cy="17" r="3"></circle><path d="M12 14v-1.5"></path></svg>
+                <span>Consult a Doctor</span>
+              </a>
+
+              <!-- Red Outline Pill: "SALE" -->
+              <a href="#featured-products" class="btn-sale-pill">
+                <span>SALE</span>
+              </a>
+            </div>
+
+            <!-- Mobile Drawer Toggle Button -->
+            <button type="button" class="sanan-mobile-toggle" id="SananMobileNavToggle" aria-label="Toggle navigation menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </nav>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ─── FULL-WIDTH VIEWPORT MEGA MENUS (Direct Children of Header Container) ─── -->
+
+    <!-- MEGA MENU 1: VIJAYA SCIENCE (Image 1 Reference - Full Screen Width) -->
+    <div class="sanan-mega-menu smm-science-menu" id="SmmScience" role="region" aria-label="Vijaya Science &amp; Operations">
+      <div class="smm-inner-container">
+        <div class="smm-ops-grid">
+          <!-- Left Hero -->
+          <div class="smm-ops-hero">
+            <span class="smm-ops-badge">GMP CERTIFIED</span>
+            <h3 class="smm-ops-title">State-of-the-Art Operations &amp; Infrastructure</h3>
+            <p class="smm-ops-desc">Our advanced production lines conform to WHO GMP, US FDA, and European regulatory standards to deliver flawless therapeutics globally.</p>
+            <div class="smm-ops-stats">
+              <div class="smm-stat-box">
+                <span class="smm-stat-val">100%</span>
+                <span class="smm-stat-lbl">QUALITY AUDITED</span>
+              </div>
+              <div class="smm-stat-box">
+                <span class="smm-stat-val">FDA</span>
+                <span class="smm-stat-lbl">COMPLIANT</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right 2x2 Feature Cards Grid -->
+          <div class="smm-ops-cards">
+            <a href="about.html" class="smm-ops-card">
+              <svg class="smm-ops-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 20h20"></path><path d="M5 20V8l5 4V8l5 4V4h5v16"></path>
+              </svg>
+              <h5 class="smm-ops-card-title">Facility</h5>
+              <p class="smm-ops-card-desc">Modern production &amp; synthesis plant facilities with cleanroom precision.</p>
+            </a>
+
+            <a href="contact.html" class="smm-ops-card">
+              <svg class="smm-ops-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <h5 class="smm-ops-card-title">Services</h5>
+              <p class="smm-ops-card-desc">Contract formulation, customized titration &amp; synthesis options.</p>
+            </a>
+
+            <a href="legal.html#reports" class="smm-ops-card">
+              <svg class="smm-ops-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 12 11 14 15 10"></polyline>
+              </svg>
+              <h5 class="smm-ops-card-title">Quality Assurance</h5>
+              <p class="smm-ops-card-desc">Multi-stage HPLC testing, stability analysis, and batch validation.</p>
+            </a>
+
+            <a href="legal.html#reports" class="smm-ops-card">
+              <svg class="smm-ops-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <h5 class="smm-ops-card-title">Compliance</h5>
+              <p class="smm-ops-card-desc">Conforming strictly to AYUSH, FDA and pharmacovigilance mandates.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEGA MENU 2: FIND SUPPORT (Image 2 Reference - Full Screen Width) -->
+    <div class="sanan-mega-menu smm-support-menu" id="SmmSupport" role="region" aria-label="Support &amp; Network Directory">
+      <div class="smm-inner-container">
+        <div class="smm-support-grid">
+          <!-- Left: Facility Visual -->
+          <div class="smm-support-visual">
+            <img src="../assets/megamenu-facility.jpg" alt="Sanan Extraction Facility" class="smm-support-img" width="340" height="230" loading="lazy">
+          </div>
+
+          <!-- Center: Vertical Links -->
+          <div class="smm-support-links">
+            <a href="about.html" class="smm-support-item">
+              <span>About Sanan Relief</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="contact.html" class="smm-support-item">
+              <span>Doctor Prescription Helpline</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="contact.html" class="smm-support-item">
+              <span>Tele-Consultation Network</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="about.html" class="smm-support-item">
+              <span>Manufacturing Facilities</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="legal.html#shipping" class="smm-support-item">
+              <span>Domestic Express Delivery</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="contact.html" class="smm-support-item">
+              <span>International Consultations</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+
+          <!-- Right: Editorial Innovation Card -->
+          <div class="smm-support-editorial">
+            <h4 class="smm-support-headline">Sanan is here to make a <span>difference through Innovation.</span></h4>
+            <p class="smm-support-body">To be a part of consumer's daily life by giving them best value for money through well researched and ever evolving excellent products.</p>
+            <p class="smm-support-body">Sanan is a leading classical Ayurvedic formulation brand in India which pioneers certified Schedule E-1 healthcare therapeutics.</p>
+            <a href="about.html" class="smm-support-cta">Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEGA MENU 3: OUR STORY (Image 4 Reference - Full Screen Width) -->
+    <div class="sanan-mega-menu smm-story-menu" id="SmmStory" role="region" aria-label="Our Story and Principles">
+      <div class="smm-inner-container">
+        <div class="smm-story-grid">
+          <a href="#why-sanan" class="smm-story-card">
+            <div class="smm-story-thumb-wrap">
+              <img src="../assets/megamenu-story.jpg" alt="Our Story" class="smm-story-thumb" width="360" height="200" loading="lazy">
+            </div>
+            <h4 class="smm-story-title">Our Story</h4>
+            <p class="smm-story-desc">A journey of passion, clinical dedication, and global Ayurvedic herbal trading excellence.</p>
+          </a>
+
+          <a href="#doctor-trust" class="smm-story-card">
+            <div class="smm-story-thumb-wrap">
+              <img src="../assets/doctor-parallax-ref.jpg" alt="Leadership &amp; Culture" class="smm-story-thumb" width="360" height="200" loading="lazy">
+            </div>
+            <h4 class="smm-story-title">Leadership &amp; Culture</h4>
+            <p class="smm-story-desc">Meet our visionary Ayurvedic physician leadership team and clinical research workspace.</p>
+          </a>
+
+          <a href="#sanan-difference" class="smm-story-card">
+            <div class="smm-story-thumb-wrap">
+              <img src="../assets/footer-bg.jpg" alt="Guiding Principles" class="smm-story-thumb" width="360" height="200" loading="lazy">
+            </div>
+            <h4 class="smm-story-title">Guiding Principles</h4>
+            <p class="smm-story-desc">The core values shaping our daily cleanroom extraction operations and global clinical actions.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </header>
+</div>
+
+<!-- ─── FULL SCREEN "SHOP" OVERLAY MENU WITH CLOSE BUTTON (Triggered by Shop Link) ─── -->
+<div class="sanan-shop-all-overlay" id="SananShopAllOverlay" role="dialog" aria-modal="true" aria-label="Shop All Formulations by Health Concern">
+  <!-- Top Bar -->
+  <div class="sso-header-bar">
+    <div class="sso-header-left">
+      <img src="../assets/logo.png" alt="Sanan Relief" class="sso-logo-img" width="100" height="50">
+      <div class="sso-title-group">
+        <h2>Explore All Formulations &amp; Health Concerns</h2>
+        <p>Targeted Ayurvedic Vijaya Extracts &amp; Classical Formulations</p>
+      </div>
+    </div>
+
+    <!-- Close Button (✕) -->
+    <button type="button" class="sso-close-btn" id="SananOverlayCloseBtn" aria-label="Close Shop menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+      <span>Close [ESC]</span>
+    </button>
+  </div>
+
+  <!-- Body Content -->
+  <div class="sso-body">
+    <!-- Sidebar Tabs -->
+    <aside class="sso-sidebar">
+      <button type="button" class="sso-tab-btn is-active" data-tab="concerns">
+        <span>Shop By Concern</span>
+        <span>&rarr;</span>
+      </button>
+      <button type="button" class="sso-tab-btn" data-tab="clinical">
+        <span>Clinical Formulations</span>
+        <span>&rarr;</span>
+      </button>
+      <button type="button" class="sso-tab-btn" data-tab="combos">
+        <span>Concern Combos</span>
+        <span>&rarr;</span>
+      </button>
+      <button type="button" class="sso-tab-btn" data-tab="all-products">
+        <span>All 24+ Products</span>
+        <span>&rarr;</span>
+      </button>
+    </aside>
+
+    <!-- TAB 1: 4x2 Visual Cards Grid (From Image 3 Reference) -->
+    <div class="sso-tab-pane sso-cards-grid is-active" id="SsoTab-concerns">
+      <!-- Card 1 -->
+      <a href="#featured-products#pain" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/benefit-pain-relief.svg" alt="Pain &amp; Muscle Recovery" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Pain &amp; Muscle Recovery</h4>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="#featured-products#stress" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/benefit-stress-anxiety.jpg" alt="Stress &amp; Anxiety" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Stress &amp; Anxiety</h4>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="#featured-products#sleep" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/benefit-sleep-recovery.svg" alt="Sleep Management" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Sleep Management</h4>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="#featured-products#daily" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/product-radiance-serum.svg" alt="Daily Wellness &amp; Metabolism" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Daily Wellness &amp; Metabolism</h4>
+      </a>
+
+      <!-- Card 5 -->
+      <a href="#featured-products#relax" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/product-sleepwell-pulse.svg" alt="Unwind and Relax" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Unwind and Relax</h4>
+      </a>
+
+      <!-- Card 6 -->
+      <a href="#featured-products#cancer-care" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/cta-product-3d.png" alt="Cancer Care &amp; Palliative" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Cancer Care &amp; Palliative</h4>
+      </a>
+
+      <!-- Card 7 -->
+      <a href="#featured-products#mental-health" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/product-ashwagandha.svg" alt="Mental Health (ADHD &amp; Focus)" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Mental Health (ADHD &amp; Focus)</h4>
+      </a>
+
+      <!-- Card 8: Concern Combos Action Card -->
+      <a href="#featured-products#combos" class="sso-combo-card">
+        <svg class="sso-combo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <h4 class="sso-combo-title">Explore Concern Combos &rarr;</h4>
+      </a>
+    </div>
+
+    <!-- TAB 2: Clinical Formulations (From Image 5 Reference) -->
+    <div class="sso-tab-pane smm-shop-grid" id="SsoTab-clinical" style="display:none; grid-column: 2;">
+      <!-- Col 1 -->
+      <div class="smm-link-col">
+        <h4 class="smm-col-header">CLINICAL PAIN RELIEF</h4>
+        <ul class="smm-link-list">
+          <li><a href="#featured-products" class="smm-link">Clinically Studied Pain Relief Oil 30ml</a></li>
+          <li><a href="#featured-products" class="smm-link">Pain Relief Oil 50ml (Economy Pack)</a></li>
+          <li><a href="#featured-products" class="smm-link">Vijaya Pain Relief Patch (Pack of 5)</a></li>
+          <li><a href="#featured-products" class="smm-link">Joint &amp; Arthritis Roll-On 10ml</a></li>
+        </ul>
+        <a href="collection.html?concern=pain" class="smm-view-all-link">View All Pain Solutions &rarr;</a>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="smm-link-col">
+        <h4 class="smm-col-header">ATHLETIC &amp; MUSCLE</h4>
+        <ul class="smm-link-list">
+          <li><a href="collection.html?concern=pain" class="smm-link">Vijaya Athletic Rub Balm</a></li>
+          <li><a href="collection.html?concern=pain" class="smm-link">Deep Heat Recovery Salve</a></li>
+          <li><a href="collection.html?concern=pain" class="smm-link">Full Spectrum Vijaya Oil 4500mg</a></li>
+          <li><a href="collection.html?concern=pain" class="smm-link">Post-Workout Muscle Drops</a></li>
+        </ul>
+        <a href="collection.html?concern=pain" class="smm-view-all-link">View All Muscle Care &rarr;</a>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="smm-link-col">
+        <h4 class="smm-col-header">DOCTOR &amp; VERIFICATION</h4>
+        <ul class="smm-link-list">
+          <li><a href="contact.html" class="smm-link">Ayush Doctor on WhatsApp</a></li>
+          <li><a href="legal.html#reports" class="smm-link">CTRI Trial Registry Data</a></li>
+          <li><a href="legal.html#reports" class="smm-link">Lab Certificates of Analysis (COA)</a></li>
+          <li><a href="contact.html" class="smm-link">Practitioner Portal (SananRelief)</a></li>
+        </ul>
+        <a href="contact.html" class="smm-view-all-link">Dosage Calculator Guide &rarr;</a>
+      </div>
+
+      <!-- Promo 1 -->
+      <a href="#featured-products" class="smm-promo-card">
+        <span class="smm-promo-badge">CTRI PROVEN</span>
+        <div class="smm-promo-img-wrap">
+          <img src="../assets/cta-product-3d.png" alt="Sanan Pain Relief Oil" class="smm-promo-img" width="160" height="120" loading="lazy">
+        </div>
+        <div class="smm-promo-body">
+          <h5 class="smm-promo-title">Sanan Pain Relief Oil</h5>
+          <p class="smm-promo-desc">CTRI/2024/08/072905: 43.5% less pain in 14 days, 24% lower inflammatory ESR marker.</p>
+          <span class="smm-promo-cta">EXPLORE CLINICAL STUDY &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Promo 2 -->
+      <a href="#featured-products" class="smm-promo-card">
+        <span class="smm-promo-badge">RAW BOTANICAL</span>
+        <div class="smm-promo-img-wrap">
+          <img src="../assets/product-vijaya-oil.svg" alt="Full Spectrum Vijaya 4500mg" class="smm-promo-img" width="160" height="120" loading="lazy">
+        </div>
+        <div class="smm-promo-body">
+          <h5 class="smm-promo-title">Full Spectrum Vijaya 4500mg</h5>
+          <p class="smm-promo-desc">100% whole-plant raw extract preserving natural terpenes, flavonoids and cannabinoids.</p>
+          <span class="smm-promo-cta">SHOP FULL SPECTRUM &rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- TAB 3: Concern Combos -->
+    <div class="sso-tab-pane sso-cards-grid" id="SsoTab-combos" style="display:none;">
+      <a href="#featured-products" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/cta-product-3d.png" alt="Pain Free Mobility Kit" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Pain-Free Mobility Kit (Oil + Balm)</h4>
+      </a>
+      <a href="#featured-products" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/benefit-sleep-recovery.svg" alt="Restorative Sleep Stack" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Restorative Sleep Stack</h4>
+      </a>
+      <a href="#featured-products" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/product-ashwagandha.svg" alt="Stress &amp; Calm Duo" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Stress &amp; Neurological Calm Duo</h4>
+      </a>
+      <a href="#featured-products" class="sso-combo-card">
+        <svg class="sso-combo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <h4 class="sso-combo-title">Build Custom Doctor Regimen &rarr;</h4>
+      </a>
+    </div>
+
+    <!-- TAB 4: All Products -->
+    <div class="sso-tab-pane sso-cards-grid" id="SsoTab-all-products" style="display:none;">
+      <a href="#featured-products" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/cta-product-3d.png" alt="Sanan Vijaya Formulation" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Sanan Vijaya Pain Relief Oil 1500mg</h4>
+      </a>
+      <a href="#featured-products" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/product-vijaya-oil.svg" alt="Full Spectrum Vijaya 4500mg" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Full Spectrum Vijaya Oil 4500mg</h4>
+      </a>
+      <a href="#featured-products" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/product-herbal-balm.svg" alt="Vijaya Athletic Balm" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Vijaya Athletic Rub Balm 50g</h4>
+      </a>
+      <a href="#featured-products" class="sso-concern-card">
+        <div class="sso-concern-img-wrap">
+          <img src="../assets/product-ashwagandha.svg" alt="Ashwagandha Vijaya Elixir" class="sso-concern-img" width="220" height="135" loading="lazy">
+        </div>
+        <h4 class="sso-concern-title">Classical Ashwagandha Vijaya Elixir</h4>
+      </a>
+    </div>
+
+    <!-- Bottom Fast-Track Banner -->
+    <div class="sso-footer-banner">
+      <div class="sso-fb-text">
+        <h3>Unsure Which Formulation Fits Your Diagnosis?</h3>
+        <p>Consult with our senior Ayurvedic physicians for free dosage and Schedule E-1 prescription assistance.</p>
+      </div>
+      <a href="contact.html" class="sso-fb-btn">Speak to a Doctor (Free) &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<main class="page-404-wrapper">
+  <div class="page-404-container">
+    
+    <!-- Central Glass Card -->
+    <div class="page-404-card">
+      <div class="page-404-giant-number">404</div>
+
+      <div class="page-404-kicker">
+        <span>🌿</span> Remedy Not Found &bull; Sanan Archives
+      </div>
+
+      <h1 class="page-404-title">This Botanical Remedy Has Wandered</h1>
+      <p class="page-404-desc">
+        The formulation, clinical article, or patient document you are seeking has been moved, archived, or dispensed under a revised nomenclature. Explore our active apothecary catalog below.
+      </p>
+
+      <!-- Quick Search Bar -->
+      <div class="page-404-search-box">
+        <form action="search.html" method="get" class="page-404-search-form">
+          <input type="text" name="q" placeholder="Search formulations, ingredients, concerns...">
+          <button type="submit">Search Remedy &rarr;</button>
+        </form>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="page-404-actions">
+        <a href="storefront.html" class="btn-primary-dock">Return to Apothecary &rarr;</a>
+        <a href="collection.html" class="btn-secondary-dock">Browse All Formulations</a>
+        <a href="contact.html" class="btn-secondary-dock">Speak with Doctor</a>
+      </div>
+    </div>
+
+    <!-- Recommended Remedies -->
+    <div class="page-404-recommendations">
+      <h3 class="page-404-recommendations-title">Recommended Clinical Formulations</h3>
+      
+      <div class="page-404-grid">
+        <a href="product.html" class="page-404-prod-card">
+          <img src="../assets/product-oil-6500mg.jpg" alt="Vijaya Oil 6500mg" class="page-404-prod-img" onerror="this.src='../assets/placeholder.jpg'">
+          <div class="page-404-prod-kicker">CLINICAL TINCTURE</div>
+          <div class="page-404-prod-title">Full-Spectrum Vijaya Oil (6500mg)</div>
+          <div class="page-404-prod-price">
+            <span>₹4,499</span>
+            <span style="color:#2D6E6F; font-size:12px;">Explore &rarr;</span>
+          </div>
+        </a>
+
+        <a href="product-gummies.html" class="page-404-prod-card">
+          <img src="../assets/product-gummies-gold.jpg" alt="Gummy Vati Gold" class="page-404-prod-img" onerror="this.src='../assets/placeholder.jpg'">
+          <div class="page-404-prod-kicker">HERBAL RASA</div>
+          <div class="page-404-prod-title">Ayush Gummy Vati Gold (Alphonso Mango)</div>
+          <div class="page-404-prod-price">
+            <span>₹6,499</span>
+            <span style="color:#2D6E6F; font-size:12px;">Explore &rarr;</span>
+          </div>
+        </a>
+
+        <a href="product.html" class="page-404-prod-card">
+          <img src="../assets/product-modak-vati.jpg" alt="Modak Vati" class="page-404-prod-img" onerror="this.src='../assets/placeholder.jpg'">
+          <div class="page-404-prod-kicker">DEEP REST</div>
+          <div class="page-404-prod-title">Modak Vati Classical Sleep Pearls</div>
+          <div class="page-404-prod-price">
+            <span>₹2,499</span>
+            <span style="color:#2D6E6F; font-size:12px;">Explore &rarr;</span>
+          </div>
+        </a>
+
+        <a href="product.html" class="page-404-prod-card">
+          <img src="../assets/product-pain-balm.jpg" alt="Vijaya Balm" class="page-404-prod-img" onerror="this.src='../assets/placeholder.jpg'">
+          <div class="page-404-prod-kicker">TOPICAL RELIEF</div>
+          <div class="page-404-prod-title">Himalayan Vijaya Therapeutic Pain Balm</div>
+          <div class="page-404-prod-price">
+            <span>₹1,899</span>
+            <span style="color:#2D6E6F; font-size:12px;">Explore &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Global Footer -->
+<footer class="sanan-footer" style="background:#1A3D3E; color:#FFFFFF; padding:60px 0 30px; margin-top:80px;">
+  <div style="max-width:1240px; margin:0 auto; padding:0 24px;">
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:40px; margin-bottom:40px;">
+      <div>
+        <img src="../assets/logo.png" alt="Sanan Relief" style="height:60px; filter:brightness(0) invert(1); margin-bottom:16px;">
+        <p style="color:#A0AEC0; font-size:13px; line-height:1.6;">Precision Ayurvedic Vijaya Pharmacopoeia. Standardized botanical extracts validated by clinical evidence and Schedule E-1 compliance.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'DM Serif Display', Georgia, serif; font-size:16px; margin-bottom:16px; color:#FBF8F5;">Patient Care</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:2; font-size:13px;">
+          <li><a href="contact.html" style="color:#CBD5E1; text-decoration:none;">Book Ayush Consultation</a></li>
+          <li><a href="track-order.html" style="color:#CBD5E1; text-decoration:none;">Track Order Status</a></li>
+          <li><a href="account.html" style="color:#CBD5E1; text-decoration:none;">Prescription Vault</a></li>
+          <li><a href="faq.html" style="color:#CBD5E1; text-decoration:none;">Dosage &amp; Safety FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:'DM Serif Display', Georgia, serif; font-size:16px; margin-bottom:16px; color:#FBF8F5;">Apothecary</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:2; font-size:13px;">
+          <li><a href="product.html" style="color:#CBD5E1; text-decoration:none;">Vijaya Oil (Clinical)</a></li>
+          <li><a href="product-gummies.html" style="color:#CBD5E1; text-decoration:none;">Uplift Gummies (5 Flavours)</a></li>
+          <li><a href="collection.html" style="color:#CBD5E1; text-decoration:none;">Pain &amp; Inflammation</a></li>
+          <li><a href="collection.html" style="color:#CBD5E1; text-decoration:none;">Sleep &amp; Rest</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:'DM Serif Display', Georgia, serif; font-size:16px; margin-bottom:16px; color:#FBF8F5;">AYUSH Compliance</h4>
+        <p style="color:#A0AEC0; font-size:12px; line-height:1.6;">Prescription medicine governed by Drugs and Cosmetics Rules 1945. Manufactured under GMP-certified Ayurvedic licence.</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; font-size:12px; color:#A0AEC0;">
+      <div>&copy; 2026 Sanan Relief Pvt Ltd. All rights reserved.</div>
+      <div style="display:flex; gap:16px;">
+        <a href="legal.html" style="color:#A0AEC0; text-decoration:none;">Privacy Policy</a>
+        <a href="legal.html" style="color:#A0AEC0; text-decoration:none;">Terms of Service</a>
+        <a href="legal.html" style="color:#A0AEC0; text-decoration:none;">Ayush Compliance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

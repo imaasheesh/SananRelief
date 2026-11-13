@@ -1,0 +1,924 @@
+/*
+ * ============================================================
+ * SANAN RELIEF — RECREATIONAL GUMMIES EXPERIENCE (PDP)
+ * Vibrant, Visual-First, Dynamic Multi-Flavour Character Theming
+ * ============================================================
+ */
+
+:root {
+  --flavor-primary: #7858A6;
+  --flavor-dark: #3B0764;
+  --flavor-light: #F3E8FF;
+  --flavor-accent: #C084FC;
+  --flavor-glow: rgba(120, 88, 166, 0.35);
+  --flavor-gradient: linear-gradient(135deg, #7858A6 0%, #4C1D95 100%);
+}
+
+/* ─── DYNAMIC RECREATIONAL AMBIENT ORBS ─── */
+.gummy-ambient-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  transition: background 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gummy-orb-primary {
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--flavor-glow) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(80px);
+  opacity: 0.85;
+  transition: background 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s ease;
+}
+
+.gummy-orb-secondary {
+  position: absolute;
+  top: 45%;
+  left: -200px;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--flavor-glow) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(90px);
+  opacity: 0.6;
+  transition: background 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─── CHARACTER BADGE & TAGLINE ─── */
+.gummy-character-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--flavor-light);
+  color: var(--flavor-dark);
+  font-size: 0.78125rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.gummy-vibe-tagline {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--flavor-primary);
+  margin-bottom: 0.45rem;
+  letter-spacing: 0.01em;
+  transition: color 0.3s ease;
+}
+
+/* ─── VISUAL FLAVOUR SELECTOR CARDS ─── */
+.gummy-flavor-showcase {
+  margin: 0.45rem 0 1rem;
+}
+
+.gummy-flavor-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.84rem;
+  color: #374151;
+  margin-bottom: 0.55rem;
+}
+
+.gummy-flavor-label strong {
+  color: var(--flavor-dark);
+  font-weight: 800;
+}
+
+.gummy-flavor-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.65rem;
+}
+
+.gummy-flavor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 0.65rem 0.35rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+}
+
+.gummy-flavor-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.gummy-flavor-card.is-active {
+  background: #FFFFFF;
+  border-color: var(--flavor-primary);
+  box-shadow: 0 10px 24px var(--flavor-glow);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.gummy-flavor-dot-ring {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.gummy-flavor-card.is-active .gummy-flavor-dot-ring {
+  box-shadow: 0 0 0 2px var(--flavor-primary);
+}
+
+.gummy-flavor-dot-inner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: block;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.gummy-flavor-card-name {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1.2;
+}
+
+.gummy-flavor-card-dose {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--flavor-primary);
+  background: rgba(0, 0, 0, 0.04);
+  padding: 1px 6px;
+  border-radius: 6px;
+}
+
+/* ─── VISUAL VIBE & MOOD METER ─── */
+.gummy-vibe-meter-box {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  margin: 0.5rem 0 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.gummy-vibe-meter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.gummy-vibe-meter-title {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.gummy-vibe-score-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--flavor-dark);
+  background: var(--flavor-light);
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.gummy-meter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem 1.25rem;
+}
+
+.gummy-meter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.gummy-meter-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4B5563;
+}
+
+.gummy-meter-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.gummy-meter-bar {
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--flavor-gradient);
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─── DYNAMIC ADD TO CART BUTTON ─── */
+.gummy-btn-cart {
+  flex: 1;
+  height: 52px;
+  background: var(--flavor-gradient);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  cursor: pointer;
+  box-shadow: 0 12px 28px var(--flavor-glow);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gummy-btn-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px var(--flavor-glow);
+  filter: brightness(108%);
+}
+
+/* ─── SENSORY TASTING RITUAL SECTION (BIG IMAGES, LESS TEXT) ─── */
+.gummy-sensory-section {
+  margin: 4.5rem 0;
+}
+
+.gummy-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.gummy-section-kicker {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--flavor-primary);
+  margin-bottom: 0.45rem;
+}
+
+.gummy-section-title {
+  font-family: var(--sanan-font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 0.65rem;
+}
+
+.gummy-section-sub {
+  font-size: 0.9375rem;
+  color: #6B7280;
+  line-height: 1.5;
+}
+
+.gummy-ritual-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.gummy-ritual-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 22px;
+  padding: 1.75rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gummy-ritual-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.gummy-ritual-phase {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--flavor-primary);
+  margin-bottom: 0.45rem;
+}
+
+.gummy-ritual-title {
+  font-family: var(--sanan-font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.65rem;
+}
+
+.gummy-ritual-desc {
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: #4B5563;
+}
+
+.gummy-ritual-icon-ring {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--flavor-light);
+  color: var(--flavor-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+/* ─── VISUAL CHARACTER MOSAIC (BIG IMAGES, LESS TEXT) ─── */
+.gummy-characters-mosaic {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin: 3.5rem 0;
+}
+
+.gummy-character-item {
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.gummy-character-item:hover,
+.gummy-character-item.is-active {
+  transform: translateY(-6px);
+  border-color: var(--char-color);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.gummy-character-img-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #F8FAFC;
+  position: relative;
+  overflow: hidden;
+}
+
+.gummy-character-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gummy-character-item:hover .gummy-character-img-wrap img {
+  transform: scale(1.06);
+}
+
+.gummy-character-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.gummy-character-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--char-color);
+}
+
+.gummy-character-name {
+  font-family: var(--sanan-font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.gummy-character-potency {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6B7280;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .gummy-flavor-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gummy-characters-mosaic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gummy-ritual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .gummy-flavor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gummy-characters-mosaic {
+    grid-template-columns: 1fr;
+  }
+  .gummy-meter-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ─── Hero Badges & Stage Overlays for Gummies ─── */
+.sanan-pdp-badge-sharktank {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sanan-pdp-badge-sharktank:hover {
+  transform: translateY(-2px) scale(1.04);
+}
+.sanan-pdp-badge-sharktank img {
+  display: block;
+  width: 76px;
+  height: auto;
+}
+
+.sanan-pdp-badge-xtrastrong {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  filter: drop-shadow(0 6px 14px var(--flavor-glow));
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sanan-pdp-badge-xtrastrong:hover {
+  transform: translateY(-2px) rotate(4deg) scale(1.05);
+}
+.sanan-pdp-badge-xtrastrong img {
+  display: block;
+  width: 82px;
+  height: auto;
+}
+
+.sanan-pdp-stage-caption {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-heading, var(--font-heading, 'DM Serif Display', Georgia, serif));
+  font-weight: 700;
+  font-size: 1.45rem;
+  line-height: 1.25;
+  color: #FFFFFF;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.95);
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Marquee Ticker Strip directly beneath stage box matching screenshot */
+.sanan-pdp-ticker-strip {
+  width: 100%;
+  background: var(--flavor-light, #F3E8FF);
+  border: 1px solid var(--flavor-border, rgba(168, 85, 247, 0.25));
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  margin: 0.85rem 0 1.25rem 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.sanan-pdp-ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  white-space: nowrap;
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--flavor-dark, #581C87);
+  text-transform: uppercase;
+  animation: sananTickerScroll 24s linear infinite;
+}
+
+.ticker-pill {
+  background: var(--flavor-primary, #7E22CE);
+  color: #FFFFFF;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 2px 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.ticker-dot {
+  color: var(--flavor-primary, #A855F7);
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+/* Inline Left Scroll-To-Top Button */
+.sanan-float-scrolltop-left-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(45, 110, 111, 0.22);
+  color: #0E2929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(14, 41, 41, 0.12);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+.sanan-float-scrolltop-left-btn:hover {
+  background: var(--flavor-primary, #0E2929);
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px var(--flavor-glow);
+}
+
+
+/* ─── Product Variations, Flavours & Prescription Highlight (Matching Reference Screenshot) ─── */
+.sanan-pdp-rx-highlight-card {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 95, 70, 0.12) 100%);
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+  border-radius: 12px;
+  padding: 0.85rem 1.15rem;
+  margin: 1rem 0 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.rx-highlight-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.rx-highlight-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.rx-highlight-title {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #064E3B;
+  letter-spacing: -0.01em;
+}
+
+.rx-highlight-sub {
+  font-size: 0.775rem;
+  color: var(--color-primary-dark, #2D6E6F);
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+.rx-highlight-badge {
+  background: #065F46;
+  color: #FFFFFF;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Variant Groups */
+.sanan-variant-group {
+  margin: 1.25rem 0;
+}
+
+.sanan-variant-label {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  display: block;
+  letter-spacing: -0.01em;
+}
+
+/* 1. Select Type: (Indica Chill, Hybrid Vibes, Sativa Surge) */
+/* 1. Select Type: (Indica Chill, Hybrid Vibes, Sativa Surge - Matching Image 1 Reference) */
+.sanan-type-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.sanan-type-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 0.9rem 0.5rem 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sanan-type-card:hover {
+  border-color: #9CA3AF;
+}
+
+.sanan-type-card.is-active {
+  border: 2px solid #111111 !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.type-card-media {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.45rem;
+}
+
+.type-card-media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.type-card-title {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
+}
+
+/* 2. Select Flavor: (Matching Image 1 Reference) */
+.sanan-flavor-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.sanan-flavor-pill-btn {
+  flex: 1;
+  min-width: 140px;
+  height: 52px;
+  border-radius: 9999px;
+  border: 1.5px solid #E5E7EB;
+  background: #FFFFFF;
+  color: #4B5563;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: lowercase;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.sanan-flavor-pill-btn:hover {
+  border-color: #9CA3AF;
+  color: #111111;
+}
+
+.sanan-flavor-pill-btn.is-active {
+  border: 2px solid #111111 !important;
+  background: #FFFFFF !important;
+  color: #111111 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* 3. Select Count: (Matching Image 1 Reference) */
+.sanan-count-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  position: relative;
+  margin-top: 1.15rem;
+}
+
+.sanan-count-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 1.35rem 0.5rem 0.95rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 96px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sanan-count-card:hover {
+  border-color: #9CA3AF;
+}
+
+.sanan-count-card.is-active {
+  border: 2px solid #111111 !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.count-card-save-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #84CC16 !important;
+  color: #111111 !important;
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  white-space: nowrap;
+  line-height: 1.2;
+  box-shadow: none !important;
+}
+
+.count-card-main {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.2;
+}
+
+.count-card-sub {
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #4B5563;
+  margin-top: 3px;
+}
+
+.count-card-pill-tag {
+  font-family: 'DM Mono', monospace, 'Courier New', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #4B5563;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  margin-top: 6px;
+}
+
+/* 4. Patient Consent & Terms Checkbox */
+.sanan-patient-consent-wrap {
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  margin: 1.25rem 0 0.85rem;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.sanan-patient-consent-wrap.has-error {
+  border-color: #EF4444;
+  background: #FEF2F2;
+  animation: consentShake 0.4s ease;
+}
+
+@keyframes consentShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.sanan-consent-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+}
+
+.sanan-consent-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sanan-consent-box-custom {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid #94A3B8;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+
+.sanan-consent-checkbox-input:checked + .sanan-consent-box-custom {
+  background: #0E2929;
+  border-color: #0E2929;
+}
+
+.sanan-consent-box-custom svg {
+  display: none;
+}
+
+.sanan-consent-checkbox-input:checked + .sanan-consent-box-custom svg {
+  display: block;
+}
+
+.sanan-consent-text {
+  font-family: var(--font-body, var(--font-body, 'DM Sans', sans-serif));
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: #334155;
+}
+
+.sanan-consent-text a {
+  color: #0E2929;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.sanan-consent-validation-msg {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #DC2626;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}

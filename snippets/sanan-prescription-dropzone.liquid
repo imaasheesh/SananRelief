@@ -1,0 +1,64 @@
+{% comment %}
+  Sanan Relief — AYUSH Schedule E-1 Prescription Dropzone Snippet
+  Ensures full legal compliance with Drugs & Cosmetics Rules 1945
+{% endcomment %}
+
+<div class="sanan-rx-module" data-prescription-module>
+  <div class="sanan-rx-header">
+    <div class="sanan-rx-shield">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+      </svg>
+    </div>
+    <div>
+      <h4 class="sanan-rx-title">AYUSH Schedule E-1 Prescription Protocol</h4>
+      <p class="sanan-rx-sub">Standardized Vijaya formulations require medical validation prior to dispensation.</p>
+    </div>
+  </div>
+
+  <div class="sanan-rx-options">
+    <label class="sanan-rx-option-card is-active">
+      <input type="radio" name="rx_status" value="has_rx" checked onchange="document.getElementById('rxDropzoneBox').style.display='block'; document.getElementById('freeConsultBox').style.display='none';">
+      <span class="sanan-rx-radio"></span>
+      <div class="sanan-rx-option-text">
+        <strong>I have a valid Ayush prescription</strong>
+        <span>Upload doctor prescription (PDF, JPG, PNG &bull; Max 15MB)</span>
+      </div>
+    </label>
+
+    <label class="sanan-rx-option-card">
+      <input type="radio" name="rx_status" value="need_consult" onchange="document.getElementById('rxDropzoneBox').style.display='none'; document.getElementById('freeConsultBox').style.display='block';">
+      <span class="sanan-rx-radio"></span>
+      <div class="sanan-rx-option-text">
+        <strong>I need a free Ayurvedic doctor consultation</strong>
+        <span>Our in-house physician will contact you on WhatsApp post-checkout</span>
+      </div>
+    </label>
+  </div>
+
+  <!-- Upload Area -->
+  <div class="sanan-rx-dropzone" id="rxDropzoneBox">
+    <input type="file" id="rxFileInput" accept=".pdf,.jpg,.jpeg,.png" style="display:none;" onchange="document.getElementById('rxFileName').innerText = this.files[0] ? this.files[0].name : ''; document.getElementById('rxFileSuccess').style.display = this.files[0] ? 'block' : 'none';">
+    <div class="sanan-dropzone-inner" onclick="document.getElementById('rxFileInput').click();">
+      <div class="sanan-dropzone-icon">📄</div>
+      <div class="sanan-dropzone-cta">Click or drag &amp; drop your prescription file here</div>
+      <div class="sanan-dropzone-hint">Supported formats: PDF, JPG, PNG up to 15MB</div>
+    </div>
+    <div id="rxFileSuccess" style="display:none; margin-top:10px; color:#059669; font-weight:600; font-size:13px;">
+      ✓ Attached: <span id="rxFileName" style="color:#111111;"></span>
+    </div>
+  </div>
+
+  <!-- Free Consult Notice -->
+  <div class="sanan-consult-notice" id="freeConsultBox" style="display:none;">
+    <div class="sanan-consult-badge">COMPLIMENTARY CONSULTATION</div>
+    <p>Complete your checkout normally. Our clinical desk will automatically schedule your 15-minute tele-consultation with an authorized BAMS physician to generate your personalized prescription.</p>
+  </div>
+
+  <!-- Patient Age & Medical Consent Checkbox -->
+  <label class="sanan-consent-checkbox">
+    <input type="checkbox" name="patient_age_consent" required>
+    <span>I solemnly declare that I am <strong>18 years of age or older</strong> and that this Ayurvedic formulation will be consumed strictly under medical guidance in accordance with AYUSH pharmacopoeial guidelines.</span>
+  </label>
+</div>
+

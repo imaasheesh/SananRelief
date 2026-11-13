@@ -1,0 +1,268 @@
+{% comment %}
+  Featured Tri-Banner Section
+  Asymmetric 3-banner promo showcase (1 tall hero card + 2 stacked horizontal cards)
+  Fully responsive with theme styling, pill buttons, and customizable media.
+{% endcomment %}
+
+{{ 'storefront.css' | asset_url | stylesheet_tag }}
+
+<section class="tri-banner-section section-{{ section.id }}-padding" id="TriBanner-{{ section.id }}">
+  <div class="tri-banner-container">
+    {%- if section.settings.title != blank -%}
+      <div class="section-header text-center" style="margin-bottom: 2.25rem;">
+        {%- if section.settings.subheading != blank -%}
+          <p class="section-eyebrow">{{ section.settings.subheading | escape }}</p>
+        {%- endif -%}
+        <h2 class="section-title">{{ section.settings.title }}</h2>
+      </div>
+    {%- endif -%}
+
+    <div class="tri-banner-grid">
+      <!-- 1. Left Featured Tall Card -->
+      <a href="{{ section.settings.card_1_link | default: '#' }}" class="tri-banner-card tri-banner-card-large" title="{{ section.settings.card_1_title | default: 'Pain Relief Oil' | escape }}">
+        {%- if section.settings.card_1_image != blank -%}
+          {{
+            section.settings.card_1_image
+            | image_url: width: 1200
+            | image_tag: loading: 'lazy', class: 'tri-banner-media', alt: section.settings.card_1_title
+          }}
+        {%- else -%}
+          <img src="{{ 'editorial-banner-pain-relief.png' | asset_url }}" alt="{{ section.settings.card_1_title | default: 'Pain Relief Oil' | escape }}" class="tri-banner-media" width="502" height="423" loading="lazy">
+        {%- endif -%}
+
+        {%- if section.settings.show_content_overlay -%}
+          <div class="tri-banner-overlay-content">
+            {%- if section.settings.card_1_eyebrow != blank -%}
+              <span class="tri-banner-eyebrow">{{ section.settings.card_1_eyebrow | escape }}</span>
+            {%- endif -%}
+            {%- if section.settings.card_1_title != blank -%}
+              <h3 class="tri-banner-title">{{ section.settings.card_1_title | escape }}</h3>
+            {%- endif -%}
+            {%- if section.settings.card_1_desc != blank -%}
+              <p class="tri-banner-desc">{{ section.settings.card_1_desc | escape }}</p>
+            {%- endif -%}
+            {%- if section.settings.card_1_btn_text != blank -%}
+              <span class="tri-banner-btn tri-banner-btn-outline">
+                {{ section.settings.card_1_btn_text | escape }} &rarr;
+              </span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </a>
+
+      <!-- Right Column: 2 Stacked Horizontal Banners -->
+      <div class="tri-banner-stack">
+        <!-- 2. Top Right Banner -->
+        <a href="{{ section.settings.card_2_link | default: '#' }}" class="tri-banner-card tri-banner-card-sub" title="{{ section.settings.card_2_title | default: 'Vijaya Gummy Range' | escape }}">
+          {%- if section.settings.card_2_image != blank -%}
+            {{
+              section.settings.card_2_image
+              | image_url: width: 1000
+              | image_tag: loading: 'lazy', class: 'tri-banner-media', alt: section.settings.card_2_title
+            }}
+          {%- else -%}
+            <img src="{{ 'editorial-banner-gummies.png' | asset_url }}" alt="{{ section.settings.card_2_title | default: 'Vijaya Gummy Range' | escape }}" class="tri-banner-media" width="501" height="208" loading="lazy">
+          {%- endif -%}
+
+          {%- if section.settings.show_content_overlay -%}
+            <div class="tri-banner-overlay-content">
+              {%- if section.settings.card_2_eyebrow != blank -%}
+                <span class="tri-banner-eyebrow">{{ section.settings.card_2_eyebrow | escape }}</span>
+              {%- endif -%}
+              {%- if section.settings.card_2_title != blank -%}
+                <h3 class="tri-banner-title">{{ section.settings.card_2_title | escape }}</h3>
+              {%- endif -%}
+              {%- if section.settings.card_2_desc != blank -%}
+                <p class="tri-banner-desc">{{ section.settings.card_2_desc | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings.card_2_btn_text != blank -%}
+                <span class="tri-banner-btn tri-banner-btn-solid">
+                  {{ section.settings.card_2_btn_text | escape }} &rarr;
+                </span>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </a>
+
+        <!-- 3. Bottom Right Banner -->
+        <a href="{{ section.settings.card_3_link | default: '#' }}" class="tri-banner-card tri-banner-card-sub" title="{{ section.settings.card_3_title | default: 'Ayurvedic Gummy Vatis' | escape }}">
+          {%- if section.settings.card_3_image != blank -%}
+            {{
+              section.settings.card_3_image
+              | image_url: width: 1000
+              | image_tag: loading: 'lazy', class: 'tri-banner-media', alt: section.settings.card_3_title
+            }}
+          {%- else -%}
+            <img src="{{ 'editorial-banner-gummy-vatis.png' | asset_url }}" alt="{{ section.settings.card_3_title | default: 'Ayurvedic Gummy Vatis' | escape }}" class="tri-banner-media" width="501" height="208" loading="lazy">
+          {%- endif -%}
+
+          {%- if section.settings.show_content_overlay -%}
+            <div class="tri-banner-overlay-content">
+              {%- if section.settings.card_3_eyebrow != blank -%}
+                <span class="tri-banner-eyebrow">{{ section.settings.card_3_eyebrow | escape }}</span>
+              {%- endif -%}
+              {%- if section.settings.card_3_title != blank -%}
+                <h3 class="tri-banner-title">{{ section.settings.card_3_title | escape }}</h3>
+              {%- endif -%}
+              {%- if section.settings.card_3_desc != blank -%}
+                <p class="tri-banner-desc">{{ section.settings.card_3_desc | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings.card_3_btn_text != blank -%}
+                <span class="tri-banner-btn tri-banner-btn-outline">
+                  {{ section.settings.card_3_btn_text | escape }} &rarr;
+                </span>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Tri-Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Section Subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Section Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_content_overlay",
+      "label": "Render HTML Text Overlay",
+      "default": false,
+      "info": "Enable if using clean background imagery without baked-in text."
+    },
+    {
+      "type": "header",
+      "content": "Card 1 (Left Tall Banner)"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_1_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "card_1_eyebrow",
+      "label": "Eyebrow Text",
+      "default": "Topical Wellness"
+    },
+    {
+      "type": "text",
+      "id": "card_1_title",
+      "label": "Heading",
+      "default": "Pain Relief Oil"
+    },
+    {
+      "type": "textarea",
+      "id": "card_1_desc",
+      "label": "Description",
+      "default": "A time-honoured blend for everyday comfort and mobility."
+    },
+    {
+      "type": "text",
+      "id": "card_1_btn_text",
+      "label": "Button Label",
+      "default": "Shop Pain Relief Oil"
+    },
+    {
+      "type": "url",
+      "id": "card_1_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Card 2 (Top Right Banner)"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_2_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "card_2_eyebrow",
+      "label": "Eyebrow Text",
+      "default": "Gummies"
+    },
+    {
+      "type": "text",
+      "id": "card_2_title",
+      "label": "Heading",
+      "default": "Vijaya Gummy Range"
+    },
+    {
+      "type": "textarea",
+      "id": "card_2_desc",
+      "label": "Description",
+      "default": "Carefully crafted formulations with standardised Vijaya concentration."
+    },
+    {
+      "type": "text",
+      "id": "card_2_btn_text",
+      "label": "Button Label",
+      "default": "Explore Gummies"
+    },
+    {
+      "type": "url",
+      "id": "card_2_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Card 3 (Bottom Right Banner)"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_3_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "card_3_eyebrow",
+      "label": "Eyebrow Text",
+      "default": "Gummy Vatis"
+    },
+    {
+      "type": "text",
+      "id": "card_3_title",
+      "label": "Heading",
+      "default": "Ayurvedic Gummy Vatis"
+    },
+    {
+      "type": "textarea",
+      "id": "card_3_desc",
+      "label": "Description",
+      "default": "Traditional botanicals in a modern, convenient format."
+    },
+    {
+      "type": "text",
+      "id": "card_3_btn_text",
+      "label": "Button Label",
+      "default": "Shop Gummy Vatis"
+    },
+    {
+      "type": "url",
+      "id": "card_3_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Tri-Banner",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,776 @@
+/* ==========================================================================
+ * SANAN RELIEF — LUXURY CART PAGE STYLESHEET
+ * Strict Design Token Compliance, Frosted Glass, Pinned Sticky Summary, Micro-interactions
+ * ========================================================================== */
+
+.sanan-cart-body {
+  background-color: var(--color-background, #F7FBFB);
+  color: var(--color-text-primary, #1A3333);
+  font-family: var(--font-body, 'DM Sans', sans-serif);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 1. Cart Hero Header */
+.sanan-cart-hero {
+  position: relative;
+  padding: calc(var(--sanan-header-dock-top, 102px) + 2.5rem) 1.5rem 3rem;
+  background: linear-gradient(180deg, rgba(67, 151, 152, 0.08) 0%, rgba(247, 251, 251, 0) 100%);
+  text-align: center;
+}
+
+.sanan-cart-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sanan-cart-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(67, 151, 152, 0.12);
+  color: var(--color-primary-dark, #2D6E6F);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.4rem 1.15rem;
+  border-radius: var(--btn-radius-pill, 50px);
+  margin-bottom: 1rem;
+}
+
+.sanan-cart-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  color: var(--color-secondary, #1A4A4B);
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.015em;
+}
+
+/* Free Shipping & Rx Verification Progress Bar */
+.sanan-cart-shipping-bar {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border, #D4E8E8);
+  border-radius: 14px;
+  padding: 1.15rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(26, 74, 75, 0.04);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.shipping-bar-text {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-secondary, #1A4A4B);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.shipping-progress-track {
+  width: 100%;
+  height: 8px;
+  background: #E5F0F0;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.shipping-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #439798 0%, #10B981 100%);
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+}
+
+/* 2. Main Cart Layout (2-Column Grid) */
+.sanan-cart-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+.sanan-cart-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* 3. Left Column: Cart Items */
+.sanan-cart-items-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sanan-cart-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1.5px solid var(--color-border, #D4E8E8);
+}
+
+.cart-items-count-heading {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  margin: 0;
+}
+
+.cart-continue-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary, #439798);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cart-continue-link:hover {
+  color: var(--color-secondary, #1A4A4B);
+  text-decoration: underline;
+}
+
+/* Cart Item Card */
+.sanan-cart-item-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border, #D4E8E8);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(26, 74, 75, 0.03);
+  transition: all 0.25s ease;
+}
+
+.sanan-cart-item-card:hover {
+  border-color: var(--color-primary, #439798);
+  box-shadow: 0 8px 24px rgba(67, 151, 152, 0.08);
+}
+
+.cart-item-thumb {
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  background: #F0F8F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cart-item-thumb img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.sanan-cart-item-card:hover .cart-item-thumb img {
+  transform: scale(1.05);
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cart-item-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cart-item-badge-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.badge-potency {
+  background: rgba(67, 151, 152, 0.12);
+  color: var(--color-primary-dark, #2D6E6F);
+}
+
+.badge-flavor {
+  background: #F3F4F6;
+  color: #374151;
+}
+
+.cart-item-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--color-secondary, #1A4A4B);
+  line-height: 1.2;
+  margin: 0;
+  text-decoration: none;
+}
+
+.cart-item-title:hover {
+  color: var(--color-primary, #439798);
+}
+
+.cart-item-variant-desc {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.cart-item-rx-status {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.rx-status-valid {
+  color: #059669;
+}
+
+.rx-status-pending {
+  color: #D97706;
+}
+
+/* Price & Quantity Controls */
+.cart-item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.85rem;
+}
+
+.cart-item-price-wrap {
+  text-align: right;
+}
+
+.cart-item-current-price {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-secondary, #1A4A4B);
+}
+
+.cart-item-compare-price {
+  font-size: 0.875rem;
+  color: #9CA3AF;
+  text-decoration: line-through;
+  margin-left: 0.4rem;
+}
+
+.cart-qty-stepper {
+  display: flex;
+  align-items: center;
+  background: #F7FBFB;
+  border: 1.5px solid var(--color-border, #D4E8E8);
+  border-radius: var(--btn-radius-pill, 50px);
+  padding: 0.2rem 0.4rem;
+  gap: 0.5rem;
+}
+
+.cart-qty-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--color-secondary, #1A4A4B);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.cart-qty-btn:hover {
+  background: #E5F0F0;
+}
+
+.cart-qty-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  min-width: 24px;
+  text-align: center;
+}
+
+.cart-item-remove-btn {
+  background: transparent;
+  border: none;
+  color: #9CA3AF;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+  padding: 0;
+}
+
+.cart-item-remove-btn:hover {
+  color: #EF4444;
+}
+
+/* Prescription & Doctor Dropzone Card */
+.sanan-cart-rx-dropzone-card {
+  background: #FFFFFF;
+  border: 1.5px dashed var(--color-primary, #439798);
+  border-radius: 16px;
+  padding: 1.75rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(26, 74, 75, 0.03);
+}
+
+.rx-dropzone-icon {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.rx-dropzone-title {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+  margin: 0 0 0.35rem;
+}
+
+.rx-dropzone-desc {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin: 0 0 1.25rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rx-dropzone-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-upload-rx {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-primary, #439798);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--btn-radius-pill, 50px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-upload-rx:hover {
+  background: var(--color-primary-dark, #2D6E6F);
+  transform: translateY(-1px);
+}
+
+.btn-consult-free {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-secondary, #1A4A4B);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--btn-radius-pill, 50px);
+  border: 1.5px solid var(--color-border, #D4E8E8);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-consult-free:hover {
+  border-color: var(--color-primary, #439798);
+  background: rgba(67, 151, 152, 0.05);
+}
+
+/* 4. Right Column: Sticky Floating Summary Glass Card */
+.sanan-cart-summary-sticky {
+  position: sticky;
+  top: calc(var(--sanan-header-dock-top, 102px) + 20px);
+  align-self: start;
+}
+
+.sanan-cart-summary-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid var(--color-border, #D4E8E8);
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 12px 32px rgba(26, 74, 75, 0.06);
+}
+
+.summary-card-heading {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-secondary, #1A4A4B);
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1.5px solid #F0F6F6;
+}
+
+.summary-rows-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #4B5563;
+}
+
+.summary-row-bold {
+  font-weight: 700;
+  color: var(--color-secondary, #1A4A4B);
+}
+
+.discount-val {
+  color: #059669;
+  font-weight: 700;
+}
+
+.free-pill-tag {
+  background: #E8F5E9;
+  color: #166534;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.summary-total-divider {
+  height: 1.5px;
+  background: #E5F0F0;
+  margin: 0.5rem 0;
+}
+
+.summary-total-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.total-label {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-secondary, #1A4A4B);
+}
+
+.total-val {
+  font-family: var(--font-body);
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--color-secondary, #1A4A4B);
+  letter-spacing: -0.01em;
+}
+
+.total-tax-note {
+  font-size: 0.8rem;
+  color: #9CA3AF;
+  text-align: right;
+  margin-top: -0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Promo Code Box */
+.cart-promo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cart-promo-input {
+  flex: 1;
+  height: 46px;
+  border-radius: var(--btn-radius-pill, 50px);
+  border: 1.5px solid var(--color-border, #D4E8E8);
+  padding: 0 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  background: #FFFFFF;
+  color: var(--color-text-primary, #1A3333);
+}
+
+.cart-promo-input:focus {
+  outline: none;
+  border-color: var(--color-primary, #439798);
+  box-shadow: 0 0 0 3px rgba(67, 151, 152, 0.15);
+}
+
+.cart-promo-btn {
+  height: 46px;
+  padding: 0 1.35rem;
+  border-radius: var(--btn-radius-pill, 50px);
+  border: 1.5px solid var(--color-secondary, #1A4A4B);
+  background: var(--color-secondary, #1A4A4B);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cart-promo-btn:hover {
+  background: var(--color-primary-dark, #2D6E6F);
+  border-color: var(--color-primary-dark, #2D6E6F);
+}
+
+/* Patient Consent Checkbox */
+.cart-consent-wrap {
+  margin-bottom: 1.5rem;
+  background: #F7FBFB;
+  border: 1px solid var(--color-border, #D4E8E8);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+}
+
+.cart-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  color: #4B5563;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.cart-consent-label input {
+  margin-top: 3px;
+  accent-color: var(--color-primary, #439798);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.cart-consent-label a {
+  color: var(--color-primary, #439798);
+  text-decoration: underline;
+}
+
+/* Checkout CTA Button */
+.btn-checkout-primary {
+  width: 100%;
+  height: var(--btn-height-lg, 56px);
+  background: var(--color-primary-gradient, linear-gradient(135deg, #5BBCBD 0%, #439798 50%, #357C7D 100%));
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  border-radius: var(--btn-radius-pill, 50px);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 24px rgba(67, 151, 152, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.btn-checkout-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(67, 151, 152, 0.45);
+}
+
+/* Trust Seals */
+.cart-trust-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #F0F6F6;
+}
+
+.cart-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-secondary, #1A4A4B);
+}
+
+.cart-trust-icon {
+  font-size: 1.15rem;
+}
+
+/* 5. Recommended Formulations Carousel / Grid */
+.sanan-cart-cross-sell {
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1.5px solid var(--color-border, #D4E8E8);
+}
+
+.cross-sell-heading {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--color-secondary, #1A4A4B);
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+.cross-sell-sub {
+  font-size: 1rem;
+  color: #6B7280;
+  text-align: center;
+  margin: 0 0 2.5rem;
+}
+
+.cross-sell-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.cross-sell-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border, #D4E8E8);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.cross-sell-card:hover {
+  border-color: var(--color-primary, #439798);
+  box-shadow: 0 8px 24px rgba(67, 151, 152, 0.1);
+  transform: translateY(-3px);
+}
+
+.cross-sell-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #F0F8F8;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.cross-sell-media img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.cross-sell-card:hover .cross-sell-media img {
+  transform: scale(1.06);
+}
+
+.cross-sell-title {
+  font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+  font-size: 1.2rem;
+  color: var(--color-secondary, #1A4A4B);
+  margin: 0 0 0.35rem;
+}
+
+.cross-sell-desc {
+  font-size: 0.85rem;
+  color: #6B7280;
+  line-height: 1.45;
+  margin: 0 0 1rem;
+  flex: 1;
+}
+
+.cross-sell-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cross-sell-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-secondary, #1A4A4B);
+}
+
+.btn-cross-sell-add {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-primary, #439798);
+  color: var(--color-primary, #439798);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--btn-radius-pill, 50px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cross-sell-add:hover {
+  background: var(--color-primary, #439798);
+  color: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sanan-cart-grid {
+    grid-template-columns: 1fr;
+  }
+  .sanan-cart-summary-sticky {
+    position: static;
+  }
+  .cross-sell-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sanan-cart-item-card {
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+  }
+  .cart-item-actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cross-sell-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

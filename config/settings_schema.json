@@ -1466,5 +1466,61 @@
         "label": "t:settings_schema.customer_accounts.settings.customer_account_menu.label"
       }
     ]
+  },
+  {
+    "name": "Checkout & AYUSH Compliance",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Sanan Relief Luxury Checkout Branding"
+      },
+      {
+        "type": "image_picker",
+        "id": "sanan_checkout_logo",
+        "label": "Checkout Apothecary Emblem / Logo"
+      },
+      {
+        "type": "color",
+        "id": "sanan_checkout_accent_color",
+        "label": "Checkout Primary Brand Teal",
+        "default": "#1A3D3E"
+      },
+      {
+        "type": "color",
+        "id": "sanan_checkout_button_color",
+        "label": "Checkout Primary CTA Button",
+        "default": "#1A3D3E"
+      },
+      {
+        "type": "color",
+        "id": "sanan_checkout_badge_color",
+        "label": "Compliance Badge Lime Green",
+        "default": "#84CC16"
+      },
+      {
+        "type": "color",
+        "id": "sanan_checkout_background_color",
+        "label": "Checkout Warm Clean Canvas",
+        "default": "#F7FBFB"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_ayush_schedule_e1_warning",
+        "label": "Display AYUSH Schedule E-1 Prescription Mandate Banner",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_age_verification_gate",
+        "label": "Require 18+ Age Declaration Checkbox",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_free_doctor_consult_prompt",
+        "label": "Offer Free 15-Minute Ayurvedic Doctor Consultation at Checkout",
+        "default": true
+      }
+    ]
   }
 ]

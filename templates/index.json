@@ -1,5 +1,12 @@
 {
   "sections": {
+    "hero_fullscreen": {
+      "type": "hero-fullscreen",
+      "settings": {
+        "hero_height": "100vh",
+        "enable_zoom": false
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -66,10 +73,100 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "why_sanan": {
+      "type": "why-sanan-parallax",
+      "settings": {
+        "eyebrow": "TRUSTED. RESEARCH-LED. IMPACT DRIVEN.",
+        "heading": "Pioneering India's <em>Medicinal Cannabis</em> Industry",
+        "description": "Advancing plant-based therapeutics through research, innovation and responsible healthcare solutions.",
+        "button_text": "Meet SANAN",
+        "button_link": "#about-sanan"
+      }
+    },
+    "sanan_difference": {
+      "type": "sanan-difference",
+      "settings": {
+        "heading": "The Sanan Difference",
+        "subheading": "SANAN CONNECTS AYURVEDIC HEALING TO PEOPLE",
+        "description": "Not to middlemen. Not to synthetic isolates. But to wellness seekers.",
+        "sanan_label": "SANAN",
+        "others_label": "OTHER BRANDS"
+      }
+    },
+    "doctor_trusted_choice": {
+      "type": "doctor-trusted-choice",
+      "settings": {
+        "heading": "Doctor's Trusted Choice",
+        "button_text": "EXPLORE OUR PRODUCTS"
+      }
+    },
+    "sanan_featured_product": {
+      "type": "sanan-featured-product",
+      "blocks": {
+        "benefit_1": {
+          "type": "benefit",
+          "settings": {
+            "icon": "leaf",
+            "title": "Full-Spectrum Vijaya",
+            "subtitle": "Standardized phytocannabinoids & terpenes"
+          }
+        },
+        "benefit_2": {
+          "type": "benefit",
+          "settings": {
+            "icon": "flash",
+            "title": "Rapid Sublingual Action",
+            "subtitle": "Bioavailable relief within 15–20 minutes"
+          }
+        },
+        "benefit_3": {
+          "type": "benefit",
+          "settings": {
+            "icon": "check",
+            "title": "CTRI Registered",
+            "subtitle": "Clinical trial proven for musculoskeletal comfort"
+          }
+        },
+        "benefit_4": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shield",
+            "title": "100% Heavy Metal Free",
+            "subtitle": "Third-party HPLC lab batch certified"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3",
+        "benefit_4"
+      ],
+      "settings": {
+        "eyebrow": "Featured Clinical Formulation",
+        "custom_subtitle": "Clinically Studied Whole-Plant Vijaya Extract (1500mg) for Chronic Musculoskeletal & Neuropathic Discomfort",
+        "badge_left": "CTRI Registered Trial",
+        "show_rating": true,
+        "rating_score": "4.9",
+        "reviews_count": "184",
+        "show_quantity": true,
+        "show_trust_badges": true,
+        "secondary_cta_text": "Free Ayurvedic Doctor Consultation →",
+        "secondary_cta_url": "",
+        "bg_color": "#FAFCFC",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
+    "hero_fullscreen",
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "sanan_featured_product",
+    "why_sanan",
+    "sanan_difference",
+    "doctor_trusted_choice"
   ]
 }

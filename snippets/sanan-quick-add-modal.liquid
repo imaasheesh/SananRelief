@@ -1,0 +1,33 @@
+{% comment %}
+  Renders the compact Sanan Relief variant selection modal.
+{% endcomment %}
+
+<div class="sanan-variant-modal" id="SananVariantModal" role="dialog" aria-modal="true" aria-label="Select Formulation Options">
+  <div class="sanan-variant-modal-backdrop"></div>
+  <div class="sanan-variant-modal-card">
+    <button type="button" class="sanan-modal-close-btn" aria-label="Close variant selector">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div class="sanan-modal-prod-summary">
+      <img src="" alt="" class="sanan-modal-thumb" width="80" height="80">
+      <div>
+        <h3 class="sanan-modal-prod-title">Product Title</h3>
+        <div class="sanan-modal-prod-price">₹0.00</div>
+      </div>
+    </div>
+
+    <div class="sanan-variant-option-group">
+      <div class="sanan-variant-option-label">Select Volume / Formulation</div>
+      <div class="sanan-variant-options-list">
+        <!-- Injected via JavaScript from card data attributes -->
+      </div>
+    </div>
+
+    <button type="button" class="sanan-variant-submit-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span>Add to Cart</span>
+    </button>
+  </div>
+</div>
+

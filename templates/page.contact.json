@@ -1,25 +1,15 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "contact_content": {
+      "type": "sanan-contact",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "form": {
-      "type": "contact-form",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "eyebrow": "AYURVEDIC CLINICAL SUPPORT",
+        "heading": "Connect with Sanan Relief",
+        "subheading": "Whether you require formulation dosage advice, order assistance, or wholesale clinic inquiries, our dedicated medical advisory and care team is here for you."
       }
     }
   },
   "order": [
-    "main",
-    "form"
+    "contact_content"
   ]
 }

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bnAllBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF4F0"/>
+      <stop offset="40%" stop-color="#F7F4EC"/>
+      <stop offset="100%" stop-color="#DDECE4"/>
+    </linearGradient>
+    <radialGradient id="sunAll" cx="80%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#FFFDF5" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFDF5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="340" height="600" rx="28" fill="url(#bnAllBg)"/>
+  <rect width="340" height="600" rx="28" fill="url(#sunAll)"/>
+  <!-- Ambient Botanical Leaves -->
+  <g fill="#439798" opacity="0.16">
+    <path d="M0,80 C60,110 100,180 90,260 C50,200 20,150 0,80 Z"/>
+    <path d="M40,160 C110,180 140,250 120,330 C80,260 50,210 40,160 Z"/>
+    <path d="M340,40 C280,80 250,160 270,240 C300,170 330,110 340,40 Z"/>
+  </g>
+  <!-- Stylized Dropper Bottle Center Art -->
+  <g transform="translate(135, 230)">
+    <!-- Aura Glow -->
+    <circle cx="35" cy="110" r="100" fill="#FFF8E7" opacity="0.8"/>
+    <!-- Bottle Body -->
+    <rect x="10" y="60" width="50" height="95" rx="10" fill="#5E381C"/>
+    <rect x="15" y="66" width="40" height="83" rx="6" fill="#84481C"/>
+    <!-- Amber Liquid Highlight -->
+    <rect x="18" y="72" width="7" height="70" rx="3" fill="#E28B47" opacity="0.65"/>
+    <!-- Elegant White Label -->
+    <rect x="16" y="90" width="38" height="48" rx="4" fill="#FAF6ED"/>
+    <circle cx="35" cy="106" r="8" fill="#439798"/>
+    <line x1="24" y1="122" x2="46" y2="122" stroke="#233535" stroke-width="2"/>
+    <!-- Collar & Bulb -->
+    <rect x="22" y="44" width="26" height="18" rx="3" fill="#221C19"/>
+    <path d="M26,44 C26,26 35,18 35,18 C35,18 44,26 44,44 Z" fill="#221C19"/>
+  </g>
+  <!-- Decorative Arch Grid at Bottom -->
+  <path d="M40,540 C40,450 300,450 300,540" stroke="#CBDDD5" stroke-width="2" fill="none" opacity="0.7"/>
+  <circle cx="170" cy="460" r="24" fill="#DEEFE7" opacity="0.6"/>
+</svg>

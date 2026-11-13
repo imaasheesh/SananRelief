@@ -1,0 +1,12 @@
+preview/*
+preview/**/*
+scratch/*
+scratch/**/*
+node_modules/*
+node_modules/**/*
+package.json
+package-lock.json
+index.html
+*.md
+sanan_products.json
+*.zip

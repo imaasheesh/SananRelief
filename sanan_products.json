@@ -1,0 +1,1266 @@
+{
+  "source_website": "https://sananindia.com/",
+  "exported_at": "2026-11-12T06:36:48.234Z",
+  "total_products": 14,
+  "currency": "INR",
+  "products": [
+    {
+      "id": 3649,
+      "title": "Gummy Vati Gold",
+      "handle": "gummy-vati-gold",
+      "url": "https://sananindia.com/product/gummy-vati-gold/",
+      "type": "variable",
+      "sku": "SN-3649",
+      "vendor": "Sanan Relief",
+      "product_type": "Edible",
+      "categories": [
+        {
+          "id": 34,
+          "name": "Edible",
+          "slug": "edible",
+          "link": "https://sananindia.com/product-category/edible/"
+        }
+      ],
+      "tags": [],
+      "is_in_stock": true,
+      "on_sale": false,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 6499,
+        "regular_price": 6499,
+        "sale_price": 6499,
+        "price_range": {
+          "min": 6499,
+          "max": 17999
+        }
+      },
+      "attributes": [
+        {
+          "name": "Pack Size",
+          "options": [
+            "10 Days Pack",
+            "20 Days Pack",
+            "30 Days Pack"
+          ]
+        }
+      ],
+      "variations": [
+        {
+          "id": 3651,
+          "sku": "SN-3649-3651",
+          "attributes": {
+            "pack size": "10 Days Pack"
+          },
+          "price": 6499,
+          "regular_price": 6499,
+          "is_in_stock": true,
+          "weight": null,
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/09/1.png"
+        },
+        {
+          "id": 3652,
+          "sku": "SN-3649-3652",
+          "attributes": {
+            "pack size": "20 Days Pack"
+          },
+          "price": 11999,
+          "regular_price": 11999,
+          "is_in_stock": true,
+          "weight": null,
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/09/1.png"
+        },
+        {
+          "id": 3653,
+          "sku": "SN-3649-3653",
+          "attributes": {
+            "pack size": "30 Days Pack"
+          },
+          "price": 17999,
+          "regular_price": 17999,
+          "is_in_stock": true,
+          "weight": null,
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/09/1.png"
+        }
+      ],
+      "short_description": "",
+      "short_description_html": "",
+      "description": "Some nights the body needs more than rest — it needs to reset. Gummy Vati Gold is Sanan Relief's highest-strength edible, formulated for the nights your system has the most to recover from. Most wellness products act on the surface. Gummy Vati Gold works deeper. We work on the Endocannabinoid System — the network your body already uses to regulate rest, mood, comfort and balance. Each gummy carries a refined Vijaya extract paired with a classical Ayurvedic base, so the plant is delivered in a form the body can take up smoothly. Around that core sits a considered herbal blend: Ashwagandha to settle a wound-up system, Arjun Tvak and Pippali Mool for circulatory and metabolic support, and Haritaki, Shunthi and Nimbu Sat rounding out an easy-on-the-body formulation. The result is a single gummy that helps you wind down, ease into deeper rest, and let the body do its overnight work. Forty years of formulating with Vijaya, in the most refined form we've made yet. Purity. Power. Focus. Key Benefits: Relieves Stress & Anxiety: Natural adaptogens help regulate cortisol levels to promote a calm, balanced mind. Deep, Restful Sleep: Natural sedative properties help you fall asleep faster and enjoy uninterrupted, rejuvenating rest. Soothes Muscle Tension: Gently reduces inflammation and physical tension throughout the body. Composition Ashwagandha 10%, Haritaki 10%, Pippali Mool 9%, Shunthi 9%, Arjun Tvak 9%, Vijaya 7%, Nimbu Sat 5%, Sodium Citrate 4%, Permitted Flavour 2%, Sugar 15%, Glucose 15%, Setting Agent 5%.",
+      "description_html": "<p dir=\"ltr\">Some nights the body needs more than rest — it needs to reset. Gummy Vati Gold is Sanan Relief&#8217;s highest-strength edible, formulated for the nights your system has the most to recover from.</p>\n<p dir=\"ltr\">Most wellness products act on the surface. Gummy Vati Gold works deeper. <strong>We work on the Endocannabinoid System</strong> — the network your body already uses to regulate rest, mood, comfort and balance. Each gummy carries a refined Vijaya extract paired with a classical Ayurvedic base, so the plant is delivered in a form the body can take up smoothly.</p>\n<p dir=\"ltr\">Around that core sits a considered herbal blend: Ashwagandha to settle a wound-up system, Arjun Tvak and Pippali Mool for circulatory and metabolic support, and Haritaki, Shunthi and Nimbu Sat rounding out an easy-on-the-body formulation. The result is a single gummy that helps you wind down, ease into deeper rest, and let the body do its overnight work.</p>\n<p dir=\"ltr\">Forty years of formulating with Vijaya, in the most refined form we&#8217;ve made yet.</p>\n<p dir=\"ltr\"><strong>Purity. Power. Focus.</strong></p>\n<p>&nbsp;</p>\n<p data-path-to-node=\"4\"><span style=\"font-family: &apos;arial black&apos;, sans-serif\"><b data-path-to-node=\"4\" data-index-in-node=\"0\">Key Benefits:</b></span></p>\n<ul data-path-to-node=\"5\">\n<li>\n<p data-path-to-node=\"5,0,0\"><b data-path-to-node=\"5,0,0\" data-index-in-node=\"0\">Relieves Stress &amp; Anxiety:</b> Natural adaptogens help regulate cortisol levels to promote a calm, balanced mind.</p>\n</li>\n<li>\n<p data-path-to-node=\"5,1,0\"><b data-path-to-node=\"5,1,0\" data-index-in-node=\"0\">Deep, Restful Sleep:</b> Natural sedative properties help you fall asleep faster and enjoy uninterrupted, rejuvenating rest.</p>\n</li>\n<li>\n<p data-path-to-node=\"5,2,0\"><b data-path-to-node=\"5,2,0\" data-index-in-node=\"0\">Soothes Muscle Tension:</b> Gently reduces inflammation and physical tension throughout the body.</p>\n</li>\n</ul>\n<p dir=\"ltr\"><strong> </strong></p>\n<h4 dir=\"ltr\">Composition</h4>\n<p dir=\"ltr\">Ashwagandha 10%, Haritaki 10%, Pippali Mool 9%, Shunthi 9%, Arjun Tvak 9%, Vijaya 7%, Nimbu Sat 5%, Sodium Citrate 4%, Permitted Flavour 2%, Sugar 15%, Glucose 15%, Setting Agent 5%.</p>",
+      "tabs": {
+        "description": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab\" id=\"tab-description\" role=\"tabpanel\" aria-labelledby=\"tab-title-description\">\n\t\t\t\t\n\n<p dir=\"ltr\">Some nights the body needs more than rest — it needs to reset. Gummy Vati Gold is Sanan Relief&#8217;s highest-strength edible, formulated for the nights your system has the most to recover from.</p>\n<p dir=\"ltr\">Most wellness products act on the surface. Gummy Vati Gold works deeper. <strong>We work on the Endocannabinoid System</strong> — the network your body already uses to regulate rest, mood, comfort and balance. Each gummy carries a refined Vijaya extract paired with a classical Ayurvedic base, so the plant is delivered in a form the body can take up smoothly.</p>\n<p dir=\"ltr\">Around that core sits a considered herbal blend: Ashwagandha to settle a wound-up system, Arjun Tvak and Pippali Mool for circulatory and metabolic support, and Haritaki, Shunthi and Nimbu Sat rounding out an easy-on-the-body formulation. The result is a single gummy that helps you wind down, ease into deeper rest, and let the body do its overnight work.</p>\n<p dir=\"ltr\">Forty years of formulating with Vijaya, in the most refined form we&#8217;ve made yet.</p>\n<p dir=\"ltr\"><strong>Purity. Power. Focus.</strong></p>\n<p>&nbsp;</p>\n<p data-path-to-node=\"4\"><span style=\"font-family: 'arial black', sans-serif;\"><b data-path-to-node=\"4\" data-index-in-node=\"0\">Key Benefits:</b></span></p>\n<ul data-path-to-node=\"5\">\n<li>\n<p data-path-to-node=\"5,0,0\"><b data-path-to-node=\"5,0,0\" data-index-in-node=\"0\">Relieves Stress &amp; Anxiety:</b> Natural adaptogens help regulate cortisol levels to promote a calm, balanced mind.</p>\n</li>\n<li>\n<p data-path-to-node=\"5,1,0\"><b data-path-to-node=\"5,1,0\" data-index-in-node=\"0\">Deep, Restful Sleep:</b> Natural sedative properties help you fall asleep faster and enjoy uninterrupted, rejuvenating rest.</p>\n</li>\n<li>\n<p data-path-to-node=\"5,2,0\"><b data-path-to-node=\"5,2,0\" data-index-in-node=\"0\">Soothes Muscle Tension:</b> Gently reduces inflammation and physical tension throughout the body.</p>\n</li>\n</ul>\n<p dir=\"ltr\"><strong> </strong></p>\n<h4 dir=\"ltr\">Composition</h4>\n<p dir=\"ltr\">Ashwagandha 10%, Haritaki 10%, Pippali Mool 9%, Shunthi 9%, Arjun Tvak 9%, Vijaya 7%, Nimbu Sat 5%, Sodium Citrate 4%, Permitted Flavour 2%, Sugar 15%, Glucose 15%, Setting Agent 5%.</p>\n\n    <div class=\"xs_social_share_widget xs_share_url after_content \t\tmain_content  wslu-style-1 wslu-share-box-shaped wslu-fill-colored wslu-none wslu-share-horizontal wslu-theme-font-no wslu-main_content\">\n\n\t\t\n        <ul>\n\t\t\t        </ul>\n    </div>",
+          "text": "Some nights the body needs more than rest — it needs to reset. Gummy Vati Gold is Sanan Relief's highest-strength edible, formulated for the nights your system has the most to recover from. Most wellness products act on the surface. Gummy Vati Gold works deeper. We work on the Endocannabinoid System — the network your body already uses to regulate rest, mood, comfort and balance. Each gummy carries a refined Vijaya extract paired with a classical Ayurvedic base, so the plant is delivered in a form the body can take up smoothly. Around that core sits a considered herbal blend: Ashwagandha to settle a wound-up system, Arjun Tvak and Pippali Mool for circulatory and metabolic support, and Haritaki, Shunthi and Nimbu Sat rounding out an easy-on-the-body formulation. The result is a single gummy that helps you wind down, ease into deeper rest, and let the body do its overnight work. Forty years of formulating with Vijaya, in the most refined form we've made yet. Purity. Power. Focus. Key Benefits: Relieves Stress & Anxiety: Natural adaptogens help regulate cortisol levels to promote a calm, balanced mind. Deep, Restful Sleep: Natural sedative properties help you fall asleep faster and enjoy uninterrupted, rejuvenating rest. Soothes Muscle Tension: Gently reduces inflammation and physical tension throughout the body. Composition Ashwagandha 10%, Haritaki 10%, Pippali Mool 9%, Shunthi 9%, Arjun Tvak 9%, Vijaya 7%, Nimbu Sat 5%, Sodium Citrate 4%, Permitted Flavour 2%, Sugar 15%, Glucose 15%, Setting Agent 5%."
+        },
+        "additional_information": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content wc-tab\" id=\"tab-additional_information\" role=\"tabpanel\" aria-labelledby=\"tab-title-additional_information\">\n\t\t\t\t\n\n<table class=\"woocommerce-product-attributes shop_attributes\" aria-label=\"Product Details\">\n\t\t\t<tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pack-size\">\n\t\t\t<th class=\"woocommerce-product-attributes-item__label\" scope=\"row\">Pack Size</th>\n\t\t\t<td class=\"woocommerce-product-attributes-item__value\"><p>10 Days Pack, 20 Days Pack, 30 Days Pack</p>\n</td>\n\t\t</tr>\n\t</table>\n\t\t\t</div>",
+          "text": "Pack Size 10 Days Pack, 20 Days Pack, 30 Days Pack"
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\tReviews\t\t</h2>\n\n\t\t\t\t\t<p class=\"woocommerce-noreviews\">There are no reviews yet.</p>\n\t\t\t</div>",
+          "text": "Reviews There are no reviews yet."
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2026/09/1.png",
+          "alt": "Gummy Vati Gold - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Oral titration as advised by physician",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 2139,
+      "title": "Full Spectrum Vijaya Oil 6500mg",
+      "handle": "full-spectrum-vijaya-oil-6500mg",
+      "url": "https://sananindia.com/product/full-spectrum-vijaya-oil-6500mg/",
+      "type": "simple",
+      "sku": "SN-2139",
+      "vendor": "Sanan Relief",
+      "product_type": "CBD Oil",
+      "categories": [
+        {
+          "id": 19,
+          "name": "CBD Oil",
+          "slug": "cbd-oil",
+          "link": "https://sananindia.com/product-category/cbd-oil/"
+        },
+        {
+          "id": 34,
+          "name": "Edible",
+          "slug": "edible",
+          "link": "https://sananindia.com/product-category/edible/"
+        }
+      ],
+      "tags": [],
+      "is_in_stock": true,
+      "on_sale": false,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 6500,
+        "regular_price": 6500,
+        "sale_price": 6500,
+        "price_range": null
+      },
+      "attributes": [],
+      "variations": [],
+      "short_description": "A premium blend of cannabinoids crafted from high-quality Vijaya (hemp) leaves, designed to support relaxation, stress management, and overall wellness. Made under ISO & GMP-certified processes for purity and consistency.",
+      "short_description_html": "<p>A premium blend of cannabinoids crafted from high-quality Vijaya (hemp) leaves, designed to support relaxation, stress management, and overall wellness. Made under ISO &amp; GMP-certified processes for purity and consistency.</p>",
+      "description": "Full Spectrum Vijaya Oil from Sanan India is a carefully formulated herbal oil made using high-grade Vijaya (hemp) leaves and advanced extraction techniques. This full-spectrum formulation contains a balanced profile of cannabinoids and plant compounds that work together to promote overall well-being. Our oil is crafted in ISO & GMP-certified facilities and licensed under the Ministry of Ayush, ensuring every bottle meets our high standards for safety and quality. Key Features: Full-spectrum hemp extract for balanced wellness support Made from premium-quality Vijaya leaves Supports relaxation, stress management, and general well-being Produced in ISO & GMP-certified facilities 100% plant-based and cruelty-free Usage: Follow the recommended dosage instructions on the packaging or consult a qualified wellness professional before use. Storage: Store in a cool, dry place away from direct sunlight. Keep out of reach of children.",
+      "description_html": "<p data-start=\"660\" data-end=\"968\"><strong data-start=\"660\" data-end=\"688\">Full Spectrum Vijaya Oil</strong> from Sanan India is a carefully formulated herbal oil made using high-grade Vijaya (hemp) leaves and advanced extraction techniques. This full-spectrum formulation contains a balanced profile of cannabinoids and plant compounds that work together to promote overall well-being.</p>\n<p data-start=\"970\" data-end=\"1137\">Our oil is crafted in ISO &amp; GMP-certified facilities and licensed under the Ministry of Ayush, ensuring every bottle meets our high standards for safety and quality.</p>\n<p data-start=\"1139\" data-end=\"1158\"><strong data-start=\"1139\" data-end=\"1156\">Key Features:</strong></p>\n<ul data-start=\"1159\" data-end=\"1415\">\n<li data-start=\"1159\" data-end=\"1219\">\n<p data-start=\"1161\" data-end=\"1219\">Full-spectrum hemp extract for balanced wellness support</p>\n</li>\n<li data-start=\"1220\" data-end=\"1263\">\n<p data-start=\"1222\" data-end=\"1263\">Made from premium-quality Vijaya leaves</p>\n</li>\n<li data-start=\"1264\" data-end=\"1330\">\n<p data-start=\"1266\" data-end=\"1330\">Supports relaxation, stress management, and general well-being</p>\n</li>\n<li data-start=\"1331\" data-end=\"1377\">\n<p data-start=\"1333\" data-end=\"1377\">Produced in ISO &amp; GMP-certified facilities</p>\n</li>\n<li data-start=\"1378\" data-end=\"1415\">\n<p data-start=\"1380\" data-end=\"1415\">100% plant-based and cruelty-free</p>\n</li>\n</ul>\n<p data-start=\"1417\" data-end=\"1548\"><strong data-start=\"1417\" data-end=\"1427\">Usage:</strong><br data-start=\"1427\" data-end=\"1430\" />Follow the recommended dosage instructions on the packaging or consult a qualified wellness professional before use.</p>\n<p data-start=\"1550\" data-end=\"1651\"><strong data-start=\"1550\" data-end=\"1562\">Storage:</strong><br data-start=\"1562\" data-end=\"1565\" />Store in a cool, dry place away from direct sunlight. Keep out of reach of children.</p>",
+      "tabs": {
+        "description": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab\" id=\"tab-description\" role=\"tabpanel\" aria-labelledby=\"tab-title-description\">\n\t\t\t\t\n\n<p data-start=\"660\" data-end=\"968\"><strong data-start=\"660\" data-end=\"688\">Full Spectrum Vijaya Oil</strong> from Sanan India is a carefully formulated herbal oil made using high-grade Vijaya (hemp) leaves and advanced extraction techniques. This full-spectrum formulation contains a balanced profile of cannabinoids and plant compounds that work together to promote overall well-being.</p>\n<p data-start=\"970\" data-end=\"1137\">Our oil is crafted in ISO &amp; GMP-certified facilities and licensed under the Ministry of Ayush, ensuring every bottle meets our high standards for safety and quality.</p>\n<p data-start=\"1139\" data-end=\"1158\"><strong data-start=\"1139\" data-end=\"1156\">Key Features:</strong></p>\n<ul data-start=\"1159\" data-end=\"1415\">\n<li data-start=\"1159\" data-end=\"1219\">\n<p data-start=\"1161\" data-end=\"1219\">Full-spectrum hemp extract for balanced wellness support</p>\n</li>\n<li data-start=\"1220\" data-end=\"1263\">\n<p data-start=\"1222\" data-end=\"1263\">Made from premium-quality Vijaya leaves</p>\n</li>\n<li data-start=\"1264\" data-end=\"1330\">\n<p data-start=\"1266\" data-end=\"1330\">Supports relaxation, stress management, and general well-being</p>\n</li>\n<li data-start=\"1331\" data-end=\"1377\">\n<p data-start=\"1333\" data-end=\"1377\">Produced in ISO &amp; GMP-certified facilities</p>\n</li>\n<li data-start=\"1378\" data-end=\"1415\">\n<p data-start=\"1380\" data-end=\"1415\">100% plant-based and cruelty-free</p>\n</li>\n</ul>\n<p data-start=\"1417\" data-end=\"1548\"><strong data-start=\"1417\" data-end=\"1427\">Usage:</strong><br data-start=\"1427\" data-end=\"1430\" />Follow the recommended dosage instructions on the packaging or consult a qualified wellness professional before use.</p>\n<p data-start=\"1550\" data-end=\"1651\"><strong data-start=\"1550\" data-end=\"1562\">Storage:</strong><br data-start=\"1562\" data-end=\"1565\" />Store in a cool, dry place away from direct sunlight. Keep out of reach of children.</p>\n\n    <div class=\"xs_social_share_widget xs_share_url after_content \t\tmain_content  wslu-style-1 wslu-share-box-shaped wslu-fill-colored wslu-none wslu-share-horizontal wslu-theme-font-no wslu-main_content\">\n\n\t\t\n        <ul>\n\t\t\t        </ul>\n    </div>",
+          "text": "Full Spectrum Vijaya Oil from Sanan India is a carefully formulated herbal oil made using high-grade Vijaya (hemp) leaves and advanced extraction techniques. This full-spectrum formulation contains a balanced profile of cannabinoids and plant compounds that work together to promote overall well-being. Our oil is crafted in ISO & GMP-certified facilities and licensed under the Ministry of Ayush, ensuring every bottle meets our high standards for safety and quality. Key Features: Full-spectrum hemp extract for balanced wellness support Made from premium-quality Vijaya leaves Supports relaxation, stress management, and general well-being Produced in ISO & GMP-certified facilities 100% plant-based and cruelty-free Usage: Follow the recommended dosage instructions on the packaging or consult a qualified wellness professional before use. Storage: Store in a cool, dry place away from direct sunlight. Keep out of reach of children."
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\tReviews\t\t</h2>\n\n\t\t\t\t\t<p class=\"woocommerce-noreviews\">There are no reviews yet.</p>\n\t\t\t</div>",
+          "text": "Reviews There are no reviews yet."
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2026/08/Product_packaging_photograph_2K_202608051426.png",
+          "alt": "Full Spectrum Vijaya Oil 6500mg - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Oral titration as advised by physician",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 2134,
+      "title": "Kameshwar Modak Tablet",
+      "handle": "kameshwar-modak",
+      "url": "https://sananindia.com/product/kameshwar-modak/",
+      "type": "variable",
+      "sku": "SN-2134",
+      "vendor": "Sanan Relief",
+      "product_type": "Edible",
+      "categories": [
+        {
+          "id": 34,
+          "name": "Edible",
+          "slug": "edible",
+          "link": "https://sananindia.com/product-category/edible/"
+        },
+        {
+          "id": 38,
+          "name": "Tablets",
+          "slug": "tablets",
+          "link": "https://sananindia.com/product-category/tablets/"
+        }
+      ],
+      "tags": [],
+      "is_in_stock": false,
+      "on_sale": false,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 550,
+        "regular_price": 550,
+        "sale_price": 550,
+        "price_range": {
+          "min": 550,
+          "max": 750
+        }
+      },
+      "attributes": [
+        {
+          "name": "Quantity",
+          "options": [
+            "20 Tablets",
+            "30 Tablets"
+          ]
+        }
+      ],
+      "variations": [
+        {
+          "id": 2136,
+          "sku": "SN-2134-2136",
+          "attributes": {
+            "pa_pack size": "20-tablets"
+          },
+          "price": 550,
+          "regular_price": 550,
+          "is_in_stock": false,
+          "weight": null,
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/08/Sanan_Relief_Kameshawar_Modak_pr…_202608051414.png"
+        },
+        {
+          "id": 2137,
+          "sku": "SN-2134-2137",
+          "attributes": {
+            "pa_pack size": "30-tablets"
+          },
+          "price": 750,
+          "regular_price": 750,
+          "is_in_stock": false,
+          "weight": null,
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/08/Sanan_Relief_Kameshawar_Modak_pr…_202608051414.png"
+        }
+      ],
+      "short_description": "",
+      "short_description_html": "",
+      "description": "",
+      "description_html": "\n    <div class=\"xs_social_share_widget xs_share_url after_content \t\tmain_content  wslu-style-1 wslu-share-box-shaped wslu-fill-colored wslu-none wslu-share-horizontal wslu-theme-font-no wslu-main_content\">\n\n\t\t\n        <ul>\n\t\t\t        </ul>\n    </div> \n",
+      "tabs": {
+        "additional_information": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content wc-tab\" id=\"tab-additional_information\" role=\"tabpanel\" aria-labelledby=\"tab-title-additional_information\">\n\t\t\t\t\n\n<table class=\"woocommerce-product-attributes shop_attributes\" aria-label=\"Product Details\">\n\t\t\t<tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_pack-size\">\n\t\t\t<th class=\"woocommerce-product-attributes-item__label\" scope=\"row\">Quantity</th>\n\t\t\t<td class=\"woocommerce-product-attributes-item__value\"><p>20 Tablets, 30 Tablets</p>\n</td>\n\t\t</tr>\n\t</table>\n\t\t\t</div>",
+          "text": "Quantity 20 Tablets, 30 Tablets"
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\tReviews\t\t</h2>\n\n\t\t\t\t\t<p class=\"woocommerce-noreviews\">There are no reviews yet.</p>\n\t\t\t</div>",
+          "text": "Reviews There are no reviews yet."
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2026/08/Sanan_Relief_Kameshawar_Modak_pr…_202608051414.png",
+          "alt": "Kameshwar Modak Tablet - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Oral titration as advised by physician",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 2129,
+      "title": "Bilwadi Churan",
+      "handle": "bilwadi-churan",
+      "url": "https://sananindia.com/product/bilwadi-churan/",
+      "type": "variable",
+      "sku": "SN-2129",
+      "vendor": "Sanan Relief",
+      "product_type": "Edible",
+      "categories": [
+        {
+          "id": 34,
+          "name": "Edible",
+          "slug": "edible",
+          "link": "https://sananindia.com/product-category/edible/"
+        },
+        {
+          "id": 38,
+          "name": "Tablets",
+          "slug": "tablets",
+          "link": "https://sananindia.com/product-category/tablets/"
+        }
+      ],
+      "tags": [],
+      "is_in_stock": true,
+      "on_sale": false,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 550,
+        "regular_price": 550,
+        "sale_price": 550,
+        "price_range": {
+          "min": 550,
+          "max": 750
+        }
+      },
+      "attributes": [
+        {
+          "name": "Quantity",
+          "options": [
+            "20 Tablets",
+            "30 Tablets"
+          ]
+        }
+      ],
+      "variations": [
+        {
+          "id": 2131,
+          "sku": "SN-2129-2131",
+          "attributes": {
+            "pa_pack size": "20-tablets"
+          },
+          "price": 550,
+          "regular_price": 550,
+          "is_in_stock": true,
+          "weight": null,
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/08/Bilwadi_Churan_product_photograph_2K_202608051343.png"
+        },
+        {
+          "id": 2132,
+          "sku": "SN-2129-2132",
+          "attributes": {
+            "pa_pack size": "30-tablets"
+          },
+          "price": 750,
+          "regular_price": 750,
+          "is_in_stock": true,
+          "weight": null,
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/08/Bilwadi_Churan_product_photograph_2K_202608051343.png"
+        }
+      ],
+      "short_description": "",
+      "short_description_html": "",
+      "description": "",
+      "description_html": "\n    <div class=\"xs_social_share_widget xs_share_url after_content \t\tmain_content  wslu-style-1 wslu-share-box-shaped wslu-fill-colored wslu-none wslu-share-horizontal wslu-theme-font-no wslu-main_content\">\n\n\t\t\n        <ul>\n\t\t\t        </ul>\n    </div> \n",
+      "tabs": {
+        "additional_information": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content wc-tab\" id=\"tab-additional_information\" role=\"tabpanel\" aria-labelledby=\"tab-title-additional_information\">\n\t\t\t\t\n\n<table class=\"woocommerce-product-attributes shop_attributes\" aria-label=\"Product Details\">\n\t\t\t<tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_pack-size\">\n\t\t\t<th class=\"woocommerce-product-attributes-item__label\" scope=\"row\">Quantity</th>\n\t\t\t<td class=\"woocommerce-product-attributes-item__value\"><p>20 Tablets, 30 Tablets</p>\n</td>\n\t\t</tr>\n\t</table>\n\t\t\t</div>",
+          "text": "Quantity 20 Tablets, 30 Tablets"
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\tReviews\t\t</h2>\n\n\t\t\t\t\t<p class=\"woocommerce-noreviews\">There are no reviews yet.</p>\n\t\t\t</div>",
+          "text": "Reviews There are no reviews yet."
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2026/08/Bilwadi_Churan_product_photograph_2K_202608051343.png",
+          "alt": "Bilwadi Churan - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Oral titration as advised by physician",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 2123,
+      "title": "Trailokya Vijaya Vati",
+      "handle": "trailokya-vijaya-vati",
+      "url": "https://sananindia.com/product/trailokya-vijaya-vati/",
+      "type": "variable",
+      "sku": "SN-2123",
+      "vendor": "Sanan Relief",
+      "product_type": "Edible",
+      "categories": [
+        {
+          "id": 34,
+          "name": "Edible",
+          "slug": "edible",
+          "link": "https://sananindia.com/product-category/edible/"
+        }
+      ],
+      "tags": [],
+      "is_in_stock": true,
+      "on_sale": false,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 550,
+        "regular_price": 550,
+        "sale_price": 550,
+        "price_range": {
+          "min": 550,
+          "max": 750
+        }
+      },
+      "attributes": [
+        {
+          "name": "Quantity",
+          "options": [
+            "20 Tablets",
+            "30 Tablets"
+          ]
+        }
+      ],
+      "variations": [
+        {
+          "id": 2127,
+          "sku": "SN-2123-2127",
+          "attributes": {
+            "pa_pack size": "20-tablets"
+          },
+          "price": 550,
+          "regular_price": 550,
+          "is_in_stock": true,
+          "weight": null,
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/08/Trailokya-Vijaya-Vati.png"
+        },
+        {
+          "id": 2128,
+          "sku": "SN-2123-2128",
+          "attributes": {
+            "pa_pack size": "30-tablets"
+          },
+          "price": 750,
+          "regular_price": 750,
+          "is_in_stock": true,
+          "weight": null,
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/08/Trailokya-Vijaya-Vati.png"
+        }
+      ],
+      "short_description": "",
+      "short_description_html": "",
+      "description": "",
+      "description_html": "\n    <div class=\"xs_social_share_widget xs_share_url after_content \t\tmain_content  wslu-style-1 wslu-share-box-shaped wslu-fill-colored wslu-none wslu-share-horizontal wslu-theme-font-no wslu-main_content\">\n\n\t\t\n        <ul>\n\t\t\t        </ul>\n    </div> \n",
+      "tabs": {
+        "additional_information": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content wc-tab\" id=\"tab-additional_information\" role=\"tabpanel\" aria-labelledby=\"tab-title-additional_information\">\n\t\t\t\t\n\n<table class=\"woocommerce-product-attributes shop_attributes\" aria-label=\"Product Details\">\n\t\t\t<tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_pack-size\">\n\t\t\t<th class=\"woocommerce-product-attributes-item__label\" scope=\"row\">Quantity</th>\n\t\t\t<td class=\"woocommerce-product-attributes-item__value\"><p>20 Tablets, 30 Tablets</p>\n</td>\n\t\t</tr>\n\t</table>\n\t\t\t</div>",
+          "text": "Quantity 20 Tablets, 30 Tablets"
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\tReviews\t\t</h2>\n\n\t\t\t\t\t<p class=\"woocommerce-noreviews\">There are no reviews yet.</p>\n\t\t\t</div>",
+          "text": "Reviews There are no reviews yet."
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2026/08/Trailokya-Vijaya-Vati.png",
+          "alt": "Trailokya Vijaya Vati - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Oral titration as advised by physician",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 2115,
+      "title": "Pain Relief Oil 30 ml",
+      "handle": "pain-relief-oil-30-ml",
+      "url": "https://sananindia.com/product/pain-relief-oil-30-ml/",
+      "type": "simple",
+      "sku": "SN-2115",
+      "vendor": "Sanan Relief",
+      "product_type": "Pain Management",
+      "categories": [
+        {
+          "id": 20,
+          "name": "Pain Management",
+          "slug": "pain-management",
+          "link": "https://sananindia.com/product-category/pain-management/"
+        }
+      ],
+      "tags": [
+        "Painoil30ml"
+      ],
+      "is_in_stock": true,
+      "on_sale": false,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 599,
+        "regular_price": 599,
+        "sale_price": 599,
+        "price_range": null
+      },
+      "attributes": [],
+      "variations": [],
+      "short_description": "A deeply penetrating herbal oil formulated with Vijaya (hemp) leaf extract and traditional Ayurvedic herbs to help ease muscle tension and support joint comfort naturally. Crafted for effective massage and daily wellness routines.",
+      "short_description_html": "<p>A deeply penetrating herbal oil formulated with Vijaya (hemp) leaf extract and traditional Ayurvedic herbs to help ease muscle tension and support joint comfort naturally. Crafted for effective massage and daily wellness routines.</p>",
+      "description": "Move freely. Live fully. Sanan Pain Relief Oil is a modern, plant-based recovery oil formulated for the way you actually live — long hours at the desk, hard training days, and joints that have carried you for decades. Sixteen carefully balanced botanicals, led by Vijaya leaf extract, work together to ease pain at the source and calm the tension that builds up in muscles, joints, and nerves. Clinically studied. Non-greasy. Made in India by the pioneers of the Vijaya industry since 1985. How It Works Your body has a built-in pain-management system called the endocannabinoid system (ECS) — a network of receptors sitting in your skin, muscles, joints, and nerves. Its job is to keep pain signals in balance and help your body recover. When you strain a muscle or a joint gets inflamed, that system can get overwhelmed and the pain turns up loud. Sanan Pain Relief Oil works with this natural system, in four steps: Absorbs deep. A pure mustard oil base carries the actives past the surface and into the tissue underneath — where the pain actually lives. Turns the signal down. Vijaya leaf extract meets your ECS receptors at the site and helps dial down the pain messaging travelling to your brain. Cools, then warms. Camphor and mint cool the surface for instant relief. Wintergreen, ginger, and capsicum warm underneath — drawing fresh blood to the area to speed recovery. Calms inflammation. Nirgundi, Salai Guggal (Boswellia), and ginger work on the underlying swelling that keeps pain going — so relief lasts hours, not minutes. Because it acts right where it hurts, relief is targeted, fast, and long-lasting. Clinically Proven Performance Relief begins in an average of 77.67 seconds of application Up to 11 hours of continuous action per application 43.5% reduction in overall pain intensity over 14 days 24% reduction in ESR — a marker of underlying inflammation 4.9/5 spreadability rating — non-greasy, absorbs cleanly Zero adverse events reported in clinical trial Key Benefits Desk life & posture strain Eases \"tech neck\" and shoulder tension from screens and laptops Soothes lower back aches from long hours of sitting Relieves wrist and forearm strain from typing and scrolling Loosens cramped muscles after long flights or drives Active life & training recovery Calms post-workout soreness and DOMS after a tough session Speeds recovery from sprains, twisted ankles, and minor pulls Gentle care for the everyday knocks and bruises of an active life Joints, nerves & long-standing discomfort Keeps knees, elbows, and fingers moving without heavy stiffness Targeted relief for the sharp, tingling, or burning sensations of nerve irritation Gentle tissue support during post-procedure recovery Everyday wellness A warming, natural rescue for period cramps — massage into the lower abdomen Fixes the \"pain in the neck\" from an awkward night's sleep How to use: Take a few drops on clean, dry skin. Massage gently over the affected area until fully absorbed. Reapply as needed, up to 3 times daily. For external use only. Ayurvedic Proprietary Medicine · 30 ml",
+      "description_html": "<h2>Move freely. Live fully.</h2>\n<p>Sanan Pain Relief Oil is a modern, plant-based recovery oil formulated for the way you actually live — long hours at the desk, hard training days, and joints that have carried you for decades. Sixteen carefully balanced botanicals, led by Vijaya leaf extract, work together to ease pain at the source and calm the tension that builds up in muscles, joints, and nerves.</p>\n<p>Clinically studied. Non-greasy. Made in India by the pioneers of the Vijaya industry since 1985.</p>\n<h3>How It Works</h3>\n<p>Your body has a built-in pain-management system called the <strong>endocannabinoid system (ECS)</strong> — a network of receptors sitting in your skin, muscles, joints, and nerves. Its job is to keep pain signals in balance and help your body recover. When you strain a muscle or a joint gets inflamed, that system can get overwhelmed and the pain turns up loud.</p>\n<p>Sanan Pain Relief Oil works <em>with</em> this natural system, in four steps:</p>\n<ol>\n<li><strong>Absorbs deep.</strong> A pure mustard oil base carries the actives past the surface and into the tissue underneath — where the pain actually lives.</li>\n<li><strong>Turns the signal down.</strong> Vijaya leaf extract meets your ECS receptors at the site and helps dial down the pain messaging travelling to your brain.</li>\n<li><strong>Cools, then warms.</strong> Camphor and mint cool the surface for instant relief. Wintergreen, ginger, and capsicum warm underneath — drawing fresh blood to the area to speed recovery.</li>\n<li><strong>Calms inflammation.</strong> Nirgundi, Salai Guggal (Boswellia), and ginger work on the underlying swelling that keeps pain going — so relief lasts hours, not minutes.</li>\n</ol>\n<p>Because it acts right where it hurts, relief is targeted, fast, and long-lasting.</p>\n<h3>Clinically Proven Performance</h3>\n<ul>\n<li>Relief begins in an average of <strong>77.67 seconds</strong> of application</li>\n<li>Up to <strong>11 hours</strong> of continuous action per application</li>\n<li><strong>43.5% reduction</strong> in overall pain intensity over 14 days</li>\n<li><strong>24% reduction</strong> in ESR — a marker of underlying inflammation</li>\n<li><strong>4.9/5</strong> spreadability rating — non-greasy, absorbs cleanly</li>\n<li>Zero adverse events reported in clinical trial</li>\n</ul>\n<h3>Key Benefits</h3>\n<h4>Desk life &amp; posture strain</h4>\n<ul>\n<li>Eases &#8220;tech neck&#8221; and shoulder tension from screens and laptops</li>\n<li>Soothes lower back aches from long hours of sitting</li>\n<li>Relieves wrist and forearm strain from typing and scrolling</li>\n<li>Loosens cramped muscles after long flights or drives</li>\n</ul>\n<h4>Active life &amp; training recovery</h4>\n<ul>\n<li>Calms post-workout soreness and DOMS after a tough session</li>\n<li>Speeds recovery from sprains, twisted ankles, and minor pulls</li>\n<li>Gentle care for the everyday knocks and bruises of an active life</li>\n</ul>\n<h4>Joints, nerves &amp; long-standing discomfort</h4>\n<ul>\n<li>Keeps knees, elbows, and fingers moving without heavy stiffness</li>\n<li>Targeted relief for the sharp, tingling, or burning sensations of nerve irritation</li>\n<li>Gentle tissue support during post-procedure recovery</li>\n</ul>\n<h4>Everyday wellness</h4>\n<ul>\n<li>A warming, natural rescue for period cramps — massage into the lower abdomen</li>\n<li>Fixes the &#8220;pain in the neck&#8221; from an awkward night&#8217;s sleep</li>\n</ul>\n<p><strong>How to use:</strong> Take a few drops on clean, dry skin. Massage gently over the affected area until fully absorbed. Reapply as needed, up to 3 times daily. For external use only.</p>\n<p><em>Ayurvedic Proprietary Medicine · 30 ml</em></p>",
+      "tabs": {},
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2026/08/Product.jpg",
+          "alt": "Pain Relief Oil 30 ml - Sanan Relief Formulation"
+        },
+        {
+          "position": 2,
+          "url": "https://sananindia.com/wp-content/uploads/2026/08/logo-removed.png",
+          "alt": "Pain Relief Oil 30 ml - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Topical localized massage",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 2022,
+      "title": "Gummy Vati",
+      "handle": "gummy-vati",
+      "url": "https://sananindia.com/product/gummy-vati/",
+      "type": "variable",
+      "sku": "SN-2022",
+      "vendor": "Sanan Relief",
+      "product_type": "Edible",
+      "categories": [
+        {
+          "id": 34,
+          "name": "Edible",
+          "slug": "edible",
+          "link": "https://sananindia.com/product-category/edible/"
+        },
+        {
+          "id": 22,
+          "name": "Wellness",
+          "slug": "wellness",
+          "link": "https://sananindia.com/product-category/wellness/"
+        }
+      ],
+      "tags": [
+        "Gummy"
+      ],
+      "is_in_stock": true,
+      "on_sale": true,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 1000,
+        "regular_price": 1000,
+        "sale_price": 1000,
+        "price_range": {
+          "min": 1000,
+          "max": 2800
+        }
+      },
+      "attributes": [
+        {
+          "name": "Pack Size",
+          "options": [
+            "10 Days Pack",
+            "20 Days Pack",
+            "30 Days Pack"
+          ]
+        }
+      ],
+      "variations": [
+        {
+          "id": 2023,
+          "sku": "GMVT-31",
+          "attributes": {
+            "pack size": "10 Days Pack"
+          },
+          "price": 1000,
+          "regular_price": 1000,
+          "is_in_stock": true,
+          "weight": "0.150",
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/07/Gummy_Vati_product_photograph_2K_202608061457.png"
+        },
+        {
+          "id": 2024,
+          "sku": "GMVT-32",
+          "attributes": {
+            "pack size": "20 Days Pack"
+          },
+          "price": 2000,
+          "regular_price": 2000,
+          "is_in_stock": true,
+          "weight": "0.300",
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/07/Gummy_Vati_product_photograph_2K_202608061457.png"
+        },
+        {
+          "id": 2025,
+          "sku": "GMVT-33",
+          "attributes": {
+            "pack size": "30 Days Pack"
+          },
+          "price": 2800,
+          "regular_price": 3000,
+          "is_in_stock": true,
+          "weight": "0.450",
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2026/07/Gummy_Vati_product_photograph_2K_202608061457.png"
+        }
+      ],
+      "short_description": "Find your calm and get the rest you deserve. Our Ayurvedic chewable gummies are formulated with a powerful blend of natural adaptogens and relaxants to support your mental well-being and physical recovery.",
+      "short_description_html": "<p>Find your calm and get the rest you deserve. Our Ayurvedic chewable gummies are formulated with a powerful blend of natural adaptogens and relaxants to support your mental well-being and physical recovery.</p>",
+      "description": "Find your calm and get the rest you deserve. Our Ayurvedic chewable gummies are formulated with a powerful blend of natural adaptogens and relaxants to support your mental well-being and physical recovery. Key Benefits: Relieves Stress & Anxiety: Natural adaptogens help regulate cortisol levels to promote a calm, balanced mind. Deep, Restful Sleep: Natural sedative properties help you fall asleep faster and enjoy uninterrupted, rejuvenating rest. Soothes Muscle Tension: Gently reduces inflammation and physical tension throughout the body. Hero Ingredients: Ashwagandha (11%): A powerful adaptogen that manages everyday stress and anxiety. Vijaya (3%): A natural plant-based relaxant that safely induces deep sleep. Arjun Tvak (10%): Supports cardiovascular health and daily stress management. Haritaki & Shunthi: Aids in digestion, detoxification, and reducing inflammation. Pippali Mool (10%): Enhances the absorption of all these herbs so your body gets the maximum benefit. Product Details: Format: Soft, naturally flavored chewable gummies. Quality You Can Trust: GMP-Compliant, Ayush Ministry Approved, and made with standardized herbal extracts. Shelf Life: 24 months. (Store in a cool, dry place away from direct sunlight). Safety & Usage Notes: Contraindications: Please consult a physician before use if you are pregnant, nursing, have severe cardiac conditions, or are currently taking other sedative or anti-anxiety medications. Not recommended for children under 12.",
+      "description_html": "<p data-path-to-node=\"3\">Find your calm and get the rest you deserve. Our Ayurvedic chewable gummies are formulated with a powerful blend of natural adaptogens and relaxants to support your mental well-being and physical recovery.</p>\n<p data-path-to-node=\"4\"><span style=\"font-family: &apos;arial black&apos;, sans-serif\"><b data-path-to-node=\"4\" data-index-in-node=\"0\">Key Benefits:</b></span></p>\n<ul data-path-to-node=\"5\">\n<li>\n<p data-path-to-node=\"5,0,0\"><b data-path-to-node=\"5,0,0\" data-index-in-node=\"0\">Relieves Stress &amp; Anxiety:</b> Natural adaptogens help regulate cortisol levels to promote a calm, balanced mind.</p>\n</li>\n<li>\n<p data-path-to-node=\"5,1,0\"><b data-path-to-node=\"5,1,0\" data-index-in-node=\"0\">Deep, Restful Sleep:</b> Natural sedative properties help you fall asleep faster and enjoy uninterrupted, rejuvenating rest.</p>\n</li>\n<li>\n<p data-path-to-node=\"5,2,0\"><b data-path-to-node=\"5,2,0\" data-index-in-node=\"0\">Soothes Muscle Tension:</b> Gently reduces inflammation and physical tension throughout the body.</p>\n</li>\n</ul>\n<p data-path-to-node=\"6\"><span style=\"font-family: &apos;arial black&apos;, sans-serif\"><b data-path-to-node=\"6\" data-index-in-node=\"0\">Hero Ingredients:</b></span></p>\n<ul data-path-to-node=\"7\">\n<li>\n<p data-path-to-node=\"7,0,0\"><b data-path-to-node=\"7,0,0\" data-index-in-node=\"0\">Ashwagandha (11%):</b> A powerful adaptogen that manages everyday stress and anxiety.</p>\n</li>\n<li>\n<p data-path-to-node=\"7,1,0\"><b data-path-to-node=\"7,1,0\" data-index-in-node=\"0\">Vijaya (3%):</b> A natural plant-based relaxant that safely induces deep sleep.</p>\n</li>\n<li>\n<p data-path-to-node=\"7,2,0\"><b data-path-to-node=\"7,2,0\" data-index-in-node=\"0\">Arjun Tvak (10%):</b> Supports cardiovascular health and daily stress management.</p>\n</li>\n<li>\n<p data-path-to-node=\"7,3,0\"><b data-path-to-node=\"7,3,0\" data-index-in-node=\"0\">Haritaki &amp; Shunthi:</b> Aids in digestion, detoxification, and reducing inflammation.</p>\n</li>\n<li>\n<p data-path-to-node=\"7,4,0\"><b data-path-to-node=\"7,4,0\" data-index-in-node=\"0\">Pippali Mool (10%):</b> Enhances the absorption of all these herbs so your body gets the maximum benefit.</p>\n</li>\n</ul>\n<p data-path-to-node=\"8\"><span style=\"font-family: &apos;arial black&apos;, sans-serif\"><b data-path-to-node=\"8\" data-index-in-node=\"0\">Product Details:</b></span></p>\n<ul data-path-to-node=\"9\">\n<li>\n<p data-path-to-node=\"9,0,0\"><b data-path-to-node=\"9,0,0\" data-index-in-node=\"0\">Format:</b> Soft, naturally flavored chewable gummies.</p>\n</li>\n<li>\n<p data-path-to-node=\"9,1,0\"><b data-path-to-node=\"9,1,0\" data-index-in-node=\"0\">Quality You Can Trust:</b> GMP-Compliant, Ayush Ministry Approved, and made with standardized herbal extracts.</p>\n</li>\n<li>\n<p data-path-to-node=\"9,2,0\"><b data-path-to-node=\"9,2,0\" data-index-in-node=\"0\">Shelf Life:</b> 24 months. (Store in a cool, dry place away from direct sunlight).</p>\n</li>\n</ul>\n<p data-path-to-node=\"10\"><b data-path-to-node=\"10\" data-index-in-node=\"0\">Safety &amp; Usage Notes:</b></p>\n<ul data-path-to-node=\"11\">\n<li>\n<p data-path-to-node=\"11,0,0\"><b data-path-to-node=\"11,0,0\" data-index-in-node=\"0\">Contraindications:</b> Please consult a physician before use if you are pregnant, nursing, have severe cardiac conditions, or are currently taking other sedative or anti-anxiety medications. Not recommended for children under 12.</p>\n</li>\n</ul>\n<h3></h3>\n<p>&nbsp;</p>",
+      "tabs": {},
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2026/07/Gummy_Vati_product_photograph_2K_202608061457.png",
+          "alt": "Gummy Vati - Sanan Relief Formulation"
+        },
+        {
+          "position": 2,
+          "url": "https://sananindia.com/wp-content/uploads/2025/09/GUMMIE-1.png",
+          "alt": "Gummy Vati - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Oral titration as advised by physician",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 1214,
+      "title": "Sanan Mewa Modak Vati – Vijaya edible (10500mg | 30 Pieces)",
+      "handle": "sanan-mewa-modak-vati-vijaya-edible-10500mg-30-pieces",
+      "url": "https://sananindia.com/product/sanan-mewa-modak-vati-vijaya-edible-10500mg-30-pieces/",
+      "type": "simple",
+      "sku": "SH029002",
+      "vendor": "Sanan Relief",
+      "product_type": "Edible",
+      "categories": [
+        {
+          "id": 34,
+          "name": "Edible",
+          "slug": "edible",
+          "link": "https://sananindia.com/product-category/edible/"
+        },
+        {
+          "id": 22,
+          "name": "Wellness",
+          "slug": "wellness",
+          "link": "https://sananindia.com/product-category/wellness/"
+        }
+      ],
+      "tags": [
+        "Acute pain",
+        "Insomnia",
+        "Mood management",
+        "Strength-related",
+        "Stress"
+      ],
+      "is_in_stock": true,
+      "on_sale": true,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 1499,
+        "regular_price": 1899,
+        "sale_price": 1499,
+        "price_range": null
+      },
+      "attributes": [],
+      "variations": [],
+      "short_description": "A premium mewa-based Vijaya edible designed to support pain relief, improve sleep, enhance appetite, and boost concentration. Crafted using high-quality dried fruits, natural sweeteners, saffron, magaj seeds, and Vijaya leaves — this modak vati offers both rich taste and powerful wellness benefits.",
+      "short_description_html": "<p>A premium mewa-based Vijaya edible designed to support pain relief, improve sleep, enhance appetite, and boost concentration. Crafted using high-quality dried fruits, natural sweeteners, saffron, magaj seeds, and Vijaya leaves — this modak vati offers both rich taste and powerful wellness benefits.</p>",
+      "description": "A delicious fusion of traditional Indian mewa, premium herbs, and therapeutic Vijaya — crafted to support pain relief, better sleep, digestion, appetite, and overall wellness. Sanan Mewa Modak Vati combines natural ingredients like almonds, pistachios, cashews, raisins, jaggery, dates, saffron, rose petal jam , and Vijaya leaves to create a powerful yet tasty edible designed for mind–body balance. These bite-sized wellness modaks are formulated to help you relax, sleep better, improve concentration, and support mental clarity — all while giving your body the nourishment of real mewa and herbs. Enjoy delicious taste , premium quality , and natural healing in every piece. ✨ Key Benefits ✔ Helps relieve and manage pain naturally ✔ Promotes relaxation of mind & body ✔ Helps reduce sleep disorders and improves sleep quality ✔ Improves appetite and digestion ✔ Enhances concentration & focus ✔ Holistic wellness formula made with premium mewa and herbs 🌿 Product Highlights 30 pieces of premium Vijaya-infused mewa modaks Infused with powerful natural ingredients Authentic Ayurvedic-inspired formulation Crafted for safe daily wellness use Delicious, nutritious, and effective Infused with 99.99 percent Silver Coating 📋 Ingredients (per 100 grams) Below is the full ingredient breakdown in a clean, tabular format: Ingredient Percentage / Description Almond 2% Pistachio 1% Cashew 2% Raisin 1% Sugar 20% Candy Sugar 2% Salt 3% Vijaya Leaves 5% Rose Petal Jam 6% Saffron Included Vark Included Magaj Seeds 2% Dates 30% Jaggery 20% Poppy Seeds 1% 🔎 Additional Information Net Quantity: 30 pieces (7g each) Type: Vijaya Edibles / Ayurvedic Wellness Categories: Vijaya Medicine, Vijaya Capsules, Vijaya Edibles Tags: Acute pain, Insomnia, Stress, Mood management, Strength-related",
+      "description_html": "<p data-start=\"477\" data-end=\"658\">A delicious fusion of <strong data-start=\"499\" data-end=\"567\">traditional Indian mewa, premium herbs, and therapeutic Vijaya</strong> — crafted to support pain relief, better sleep, digestion, appetite, and overall wellness.</p>\n<p data-start=\"660\" data-end=\"893\">Sanan Mewa Modak Vati combines <strong data-start=\"691\" data-end=\"798\">natural ingredients like almonds, pistachios, cashews, raisins, jaggery, dates, saffron, rose petal jam</strong>, and <strong data-start=\"804\" data-end=\"823\">Vijaya leaves</strong> to create a powerful yet tasty edible designed for mind–body balance.</p>\n<p data-start=\"895\" data-end=\"1094\">These bite-sized wellness modaks are formulated to help you relax, sleep better, improve concentration, and support mental clarity — all while giving your body the nourishment of real mewa and herbs.</p>\n<p data-start=\"1096\" data-end=\"1183\">Enjoy <strong data-start=\"1102\" data-end=\"1121\">delicious taste</strong>, <strong data-start=\"1123\" data-end=\"1142\">premium quality</strong>, and <strong data-start=\"1148\" data-end=\"1167\">natural healing</strong> in every piece.</p>\n<hr data-start=\"1185\" data-end=\"1188\" />\n<h1 data-start=\"1190\" data-end=\"1210\"><strong data-start=\"1192\" data-end=\"1210\">✨ Key Benefits</strong></h1>\n<ul data-start=\"1211\" data-end=\"1523\">\n<li data-start=\"1211\" data-end=\"1260\">\n<p data-start=\"1213\" data-end=\"1260\">✔ <strong data-start=\"1215\" data-end=\"1248\">Helps relieve and manage pain</strong> naturally</p>\n</li>\n<li data-start=\"1261\" data-end=\"1305\">\n<p data-start=\"1263\" data-end=\"1305\">✔ <strong data-start=\"1265\" data-end=\"1288\">Promotes relaxation</strong> of mind &amp; body</p>\n</li>\n<li data-start=\"1306\" data-end=\"1371\">\n<p data-start=\"1308\" data-end=\"1371\">✔ <strong data-start=\"1310\" data-end=\"1342\">Helps reduce sleep disorders</strong> and improves sleep quality</p>\n</li>\n<li data-start=\"1372\" data-end=\"1413\">\n<p data-start=\"1374\" data-end=\"1413\">✔ <strong data-start=\"1376\" data-end=\"1397\">Improves appetite</strong> and digestion</p>\n</li>\n<li data-start=\"1414\" data-end=\"1454\">\n<p data-start=\"1416\" data-end=\"1454\">✔ <strong data-start=\"1418\" data-end=\"1452\">Enhances concentration &amp; focus</strong></p>\n</li>\n<li data-start=\"1455\" data-end=\"1523\">\n<p data-start=\"1457\" data-end=\"1523\">✔ <strong data-start=\"1459\" data-end=\"1488\">Holistic wellness formula</strong> made with premium mewa and herbs</p>\n</li>\n</ul>\n<hr data-start=\"1525\" data-end=\"1528\" />\n<h1 data-start=\"1530\" data-end=\"1557\"><strong data-start=\"1532\" data-end=\"1557\">🌿 Product Highlights</strong></h1>\n<ul data-start=\"1558\" data-end=\"1783\">\n<li data-start=\"1558\" data-end=\"1611\">\n<p data-start=\"1560\" data-end=\"1611\">30 pieces of premium Vijaya-infused mewa modaks</p>\n</li>\n<li data-start=\"1612\" data-end=\"1657\">\n<p data-start=\"1614\" data-end=\"1657\">Infused with powerful natural ingredients</p>\n</li>\n<li data-start=\"1658\" data-end=\"1702\">\n<p data-start=\"1660\" data-end=\"1702\">Authentic Ayurvedic-inspired formulation</p>\n</li>\n<li data-start=\"1703\" data-end=\"1742\">\n<p data-start=\"1705\" data-end=\"1742\">Crafted for safe daily wellness use</p>\n</li>\n<li data-start=\"1743\" data-end=\"1783\">\n<p data-start=\"1745\" data-end=\"1783\">Delicious, nutritious, and effective</p>\n</li>\n<li data-start=\"1743\" data-end=\"1783\">Infused with 99.99 percent Silver Coating</li>\n</ul>\n<hr data-start=\"1785\" data-end=\"1788\" />\n<h1 data-start=\"1790\" data-end=\"1826\"><strong data-start=\"1792\" data-end=\"1826\">📋 Ingredients (per 100 grams)</strong></h1>\n<p data-start=\"1828\" data-end=\"1894\">Below is the full ingredient breakdown in a clean, tabular format:</p>\n<div class=\"TyagGW_tableContainer\">\n<div class=\"group TyagGW_tableWrapper flex w-fit flex-col-reverse\">\n<table class=\"w-fit min-w-(--thread-content-width)\" data-start=\"1896\" data-end=\"2864\">\n<thead data-start=\"1896\" data-end=\"1952\">\n<tr data-start=\"1896\" data-end=\"1952\">\n<th data-start=\"1896\" data-end=\"1920\" data-col-size=\"sm\"><strong data-start=\"1898\" data-end=\"1912\">Ingredient</strong></th>\n<th data-start=\"1920\" data-end=\"1952\" data-col-size=\"sm\"><strong data-start=\"1922\" data-end=\"1950\">Percentage / Description</strong></th>\n</tr>\n</thead>\n<tbody data-start=\"2010\" data-end=\"2864\">\n<tr data-start=\"2010\" data-end=\"2066\">\n<td data-start=\"2010\" data-end=\"2034\" data-col-size=\"sm\">Almond</td>\n<td data-col-size=\"sm\" data-start=\"2034\" data-end=\"2066\">2%</td>\n</tr>\n<tr data-start=\"2067\" data-end=\"2123\">\n<td data-start=\"2067\" data-end=\"2091\" data-col-size=\"sm\">Pistachio</td>\n<td data-start=\"2091\" data-end=\"2123\" data-col-size=\"sm\">1%</td>\n</tr>\n<tr data-start=\"2124\" data-end=\"2180\">\n<td data-start=\"2124\" data-end=\"2148\" data-col-size=\"sm\">Cashew</td>\n<td data-col-size=\"sm\" data-start=\"2148\" data-end=\"2180\">2%</td>\n</tr>\n<tr data-start=\"2181\" data-end=\"2237\">\n<td data-start=\"2181\" data-end=\"2205\" data-col-size=\"sm\">Raisin</td>\n<td data-start=\"2205\" data-end=\"2237\" data-col-size=\"sm\">1%</td>\n</tr>\n<tr data-start=\"2238\" data-end=\"2294\">\n<td data-start=\"2238\" data-end=\"2262\" data-col-size=\"sm\">Sugar</td>\n<td data-col-size=\"sm\" data-start=\"2262\" data-end=\"2294\">20%</td>\n</tr>\n<tr data-start=\"2295\" data-end=\"2351\">\n<td data-start=\"2295\" data-end=\"2319\" data-col-size=\"sm\">Candy Sugar</td>\n<td data-col-size=\"sm\" data-start=\"2319\" data-end=\"2351\">2%</td>\n</tr>\n<tr data-start=\"2352\" data-end=\"2408\">\n<td data-start=\"2352\" data-end=\"2376\" data-col-size=\"sm\">Salt</td>\n<td data-start=\"2376\" data-end=\"2408\" data-col-size=\"sm\">3%</td>\n</tr>\n<tr data-start=\"2409\" data-end=\"2465\">\n<td data-start=\"2409\" data-end=\"2433\" data-col-size=\"sm\">Vijaya Leaves</td>\n<td data-start=\"2433\" data-end=\"2465\" data-col-size=\"sm\">5%</td>\n</tr>\n<tr data-start=\"2466\" data-end=\"2522\">\n<td data-start=\"2466\" data-end=\"2490\" data-col-size=\"sm\">Rose Petal Jam</td>\n<td data-start=\"2490\" data-end=\"2522\" data-col-size=\"sm\">6%</td>\n</tr>\n<tr data-start=\"2523\" data-end=\"2579\">\n<td data-start=\"2523\" data-end=\"2547\" data-col-size=\"sm\">Saffron</td>\n<td data-start=\"2547\" data-end=\"2579\" data-col-size=\"sm\">Included</td>\n</tr>\n<tr data-start=\"2580\" data-end=\"2636\">\n<td data-start=\"2580\" data-end=\"2604\" data-col-size=\"sm\">Vark</td>\n<td data-col-size=\"sm\" data-start=\"2604\" data-end=\"2636\">Included</td>\n</tr>\n<tr data-start=\"2637\" data-end=\"2693\">\n<td data-start=\"2637\" data-end=\"2661\" data-col-size=\"sm\">Magaj Seeds</td>\n<td data-start=\"2661\" data-end=\"2693\" data-col-size=\"sm\">2%</td>\n</tr>\n<tr data-start=\"2694\" data-end=\"2750\">\n<td data-start=\"2694\" data-end=\"2718\" data-col-size=\"sm\">Dates</td>\n<td data-col-size=\"sm\" data-start=\"2718\" data-end=\"2750\">30%</td>\n</tr>\n<tr data-start=\"2751\" data-end=\"2807\">\n<td data-start=\"2751\" data-end=\"2775\" data-col-size=\"sm\">Jaggery</td>\n<td data-col-size=\"sm\" data-start=\"2775\" data-end=\"2807\">20%</td>\n</tr>\n<tr data-start=\"2808\" data-end=\"2864\">\n<td data-start=\"2808\" data-end=\"2832\" data-col-size=\"sm\">Poppy Seeds</td>\n<td data-col-size=\"sm\" data-start=\"2832\" data-end=\"2864\">1%</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<hr data-start=\"2866\" data-end=\"2869\" />\n<h1 data-start=\"2871\" data-end=\"2902\"><strong data-start=\"2873\" data-end=\"2902\">🔎 Additional Information</strong></h1>\n<ul data-start=\"2903\" data-end=\"3171\">\n<li data-start=\"2903\" data-end=\"2944\">\n<p data-start=\"2905\" data-end=\"2944\"><strong data-start=\"2905\" data-end=\"2922\">Net Quantity:</strong> 30 pieces (7g each)</p>\n</li>\n<li data-start=\"2945\" data-end=\"2996\">\n<p data-start=\"2947\" data-end=\"2996\"><strong data-start=\"2947\" data-end=\"2956\">Type:</strong> Vijaya Edibles / Ayurvedic Wellness</p>\n</li>\n<li data-start=\"3019\" data-end=\"3093\">\n<p data-start=\"3021\" data-end=\"3093\"><strong data-start=\"3021\" data-end=\"3036\">Categories:</strong> Vijaya Medicine, Vijaya Capsules, Vijaya Edibles</p>\n</li>\n<li data-start=\"3094\" data-end=\"3171\">\n<p data-start=\"3096\" data-end=\"3171\"><strong data-start=\"3096\" data-end=\"3105\">Tags:</strong> Acute pain, Insomnia, Stress, Mood management, Strength-related</p>\n</li>\n</ul>",
+      "tabs": {
+        "description": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab\" id=\"tab-description\" role=\"tabpanel\" aria-labelledby=\"tab-title-description\">\n\t\t\t\t\n\n<p data-start=\"477\" data-end=\"658\">A delicious fusion of <strong data-start=\"499\" data-end=\"567\">traditional Indian mewa, premium herbs, and therapeutic Vijaya</strong> — crafted to support pain relief, better sleep, digestion, appetite, and overall wellness.</p>\n<p data-start=\"660\" data-end=\"893\">Sanan Mewa Modak Vati combines <strong data-start=\"691\" data-end=\"798\">natural ingredients like almonds, pistachios, cashews, raisins, jaggery, dates, saffron, rose petal jam</strong>, and <strong data-start=\"804\" data-end=\"823\">Vijaya leaves</strong> to create a powerful yet tasty edible designed for mind–body balance.</p>\n<p data-start=\"895\" data-end=\"1094\">These bite-sized wellness modaks are formulated to help you relax, sleep better, improve concentration, and support mental clarity — all while giving your body the nourishment of real mewa and herbs.</p>\n<p data-start=\"1096\" data-end=\"1183\">Enjoy <strong data-start=\"1102\" data-end=\"1121\">delicious taste</strong>, <strong data-start=\"1123\" data-end=\"1142\">premium quality</strong>, and <strong data-start=\"1148\" data-end=\"1167\">natural healing</strong> in every piece.</p>\n<hr data-start=\"1185\" data-end=\"1188\" />\n<h1 data-start=\"1190\" data-end=\"1210\"><strong data-start=\"1192\" data-end=\"1210\">✨ Key Benefits</strong></h1>\n<ul data-start=\"1211\" data-end=\"1523\">\n<li data-start=\"1211\" data-end=\"1260\">\n<p data-start=\"1213\" data-end=\"1260\">✔ <strong data-start=\"1215\" data-end=\"1248\">Helps relieve and manage pain</strong> naturally</p>\n</li>\n<li data-start=\"1261\" data-end=\"1305\">\n<p data-start=\"1263\" data-end=\"1305\">✔ <strong data-start=\"1265\" data-end=\"1288\">Promotes relaxation</strong> of mind &amp; body</p>\n</li>\n<li data-start=\"1306\" data-end=\"1371\">\n<p data-start=\"1308\" data-end=\"1371\">✔ <strong data-start=\"1310\" data-end=\"1342\">Helps reduce sleep disorders</strong> and improves sleep quality</p>\n</li>\n<li data-start=\"1372\" data-end=\"1413\">\n<p data-start=\"1374\" data-end=\"1413\">✔ <strong data-start=\"1376\" data-end=\"1397\">Improves appetite</strong> and digestion</p>\n</li>\n<li data-start=\"1414\" data-end=\"1454\">\n<p data-start=\"1416\" data-end=\"1454\">✔ <strong data-start=\"1418\" data-end=\"1452\">Enhances concentration &amp; focus</strong></p>\n</li>\n<li data-start=\"1455\" data-end=\"1523\">\n<p data-start=\"1457\" data-end=\"1523\">✔ <strong data-start=\"1459\" data-end=\"1488\">Holistic wellness formula</strong> made with premium mewa and herbs</p>\n</li>\n</ul>\n<hr data-start=\"1525\" data-end=\"1528\" />\n<h1 data-start=\"1530\" data-end=\"1557\"><strong data-start=\"1532\" data-end=\"1557\">🌿 Product Highlights</strong></h1>\n<ul data-start=\"1558\" data-end=\"1783\">\n<li data-start=\"1558\" data-end=\"1611\">\n<p data-start=\"1560\" data-end=\"1611\">30 pieces of premium Vijaya-infused mewa modaks</p>\n</li>\n<li data-start=\"1612\" data-end=\"1657\">\n<p data-start=\"1614\" data-end=\"1657\">Infused with powerful natural ingredients</p>\n</li>\n<li data-start=\"1658\" data-end=\"1702\">\n<p data-start=\"1660\" data-end=\"1702\">Authentic Ayurvedic-inspired formulation</p>\n</li>\n<li data-start=\"1703\" data-end=\"1742\">\n<p data-start=\"1705\" data-end=\"1742\">Crafted for safe daily wellness use</p>\n</li>\n<li data-start=\"1743\" data-end=\"1783\">\n<p data-start=\"1745\" data-end=\"1783\">Delicious, nutritious, and effective</p>\n</li>\n<li data-start=\"1743\" data-end=\"1783\">Infused with 99.99 percent Silver Coating</li>\n</ul>\n<hr data-start=\"1785\" data-end=\"1788\" />\n<h1 data-start=\"1790\" data-end=\"1826\"><strong data-start=\"1792\" data-end=\"1826\">📋 Ingredients (per 100 grams)</strong></h1>\n<p data-start=\"1828\" data-end=\"1894\">Below is the full ingredient breakdown in a clean, tabular format:</p>\n<div class=\"TyagGW_tableContainer\">\n<div class=\"group TyagGW_tableWrapper flex w-fit flex-col-reverse\" tabindex=\"-1\">\n<table class=\"w-fit min-w-(--thread-content-width)\" data-start=\"1896\" data-end=\"2864\">\n<thead data-start=\"1896\" data-end=\"1952\">\n<tr data-start=\"1896\" data-end=\"1952\">\n<th data-start=\"1896\" data-end=\"1920\" data-col-size=\"sm\"><strong data-start=\"1898\" data-end=\"1912\">Ingredient</strong></th>\n<th data-start=\"1920\" data-end=\"1952\" data-col-size=\"sm\"><strong data-start=\"1922\" data-end=\"1950\">Percentage / Description</strong></th>\n</tr>\n</thead>\n<tbody data-start=\"2010\" data-end=\"2864\">\n<tr data-start=\"2010\" data-end=\"2066\">\n<td data-start=\"2010\" data-end=\"2034\" data-col-size=\"sm\">Almond</td>\n<td data-col-size=\"sm\" data-start=\"2034\" data-end=\"2066\">2%</td>\n</tr>\n<tr data-start=\"2067\" data-end=\"2123\">\n<td data-start=\"2067\" data-end=\"2091\" data-col-size=\"sm\">Pistachio</td>\n<td data-start=\"2091\" data-end=\"2123\" data-col-size=\"sm\">1%</td>\n</tr>\n<tr data-start=\"2124\" data-end=\"2180\">\n<td data-start=\"2124\" data-end=\"2148\" data-col-size=\"sm\">Cashew</td>\n<td data-col-size=\"sm\" data-start=\"2148\" data-end=\"2180\">2%</td>\n</tr>\n<tr data-start=\"2181\" data-end=\"2237\">\n<td data-start=\"2181\" data-end=\"2205\" data-col-size=\"sm\">Raisin</td>\n<td data-start=\"2205\" data-end=\"2237\" data-col-size=\"sm\">1%</td>\n</tr>\n<tr data-start=\"2238\" data-end=\"2294\">\n<td data-start=\"2238\" data-end=\"2262\" data-col-size=\"sm\">Sugar</td>\n<td data-col-size=\"sm\" data-start=\"2262\" data-end=\"2294\">20%</td>\n</tr>\n<tr data-start=\"2295\" data-end=\"2351\">\n<td data-start=\"2295\" data-end=\"2319\" data-col-size=\"sm\">Candy Sugar</td>\n<td data-col-size=\"sm\" data-start=\"2319\" data-end=\"2351\">2%</td>\n</tr>\n<tr data-start=\"2352\" data-end=\"2408\">\n<td data-start=\"2352\" data-end=\"2376\" data-col-size=\"sm\">Salt</td>\n<td data-start=\"2376\" data-end=\"2408\" data-col-size=\"sm\">3%</td>\n</tr>\n<tr data-start=\"2409\" data-end=\"2465\">\n<td data-start=\"2409\" data-end=\"2433\" data-col-size=\"sm\">Vijaya Leaves</td>\n<td data-start=\"2433\" data-end=\"2465\" data-col-size=\"sm\">5%</td>\n</tr>\n<tr data-start=\"2466\" data-end=\"2522\">\n<td data-start=\"2466\" data-end=\"2490\" data-col-size=\"sm\">Rose Petal Jam</td>\n<td data-start=\"2490\" data-end=\"2522\" data-col-size=\"sm\">6%</td>\n</tr>\n<tr data-start=\"2523\" data-end=\"2579\">\n<td data-start=\"2523\" data-end=\"2547\" data-col-size=\"sm\">Saffron</td>\n<td data-start=\"2547\" data-end=\"2579\" data-col-size=\"sm\">Included</td>\n</tr>\n<tr data-start=\"2580\" data-end=\"2636\">\n<td data-start=\"2580\" data-end=\"2604\" data-col-size=\"sm\">Vark</td>\n<td data-col-size=\"sm\" data-start=\"2604\" data-end=\"2636\">Included</td>\n</tr>\n<tr data-start=\"2637\" data-end=\"2693\">\n<td data-start=\"2637\" data-end=\"2661\" data-col-size=\"sm\">Magaj Seeds</td>\n<td data-start=\"2661\" data-end=\"2693\" data-col-size=\"sm\">2%</td>\n</tr>\n<tr data-start=\"2694\" data-end=\"2750\">\n<td data-start=\"2694\" data-end=\"2718\" data-col-size=\"sm\">Dates</td>\n<td data-col-size=\"sm\" data-start=\"2718\" data-end=\"2750\">30%</td>\n</tr>\n<tr data-start=\"2751\" data-end=\"2807\">\n<td data-start=\"2751\" data-end=\"2775\" data-col-size=\"sm\">Jaggery</td>\n<td data-col-size=\"sm\" data-start=\"2775\" data-end=\"2807\">20%</td>\n</tr>\n<tr data-start=\"2808\" data-end=\"2864\">\n<td data-start=\"2808\" data-end=\"2832\" data-col-size=\"sm\">Poppy Seeds</td>\n<td data-col-size=\"sm\" data-start=\"2832\" data-end=\"2864\">1%</td>\n</tr>\n</tbody>\n</table>\n</div>",
+          "text": "A delicious fusion of traditional Indian mewa, premium herbs, and therapeutic Vijaya — crafted to support pain relief, better sleep, digestion, appetite, and overall wellness. Sanan Mewa Modak Vati combines natural ingredients like almonds, pistachios, cashews, raisins, jaggery, dates, saffron, rose petal jam , and Vijaya leaves to create a powerful yet tasty edible designed for mind–body balance. These bite-sized wellness modaks are formulated to help you relax, sleep better, improve concentration, and support mental clarity — all while giving your body the nourishment of real mewa and herbs. Enjoy delicious taste , premium quality , and natural healing in every piece. ✨ Key Benefits ✔ Helps relieve and manage pain naturally ✔ Promotes relaxation of mind & body ✔ Helps reduce sleep disorders and improves sleep quality ✔ Improves appetite and digestion ✔ Enhances concentration & focus ✔ Holistic wellness formula made with premium mewa and herbs 🌿 Product Highlights 30 pieces of premium Vijaya-infused mewa modaks Infused with powerful natural ingredients Authentic Ayurvedic-inspired formulation Crafted for safe daily wellness use Delicious, nutritious, and effective Infused with 99.99 percent Silver Coating 📋 Ingredients (per 100 grams) Below is the full ingredient breakdown in a clean, tabular format: Ingredient Percentage / Description Almond 2% Pistachio 1% Cashew 2% Raisin 1% Sugar 20% Candy Sugar 2% Salt 3% Vijaya Leaves 5% Rose Petal Jam 6% Saffron Included Vark Included Magaj Seeds 2% Dates 30% Jaggery 20% Poppy Seeds 1%"
+        },
+        "additional_information": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content wc-tab\" id=\"tab-additional_information\" role=\"tabpanel\" aria-labelledby=\"tab-title-additional_information\">\n\t\t\t\t\n\n<table class=\"woocommerce-product-attributes shop_attributes\" aria-label=\"Product Details\">\n\t\t\t<tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--weight\">\n\t\t\t<th class=\"woocommerce-product-attributes-item__label\" scope=\"row\">Weight</th>\n\t\t\t<td class=\"woocommerce-product-attributes-item__value\">0.49 kg</td>\n\t\t</tr>\n\t\t\t<tr class=\"woocommerce-product-attributes-item woocommerce-product-attributes-item--dimensions\">\n\t\t\t<th class=\"woocommerce-product-attributes-item__label\" scope=\"row\">Dimensions</th>\n\t\t\t<td class=\"woocommerce-product-attributes-item__value\">19 &times; 11 &times; 9 cm</td>\n\t\t</tr>\n\t</table>\n\t\t\t</div>",
+          "text": "Weight 0.49 kg Dimensions 19 &times; 11 &times; 9 cm"
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\t1 review for <span>Sanan Mewa Modak Vati – Vijaya edible (10500mg | 30 Pieces)</span>\t\t</h2>\n\n\t\t\t\t\t<ol class=\"commentlist\">\n\t\t\t\t<li class=\"review byuser comment-author-mehtanidhi0001gmail-com bypostauthor even thread-even depth-1\" id=\"li-comment-1200\">\n\n\t<div id=\"comment-1200\" class=\"comment_container\">\n\n\t\t<img alt='' src='https://secure.gravatar.com/avatar/36591a899929d199dce2abada9e8c043498ccb8abe2d59ae603298ffba8fd1d9?s=60&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/36591a899929d199dce2abada9e8c043498ccb8abe2d59ae603298ffba8fd1d9?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' decoding='async'/>\n\t\t<div class=\"comment-text\">\n\n\t\t\t<div class=\"review-rating\"><div class=\"star-rating\"><span style=\"width:100%\">Rated <strong class=\"rating\">5</strong> out of 5</span></div>",
+          "text": "1 review for Sanan Mewa Modak Vati – Vijaya edible (10500mg | 30 Pieces) Rated 5 out of 5"
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2025/12/modak-vati.png",
+          "alt": "Sanan Mewa Modak Vati – Vijaya edible (10500mg | 30 Pieces) - Sanan Relief Formulation"
+        },
+        {
+          "position": 2,
+          "url": "https://sananindia.com/wp-content/uploads/2025/12/Product_packaging_in_studio_ligh…_202606271246.jpeg",
+          "alt": "Sanan Mewa Modak Vati – Vijaya edible (10500mg | 30 Pieces) - Sanan Relief Formulation"
+        },
+        {
+          "position": 3,
+          "url": "https://sananindia.com/wp-content/uploads/2025/12/Product_packaging_in_studio_ligh…_202606271315.jpeg",
+          "alt": "Sanan Mewa Modak Vati – Vijaya edible (10500mg | 30 Pieces) - Sanan Relief Formulation"
+        },
+        {
+          "position": 4,
+          "url": "https://sananindia.com/wp-content/uploads/2025/12/Product_packaging_in_studio_ligh…_202606271541.png",
+          "alt": "Sanan Mewa Modak Vati – Vijaya edible (10500mg | 30 Pieces) - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Oral titration as advised by physician",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 388,
+      "title": "Gummy Vati Plus",
+      "handle": "gummy-vati-plus",
+      "url": "https://sananindia.com/product/gummy-vati-plus/",
+      "type": "variable",
+      "sku": "SN-388",
+      "vendor": "Sanan Relief",
+      "product_type": "Edible",
+      "categories": [
+        {
+          "id": 34,
+          "name": "Edible",
+          "slug": "edible",
+          "link": "https://sananindia.com/product-category/edible/"
+        },
+        {
+          "id": 22,
+          "name": "Wellness",
+          "slug": "wellness",
+          "link": "https://sananindia.com/product-category/wellness/"
+        }
+      ],
+      "tags": [
+        "Gummy"
+      ],
+      "is_in_stock": true,
+      "on_sale": true,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 1499,
+        "regular_price": 2499,
+        "sale_price": 1499,
+        "price_range": {
+          "min": 1499,
+          "max": 4199
+        }
+      },
+      "attributes": [
+        {
+          "name": "Pack Size",
+          "options": [
+            "10 Days Pack",
+            "20 Days Pack",
+            "30 Days Pack"
+          ]
+        }
+      ],
+      "variations": [
+        {
+          "id": 547,
+          "sku": "GMVT-10",
+          "attributes": {
+            "pack size": "10 Days Pack"
+          },
+          "price": 1499,
+          "regular_price": 2499,
+          "is_in_stock": true,
+          "weight": "0.150",
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2025/09/asdaca.png"
+        },
+        {
+          "id": 548,
+          "sku": "GMVT-20",
+          "attributes": {
+            "pack size": "20 Days Pack"
+          },
+          "price": 2799,
+          "regular_price": 6998,
+          "is_in_stock": true,
+          "weight": "0.300",
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2025/09/asdaca.png"
+        },
+        {
+          "id": 549,
+          "sku": "GMVT-30",
+          "attributes": {
+            "pack size": "30 Days Pack"
+          },
+          "price": 4199,
+          "regular_price": 10497,
+          "is_in_stock": true,
+          "weight": "0.450",
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "height": ""
+          },
+          "image": "https://sananindia.com/wp-content/uploads/2025/09/asdaca.png"
+        }
+      ],
+      "short_description": "PRODUCT OVERVIEW Gummy Vati Plus is a premium Ayurvedic proprietary medicine formulated as easy-to-consume gummies. Crafted by Mehta Ayurvedic Sansthaan (established 1985), this natural wellness solution combines time-tested herbs to manage stress, anxiety, and sleep disorders. KEY BENEFITS Stress & Anxiety Relief – Natural calming properties reduce daily stress Quality Sleep Support – Promotes long hours of restful sleep Muscle Relaxation – Reduces tension and inflammation naturally ACTIVE INGREDIENTS Primary Herbs: Ashwagandha (11%), Arjun Tvak (10%), Haritaki (10%), Pippali Mool (10%), Shunthi (8%), Vijaya (5%), Nimbu Sat (7%) Natural Base: Sugar, Glucose, Natural Flavoring, Sodium Citrate INDICATIONS Effective in treating sleeping disorders, anxiety, and depression. USAGE 10 Gummies per pack | As directed by physician",
+      "short_description_html": "<h3>PRODUCT OVERVIEW</h3>\n<p><strong>Gummy Vati Plus</strong> is a premium Ayurvedic proprietary medicine formulated as easy-to-consume gummies. Crafted by Mehta Ayurvedic Sansthaan (established 1985), this natural wellness solution combines time-tested herbs to manage stress, anxiety, and sleep disorders.</p>\n<h3>KEY BENEFITS</h3>\n<ul>\n<li><strong>Stress &amp; Anxiety Relief</strong> &#8211; Natural calming properties reduce daily stress</li>\n<li><strong>Quality Sleep Support</strong> &#8211; Promotes long hours of restful sleep</li>\n<li><strong>Muscle Relaxation</strong> &#8211; Reduces tension and inflammation naturally</li>\n</ul>\n<h3>ACTIVE INGREDIENTS</h3>\n<p><strong>Primary Herbs:</strong> Ashwagandha (11%), Arjun Tvak (10%), Haritaki (10%), Pippali Mool (10%), Shunthi (8%), Vijaya (5%), Nimbu Sat (7%)</p>\n<p><strong>Natural Base:</strong> Sugar, Glucose, Natural Flavoring, Sodium Citrate</p>\n<h3>INDICATIONS</h3>\n<p>Effective in treating sleeping disorders, anxiety, and depression.</p>\n<h3>USAGE</h3>\n<p><strong>10 Gummies per pack</strong> | As directed by physician</p>",
+      "description": "GUMMY VATI PLUS KEY BENEFITS Primary Therapeutic Actions: Stress & Anxiety Management – Natural adaptogenic herbs help regulate cortisol levels and promote mental calmness Sleep Quality Enhancement – Supports long hours of restful, rejuvenating sleep through natural sedative properties Muscle Relaxation & Anti-inflammatory – Reduces muscle tension and inflammation throughout the body COMPOSITION (Per Gummy) Ingredient Percentage Therapeutic Role Ashwagandha 11% Adaptogen for stress relief and anxiety management Pippali Mool 10% Respiratory support and bioavailability enhancer Arjun Tvak 10% Cardiovascular support and stress management Haritaki 10% Digestive health and detoxification Shunthi 8% Anti-inflammatory and digestive support Nimbu Sat 7% Vitamin C source and flavor enhancement Vijaya 5% Natural relaxant and sleep inducer Sodium Citrate 4% Stabilizer and pH regulator Permitted Flavour 2% Natural taste enhancement Sugar 15% Natural sweetener and base Glucose 15% Energy source and texture Setting Agent 5% Gummy formation and stability Total: 100% CLINICAL INDICATIONS Primary Conditions: Sleep disorders and insomnia Anxiety and stress-related conditions Depression and mood disorders Muscle tension and inflammation Therapeutic Category: Anxiolytic, Sedative, Adaptogenic, Anti-inflammatory PRODUCT SPECIFICATIONS Physical Characteristics: Form: Chewable gummies Color: Natural herb-derived Texture: Soft, chewy consistency Flavor: Naturally flavored with permitted additives Storage Conditions: Store in cool, dry place Protect from direct sunlight Keep container tightly closed Store below 30°C temperature Shelf Life: 24 months from date of manufacture REGULATORY INFORMATION Licensing & Compliance: Drug License No.: 25D/55/96 Excise License No.: 22/2022/0022 Classification: Ayurvedic Proprietary Medicine Regulatory Status: Approved under Ayush Ministry guidelines MSME Registered: Micro, Small & Medium Enterprises certified Quality Assurance: GMP compliant manufacturing facility Quality tested at multiple stages Standardized herbal extracts used Consistent potency and purity AYURVEDIC PRINCIPLES Dosha Balance: Primarily balances Vata and Pitta doshas Rasa (Taste): Madhura (Sweet), Tikta (Bitter), Katu (Pungent) Virya (Potency): Sheeta (Cooling) and Ushna (Warming) combination Prabhava (Special Effect): Medhya (Brain tonic) and Nidrajanana (Sleep inducing) SAFETY INFORMATION Contraindications: Pregnancy and lactation (consult physician) Children under 12 years (medical supervision required) Severe cardiac conditions (professional guidance needed) Drug Interactions: Inform physician about concurrent medications, especially sedatives or anxiolytics.",
+      "description_html": "<h1>GUMMY VATI PLUS</h1>\n<p>&nbsp;</p>\n<h3>KEY BENEFITS</h3>\n<p><strong>Primary Therapeutic Actions:</strong></p>\n<ul>\n<li><strong>Stress &amp; Anxiety Management</strong> &#8211; Natural adaptogenic herbs help regulate cortisol levels and promote mental calmness</li>\n<li><strong>Sleep Quality Enhancement</strong> &#8211; Supports long hours of restful, rejuvenating sleep through natural sedative properties</li>\n<li><strong>Muscle Relaxation &amp; Anti-inflammatory</strong> &#8211; Reduces muscle tension and inflammation throughout the body</li>\n</ul>\n<hr />\n<h3>COMPOSITION (Per Gummy)</h3>\n<table>\n<thead>\n<tr>\n<th>Ingredient</th>\n<th>Percentage</th>\n<th>Therapeutic Role</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Ashwagandha</strong></td>\n<td>11%</td>\n<td>Adaptogen for stress relief and anxiety management</td>\n</tr>\n<tr>\n<td><strong>Pippali Mool</strong></td>\n<td>10%</td>\n<td>Respiratory support and bioavailability enhancer</td>\n</tr>\n<tr>\n<td><strong>Arjun Tvak</strong></td>\n<td>10%</td>\n<td>Cardiovascular support and stress management</td>\n</tr>\n<tr>\n<td><strong>Haritaki</strong></td>\n<td>10%</td>\n<td>Digestive health and detoxification</td>\n</tr>\n<tr>\n<td><strong>Shunthi</strong></td>\n<td>8%</td>\n<td>Anti-inflammatory and digestive support</td>\n</tr>\n<tr>\n<td><strong>Nimbu Sat</strong></td>\n<td>7%</td>\n<td>Vitamin C source and flavor enhancement</td>\n</tr>\n<tr>\n<td><strong>Vijaya</strong></td>\n<td>5%</td>\n<td>Natural relaxant and sleep inducer</td>\n</tr>\n<tr>\n<td><strong>Sodium Citrate</strong></td>\n<td>4%</td>\n<td>Stabilizer and pH regulator</td>\n</tr>\n<tr>\n<td><strong>Permitted Flavour</strong></td>\n<td>2%</td>\n<td>Natural taste enhancement</td>\n</tr>\n<tr>\n<td><strong>Sugar</strong></td>\n<td>15%</td>\n<td>Natural sweetener and base</td>\n</tr>\n<tr>\n<td><strong>Glucose</strong></td>\n<td>15%</td>\n<td>Energy source and texture</td>\n</tr>\n<tr>\n<td><strong>Setting Agent</strong></td>\n<td>5%</td>\n<td>Gummy formation and stability</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Total:</strong> 100%</p>\n<hr />\n<h3>CLINICAL INDICATIONS</h3>\n<p><strong>Primary Conditions:</strong></p>\n<ul>\n<li>Sleep disorders and insomnia</li>\n<li>Anxiety and stress-related conditions</li>\n<li>Depression and mood disorders</li>\n<li>Muscle tension and inflammation</li>\n</ul>\n<p><strong>Therapeutic Category:</strong> Anxiolytic, Sedative, Adaptogenic, Anti-inflammatory</p>\n<hr />\n<p><span style=\"font-size: 1.5em;font-weight: bold\">PRODUCT SPECIFICATIONS</span></p>\n<p><strong>Physical Characteristics:</strong></p>\n<ul>\n<li>Form: Chewable gummies</li>\n<li>Color: Natural herb-derived</li>\n<li>Texture: Soft, chewy consistency</li>\n<li>Flavor: Naturally flavored with permitted additives</li>\n</ul>\n<p><strong>Storage Conditions:</strong></p>\n<ul>\n<li>Store in cool, dry place</li>\n<li>Protect from direct sunlight</li>\n<li>Keep container tightly closed</li>\n<li>Store below 30°C temperature</li>\n</ul>\n<p><strong>Shelf Life:</strong> 24 months from date of manufacture</p>\n<hr />\n<h3>REGULATORY INFORMATION</h3>\n<p><strong>Licensing &amp; Compliance:</strong></p>\n<ul>\n<li><strong>Drug License No.:</strong> 25D/55/96</li>\n<li><strong>Excise License No.:</strong> 22/2022/0022</li>\n<li><strong>Classification:</strong> Ayurvedic Proprietary Medicine</li>\n<li><strong>Regulatory Status:</strong> Approved under Ayush Ministry guidelines</li>\n<li><strong>MSME Registered:</strong> Micro, Small &amp; Medium Enterprises certified</li>\n</ul>\n<hr />\n<p>&nbsp;</p>\n<p><strong>Quality Assurance:</strong></p>\n<ul>\n<li>GMP compliant manufacturing facility</li>\n<li>Quality tested at multiple stages</li>\n<li>Standardized herbal extracts used</li>\n<li>Consistent potency and purity</li>\n</ul>\n<hr />\n<h3>AYURVEDIC PRINCIPLES</h3>\n<p><strong>Dosha Balance:</strong> Primarily balances Vata and Pitta doshas <strong>Rasa (Taste):</strong> Madhura (Sweet), Tikta (Bitter), Katu (Pungent) <strong>Virya (Potency):</strong> Sheeta (Cooling) and Ushna (Warming) combination <strong>Prabhava (Special Effect):</strong> Medhya (Brain tonic) and Nidrajanana (Sleep inducing)</p>\n<hr />\n<h3>SAFETY INFORMATION</h3>\n<p><strong>Contraindications:</strong></p>\n<ul>\n<li>Pregnancy and lactation (consult physician)</li>\n<li>Children under 12 years (medical supervision required)</li>\n<li>Severe cardiac conditions (professional guidance needed)</li>\n</ul>\n<p><strong>Drug Interactions:</strong> Inform physician about concurrent medications, especially sedatives or anxiolytics.</p>\n<h3></h3>\n<p>&nbsp;</p>",
+      "tabs": {},
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2025/09/asdaca.png",
+          "alt": "Gummy Vati Plus - Sanan Relief Formulation"
+        },
+        {
+          "position": 2,
+          "url": "https://sananindia.com/wp-content/uploads/2025/09/slider-m002.webp_202606271225.jpeg",
+          "alt": "Gummy Vati Plus - Sanan Relief Formulation"
+        },
+        {
+          "position": 3,
+          "url": "https://sananindia.com/wp-content/uploads/2025/12/slider-m002.webp_202606271328.jpeg",
+          "alt": "Gummy Vati Plus - Sanan Relief Formulation"
+        },
+        {
+          "position": 4,
+          "url": "https://sananindia.com/wp-content/uploads/2025/09/GUMMIE-1.png",
+          "alt": "Gummy Vati Plus - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Oral titration as advised by physician",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 197,
+      "title": "Pain Relief Patch (pack of 5)",
+      "handle": "pain-relief-patch-10-pcs",
+      "url": "https://sananindia.com/product/pain-relief-patch-10-pcs/",
+      "type": "simple",
+      "sku": "SN-197",
+      "vendor": "Sanan Relief",
+      "product_type": "Pain Management",
+      "categories": [
+        {
+          "id": 20,
+          "name": "Pain Management",
+          "slug": "pain-management",
+          "link": "https://sananindia.com/product-category/pain-management/"
+        }
+      ],
+      "tags": [],
+      "is_in_stock": true,
+      "on_sale": false,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 699,
+        "regular_price": 699,
+        "sale_price": 699,
+        "price_range": null
+      },
+      "attributes": [],
+      "variations": [],
+      "short_description": "Easy-to-apply herbal patches infused with Vijaya (hemp) leaf extract and natural botanicals, designed for long-lasting comfort from muscle and joint stiffness. Ideal for targeted, on-the-go relief.",
+      "short_description_html": "<p data-start=\"213\" data-end=\"412\">Easy-to-apply herbal patches infused with Vijaya (hemp) leaf extract and natural botanicals, designed for long-lasting comfort from muscle and joint stiffness. Ideal for targeted, on-the-go relief.</p>",
+      "description": "The Sanan India Pain Relief Patch offers a simple, mess-free way to experience herbal comfort. Each patch is infused with Vijaya (hemp) leaf extract and other plant-based ingredients, providing targeted, sustained relief to muscles and joints. Perfect for use during daily activities, workouts, or while traveling, these patches are discreet and easy to wear under clothing. Produced in ISO & GMP-certified facilities and licensed under the Ministry of Ayush , every pack is made with care and quality. Key Benefits Long-Lasting Support: Delivers steady herbal comfort for several hours. Targeted Action: Place directly over the affected area for maximum effectiveness. Convenient & Discreet: Slim, comfortable design that fits under clothes. Natural Care: Contains Vijaya leaf extract and selected herbal compounds. Mess-Free Application: No spills, no greasiness — just peel and stick. How to Use Clean and dry the affected area. Peel off the protective backing. Apply the patch directly to the skin over the discomfort area. Remove after the recommended duration mentioned on the packaging. Ideal For Lower back stiffness Shoulder and neck discomfort Joint aches after activity On-the-go herbal care Storage Instructions Store in a cool, dry place away from direct sunlight. Keep patches sealed until use. Note For external use only. Avoid applying to broken or irritated skin. Discontinue use if redness or irritation occurs.",
+      "description_html": "<p data-start=\"475\" data-end=\"857\">The <strong data-start=\"479\" data-end=\"512\">Sanan India Pain Relief Patch</strong> offers a simple, mess-free way to experience herbal comfort. Each patch is infused with Vijaya (hemp) leaf extract and other plant-based ingredients, providing targeted, sustained relief to muscles and joints.<br data-start=\"722\" data-end=\"725\" />Perfect for use during daily activities, workouts, or while traveling, these patches are discreet and easy to wear under clothing.</p>\n<p data-start=\"859\" data-end=\"995\">Produced in <strong data-start=\"871\" data-end=\"905\">ISO &amp; GMP-certified facilities</strong> and licensed under the <strong data-start=\"929\" data-end=\"950\">Ministry of Ayush</strong>, every pack is made with care and quality.</p>\n<hr data-start=\"997\" data-end=\"1000\" />\n<h4 data-start=\"1002\" data-end=\"1025\"><strong data-start=\"1007\" data-end=\"1023\">Key Benefits</strong></h4>\n<ul data-start=\"1026\" data-end=\"1437\">\n<li data-start=\"1026\" data-end=\"1105\">\n<p data-start=\"1028\" data-end=\"1105\"><strong data-start=\"1028\" data-end=\"1053\">Long-Lasting Support:</strong> Delivers steady herbal comfort for several hours.</p>\n</li>\n<li data-start=\"1106\" data-end=\"1195\">\n<p data-start=\"1108\" data-end=\"1195\"><strong data-start=\"1108\" data-end=\"1128\">Targeted Action:</strong> Place directly over the affected area for maximum effectiveness.</p>\n</li>\n<li data-start=\"1196\" data-end=\"1276\">\n<p data-start=\"1198\" data-end=\"1276\"><strong data-start=\"1198\" data-end=\"1224\">Convenient &amp; Discreet:</strong> Slim, comfortable design that fits under clothes.</p>\n</li>\n<li data-start=\"1277\" data-end=\"1358\">\n<p data-start=\"1279\" data-end=\"1358\"><strong data-start=\"1279\" data-end=\"1296\">Natural Care:</strong> Contains Vijaya leaf extract and selected herbal compounds.</p>\n</li>\n<li data-start=\"1359\" data-end=\"1437\">\n<p data-start=\"1361\" data-end=\"1437\"><strong data-start=\"1361\" data-end=\"1387\">Mess-Free Application:</strong> No spills, no greasiness — just peel and stick.</p>\n</li>\n</ul>\n<hr data-start=\"1439\" data-end=\"1442\" />\n<h4 data-start=\"1444\" data-end=\"1465\"><strong data-start=\"1449\" data-end=\"1463\">How to Use</strong></h4>\n<ol data-start=\"1466\" data-end=\"1680\">\n<li data-start=\"1466\" data-end=\"1503\">\n<p data-start=\"1469\" data-end=\"1503\">Clean and dry the affected area.</p>\n</li>\n<li data-start=\"1504\" data-end=\"1541\">\n<p data-start=\"1507\" data-end=\"1541\">Peel off the protective backing.</p>\n</li>\n<li data-start=\"1542\" data-end=\"1609\">\n<p data-start=\"1545\" data-end=\"1609\">Apply the patch directly to the skin over the discomfort area.</p>\n</li>\n<li data-start=\"1610\" data-end=\"1680\">\n<p data-start=\"1613\" data-end=\"1680\">Remove after the recommended duration mentioned on the packaging.</p>\n</li>\n</ol>\n<hr data-start=\"1682\" data-end=\"1685\" />\n<h4 data-start=\"1687\" data-end=\"1707\"><strong data-start=\"1692\" data-end=\"1705\">Ideal For</strong></h4>\n<ul data-start=\"1708\" data-end=\"1822\">\n<li data-start=\"1708\" data-end=\"1732\">\n<p data-start=\"1710\" data-end=\"1732\">Lower back stiffness</p>\n</li>\n<li data-start=\"1733\" data-end=\"1765\">\n<p data-start=\"1735\" data-end=\"1765\">Shoulder and neck discomfort</p>\n</li>\n<li data-start=\"1766\" data-end=\"1796\">\n<p data-start=\"1768\" data-end=\"1796\">Joint aches after activity</p>\n</li>\n<li data-start=\"1797\" data-end=\"1822\">\n<p data-start=\"1799\" data-end=\"1822\">On-the-go herbal care</p>\n</li>\n</ul>\n<hr data-start=\"1824\" data-end=\"1827\" />\n<h4 data-start=\"1829\" data-end=\"1860\"><strong data-start=\"1834\" data-end=\"1858\">Storage Instructions</strong></h4>\n<p data-start=\"1861\" data-end=\"1947\">Store in a cool, dry place away from direct sunlight. Keep patches sealed until use.</p>\n<hr data-start=\"1949\" data-end=\"1952\" />\n<h4 data-start=\"1954\" data-end=\"1969\"><strong data-start=\"1959\" data-end=\"1967\">Note</strong></h4>\n<p data-start=\"1970\" data-end=\"2087\">For external use only. Avoid applying to broken or irritated skin. Discontinue use if redness or irritation occurs.</p>",
+      "tabs": {
+        "description": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab\" id=\"tab-description\" role=\"tabpanel\" aria-labelledby=\"tab-title-description\">\n\t\t\t\t\n\n<p data-start=\"475\" data-end=\"857\">The <strong data-start=\"479\" data-end=\"512\">Sanan India Pain Relief Patch</strong> offers a simple, mess-free way to experience herbal comfort. Each patch is infused with Vijaya (hemp) leaf extract and other plant-based ingredients, providing targeted, sustained relief to muscles and joints.<br data-start=\"722\" data-end=\"725\" />Perfect for use during daily activities, workouts, or while traveling, these patches are discreet and easy to wear under clothing.</p>\n<p data-start=\"859\" data-end=\"995\">Produced in <strong data-start=\"871\" data-end=\"905\">ISO &amp; GMP-certified facilities</strong> and licensed under the <strong data-start=\"929\" data-end=\"950\">Ministry of Ayush</strong>, every pack is made with care and quality.</p>\n<hr data-start=\"997\" data-end=\"1000\" />\n<h4 data-start=\"1002\" data-end=\"1025\"><strong data-start=\"1007\" data-end=\"1023\">Key Benefits</strong></h4>\n<ul data-start=\"1026\" data-end=\"1437\">\n<li data-start=\"1026\" data-end=\"1105\">\n<p data-start=\"1028\" data-end=\"1105\"><strong data-start=\"1028\" data-end=\"1053\">Long-Lasting Support:</strong> Delivers steady herbal comfort for several hours.</p>\n</li>\n<li data-start=\"1106\" data-end=\"1195\">\n<p data-start=\"1108\" data-end=\"1195\"><strong data-start=\"1108\" data-end=\"1128\">Targeted Action:</strong> Place directly over the affected area for maximum effectiveness.</p>\n</li>\n<li data-start=\"1196\" data-end=\"1276\">\n<p data-start=\"1198\" data-end=\"1276\"><strong data-start=\"1198\" data-end=\"1224\">Convenient &amp; Discreet:</strong> Slim, comfortable design that fits under clothes.</p>\n</li>\n<li data-start=\"1277\" data-end=\"1358\">\n<p data-start=\"1279\" data-end=\"1358\"><strong data-start=\"1279\" data-end=\"1296\">Natural Care:</strong> Contains Vijaya leaf extract and selected herbal compounds.</p>\n</li>\n<li data-start=\"1359\" data-end=\"1437\">\n<p data-start=\"1361\" data-end=\"1437\"><strong data-start=\"1361\" data-end=\"1387\">Mess-Free Application:</strong> No spills, no greasiness — just peel and stick.</p>\n</li>\n</ul>\n<hr data-start=\"1439\" data-end=\"1442\" />\n<h4 data-start=\"1444\" data-end=\"1465\"><strong data-start=\"1449\" data-end=\"1463\">How to Use</strong></h4>\n<ol data-start=\"1466\" data-end=\"1680\">\n<li data-start=\"1466\" data-end=\"1503\">\n<p data-start=\"1469\" data-end=\"1503\">Clean and dry the affected area.</p>\n</li>\n<li data-start=\"1504\" data-end=\"1541\">\n<p data-start=\"1507\" data-end=\"1541\">Peel off the protective backing.</p>\n</li>\n<li data-start=\"1542\" data-end=\"1609\">\n<p data-start=\"1545\" data-end=\"1609\">Apply the patch directly to the skin over the discomfort area.</p>\n</li>\n<li data-start=\"1610\" data-end=\"1680\">\n<p data-start=\"1613\" data-end=\"1680\">Remove after the recommended duration mentioned on the packaging.</p>\n</li>\n</ol>\n<hr data-start=\"1682\" data-end=\"1685\" />\n<h4 data-start=\"1687\" data-end=\"1707\"><strong data-start=\"1692\" data-end=\"1705\">Ideal For</strong></h4>\n<ul data-start=\"1708\" data-end=\"1822\">\n<li data-start=\"1708\" data-end=\"1732\">\n<p data-start=\"1710\" data-end=\"1732\">Lower back stiffness</p>\n</li>\n<li data-start=\"1733\" data-end=\"1765\">\n<p data-start=\"1735\" data-end=\"1765\">Shoulder and neck discomfort</p>\n</li>\n<li data-start=\"1766\" data-end=\"1796\">\n<p data-start=\"1768\" data-end=\"1796\">Joint aches after activity</p>\n</li>\n<li data-start=\"1797\" data-end=\"1822\">\n<p data-start=\"1799\" data-end=\"1822\">On-the-go herbal care</p>\n</li>\n</ul>\n<hr data-start=\"1824\" data-end=\"1827\" />\n<h4 data-start=\"1829\" data-end=\"1860\"><strong data-start=\"1834\" data-end=\"1858\">Storage Instructions</strong></h4>\n<p data-start=\"1861\" data-end=\"1947\">Store in a cool, dry place away from direct sunlight. Keep patches sealed until use.</p>\n<hr data-start=\"1949\" data-end=\"1952\" />\n<h4 data-start=\"1954\" data-end=\"1969\"><strong data-start=\"1959\" data-end=\"1967\">Note</strong></h4>\n<p data-start=\"1970\" data-end=\"2087\">For external use only. Avoid applying to broken or irritated skin. Discontinue use if redness or irritation occurs.</p>\n\n    <div class=\"xs_social_share_widget xs_share_url after_content \t\tmain_content  wslu-style-1 wslu-share-box-shaped wslu-fill-colored wslu-none wslu-share-horizontal wslu-theme-font-no wslu-main_content\">\n\n\t\t\n        <ul>\n\t\t\t        </ul>\n    </div>",
+          "text": "The Sanan India Pain Relief Patch offers a simple, mess-free way to experience herbal comfort. Each patch is infused with Vijaya (hemp) leaf extract and other plant-based ingredients, providing targeted, sustained relief to muscles and joints. Perfect for use during daily activities, workouts, or while traveling, these patches are discreet and easy to wear under clothing. Produced in ISO & GMP-certified facilities and licensed under the Ministry of Ayush , every pack is made with care and quality. Key Benefits Long-Lasting Support: Delivers steady herbal comfort for several hours. Targeted Action: Place directly over the affected area for maximum effectiveness. Convenient & Discreet: Slim, comfortable design that fits under clothes. Natural Care: Contains Vijaya leaf extract and selected herbal compounds. Mess-Free Application: No spills, no greasiness — just peel and stick. How to Use Clean and dry the affected area. Peel off the protective backing. Apply the patch directly to the skin over the discomfort area. Remove after the recommended duration mentioned on the packaging. Ideal For Lower back stiffness Shoulder and neck discomfort Joint aches after activity On-the-go herbal care Storage Instructions Store in a cool, dry place away from direct sunlight. Keep patches sealed until use. Note For external use only. Avoid applying to broken or irritated skin. Discontinue use if redness or irritation occurs."
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\tReviews\t\t</h2>\n\n\t\t\t\t\t<p class=\"woocommerce-noreviews\">There are no reviews yet.</p>\n\t\t\t</div>",
+          "text": "Reviews There are no reviews yet."
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2025/08/blue.jpeg",
+          "alt": "Pain Relief Patch (pack of 5) - Sanan Relief Formulation"
+        },
+        {
+          "position": 2,
+          "url": "https://sananindia.com/wp-content/uploads/2025/08/Document-1.png",
+          "alt": "Pain Relief Patch (pack of 5) - Sanan Relief Formulation"
+        },
+        {
+          "position": 3,
+          "url": "https://sananindia.com/wp-content/uploads/2025/08/Sanan_Relief_pain_relief_patches_202607091804.jpeg",
+          "alt": "Pain Relief Patch (pack of 5) - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Topical localized massage",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 195,
+      "title": "Pain Relief Gel (30 gm)",
+      "handle": "pain-relief-gel-30-gm",
+      "url": "https://sananindia.com/product/pain-relief-gel-30-gm/",
+      "type": "simple",
+      "sku": "SN-195",
+      "vendor": "Sanan Relief",
+      "product_type": "Pain Management",
+      "categories": [
+        {
+          "id": 20,
+          "name": "Pain Management",
+          "slug": "pain-management",
+          "link": "https://sananindia.com/product-category/pain-management/"
+        }
+      ],
+      "tags": [],
+      "is_in_stock": false,
+      "on_sale": true,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 600,
+        "regular_price": 900,
+        "sale_price": 600,
+        "price_range": null
+      },
+      "attributes": [],
+      "variations": [],
+      "short_description": "A fast-absorbing herbal gel infused with Vijaya (hemp) leaf extract and natural cooling agents, designed to soothe sore muscles and joints while providing a refreshing sensation of relief.",
+      "short_description_html": "<p>A fast-absorbing herbal gel infused with Vijaya (hemp) leaf extract and natural cooling agents, designed to soothe sore muscles and joints while providing a refreshing sensation of relief.</p>",
+      "description": "The Sanan India Pain Relief Gel is a non-greasy, fast-acting formula created to help ease muscle and joint discomfort. Enriched with Vijaya (hemp) leaf extract and carefully selected herbal ingredients, this gel delivers a cooling effect that helps relax stiffness and refresh tired areas. Produced in ISO & GMP-certified facilities and licensed under the Ministry of Ayush, every batch meets our high standards of safety and quality. Key Benefits Quick Relief: Provides a refreshing cooling sensation that helps relax stiff muscles. Targeted Action: Ideal for localized discomfort in joints, back, neck, or shoulders. Fast Absorption: Lightweight gel texture that leaves no sticky residue. Natural Care: Combines plant-based extracts with traditional herbal wisdom. Travel-Friendly: Compact packaging for easy, on-the-go application. How to Use Apply a small amount of gel to the affected area. Massage gently in circular motions until fully absorbed. Use 2–3 times daily or as required. For external use only. Ideal For Muscle stiffness after workouts Neck and shoulder tension Joint discomfort from daily activities Quick refresh during travel or work Storage Instructions Store in a cool, dry place away from direct sunlight. Close the cap tightly after use. Note For external use only. Avoid contact with eyes, mouth, or broken skin. Discontinue use if irritation occurs.",
+      "description_html": "<p data-start=\"453\" data-end=\"748\">The <strong data-start=\"457\" data-end=\"488\">Sanan India Pain Relief Gel</strong> is a non-greasy, fast-acting formula created to help ease muscle and joint discomfort. Enriched with Vijaya (hemp) leaf extract and carefully selected herbal ingredients, this gel delivers a cooling effect that helps relax stiffness and refresh tired areas.</p>\n<p data-start=\"750\" data-end=\"896\">Produced in ISO &amp; GMP-certified facilities and licensed under the Ministry of Ayush, every batch meets our high standards of safety and quality.</p>\n<hr data-start=\"898\" data-end=\"901\" />\n<h4 data-start=\"903\" data-end=\"926\"><strong data-start=\"908\" data-end=\"924\">Key Benefits</strong></h4>\n<ul data-start=\"927\" data-end=\"1353\">\n<li data-start=\"927\" data-end=\"1020\">\n<p data-start=\"929\" data-end=\"1020\"><strong data-start=\"929\" data-end=\"946\">Quick Relief:</strong> Provides a refreshing cooling sensation that helps relax stiff muscles.</p>\n</li>\n<li data-start=\"1021\" data-end=\"1113\">\n<p data-start=\"1023\" data-end=\"1113\"><strong data-start=\"1023\" data-end=\"1043\">Targeted Action:</strong> Ideal for localized discomfort in joints, back, neck, or shoulders.</p>\n</li>\n<li data-start=\"1114\" data-end=\"1193\">\n<p data-start=\"1116\" data-end=\"1193\"><strong data-start=\"1116\" data-end=\"1136\">Fast Absorption:</strong> Lightweight gel texture that leaves no sticky residue.</p>\n</li>\n<li data-start=\"1194\" data-end=\"1277\">\n<p data-start=\"1196\" data-end=\"1277\"><strong data-start=\"1196\" data-end=\"1213\">Natural Care:</strong> Combines plant-based extracts with traditional herbal wisdom.</p>\n</li>\n<li data-start=\"1278\" data-end=\"1353\">\n<p data-start=\"1280\" data-end=\"1353\"><strong data-start=\"1280\" data-end=\"1300\">Travel-Friendly:</strong> Compact packaging for easy, on-the-go application.</p>\n</li>\n</ul>\n<hr data-start=\"1355\" data-end=\"1358\" />\n<h4 data-start=\"1360\" data-end=\"1381\"><strong data-start=\"1365\" data-end=\"1379\">How to Use</strong></h4>\n<ol data-start=\"1382\" data-end=\"1567\">\n<li data-start=\"1382\" data-end=\"1436\">\n<p data-start=\"1385\" data-end=\"1436\">Apply a small amount of gel to the affected area.</p>\n</li>\n<li data-start=\"1437\" data-end=\"1498\">\n<p data-start=\"1440\" data-end=\"1498\">Massage gently in circular motions until fully absorbed.</p>\n</li>\n<li data-start=\"1499\" data-end=\"1539\">\n<p data-start=\"1502\" data-end=\"1539\">Use 2–3 times daily or as required.</p>\n</li>\n<li data-start=\"1540\" data-end=\"1567\">\n<p data-start=\"1543\" data-end=\"1567\">For external use only.</p>\n</li>\n</ol>\n<hr data-start=\"1569\" data-end=\"1572\" />\n<h4 data-start=\"1574\" data-end=\"1594\"><strong data-start=\"1579\" data-end=\"1592\">Ideal For</strong></h4>\n<ul data-start=\"1595\" data-end=\"1743\">\n<li data-start=\"1595\" data-end=\"1630\">\n<p data-start=\"1597\" data-end=\"1630\">Muscle stiffness after workouts</p>\n</li>\n<li data-start=\"1631\" data-end=\"1660\">\n<p data-start=\"1633\" data-end=\"1660\">Neck and shoulder tension</p>\n</li>\n<li data-start=\"1661\" data-end=\"1703\">\n<p data-start=\"1663\" data-end=\"1703\">Joint discomfort from daily activities</p>\n</li>\n<li data-start=\"1704\" data-end=\"1743\">\n<p data-start=\"1706\" data-end=\"1743\">Quick refresh during travel or work</p>\n</li>\n</ul>\n<hr data-start=\"1745\" data-end=\"1748\" />\n<h4 data-start=\"1750\" data-end=\"1781\"><strong data-start=\"1755\" data-end=\"1779\">Storage Instructions</strong></h4>\n<p data-start=\"1782\" data-end=\"1870\">Store in a cool, dry place away from direct sunlight. Close the cap tightly after use.</p>\n<hr data-start=\"1872\" data-end=\"1875\" />\n<h4 data-start=\"1877\" data-end=\"1892\"><strong data-start=\"1882\" data-end=\"1890\">Note</strong></h4>\n<p data-start=\"1893\" data-end=\"2003\">For external use only. Avoid contact with eyes, mouth, or broken skin. Discontinue use if irritation occurs.</p>",
+      "tabs": {
+        "description": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab\" id=\"tab-description\" role=\"tabpanel\" aria-labelledby=\"tab-title-description\">\n\t\t\t\t\n\n<p data-start=\"453\" data-end=\"748\">The <strong data-start=\"457\" data-end=\"488\">Sanan India Pain Relief Gel</strong> is a non-greasy, fast-acting formula created to help ease muscle and joint discomfort. Enriched with Vijaya (hemp) leaf extract and carefully selected herbal ingredients, this gel delivers a cooling effect that helps relax stiffness and refresh tired areas.</p>\n<p data-start=\"750\" data-end=\"896\">Produced in ISO &amp; GMP-certified facilities and licensed under the Ministry of Ayush, every batch meets our high standards of safety and quality.</p>\n<hr data-start=\"898\" data-end=\"901\" />\n<h4 data-start=\"903\" data-end=\"926\"><strong data-start=\"908\" data-end=\"924\">Key Benefits</strong></h4>\n<ul data-start=\"927\" data-end=\"1353\">\n<li data-start=\"927\" data-end=\"1020\">\n<p data-start=\"929\" data-end=\"1020\"><strong data-start=\"929\" data-end=\"946\">Quick Relief:</strong> Provides a refreshing cooling sensation that helps relax stiff muscles.</p>\n</li>\n<li data-start=\"1021\" data-end=\"1113\">\n<p data-start=\"1023\" data-end=\"1113\"><strong data-start=\"1023\" data-end=\"1043\">Targeted Action:</strong> Ideal for localized discomfort in joints, back, neck, or shoulders.</p>\n</li>\n<li data-start=\"1114\" data-end=\"1193\">\n<p data-start=\"1116\" data-end=\"1193\"><strong data-start=\"1116\" data-end=\"1136\">Fast Absorption:</strong> Lightweight gel texture that leaves no sticky residue.</p>\n</li>\n<li data-start=\"1194\" data-end=\"1277\">\n<p data-start=\"1196\" data-end=\"1277\"><strong data-start=\"1196\" data-end=\"1213\">Natural Care:</strong> Combines plant-based extracts with traditional herbal wisdom.</p>\n</li>\n<li data-start=\"1278\" data-end=\"1353\">\n<p data-start=\"1280\" data-end=\"1353\"><strong data-start=\"1280\" data-end=\"1300\">Travel-Friendly:</strong> Compact packaging for easy, on-the-go application.</p>\n</li>\n</ul>\n<hr data-start=\"1355\" data-end=\"1358\" />\n<h4 data-start=\"1360\" data-end=\"1381\"><strong data-start=\"1365\" data-end=\"1379\">How to Use</strong></h4>\n<ol data-start=\"1382\" data-end=\"1567\">\n<li data-start=\"1382\" data-end=\"1436\">\n<p data-start=\"1385\" data-end=\"1436\">Apply a small amount of gel to the affected area.</p>\n</li>\n<li data-start=\"1437\" data-end=\"1498\">\n<p data-start=\"1440\" data-end=\"1498\">Massage gently in circular motions until fully absorbed.</p>\n</li>\n<li data-start=\"1499\" data-end=\"1539\">\n<p data-start=\"1502\" data-end=\"1539\">Use 2–3 times daily or as required.</p>\n</li>\n<li data-start=\"1540\" data-end=\"1567\">\n<p data-start=\"1543\" data-end=\"1567\">For external use only.</p>\n</li>\n</ol>\n<hr data-start=\"1569\" data-end=\"1572\" />\n<h4 data-start=\"1574\" data-end=\"1594\"><strong data-start=\"1579\" data-end=\"1592\">Ideal For</strong></h4>\n<ul data-start=\"1595\" data-end=\"1743\">\n<li data-start=\"1595\" data-end=\"1630\">\n<p data-start=\"1597\" data-end=\"1630\">Muscle stiffness after workouts</p>\n</li>\n<li data-start=\"1631\" data-end=\"1660\">\n<p data-start=\"1633\" data-end=\"1660\">Neck and shoulder tension</p>\n</li>\n<li data-start=\"1661\" data-end=\"1703\">\n<p data-start=\"1663\" data-end=\"1703\">Joint discomfort from daily activities</p>\n</li>\n<li data-start=\"1704\" data-end=\"1743\">\n<p data-start=\"1706\" data-end=\"1743\">Quick refresh during travel or work</p>\n</li>\n</ul>\n<hr data-start=\"1745\" data-end=\"1748\" />\n<h4 data-start=\"1750\" data-end=\"1781\"><strong data-start=\"1755\" data-end=\"1779\">Storage Instructions</strong></h4>\n<p data-start=\"1782\" data-end=\"1870\">Store in a cool, dry place away from direct sunlight. Close the cap tightly after use.</p>\n<hr data-start=\"1872\" data-end=\"1875\" />\n<h4 data-start=\"1877\" data-end=\"1892\"><strong data-start=\"1882\" data-end=\"1890\">Note</strong></h4>\n<p data-start=\"1893\" data-end=\"2003\">For external use only. Avoid contact with eyes, mouth, or broken skin. Discontinue use if irritation occurs.</p>\n\n    <div class=\"xs_social_share_widget xs_share_url after_content \t\tmain_content  wslu-style-1 wslu-share-box-shaped wslu-fill-colored wslu-none wslu-share-horizontal wslu-theme-font-no wslu-main_content\">\n\n\t\t\n        <ul>\n\t\t\t        </ul>\n    </div>",
+          "text": "The Sanan India Pain Relief Gel is a non-greasy, fast-acting formula created to help ease muscle and joint discomfort. Enriched with Vijaya (hemp) leaf extract and carefully selected herbal ingredients, this gel delivers a cooling effect that helps relax stiffness and refresh tired areas. Produced in ISO & GMP-certified facilities and licensed under the Ministry of Ayush, every batch meets our high standards of safety and quality. Key Benefits Quick Relief: Provides a refreshing cooling sensation that helps relax stiff muscles. Targeted Action: Ideal for localized discomfort in joints, back, neck, or shoulders. Fast Absorption: Lightweight gel texture that leaves no sticky residue. Natural Care: Combines plant-based extracts with traditional herbal wisdom. Travel-Friendly: Compact packaging for easy, on-the-go application. How to Use Apply a small amount of gel to the affected area. Massage gently in circular motions until fully absorbed. Use 2–3 times daily or as required. For external use only. Ideal For Muscle stiffness after workouts Neck and shoulder tension Joint discomfort from daily activities Quick refresh during travel or work Storage Instructions Store in a cool, dry place away from direct sunlight. Close the cap tightly after use. Note For external use only. Avoid contact with eyes, mouth, or broken skin. Discontinue use if irritation occurs."
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\tReviews\t\t</h2>\n\n\t\t\t\t\t<p class=\"woocommerce-noreviews\">There are no reviews yet.</p>\n\t\t\t</div>",
+          "text": "Reviews There are no reviews yet."
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2025/08/sanan_pain_relief_gel_30_gm.webp",
+          "alt": "Pain Relief Gel (30 gm) - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Topical localized massage",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 193,
+      "title": "Pain Relief Oil (50 ml)",
+      "handle": "pain-relief-oil-50-ml",
+      "url": "https://sananindia.com/product/pain-relief-oil-50-ml/",
+      "type": "simple",
+      "sku": "SN-193",
+      "vendor": "Sanan Relief",
+      "product_type": "Pain Management",
+      "categories": [
+        {
+          "id": 20,
+          "name": "Pain Management",
+          "slug": "pain-management",
+          "link": "https://sananindia.com/product-category/pain-management/"
+        }
+      ],
+      "tags": [],
+      "is_in_stock": true,
+      "on_sale": true,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 900,
+        "regular_price": 1200,
+        "sale_price": 900,
+        "price_range": null
+      },
+      "attributes": [],
+      "variations": [],
+      "short_description": "A deeply penetrating herbal oil formulated with Vijaya (hemp) leaf extract and traditional Ayurvedic herbs to help ease muscle tension and support joint comfort naturally. Crafted for effective massage and daily wellness routines.",
+      "short_description_html": "<p>A deeply penetrating herbal oil formulated with Vijaya (hemp) leaf extract and traditional Ayurvedic herbs to help ease muscle tension and support joint comfort naturally. Crafted for effective massage and daily wellness routines.</p>",
+      "description": "The Sanan India Pain Relief Oil is a potent, plant-based formulation designed to provide soothing comfort to tired muscles and stiff joints. Blending high-quality Vijaya (hemp) leaf extract with time-tested Ayurvedic herbs, this oil is ideal for massage therapy and everyday relief. Manufactured in ISO & GMP-certified facilities and licensed under the Ministry of Ayush, this oil reflects our commitment to quality, safety, and authenticity. Key Benefits Soothes Muscle Discomfort: Helps relax and ease tension after physical activity or long hours of work. Supports Joint Flexibility: Assists in maintaining mobility and comfort during daily activities. Deep Penetration: Absorbs well into the skin to deliver the benefits of herbs directly to affected areas. Traditional & Modern: Combines Ayurvedic knowledge with careful modern processing for purity. Premium Quality: Plant-based, cruelty-free, and crafted with care. How to Use Warm a small amount of oil in your palms. Gently massage into the affected area using circular motions. Apply 2–3 times a day or as required. For external use only. Ideal For Lower back discomfort Muscle stiffness from work or workouts Sports recovery massage Joint care routines Storage Instructions Store in a cool, dry place away from direct sunlight. Keep the bottle tightly closed when not in use. Note For external use only. Avoid contact with eyes, mouth, or broken skin. Discontinue use if irritation occurs.",
+      "description_html": "<p data-start=\"496\" data-end=\"784\">The <strong data-start=\"500\" data-end=\"531\">Sanan India Pain Relief Oil</strong> is a potent, plant-based formulation designed to provide soothing comfort to tired muscles and stiff joints. Blending high-quality Vijaya (hemp) leaf extract with time-tested Ayurvedic herbs, this oil is ideal for massage therapy and everyday relief.</p>\n<p data-start=\"786\" data-end=\"947\">Manufactured in ISO &amp; GMP-certified facilities and licensed under the Ministry of Ayush, this oil reflects our commitment to quality, safety, and authenticity.</p>\n<hr data-start=\"949\" data-end=\"952\" />\n<h4 data-start=\"954\" data-end=\"977\"><strong data-start=\"959\" data-end=\"975\">Key Benefits</strong></h4>\n<ul data-start=\"978\" data-end=\"1484\">\n<li data-start=\"978\" data-end=\"1088\">\n<p data-start=\"980\" data-end=\"1088\"><strong data-start=\"980\" data-end=\"1010\">Soothes Muscle Discomfort:</strong> Helps relax and ease tension after physical activity or long hours of work.</p>\n</li>\n<li data-start=\"1089\" data-end=\"1193\">\n<p data-start=\"1091\" data-end=\"1193\"><strong data-start=\"1091\" data-end=\"1122\">Supports Joint Flexibility:</strong> Assists in maintaining mobility and comfort during daily activities.</p>\n</li>\n<li data-start=\"1194\" data-end=\"1307\">\n<p data-start=\"1196\" data-end=\"1307\"><strong data-start=\"1196\" data-end=\"1217\">Deep Penetration:</strong> Absorbs well into the skin to deliver the benefits of herbs directly to affected areas.</p>\n</li>\n<li data-start=\"1308\" data-end=\"1409\">\n<p data-start=\"1310\" data-end=\"1409\"><strong data-start=\"1310\" data-end=\"1335\">Traditional &amp; Modern:</strong> Combines Ayurvedic knowledge with careful modern processing for purity.</p>\n</li>\n<li data-start=\"1410\" data-end=\"1484\">\n<p data-start=\"1412\" data-end=\"1484\"><strong data-start=\"1412\" data-end=\"1432\">Premium Quality:</strong> Plant-based, cruelty-free, and crafted with care.</p>\n</li>\n</ul>\n<hr data-start=\"1486\" data-end=\"1489\" />\n<h4 data-start=\"1491\" data-end=\"1512\"><strong data-start=\"1496\" data-end=\"1510\">How to Use</strong></h4>\n<ol data-start=\"1513\" data-end=\"1697\">\n<li data-start=\"1513\" data-end=\"1559\">\n<p data-start=\"1516\" data-end=\"1559\">Warm a small amount of oil in your palms.</p>\n</li>\n<li data-start=\"1560\" data-end=\"1626\">\n<p data-start=\"1563\" data-end=\"1626\">Gently massage into the affected area using circular motions.</p>\n</li>\n<li data-start=\"1627\" data-end=\"1669\">\n<p data-start=\"1630\" data-end=\"1669\">Apply 2–3 times a day or as required.</p>\n</li>\n<li data-start=\"1670\" data-end=\"1697\">\n<p data-start=\"1673\" data-end=\"1697\">For external use only.</p>\n</li>\n</ol>\n<hr data-start=\"1699\" data-end=\"1702\" />\n<h4 data-start=\"1704\" data-end=\"1724\"><strong data-start=\"1709\" data-end=\"1722\">Ideal For</strong></h4>\n<ul data-start=\"1725\" data-end=\"1845\">\n<li data-start=\"1725\" data-end=\"1750\">\n<p data-start=\"1727\" data-end=\"1750\">Lower back discomfort</p>\n</li>\n<li data-start=\"1751\" data-end=\"1793\">\n<p data-start=\"1753\" data-end=\"1793\">Muscle stiffness from work or workouts</p>\n</li>\n<li data-start=\"1794\" data-end=\"1821\">\n<p data-start=\"1796\" data-end=\"1821\">Sports recovery massage</p>\n</li>\n<li data-start=\"1822\" data-end=\"1845\">\n<p data-start=\"1824\" data-end=\"1845\">Joint care routines</p>\n</li>\n</ul>\n<hr data-start=\"1847\" data-end=\"1850\" />\n<h4 data-start=\"1852\" data-end=\"1883\"><strong data-start=\"1857\" data-end=\"1881\">Storage Instructions</strong></h4>\n<p data-start=\"1884\" data-end=\"1987\">Store in a cool, dry place away from direct sunlight. Keep the bottle tightly closed when not in use.</p>\n<hr data-start=\"1989\" data-end=\"1992\" />\n<h4 data-start=\"1994\" data-end=\"2009\"><strong data-start=\"1999\" data-end=\"2007\">Note</strong></h4>\n<p data-start=\"2010\" data-end=\"2120\">For external use only. Avoid contact with eyes, mouth, or broken skin. Discontinue use if irritation occurs.</p>",
+      "tabs": {
+        "description": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab\" id=\"tab-description\" role=\"tabpanel\" aria-labelledby=\"tab-title-description\">\n\t\t\t\t\n\n<p data-start=\"496\" data-end=\"784\">The <strong data-start=\"500\" data-end=\"531\">Sanan India Pain Relief Oil</strong> is a potent, plant-based formulation designed to provide soothing comfort to tired muscles and stiff joints. Blending high-quality Vijaya (hemp) leaf extract with time-tested Ayurvedic herbs, this oil is ideal for massage therapy and everyday relief.</p>\n<p data-start=\"786\" data-end=\"947\">Manufactured in ISO &amp; GMP-certified facilities and licensed under the Ministry of Ayush, this oil reflects our commitment to quality, safety, and authenticity.</p>\n<hr data-start=\"949\" data-end=\"952\" />\n<h4 data-start=\"954\" data-end=\"977\"><strong data-start=\"959\" data-end=\"975\">Key Benefits</strong></h4>\n<ul data-start=\"978\" data-end=\"1484\">\n<li data-start=\"978\" data-end=\"1088\">\n<p data-start=\"980\" data-end=\"1088\"><strong data-start=\"980\" data-end=\"1010\">Soothes Muscle Discomfort:</strong> Helps relax and ease tension after physical activity or long hours of work.</p>\n</li>\n<li data-start=\"1089\" data-end=\"1193\">\n<p data-start=\"1091\" data-end=\"1193\"><strong data-start=\"1091\" data-end=\"1122\">Supports Joint Flexibility:</strong> Assists in maintaining mobility and comfort during daily activities.</p>\n</li>\n<li data-start=\"1194\" data-end=\"1307\">\n<p data-start=\"1196\" data-end=\"1307\"><strong data-start=\"1196\" data-end=\"1217\">Deep Penetration:</strong> Absorbs well into the skin to deliver the benefits of herbs directly to affected areas.</p>\n</li>\n<li data-start=\"1308\" data-end=\"1409\">\n<p data-start=\"1310\" data-end=\"1409\"><strong data-start=\"1310\" data-end=\"1335\">Traditional &amp; Modern:</strong> Combines Ayurvedic knowledge with careful modern processing for purity.</p>\n</li>\n<li data-start=\"1410\" data-end=\"1484\">\n<p data-start=\"1412\" data-end=\"1484\"><strong data-start=\"1412\" data-end=\"1432\">Premium Quality:</strong> Plant-based, cruelty-free, and crafted with care.</p>\n</li>\n</ul>\n<hr data-start=\"1486\" data-end=\"1489\" />\n<h4 data-start=\"1491\" data-end=\"1512\"><strong data-start=\"1496\" data-end=\"1510\">How to Use</strong></h4>\n<ol data-start=\"1513\" data-end=\"1697\">\n<li data-start=\"1513\" data-end=\"1559\">\n<p data-start=\"1516\" data-end=\"1559\">Warm a small amount of oil in your palms.</p>\n</li>\n<li data-start=\"1560\" data-end=\"1626\">\n<p data-start=\"1563\" data-end=\"1626\">Gently massage into the affected area using circular motions.</p>\n</li>\n<li data-start=\"1627\" data-end=\"1669\">\n<p data-start=\"1630\" data-end=\"1669\">Apply 2–3 times a day or as required.</p>\n</li>\n<li data-start=\"1670\" data-end=\"1697\">\n<p data-start=\"1673\" data-end=\"1697\">For external use only.</p>\n</li>\n</ol>\n<hr data-start=\"1699\" data-end=\"1702\" />\n<h4 data-start=\"1704\" data-end=\"1724\"><strong data-start=\"1709\" data-end=\"1722\">Ideal For</strong></h4>\n<ul data-start=\"1725\" data-end=\"1845\">\n<li data-start=\"1725\" data-end=\"1750\">\n<p data-start=\"1727\" data-end=\"1750\">Lower back discomfort</p>\n</li>\n<li data-start=\"1751\" data-end=\"1793\">\n<p data-start=\"1753\" data-end=\"1793\">Muscle stiffness from work or workouts</p>\n</li>\n<li data-start=\"1794\" data-end=\"1821\">\n<p data-start=\"1796\" data-end=\"1821\">Sports recovery massage</p>\n</li>\n<li data-start=\"1822\" data-end=\"1845\">\n<p data-start=\"1824\" data-end=\"1845\">Joint care routines</p>\n</li>\n</ul>\n<hr data-start=\"1847\" data-end=\"1850\" />\n<h4 data-start=\"1852\" data-end=\"1883\"><strong data-start=\"1857\" data-end=\"1881\">Storage Instructions</strong></h4>\n<p data-start=\"1884\" data-end=\"1987\">Store in a cool, dry place away from direct sunlight. Keep the bottle tightly closed when not in use.</p>\n<hr data-start=\"1989\" data-end=\"1992\" />\n<h4 data-start=\"1994\" data-end=\"2009\"><strong data-start=\"1999\" data-end=\"2007\">Note</strong></h4>\n<p data-start=\"2010\" data-end=\"2120\">For external use only. Avoid contact with eyes, mouth, or broken skin. Discontinue use if irritation occurs.</p>\n\n    <div class=\"xs_social_share_widget xs_share_url after_content \t\tmain_content  wslu-style-1 wslu-share-box-shaped wslu-fill-colored wslu-none wslu-share-horizontal wslu-theme-font-no wslu-main_content\">\n\n\t\t\n        <ul>\n\t\t\t        </ul>\n    </div>",
+          "text": "The Sanan India Pain Relief Oil is a potent, plant-based formulation designed to provide soothing comfort to tired muscles and stiff joints. Blending high-quality Vijaya (hemp) leaf extract with time-tested Ayurvedic herbs, this oil is ideal for massage therapy and everyday relief. Manufactured in ISO & GMP-certified facilities and licensed under the Ministry of Ayush, this oil reflects our commitment to quality, safety, and authenticity. Key Benefits Soothes Muscle Discomfort: Helps relax and ease tension after physical activity or long hours of work. Supports Joint Flexibility: Assists in maintaining mobility and comfort during daily activities. Deep Penetration: Absorbs well into the skin to deliver the benefits of herbs directly to affected areas. Traditional & Modern: Combines Ayurvedic knowledge with careful modern processing for purity. Premium Quality: Plant-based, cruelty-free, and crafted with care. How to Use Warm a small amount of oil in your palms. Gently massage into the affected area using circular motions. Apply 2–3 times a day or as required. For external use only. Ideal For Lower back discomfort Muscle stiffness from work or workouts Sports recovery massage Joint care routines Storage Instructions Store in a cool, dry place away from direct sunlight. Keep the bottle tightly closed when not in use. Note For external use only. Avoid contact with eyes, mouth, or broken skin. Discontinue use if irritation occurs."
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\tReviews\t\t</h2>\n\n\t\t\t\t\t<p class=\"woocommerce-noreviews\">There are no reviews yet.</p>\n\t\t\t</div>",
+          "text": "Reviews There are no reviews yet."
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2025/08/Sanan_Topical_Pain_Relief_Oil.webp",
+          "alt": "Pain Relief Oil (50 ml) - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Topical localized massage",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 191,
+      "title": "Pain Relief Roll On (10 ml)",
+      "handle": "pain-relief-roll-on-10-ml",
+      "url": "https://sananindia.com/product/pain-relief-roll-on-10-ml/",
+      "type": "simple",
+      "sku": "SN-191",
+      "vendor": "Sanan Relief",
+      "product_type": "Pain Management",
+      "categories": [
+        {
+          "id": 20,
+          "name": "Pain Management",
+          "slug": "pain-management",
+          "link": "https://sananindia.com/product-category/pain-management/"
+        }
+      ],
+      "tags": [
+        "Pain relief roll on"
+      ],
+      "is_in_stock": true,
+      "on_sale": false,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 455,
+        "regular_price": 455,
+        "sale_price": 455,
+        "price_range": null
+      },
+      "attributes": [],
+      "variations": [],
+      "short_description": "A quick-absorbing herbal roll-on designed to provide on-the-go relief from muscle and joint discomfort. Infused with Vijaya (hemp) leaf extract and natural essential oils, crafted for targeted application and ease of use.",
+      "short_description_html": "<p>A quick-absorbing herbal roll-on designed to provide on-the-go relief from muscle and joint discomfort. Infused with Vijaya (hemp) leaf extract and natural essential oils, crafted for targeted application and ease of use.</p>",
+      "description": "Overview The Sanan India Pain Relief Roll-On is a compact, travel-friendly solution for managing everyday muscle and joint discomfort. Made with carefully selected herbal ingredients and Vijaya (hemp) leaf extract, it delivers targeted relief where you need it most — anytime, anywhere. Key Benefits Targeted Application: Easy-to-use roll-on format for precise relief on affected areas. Natural Ingredients: Infused with Vijaya leaf extract, essential oils, and soothing herbal compounds. Fast Absorption: Lightweight, non-greasy formula that penetrates quickly into the skin. On-the-Go Relief: Ideal for use at work, home, or while traveling. Quality Assurance: Produced in ISO & GMP-certified facilities and licensed under the Ministry of Ayush. How to Use Shake gently before use. Apply directly to the affected area using the roll-on applicator. Massage lightly for better absorption. Use as needed, up to 3–4 times daily. Ideal For Muscle stiffness after physical activity Joint discomfort from daily movement Temporary relief after sports or exercise Storage Instructions Store in a cool, dry place away from direct sunlight. Keep out of reach of children. Note For external use only. Avoid contact with eyes and broken skin. Discontinue use if irritation occurs.",
+      "description_html": "<h4 data-start=\"518\" data-end=\"537\"><strong data-start=\"523\" data-end=\"535\">Overview</strong></h4>\n<p data-start=\"538\" data-end=\"821\">The <strong data-start=\"542\" data-end=\"577\">Sanan India Pain Relief Roll-On</strong> is a compact, travel-friendly solution for managing everyday muscle and joint discomfort. Made with carefully selected herbal ingredients and Vijaya (hemp) leaf extract, it delivers targeted relief where you need it most — anytime, anywhere.</p>\n<h4 data-start=\"823\" data-end=\"846\"><strong data-start=\"828\" data-end=\"844\">Key Benefits</strong></h4>\n<ul data-start=\"847\" data-end=\"1334\">\n<li data-start=\"847\" data-end=\"941\">\n<p data-start=\"849\" data-end=\"941\"><strong data-start=\"849\" data-end=\"874\">Targeted Application:</strong> Easy-to-use roll-on format for precise relief on affected areas.</p>\n</li>\n<li data-start=\"942\" data-end=\"1051\">\n<p data-start=\"944\" data-end=\"1051\"><strong data-start=\"944\" data-end=\"968\">Natural Ingredients:</strong> Infused with Vijaya leaf extract, essential oils, and soothing herbal compounds.</p>\n</li>\n<li data-start=\"1052\" data-end=\"1147\">\n<p data-start=\"1054\" data-end=\"1147\"><strong data-start=\"1054\" data-end=\"1074\">Fast Absorption:</strong> Lightweight, non-greasy formula that penetrates quickly into the skin.</p>\n</li>\n<li data-start=\"1148\" data-end=\"1222\">\n<p data-start=\"1150\" data-end=\"1222\"><strong data-start=\"1150\" data-end=\"1171\">On-the-Go Relief:</strong> Ideal for use at work, home, or while traveling.</p>\n</li>\n<li data-start=\"1223\" data-end=\"1334\">\n<p data-start=\"1225\" data-end=\"1334\"><strong data-start=\"1225\" data-end=\"1247\">Quality Assurance:</strong> Produced in ISO &amp; GMP-certified facilities and licensed under the Ministry of Ayush.</p>\n</li>\n</ul>\n<h4 data-start=\"1336\" data-end=\"1357\"><strong data-start=\"1341\" data-end=\"1355\">How to Use</strong></h4>\n<ol data-start=\"1358\" data-end=\"1545\">\n<li data-start=\"1358\" data-end=\"1387\">\n<p data-start=\"1361\" data-end=\"1387\">Shake gently before use.</p>\n</li>\n<li data-start=\"1388\" data-end=\"1458\">\n<p data-start=\"1391\" data-end=\"1458\">Apply directly to the affected area using the roll-on applicator.</p>\n</li>\n<li data-start=\"1459\" data-end=\"1502\">\n<p data-start=\"1462\" data-end=\"1502\">Massage lightly for better absorption.</p>\n</li>\n<li data-start=\"1503\" data-end=\"1545\">\n<p data-start=\"1506\" data-end=\"1545\">Use as needed, up to 3–4 times daily.</p>\n</li>\n</ol>\n<h4 data-start=\"1547\" data-end=\"1567\"><strong data-start=\"1552\" data-end=\"1565\">Ideal For</strong></h4>\n<ul data-start=\"1568\" data-end=\"1699\">\n<li data-start=\"1568\" data-end=\"1612\">\n<p data-start=\"1570\" data-end=\"1612\">Muscle stiffness after physical activity</p>\n</li>\n<li data-start=\"1613\" data-end=\"1653\">\n<p data-start=\"1615\" data-end=\"1653\">Joint discomfort from daily movement</p>\n</li>\n<li data-start=\"1654\" data-end=\"1699\">\n<p data-start=\"1656\" data-end=\"1699\">Temporary relief after sports or exercise</p>\n</li>\n</ul>\n<h4 data-start=\"1701\" data-end=\"1732\"><strong data-start=\"1706\" data-end=\"1730\">Storage Instructions</strong></h4>\n<p data-start=\"1733\" data-end=\"1819\">Store in a cool, dry place away from direct sunlight. Keep out of reach of children.</p>\n<h4 data-start=\"1821\" data-end=\"1836\"><strong data-start=\"1826\" data-end=\"1834\">Note</strong></h4>\n<p data-start=\"1837\" data-end=\"1940\">For external use only. Avoid contact with eyes and broken skin. Discontinue use if irritation occurs.</p>",
+      "tabs": {
+        "description": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab\" id=\"tab-description\" role=\"tabpanel\" aria-labelledby=\"tab-title-description\">\n\t\t\t\t\n\n<h4 data-start=\"518\" data-end=\"537\"><strong data-start=\"523\" data-end=\"535\">Overview</strong></h4>\n<p data-start=\"538\" data-end=\"821\">The <strong data-start=\"542\" data-end=\"577\">Sanan India Pain Relief Roll-On</strong> is a compact, travel-friendly solution for managing everyday muscle and joint discomfort. Made with carefully selected herbal ingredients and Vijaya (hemp) leaf extract, it delivers targeted relief where you need it most — anytime, anywhere.</p>\n<h4 data-start=\"823\" data-end=\"846\"><strong data-start=\"828\" data-end=\"844\">Key Benefits</strong></h4>\n<ul data-start=\"847\" data-end=\"1334\">\n<li data-start=\"847\" data-end=\"941\">\n<p data-start=\"849\" data-end=\"941\"><strong data-start=\"849\" data-end=\"874\">Targeted Application:</strong> Easy-to-use roll-on format for precise relief on affected areas.</p>\n</li>\n<li data-start=\"942\" data-end=\"1051\">\n<p data-start=\"944\" data-end=\"1051\"><strong data-start=\"944\" data-end=\"968\">Natural Ingredients:</strong> Infused with Vijaya leaf extract, essential oils, and soothing herbal compounds.</p>\n</li>\n<li data-start=\"1052\" data-end=\"1147\">\n<p data-start=\"1054\" data-end=\"1147\"><strong data-start=\"1054\" data-end=\"1074\">Fast Absorption:</strong> Lightweight, non-greasy formula that penetrates quickly into the skin.</p>\n</li>\n<li data-start=\"1148\" data-end=\"1222\">\n<p data-start=\"1150\" data-end=\"1222\"><strong data-start=\"1150\" data-end=\"1171\">On-the-Go Relief:</strong> Ideal for use at work, home, or while traveling.</p>\n</li>\n<li data-start=\"1223\" data-end=\"1334\">\n<p data-start=\"1225\" data-end=\"1334\"><strong data-start=\"1225\" data-end=\"1247\">Quality Assurance:</strong> Produced in ISO &amp; GMP-certified facilities and licensed under the Ministry of Ayush.</p>\n</li>\n</ul>\n<h4 data-start=\"1336\" data-end=\"1357\"><strong data-start=\"1341\" data-end=\"1355\">How to Use</strong></h4>\n<ol data-start=\"1358\" data-end=\"1545\">\n<li data-start=\"1358\" data-end=\"1387\">\n<p data-start=\"1361\" data-end=\"1387\">Shake gently before use.</p>\n</li>\n<li data-start=\"1388\" data-end=\"1458\">\n<p data-start=\"1391\" data-end=\"1458\">Apply directly to the affected area using the roll-on applicator.</p>\n</li>\n<li data-start=\"1459\" data-end=\"1502\">\n<p data-start=\"1462\" data-end=\"1502\">Massage lightly for better absorption.</p>\n</li>\n<li data-start=\"1503\" data-end=\"1545\">\n<p data-start=\"1506\" data-end=\"1545\">Use as needed, up to 3–4 times daily.</p>\n</li>\n</ol>\n<h4 data-start=\"1547\" data-end=\"1567\"><strong data-start=\"1552\" data-end=\"1565\">Ideal For</strong></h4>\n<ul data-start=\"1568\" data-end=\"1699\">\n<li data-start=\"1568\" data-end=\"1612\">\n<p data-start=\"1570\" data-end=\"1612\">Muscle stiffness after physical activity</p>\n</li>\n<li data-start=\"1613\" data-end=\"1653\">\n<p data-start=\"1615\" data-end=\"1653\">Joint discomfort from daily movement</p>\n</li>\n<li data-start=\"1654\" data-end=\"1699\">\n<p data-start=\"1656\" data-end=\"1699\">Temporary relief after sports or exercise</p>\n</li>\n</ul>\n<h4 data-start=\"1701\" data-end=\"1732\"><strong data-start=\"1706\" data-end=\"1730\">Storage Instructions</strong></h4>\n<p data-start=\"1733\" data-end=\"1819\">Store in a cool, dry place away from direct sunlight. Keep out of reach of children.</p>\n<h4 data-start=\"1821\" data-end=\"1836\"><strong data-start=\"1826\" data-end=\"1834\">Note</strong></h4>\n<p data-start=\"1837\" data-end=\"1940\">For external use only. Avoid contact with eyes and broken skin. Discontinue use if irritation occurs.</p>\n\n    <div class=\"xs_social_share_widget xs_share_url after_content \t\tmain_content  wslu-style-1 wslu-share-box-shaped wslu-fill-colored wslu-none wslu-share-horizontal wslu-theme-font-no wslu-main_content\">\n\n\t\t\n        <ul>\n\t\t\t        </ul>\n    </div>",
+          "text": "Overview The Sanan India Pain Relief Roll-On is a compact, travel-friendly solution for managing everyday muscle and joint discomfort. Made with carefully selected herbal ingredients and Vijaya (hemp) leaf extract, it delivers targeted relief where you need it most — anytime, anywhere. Key Benefits Targeted Application: Easy-to-use roll-on format for precise relief on affected areas. Natural Ingredients: Infused with Vijaya leaf extract, essential oils, and soothing herbal compounds. Fast Absorption: Lightweight, non-greasy formula that penetrates quickly into the skin. On-the-Go Relief: Ideal for use at work, home, or while traveling. Quality Assurance: Produced in ISO & GMP-certified facilities and licensed under the Ministry of Ayush. How to Use Shake gently before use. Apply directly to the affected area using the roll-on applicator. Massage lightly for better absorption. Use as needed, up to 3–4 times daily. Ideal For Muscle stiffness after physical activity Joint discomfort from daily movement Temporary relief after sports or exercise Storage Instructions Store in a cool, dry place away from direct sunlight. Keep out of reach of children. Note For external use only. Avoid contact with eyes and broken skin. Discontinue use if irritation occurs."
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\tReviews\t\t</h2>\n\n\t\t\t\t\t<p class=\"woocommerce-noreviews\">There are no reviews yet.</p>\n\t\t\t</div>",
+          "text": "Reviews There are no reviews yet."
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2025/08/Product_photography_for_roll-on_2K_202607101102.jpeg",
+          "alt": "Pain Relief Roll On (10 ml) - Sanan Relief Formulation"
+        },
+        {
+          "position": 2,
+          "url": "https://sananindia.com/wp-content/uploads/2025/08/IMAGE-2.png",
+          "alt": "Pain Relief Roll On (10 ml) - Sanan Relief Formulation"
+        },
+        {
+          "position": 3,
+          "url": "https://sananindia.com/wp-content/uploads/2025/08/Sanan_Relief_bottles_tumbling_co…_202607101104-2.jpeg",
+          "alt": "Pain Relief Roll On (10 ml) - Sanan Relief Formulation"
+        },
+        {
+          "position": 4,
+          "url": "https://sananindia.com/wp-content/uploads/2025/08/Glide-2.png",
+          "alt": "Pain Relief Roll On (10 ml) - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Topical localized massage",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    },
+    {
+      "id": 190,
+      "title": "Full Spectrum Vijaya Oil 4500mg",
+      "handle": "full-spectrum-vijaya-oil",
+      "url": "https://sananindia.com/product/full-spectrum-vijaya-oil/",
+      "type": "simple",
+      "sku": "SN-190",
+      "vendor": "Sanan Relief",
+      "product_type": "CBD Oil",
+      "categories": [
+        {
+          "id": 19,
+          "name": "CBD Oil",
+          "slug": "cbd-oil",
+          "link": "https://sananindia.com/product-category/cbd-oil/"
+        },
+        {
+          "id": 34,
+          "name": "Edible",
+          "slug": "edible",
+          "link": "https://sananindia.com/product-category/edible/"
+        }
+      ],
+      "tags": [],
+      "is_in_stock": true,
+      "on_sale": false,
+      "pricing": {
+        "currency": "INR",
+        "currency_symbol": "₹",
+        "price": 4499,
+        "regular_price": 4499,
+        "sale_price": 4499,
+        "price_range": null
+      },
+      "attributes": [],
+      "variations": [],
+      "short_description": "A premium blend of cannabinoids crafted from high-quality Vijaya (hemp) leaves, designed to support relaxation, stress management, and overall wellness. Made under ISO & GMP-certified processes for purity and consistency.",
+      "short_description_html": "<p>A premium blend of cannabinoids crafted from high-quality Vijaya (hemp) leaves, designed to support relaxation, stress management, and overall wellness. Made under ISO &amp; GMP-certified processes for purity and consistency.</p>",
+      "description": "Full Spectrum Vijaya Oil from Sanan India is a carefully formulated herbal oil made using high-grade Vijaya (hemp) leaves and advanced extraction techniques. This full-spectrum formulation contains a balanced profile of cannabinoids and plant compounds that work together to promote overall well-being. Our oil is crafted in ISO & GMP-certified facilities and licensed under the Ministry of Ayush, ensuring every bottle meets our high standards for safety and quality. Key Features: Full-spectrum hemp extract for balanced wellness support Made from premium-quality Vijaya leaves Supports relaxation, stress management, and general well-being Produced in ISO & GMP-certified facilities 100% plant-based and cruelty-free Usage: Follow the recommended dosage instructions on the packaging or consult a qualified wellness professional before use. Storage: Store in a cool, dry place away from direct sunlight. Keep out of reach of children.",
+      "description_html": "<p data-start=\"660\" data-end=\"968\"><strong data-start=\"660\" data-end=\"688\">Full Spectrum Vijaya Oil</strong> from Sanan India is a carefully formulated herbal oil made using high-grade Vijaya (hemp) leaves and advanced extraction techniques. This full-spectrum formulation contains a balanced profile of cannabinoids and plant compounds that work together to promote overall well-being.</p>\n<p data-start=\"970\" data-end=\"1137\">Our oil is crafted in ISO &amp; GMP-certified facilities and licensed under the Ministry of Ayush, ensuring every bottle meets our high standards for safety and quality.</p>\n<p data-start=\"1139\" data-end=\"1158\"><strong data-start=\"1139\" data-end=\"1156\">Key Features:</strong></p>\n<ul data-start=\"1159\" data-end=\"1415\">\n<li data-start=\"1159\" data-end=\"1219\">\n<p data-start=\"1161\" data-end=\"1219\">Full-spectrum hemp extract for balanced wellness support</p>\n</li>\n<li data-start=\"1220\" data-end=\"1263\">\n<p data-start=\"1222\" data-end=\"1263\">Made from premium-quality Vijaya leaves</p>\n</li>\n<li data-start=\"1264\" data-end=\"1330\">\n<p data-start=\"1266\" data-end=\"1330\">Supports relaxation, stress management, and general well-being</p>\n</li>\n<li data-start=\"1331\" data-end=\"1377\">\n<p data-start=\"1333\" data-end=\"1377\">Produced in ISO &amp; GMP-certified facilities</p>\n</li>\n<li data-start=\"1378\" data-end=\"1415\">\n<p data-start=\"1380\" data-end=\"1415\">100% plant-based and cruelty-free</p>\n</li>\n</ul>\n<p data-start=\"1417\" data-end=\"1548\"><strong data-start=\"1417\" data-end=\"1427\">Usage:</strong><br data-start=\"1427\" data-end=\"1430\" />Follow the recommended dosage instructions on the packaging or consult a qualified wellness professional before use.</p>\n<p data-start=\"1550\" data-end=\"1651\"><strong data-start=\"1550\" data-end=\"1562\">Storage:</strong><br data-start=\"1562\" data-end=\"1565\" />Store in a cool, dry place away from direct sunlight. Keep out of reach of children.</p>",
+      "tabs": {
+        "description": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab\" id=\"tab-description\" role=\"tabpanel\" aria-labelledby=\"tab-title-description\">\n\t\t\t\t\n\n<p data-start=\"660\" data-end=\"968\"><strong data-start=\"660\" data-end=\"688\">Full Spectrum Vijaya Oil</strong> from Sanan India is a carefully formulated herbal oil made using high-grade Vijaya (hemp) leaves and advanced extraction techniques. This full-spectrum formulation contains a balanced profile of cannabinoids and plant compounds that work together to promote overall well-being.</p>\n<p data-start=\"970\" data-end=\"1137\">Our oil is crafted in ISO &amp; GMP-certified facilities and licensed under the Ministry of Ayush, ensuring every bottle meets our high standards for safety and quality.</p>\n<p data-start=\"1139\" data-end=\"1158\"><strong data-start=\"1139\" data-end=\"1156\">Key Features:</strong></p>\n<ul data-start=\"1159\" data-end=\"1415\">\n<li data-start=\"1159\" data-end=\"1219\">\n<p data-start=\"1161\" data-end=\"1219\">Full-spectrum hemp extract for balanced wellness support</p>\n</li>\n<li data-start=\"1220\" data-end=\"1263\">\n<p data-start=\"1222\" data-end=\"1263\">Made from premium-quality Vijaya leaves</p>\n</li>\n<li data-start=\"1264\" data-end=\"1330\">\n<p data-start=\"1266\" data-end=\"1330\">Supports relaxation, stress management, and general well-being</p>\n</li>\n<li data-start=\"1331\" data-end=\"1377\">\n<p data-start=\"1333\" data-end=\"1377\">Produced in ISO &amp; GMP-certified facilities</p>\n</li>\n<li data-start=\"1378\" data-end=\"1415\">\n<p data-start=\"1380\" data-end=\"1415\">100% plant-based and cruelty-free</p>\n</li>\n</ul>\n<p data-start=\"1417\" data-end=\"1548\"><strong data-start=\"1417\" data-end=\"1427\">Usage:</strong><br data-start=\"1427\" data-end=\"1430\" />Follow the recommended dosage instructions on the packaging or consult a qualified wellness professional before use.</p>\n<p data-start=\"1550\" data-end=\"1651\"><strong data-start=\"1550\" data-end=\"1562\">Storage:</strong><br data-start=\"1562\" data-end=\"1565\" />Store in a cool, dry place away from direct sunlight. Keep out of reach of children.</p>\n\n    <div class=\"xs_social_share_widget xs_share_url after_content \t\tmain_content  wslu-style-1 wslu-share-box-shaped wslu-fill-colored wslu-none wslu-share-horizontal wslu-theme-font-no wslu-main_content\">\n\n\t\t\n        <ul>\n\t\t\t        </ul>\n    </div>",
+          "text": "Full Spectrum Vijaya Oil from Sanan India is a carefully formulated herbal oil made using high-grade Vijaya (hemp) leaves and advanced extraction techniques. This full-spectrum formulation contains a balanced profile of cannabinoids and plant compounds that work together to promote overall well-being. Our oil is crafted in ISO & GMP-certified facilities and licensed under the Ministry of Ayush, ensuring every bottle meets our high standards for safety and quality. Key Features: Full-spectrum hemp extract for balanced wellness support Made from premium-quality Vijaya leaves Supports relaxation, stress management, and general well-being Produced in ISO & GMP-certified facilities 100% plant-based and cruelty-free Usage: Follow the recommended dosage instructions on the packaging or consult a qualified wellness professional before use. Storage: Store in a cool, dry place away from direct sunlight. Keep out of reach of children."
+        },
+        "reviews": {
+          "html": "<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\" role=\"tabpanel\" aria-labelledby=\"tab-title-reviews\">\n\t\t\t\t<div id=\"reviews\" class=\"woocommerce-Reviews\">\n\t<div id=\"comments\">\n\t\t<h2 class=\"woocommerce-Reviews-title\">\n\t\t\tReviews\t\t</h2>\n\n\t\t\t\t\t<p class=\"woocommerce-noreviews\">There are no reviews yet.</p>\n\t\t\t</div>",
+          "text": "Reviews There are no reviews yet."
+        }
+      },
+      "images": [
+        {
+          "position": 1,
+          "url": "https://sananindia.com/wp-content/uploads/2025/08/4500.png",
+          "alt": "Full Spectrum Vijaya Oil 4500mg - Sanan Relief Formulation"
+        }
+      ],
+      "ayush_metadata": {
+        "legal_status": "100% AYUSH Legal Formulation",
+        "schedule": "Schedule E-1 (Drugs & Cosmetics Act)",
+        "prescription_required": true,
+        "recommended_administration": "Oral titration as advised by physician",
+        "storage": "Store in a cool, dry place away from direct sunlight."
+      }
+    }
+  ]
+}

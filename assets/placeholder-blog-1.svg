@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2ECE1"/>
+      <stop offset="50%" stop-color="#E5DEC9"/>
+      <stop offset="100%" stop-color="#DCD4BE"/>
+    </linearGradient>
+    <radialGradient id="sunGlow1" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFDF7" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFDF7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pedestalShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#3A3326" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="380" fill="url(#bgGrad1)"/>
+  <rect width="600" height="380" fill="url(#sunGlow1)"/>
+
+  <!-- Botanical branch in background -->
+  <g fill="#439798" opacity="0.18" transform="translate(360, 40)">
+    <path d="M60,0 C120,40 140,120 120,180 C80,130 50,80 60,0 Z"/>
+    <path d="M120,80 C180,100 200,180 160,230 C130,170 100,130 120,80 Z"/>
+    <path d="M30,80 C80,120 70,200 40,250 C30,190 20,140 30,80 Z"/>
+  </g>
+
+  <!-- Wooden Round Pedestal / Tray -->
+  <ellipse cx="280" cy="280" rx="190" ry="55" fill="#C9B498" filter="url(#pedestalShadow)"/>
+  <ellipse cx="280" cy="272" rx="180" ry="48" fill="#DFCCA8"/>
+  <ellipse cx="280" cy="270" rx="170" ry="44" fill="#E8D9BB"/>
+
+  <!-- Amber Dropper Bottle -->
+  <g transform="translate(250, 120)">
+    <rect x="18" y="70" width="44" height="85" rx="10" fill="#5E371C"/>
+    <rect x="22" y="75" width="36" height="75" rx="6" fill="#84481C"/>
+    <!-- Highlight -->
+    <rect x="26" y="80" width="6" height="65" rx="3" fill="#E08B48" opacity="0.6"/>
+    <!-- Label -->
+    <rect x="24" y="95" width="32" height="42" rx="3" fill="#FBF8EE"/>
+    <circle cx="40" cy="110" r="7" fill="#439798"/>
+    <line x1="30" y1="125" x2="50" y2="125" stroke="#233535" stroke-width="2"/>
+    <!-- Collar & Pipette Bulb -->
+    <rect x="28" y="55" width="24" height="16" rx="3" fill="#2E2825"/>
+    <path d="M32,55 C32,38 40,30 40,30 C40,30 48,38 48,55 Z" fill="#2E2825"/>
+  </g>
+
+  <!-- Glass Pipette on pedestal with golden droplet -->
+  <g transform="translate(140, 160) rotate(-40)">
+    <rect x="0" y="0" width="8" height="120" rx="4" fill="#FFFFFF" opacity="0.75" stroke="#CBD5D1" stroke-width="1.5"/>
+    <rect x="2" y="60" width="4" height="55" rx="2" fill="#F59E0B" opacity="0.8"/>
+    <!-- Golden drop -->
+    <path d="M4,135 C-2,135 -4,128 4,120 C12,128 10,135 4,135 Z" fill="#F59E0B"/>
+  </g>
+
+  <!-- Botanical seeds scattered on pedestal -->
+  <g fill="#7A5636" opacity="0.8">
+    <ellipse cx="340" cy="265" rx="6" ry="4"/>
+    <ellipse cx="355" cy="268" rx="5" ry="3"/>
+    <ellipse cx="370" cy="262" rx="6" ry="4"/>
+    <ellipse cx="385" cy="270" rx="5" ry="3"/>
+    <ellipse cx="360" cy="275" rx="6" ry="4"/>
+    <ellipse cx="348" cy="280" rx="5" ry="3"/>
+  </g>
+</svg>

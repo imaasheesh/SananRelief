@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Collections — Sanan Relief Luxury Ayurvedic Pharmacopoeia</title>
+
+  <!-- Typography & Core Design Tokens -->
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../assets/theme-tokens.css">
+  <link rel="stylesheet" href="../assets/components.css">
+  <link rel="stylesheet" href="../assets/storefront.css">
+  <link rel="stylesheet" href="../assets/sanan-mega-menu.css">
+  <link rel="stylesheet" href="../assets/sanan-list-collections.css">
+
+  <script src="../assets/storefront.js" defer></script>
+</head>
+<body>
+
+<!-- Global Header -->
+<div class="sanan-header-wrapper header-overlay-mode" id="SananHeaderWrapper">
+  <aside class="sanan-announcement-bar" aria-label="Announcement">
+    <div class="sanan-announcement-container">
+      <div class="sanan-announcement-content">
+        <span class="announcement-promo-pill">AYURVEDIC PHARMACOPOEIA</span>
+        <span class="announcement-leaf-icon">🍃</span>
+        <span class="announcement-text">Explore Standardized Single-Origin Himalayan Vijaya Extracts &amp; Classical Formulations</span>
+      </div>
+      <div class="announcement-action">
+        <span class="announcement-code-badge">SANAN15</span>
+        <a href="contact.html" class="announcement-link">Doctor Consultation &rarr;</a>
+      </div>
+    </div>
+  </aside>
+
+  <header class="sanan-header-dock" id="SananHeaderDock">
+    <div class="sanan-header-card">
+      <div class="sanan-header-left">
+        <a href="storefront.html" class="sanan-brand-link" aria-label="Sanan Relief Home">
+          <img src="../assets/logo.png" alt="Sanan Relief" class="sanan-brand-logo" width="138" height="82">
+        </a>
+      </div>
+
+      <nav class="sanan-nav-desktop" aria-label="Main Navigation">
+        <ul class="sanan-nav-list">
+          <li class="sanan-nav-item">
+            <a href="list-collections.html" class="sanan-nav-link is-active">All Collections</a>
+          </li>
+          <li class="sanan-nav-item">
+            <a href="collection.html" class="sanan-nav-link">Shop Formulations</a>
+          </li>
+          <li class="sanan-nav-item">
+            <a href="product.html" class="sanan-nav-link">Vijaya Oil (Clinical)</a>
+          </li>
+          <li class="sanan-nav-item">
+            <a href="product-gummies.html" class="sanan-nav-link">Uplift Gummies (5 Flavours)</a>
+          </li>
+          <li class="sanan-nav-item">
+            <a href="contact.html" class="sanan-nav-link">Doctor Consult</a>
+          </li>
+          <li class="sanan-nav-item">
+            <a href="faq.html" class="sanan-nav-link">Science &amp; FAQs</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sanan-header-right">
+        <a href="account.html" class="sanan-icon-btn" title="My Account" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+        <button type="button" class="sanan-cart-btn" id="SananCartTrigger" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="sanan-cart-bubble" id="SananCartCount">2</span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- Main Content -->
+<main class="sanan-catalog-wrapper" id="MainContent">
+  <div class="sanan-catalog-container">
+
+    <!-- Breadcrumbs -->
+    <nav class="catalog-breadcrumbs" aria-label="Breadcrumb">
+      <a href="storefront.html">Home</a>
+      <span>/</span>
+      <span style="color:var(--color-secondary); font-weight:600;">All Collections</span>
+    </nav>
+
+    <!-- Catalog Hero Header -->
+    <header class="catalog-hero-header">
+      <div class="catalog-hero-kicker">Ayurvedic Formulations &amp; Pharmacopoeia</div>
+      <h1 class="catalog-hero-title">The Sanan Relief Collections</h1>
+      <p class="catalog-hero-sub">
+        Explore our standardized Ayurvedic cannabis extracts and classical herbal remedies organized by therapeutic health concern or delivery format. 100% Ayush compliant, single-origin Himalayan botanicals.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="catalog-filter-bar">
+        <button type="button" class="catalog-filter-pill is-active" data-filter="all">
+          <span>All Collections</span>
+          <span class="filter-pill-count">10</span>
+        </button>
+        <button type="button" class="catalog-filter-pill" data-filter="concern">
+          <span>By Health Concern</span>
+          <span class="filter-pill-count">5</span>
+        </button>
+        <button type="button" class="catalog-filter-pill" data-filter="format">
+          <span>By Formulation Format</span>
+          <span class="filter-pill-count">5</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Collections Grid -->
+    <div class="catalog-grid" id="CatalogGrid">
+
+      <!-- Collection 1: Chronic Pain & Inflammation (Concern) -->
+      <a href="collection.html?concern=pain" class="catalog-card" data-category="concern">
+        <div class="catalog-card-media">
+          <img src="../assets/editorial-banner-pain-relief.png" alt="Chronic Pain &amp; Inflammation Relief" class="catalog-card-img" loading="lazy">
+          <span class="catalog-card-badge">Health Concern</span>
+          <span class="catalog-card-count-pill">12 Formulations</span>
+        </div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-kicker">Therapeutic Category</div>
+          <h2 class="catalog-card-title">Chronic Pain &amp; Inflammation</h2>
+          <p class="catalog-card-desc">
+            Standardized full-spectrum Vijaya formulations calibrated to soothe persistent musculoskeletal pain, neuropathic discomfort, and arthritis.
+          </p>
+          <div class="catalog-card-herbs">
+            <span class="herb-tag">Vijaya Leaf Extract</span>
+            <span class="herb-tag">Shallaki (Boswellia)</span>
+            <span class="herb-tag">Nirgundi</span>
+          </div>
+          <div class="catalog-card-action">
+            <span>Explore Formulations</span>
+            <span class="chevron">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Collection 2: Sleep & Circadian Restoration (Concern) -->
+      <a href="collection.html?concern=sleep" class="catalog-card" data-category="concern">
+        <div class="catalog-card-media">
+          <img src="../assets/how-to-use-sublingual.jpg" alt="Sleep &amp; Circadian Restoration" class="catalog-card-img" loading="lazy">
+          <span class="catalog-card-badge">Health Concern</span>
+          <span class="catalog-card-count-pill">8 Formulations</span>
+        </div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-kicker">Therapeutic Category</div>
+          <h2 class="catalog-card-title">Sleep &amp; Circadian Restoration</h2>
+          <p class="catalog-card-desc">
+            Nocturnal Ayurvedic drops and sleep Vatis designed to shorten sleep latency, eliminate midnight wakefulness, and deepen REM rest.
+          </p>
+          <div class="catalog-card-herbs">
+            <span class="herb-tag">CBN Cannabinoid</span>
+            <span class="herb-tag">Linalool Terpenes</span>
+            <span class="herb-tag">Brahmi (Bacopa)</span>
+          </div>
+          <div class="catalog-card-action">
+            <span>Explore Formulations</span>
+            <span class="chevron">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Collection 3: Stress, Anxiety & Mood Flow (Concern) -->
+      <a href="collection.html?concern=stress" class="catalog-card" data-category="concern">
+        <div class="catalog-card-media">
+          <img src="../assets/benefit-stress-anxiety.jpg" alt="Daily Stress &amp; Anxiety Relief" class="catalog-card-img" loading="lazy">
+          <span class="catalog-card-badge">Health Concern</span>
+          <span class="catalog-card-count-pill">10 Formulations</span>
+        </div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-kicker">Therapeutic Category</div>
+          <h2 class="catalog-card-title">Stress, Anxiety &amp; Mental Calm</h2>
+          <p class="catalog-card-desc">
+            Adaptogenic synergies that quieten sympathetic nervous overload, regulate cortisol surges, and restore emotional equilibrium.
+          </p>
+          <div class="catalog-card-herbs">
+            <span class="herb-tag">Organic Vijaya CBD</span>
+            <span class="herb-tag">KSM-66 Ashwagandha</span>
+            <span class="herb-tag">Jatamansi</span>
+          </div>
+          <div class="catalog-card-action">
+            <span>Explore Formulations</span>
+            <span class="chevron">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Collection 4: Digestive Ease & Gut Health (Concern) -->
+      <a href="collection.html?concern=gut" class="catalog-card" data-category="concern">
+        <div class="catalog-card-media">
+          <img src="../assets/how-to-use-drink.jpg" alt="Digestive Ease &amp; Gut Health" class="catalog-card-img" loading="lazy">
+          <span class="catalog-card-badge">Health Concern</span>
+          <span class="catalog-card-count-pill">6 Formulations</span>
+        </div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-kicker">Therapeutic Category</div>
+          <h2 class="catalog-card-title">Digestive Ease &amp; Gut Health</h2>
+          <p class="catalog-card-desc">
+            Classical Grahani formulations to relieve abdominal cramps, improve gut motility, and restore gastrointestinal balance.
+          </p>
+          <div class="catalog-card-herbs">
+            <span class="herb-tag">Triphala</span>
+            <span class="herb-tag">Hingwastak</span>
+            <span class="herb-tag">Ayurvedic Vijaya</span>
+          </div>
+          <div class="catalog-card-action">
+            <span>Explore Formulations</span>
+            <span class="chevron">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Collection 5: Athletic Joint & Mobility Recovery (Concern) -->
+      <a href="collection.html?concern=recovery" class="catalog-card" data-category="concern">
+        <div class="catalog-card-media">
+          <img src="../assets/how-to-use-topical.jpg" alt="Athletic Joint &amp; Mobility Recovery" class="catalog-card-img" loading="lazy">
+          <span class="catalog-card-badge">Health Concern</span>
+          <span class="catalog-card-count-pill">7 Formulations</span>
+        </div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-kicker">Therapeutic Category</div>
+          <h2 class="catalog-card-title">Joint &amp; Athletic Mobility</h2>
+          <p class="catalog-card-desc">
+            Deep-penetrating topical salves and roll-ons formulated to relieve workout stiffness, knee crepitus, and tender tendon strain.
+          </p>
+          <div class="catalog-card-herbs">
+            <span class="herb-tag">Mahanarayan Taila</span>
+            <span class="herb-tag">Camphor (Karpura)</span>
+            <span class="herb-tag">Nilgiri</span>
+          </div>
+          <div class="catalog-card-action">
+            <span>Explore Formulations</span>
+            <span class="chevron">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Collection 6: Pure Vijaya Sublingual Oils (Format) -->
+      <a href="product.html" class="catalog-card" data-category="format">
+        <div class="catalog-card-media">
+          <img src="../assets/product-oil-pure.svg" alt="Pure Vijaya Sublingual Oils" class="catalog-card-img" loading="lazy">
+          <span class="catalog-card-badge">Formulation Format</span>
+          <span class="catalog-card-count-pill">9 Formulations</span>
+        </div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-kicker">Delivery Architecture</div>
+          <h2 class="catalog-card-title">Pure Vijaya Sublingual Oils</h2>
+          <p class="catalog-card-desc">
+            Direct buccal absorption drops in virgin organic coconut MCT oil. Amber glass packaging for maximum shelf potency and precise dosing.
+          </p>
+          <div class="catalog-card-herbs">
+            <span class="herb-tag">1500mg &ndash; 4500mg</span>
+            <span class="herb-tag">Sublingual Dropper</span>
+            <span class="herb-tag">Full-Spectrum</span>
+          </div>
+          <div class="catalog-card-action">
+            <span>Explore Formulations</span>
+            <span class="chevron">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Collection 7: Recreational Uplift Gummies (Format) -->
+      <a href="product-gummies.html" class="catalog-card" data-category="format">
+        <div class="catalog-card-media">
+          <img src="../assets/editorial-banner-gummies.png" alt="Recreational Uplift Gummies" class="catalog-card-img" loading="lazy">
+          <span class="catalog-card-badge">Formulation Format</span>
+          <span class="catalog-card-count-pill">5 Flavour Universes</span>
+        </div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-kicker">Delivery Architecture</div>
+          <h2 class="catalog-card-title">Recreational Uplift Gummies (Vatis)</h2>
+          <p class="catalog-card-desc">
+            100% plant-based vegan fruit pectin gummies. 5 rich flavor profiles engineered for progressive onset and sustained 6-8 hour ease.
+          </p>
+          <div class="catalog-card-herbs">
+            <span class="herb-tag">Black Currant</span>
+            <span class="herb-tag">Alphonso Mango</span>
+            <span class="herb-tag">Retro Cola</span>
+            <span class="herb-tag">Raw Mango</span>
+          </div>
+          <div class="catalog-card-action">
+            <span>Explore Formulations</span>
+            <span class="chevron">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Collection 8: Topical Relief Balms & Salves (Format) -->
+      <a href="collection.html?format=balm" class="catalog-card" data-category="format">
+        <div class="catalog-card-media">
+          <img src="../assets/product-balm.svg" alt="Topical Relief Balms &amp; Salves" class="catalog-card-img" loading="lazy">
+          <span class="catalog-card-badge">Formulation Format</span>
+          <span class="catalog-card-count-pill">6 Formulations</span>
+        </div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-kicker">Delivery Architecture</div>
+          <h2 class="catalog-card-title">Topical Balms, Salves &amp; Rubs</h2>
+          <p class="catalog-card-desc">
+            Localized dermal applications designed to bypass gastric transit and act directly on peripheral CB2 and cutaneous pain receptors.
+          </p>
+          <div class="catalog-card-herbs">
+            <span class="herb-tag">Beeswax Matrix</span>
+            <span class="herb-tag">Deep Heat Herbals</span>
+            <span class="herb-tag">Roll-On Applicator</span>
+          </div>
+          <div class="catalog-card-action">
+            <span>Explore Formulations</span>
+            <span class="chevron">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Collection 9: Sleepwell Circadian Elixirs (Format) -->
+      <a href="collection.html?format=sleepwell" class="catalog-card" data-category="format">
+        <div class="catalog-card-media">
+          <img src="../assets/product-sleepwell-pulse.svg" alt="Sleepwell Circadian Drops &amp; Pulse Points" class="catalog-card-img" loading="lazy">
+          <span class="catalog-card-badge">Formulation Format</span>
+          <span class="catalog-card-count-pill">4 Formulations</span>
+        </div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-kicker">Delivery Architecture</div>
+          <h2 class="catalog-card-title">Sleepwell Circadian Drops</h2>
+          <p class="catalog-card-desc">
+            Dual-action nighttime drops and botanical temple pulse roll-ons for peaceful sleep transitions without grogginess or dependence.
+          </p>
+          <div class="catalog-card-herbs">
+            <span class="herb-tag">Night Terpenes</span>
+            <span class="herb-tag">Melatonin Synergies</span>
+            <span class="herb-tag">Chamomile Carrier</span>
+          </div>
+          <div class="catalog-card-action">
+            <span>Explore Formulations</span>
+            <span class="chevron">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Collection 10: Doctor Starter Protocols (Format) -->
+      <a href="collection.html?format=bundles" class="catalog-card" data-category="format">
+        <div class="catalog-card-media">
+          <img src="../assets/cta-product-3d.png" alt="Curated Doctor Protocols &amp; Starter Bundles" class="catalog-card-img" loading="lazy">
+          <span class="catalog-card-badge">Formulation Format</span>
+          <span class="catalog-card-count-pill">5 Protocols</span>
+        </div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-kicker">Delivery Architecture</div>
+          <h2 class="catalog-card-title">Curated Doctor Starter Bundles</h2>
+          <p class="catalog-card-desc">
+            Complete 30-day therapeutic kits combining sublingual drops and targeted topicals for holistic multi-pathway relief.
+          </p>
+          <div class="catalog-card-herbs">
+            <span class="herb-tag">30-Day Protocol</span>
+            <span class="herb-tag">Includes Free Rx</span>
+            <span class="herb-tag">Save up to 25%</span>
+          </div>
+          <div class="catalog-card-action">
+            <span>Explore Formulations</span>
+            <span class="chevron">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Doctor Consultation Protocol Banner -->
+    <section class="catalog-consult-banner">
+      <div class="consult-banner-left">
+        <div class="consult-banner-kicker">Ayush Empanelled Physicians</div>
+        <h2 class="consult-banner-title">Unsure which formulation fits your diagnosis?</h2>
+        <p class="consult-banner-sub">
+          Book a complimentary 15-minute consultation with Dr. Harshal Sawarkar and our clinical team. We will review your symptoms, recommend the exact botanical protocol, and issue your official prescription.
+        </p>
+      </div>
+      <div>
+        <a href="contact.html" class="btn btn-primary" style="height:54px; padding:0 2.25rem; font-size:1rem; text-decoration:none;">
+          Book Free Doctor Consultation &rarr;
+        </a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="sanan-footer-section" id="SananFooter">
+  <div class="sanan-footer-container">
+    <div style="text-align:center; padding:3rem 0; color:var(--color-text-secondary); font-size:0.875rem;">
+      <p>&copy; 2026 Sanan Relief Luxury Apothecary. Licensed under Ministry of AYUSH, Govt. of India. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Interactive Category Filter Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const filterPills = document.querySelectorAll('.catalog-filter-pill');
+  const cards = document.querySelectorAll('.catalog-card');
+
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', function () {
+      const filter = this.getAttribute('data-filter');
+      filterPills.forEach(p => p.classList.remove('is-active'));
+      this.classList.add('is-active');
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+

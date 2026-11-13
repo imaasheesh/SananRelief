@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
+  <g fill="#10b981" stroke="#047857" stroke-width="1.8" stroke-linejoin="round" opacity="0.85">
+    <!-- Center Leaflet -->
+    <path d="M50 82 C50 60 38 35 50 10 C62 35 50 60 50 82 Z" fill="#d1fae5"/>
+    <path d="M50 15 L50 80" stroke="#047857" stroke-width="1.5"/>
+    <!-- Left Leaflets -->
+    <path d="M50 68 C40 55 18 42 22 28 C34 40 45 56 50 68 Z" fill="#a7f3d0"/>
+    <path d="M50 74 C36 68 12 62 10 52 C24 58 40 68 50 74 Z" fill="#6ee7b7"/>
+    <!-- Right Leaflets -->
+    <path d="M50 68 C60 55 82 42 78 28 C66 40 55 56 50 68 Z" fill="#a7f3d0"/>
+    <path d="M50 74 C64 68 88 62 90 52 C76 58 60 68 50 74 Z" fill="#6ee7b7"/>
+    <!-- Stem -->
+    <path d="M50 82 L50 96" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

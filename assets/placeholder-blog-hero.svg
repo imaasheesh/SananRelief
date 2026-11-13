@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blogHeroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF5F1"/>
+      <stop offset="50%" stop-color="#FBF9F4"/>
+      <stop offset="100%" stop-color="#E2ECE6"/>
+    </linearGradient>
+    <linearGradient id="book1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F4EFE6"/>
+      <stop offset="100%" stop-color="#E5DEC9"/>
+    </linearGradient>
+    <linearGradient id="book2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ADC0B3"/>
+      <stop offset="100%" stop-color="#93AB9B"/>
+    </linearGradient>
+    <linearGradient id="book3Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F9F6EE"/>
+      <stop offset="100%" stop-color="#EBE3D0"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#D7E7E0" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#1B3E39" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="680" height="440" fill="url(#blogHeroBg)"/>
+
+  <!-- Soft sunlight glow -->
+  <circle cx="560" cy="80" r="240" fill="#FFFBEB" opacity="0.6"/>
+
+  <!-- Elegant organic leafy shadows in background -->
+  <g fill="#439798" opacity="0.12" transform="translate(40, -20)">
+    <path d="M120,50 C180,90 220,180 200,280 C150,220 90,170 50,140 Z"/>
+    <path d="M220,40 C280,100 300,200 270,300 C230,220 190,160 160,110 Z"/>
+    <path d="M300,20 C360,70 400,160 380,260 C330,190 280,130 250,80 Z"/>
+  </g>
+
+  <!-- Surface Table Line -->
+  <rect x="0" y="360" width="680" height="80" fill="#F0EDE4" opacity="0.65"/>
+  <line x1="0" y1="360" x2="680" y2="360" stroke="#DDD6C8" stroke-width="2"/>
+
+  <!-- Left: Laboratory Glass Flask with Botanicals -->
+  <g transform="translate(130, 110)">
+    <!-- Water liquid in bulb -->
+    <path d="M35,160 L65,160 L105,240 A50,50 0 0,1 0,240 Z" fill="#D3E6DE" opacity="0.5"/>
+    <!-- Glass body -->
+    <path d="M35,50 L35,160 L-10,240 A60,60 0 0,0 110,240 L65,160 L65,50 Z" 
+          fill="url(#glassGrad)" stroke="#B0C8C0" stroke-width="2.5" filter="url(#softShadow)"/>
+    <ellipse cx="50" cy="50" rx="16" ry="6" fill="#FFFFFF" stroke="#B0C8C0" stroke-width="2"/>
+    
+    <!-- Botanical cutting inside and spilling out -->
+    <!-- Stem -->
+    <path d="M50,40 Q40,120 50,220" stroke="#3F7A65" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Leaves -->
+    <path d="M48,80 C20,60 0,30 20,10 C45,20 50,60 48,80 Z" fill="#4B8C74"/>
+    <path d="M52,60 C80,40 100,10 80,-10 C55,0 50,40 52,60 Z" fill="#3D7A64"/>
+    <path d="M50,15 C45,-25 60,-55 80,-40 C75,-10 60,5 50,15 Z" fill="#5BA188"/>
+    <path d="M42,25 C15,5 -5,-25 15,-40 C35,-20 40,5 42,25 Z" fill="#65AD94"/>
+  </g>
+
+  <!-- Right: Stacked Books with Embossed Titles -->
+  <g transform="translate(280, 210)" filter="url(#softShadow)">
+    
+    <!-- Book 3: Bottom "A BRIGHTER YOU" -->
+    <g transform="translate(0, 100)">
+      <rect x="0" y="0" width="280" height="48" rx="6" fill="url(#book3Grad)"/>
+      <line x1="8" y1="4" x2="8" y2="44" stroke="#D1C7B2" stroke-width="2"/>
+      <text x="140" y="30" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" 
+            letter-spacing="4" fill="#6B5E48" text-anchor="middle">A BRIGHTER YOU</text>
+    </g>
+
+    <!-- Book 2: Middle "WELLNESS" (Sage Green) -->
+    <g transform="translate(20, 52)">
+      <rect x="0" y="0" width="250" height="46" rx="6" fill="url(#book2Grad)"/>
+      <line x1="8" y1="4" x2="8" y2="42" stroke="#7A9382" stroke-width="2"/>
+      <text x="125" y="28" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" 
+            letter-spacing="5" fill="#2E4837" text-anchor="middle">WELLNESS</text>
+    </g>
+
+    <!-- Book 1: Top "PLANTS" (Warm Linen) -->
+    <g transform="translate(40, 6)">
+      <rect x="0" y="0" width="220" height="44" rx="6" fill="url(#book1Grad)"/>
+      <line x1="8" y1="4" x2="8" y2="40" stroke="#CCC2A9" stroke-width="2"/>
+      <text x="110" y="27" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" 
+            letter-spacing="5" fill="#635742" text-anchor="middle">PLANTS</text>
+    </g>
+
+    <!-- Single fresh leaf sprig resting gently on top book -->
+    <g transform="translate(130, -35)">
+      <path d="M0,40 Q-10,15 0,0" stroke="#3F7A65" stroke-width="2" fill="none"/>
+      <path d="M0,15 C-25,10 -35,-15 -15,-25 C5,-15 5,5 0,15 Z" fill="#4B8C74"/>
+      <path d="M0,10 C25,5 35,-20 15,-30 C-5,-20 -5,0 0,10 Z" fill="#3D7A64"/>
+      <path d="M0,-5 C0,-30 15,-45 25,-35 C20,-15 5,-5 0,-5 Z" fill="#5BA188"/>
+    </g>
+  </g>
+</svg>

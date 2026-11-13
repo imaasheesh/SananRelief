@@ -1,0 +1,26 @@
+{
+  "name": "sananrelief-shopify",
+  "version": "1.0.0",
+  "description": "[![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)\r [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)",
+  "main": "index.js",
+  "scripts": {
+    "preview": "npx serve . -l 3000 --no-clipboard",
+    "check": "shopify theme check",
+    "dev": "shopify theme dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imaasheesh/SananRelief.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/imaasheesh/SananRelief/issues"
+  },
+  "homepage": "https://github.com/imaasheesh/SananRelief#readme",
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}

@@ -1,0 +1,295 @@
+{% comment %}
+  The Sanan Difference — Comparison Table Section
+  Editorial comparison matrix showcasing Sanan's quality, licensure,
+  and Ayurvedic formulation superiority vs other brands.
+{% endcomment %}
+
+{{ 'storefront.css' | asset_url | stylesheet_tag }}
+
+<section class="difference-section section-{{ section.id }}-padding" id="Difference-{{ section.id }}">
+  <div class="difference-container">
+    <!-- Header Row -->
+    <div class="difference-header">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="difference-title">{{ section.settings.heading }}</h2>
+      {%- else -%}
+        <h2 class="difference-title">The Sanan Difference</h2>
+      {%- endif -%}
+
+      {%- if section.settings.subheading != blank -%}
+        <p class="difference-eyebrow">{{ section.settings.subheading | escape }}</p>
+      {%- else -%}
+        <p class="difference-eyebrow">SANAN CONNECTS AYURVEDIC HEALING TO PEOPLE</p>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <p class="difference-subtitle">{{ section.settings.description | escape }}</p>
+      {%- else -%}
+        <p class="difference-subtitle">Not to middlemen. Not to synthetic isolates. But to wellness seekers.</p>
+      {%- endif -%}
+    </div>
+
+    <!-- Comparison Table Card -->
+    <div class="difference-table-card">
+      <div class="difference-table-scroll">
+        <table class="difference-table" role="table">
+          <thead>
+            <tr>
+              <th scope="col" class="diff-col-feature"></th>
+              <th scope="col" class="diff-col-sanan">{{ section.settings.sanan_label | default: 'SANAN' | escape }}</th>
+              <th scope="col" class="diff-col-others">{{ section.settings.others_label | default: 'OTHER BRANDS' | escape }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- if section.blocks.size > 0 -%}
+              {%- for block in section.blocks -%}
+                <tr {{ block.shopify_attributes }}>
+                  <td class="diff-cell-feature">
+                    <h3 class="diff-feature-title">{{ block.settings.title | escape }}</h3>
+                    {%- if block.settings.description != blank -%}
+                      <p class="diff-feature-desc">{{ block.settings.description | escape }}</p>
+                    {%- endif -%}
+                  </td>
+                  <td class="diff-cell-sanan">
+                    {%- if block.settings.sanan_positive -%}
+                      <div class="diff-icon-check" title="Included in Sanan" aria-label="Yes">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      </div>
+                    {%- else -%}
+                      <div class="diff-icon-cross" title="Not Included" aria-label="No">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      </div>
+                    {%- endif -%}
+                  </td>
+                  <td class="diff-cell-others">
+                    {%- if block.settings.others_positive -%}
+                      <div class="diff-icon-check" title="Included" aria-label="Yes">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      </div>
+                    {%- else -%}
+                      <div class="diff-icon-cross" title="Not available in typical brands" aria-label="No">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                      </div>
+                    {%- endif -%}
+                  </td>
+                </tr>
+              {%- endfor -%}
+            {%- else -%}
+              <!-- Default Pre-built 5 Difference Rows (Exact Match to Reference) -->
+              <tr>
+                <td class="diff-cell-feature">
+                  <h3 class="diff-feature-title">Freshness &amp; Potency Guarantee</h3>
+                  <p class="diff-feature-desc">Do your formulations retain standardized active cannabinoids, third-party lab COAs, and raw botanical terpene profile intact?</p>
+                </td>
+                <td class="diff-cell-sanan">
+                  <div class="diff-icon-check" aria-label="Yes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                </td>
+                <td class="diff-cell-others">
+                  <div class="diff-icon-cross" aria-label="No">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="diff-cell-feature">
+                  <h3 class="diff-feature-title">Comprehensive Vijaya &amp; Hemp Range</h3>
+                  <p class="diff-feature-desc">Do you have access to rare, specialized therapeutic offerings from raw Vijaya extracts, broad-spectrum drops to pain relief topicals?</p>
+                </td>
+                <td class="diff-cell-sanan">
+                  <div class="diff-icon-check" aria-label="Yes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                </td>
+                <td class="diff-cell-others">
+                  <div class="diff-icon-cross" aria-label="No">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="diff-cell-feature">
+                  <h3 class="diff-feature-title">Superior Quality &amp; AYUSH Licensure</h3>
+                  <p class="diff-feature-desc">Do you get formulations backed by India's first Vijaya license holder since 1985 and certified GMP laboratory testing?</p>
+                </td>
+                <td class="diff-cell-sanan">
+                  <div class="diff-icon-check" aria-label="Yes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                </td>
+                <td class="diff-cell-others">
+                  <div class="diff-icon-cross" aria-label="No">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="diff-cell-feature">
+                  <h3 class="diff-feature-title">Whole-Plant Entourage Synergy</h3>
+                  <p class="diff-feature-desc">Do you experience pure, whole-leaf Ayurvedic synergy from sustainably harvested Indian wild Vijaya rather than synthetic isolates?</p>
+                </td>
+                <td class="diff-cell-sanan">
+                  <div class="diff-icon-check" aria-label="Yes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                </td>
+                <td class="diff-cell-others">
+                  <div class="diff-icon-cross" aria-label="No">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="diff-cell-feature">
+                  <h3 class="diff-feature-title">Ethical Sourcing &amp; Traceability</h3>
+                  <p class="diff-feature-desc">Do you get to know intricate details about your formulations such as harvest batch, certificate of analysis, and grower sustainability practices?</p>
+                </td>
+                <td class="diff-cell-sanan">
+                  <div class="diff-icon-check" aria-label="Yes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                </td>
+                <td class="diff-cell-others">
+                  <div class="diff-icon-cross" aria-label="No">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  </div>
+                </td>
+              </tr>
+            {%- endif -%}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "The Sanan Difference",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Sanan Difference"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Eyebrow Subheading",
+      "default": "SANAN CONNECTS AYURVEDIC HEALING TO PEOPLE"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Not to middlemen. Not to synthetic isolates. But to wellness seekers."
+    },
+    {
+      "type": "text",
+      "id": "sanan_label",
+      "label": "Sanan Column Label",
+      "default": "SANAN"
+    },
+    {
+      "type": "text",
+      "id": "others_label",
+      "label": "Other Brands Column Label",
+      "default": "OTHER BRANDS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "difference_row",
+      "name": "Comparison Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature Title",
+          "default": "Freshness & Potency Guarantee"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Question / Details",
+          "default": "Do your formulations retain standardized active cannabinoids, third-party lab COAs, and raw botanical terpene profile intact?"
+        },
+        {
+          "type": "checkbox",
+          "id": "sanan_positive",
+          "label": "Sanan Checkmark",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "others_positive",
+          "label": "Other Brands Checkmark",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "The Sanan Difference",
+      "category": "Brand",
+      "blocks": [
+        {
+          "type": "difference_row",
+          "settings": {
+            "title": "Freshness & Potency Guarantee",
+            "description": "Do your formulations retain standardized active cannabinoids, third-party lab COAs, and raw botanical terpene profile intact?",
+            "sanan_positive": true,
+            "others_positive": false
+          }
+        },
+        {
+          "type": "difference_row",
+          "settings": {
+            "title": "Comprehensive Vijaya & Hemp Range",
+            "description": "Do you have access to rare, specialized therapeutic offerings from raw Vijaya extracts, broad-spectrum drops to pain relief topicals?",
+            "sanan_positive": true,
+            "others_positive": false
+          }
+        },
+        {
+          "type": "difference_row",
+          "settings": {
+            "title": "Superior Quality & AYUSH Licensure",
+            "description": "Do you get formulations backed by India's first Vijaya license holder since 1985 and certified GMP laboratory testing?",
+            "sanan_positive": true,
+            "others_positive": false
+          }
+        },
+        {
+          "type": "difference_row",
+          "settings": {
+            "title": "Whole-Plant Entourage Synergy",
+            "description": "Do you experience pure, whole-leaf Ayurvedic synergy from sustainably harvested Indian wild Vijaya rather than synthetic isolates?",
+            "sanan_positive": true,
+            "others_positive": false
+          }
+        },
+        {
+          "type": "difference_row",
+          "settings": {
+            "title": "Ethical Sourcing & Traceability",
+            "description": "Do you get to know intricate details about your formulations such as harvest batch, certificate of analysis, and grower sustainability practices?",
+            "sanan_positive": true,
+            "others_positive": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

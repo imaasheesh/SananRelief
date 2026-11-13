@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bnCapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5EFE4"/>
+      <stop offset="50%" stop-color="#FBF7EE"/>
+      <stop offset="100%" stop-color="#E2DCCE"/>
+    </linearGradient>
+  </defs>
+  <rect width="340" height="600" rx="28" fill="url(#bnCapBg)"/>
+  <!-- Sun halo -->
+  <circle cx="170" cy="310" r="110" fill="#FFF5D6" opacity="0.6"/>
+  <!-- Adaptogenic botanical roots / plant leaves -->
+  <g fill="#7A6843" opacity="0.18" transform="translate(40, 60)">
+    <path d="M40,0 C100,50 140,120 120,200 C80,150 40,90 40,0 Z"/>
+    <path d="M120,80 C180,110 200,190 170,260 C130,200 90,150 120,80 Z"/>
+  </g>
+  <!-- Capsule Icons Graphic -->
+  <g transform="translate(130, 270)">
+    <!-- Capsule 1 -->
+    <g transform="rotate(-30, 40, 40)">
+      <rect x="25" y="10" width="30" height="65" rx="15" fill="#E2A644"/>
+      <path d="M25,42 L55,42 L55,60 C55,68 48,75 40,75 C32,75 25,68 25,60 Z" fill="#C58928"/>
+      <line x1="25" y1="42" x2="55" y2="42" stroke="#FFFFFF" stroke-width="2"/>
+    </g>
+    <!-- Capsule 2 -->
+    <g transform="translate(45, 20) rotate(25, 40, 40)">
+      <rect x="25" y="10" width="26" height="58" rx="13" fill="#E2A644" opacity="0.9"/>
+      <path d="M25,38 L51,38 L51,55 C51,62 45,68 38,68 C31,68 25,62 25,55 Z" fill="#C58928"/>
+    </g>
+  </g>
+</svg>
