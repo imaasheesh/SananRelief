@@ -279,6 +279,33 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'fonts.css' | asset_url | stylesheet_tag }}
+    {{ 'theme-tokens.css' | asset_url | stylesheet_tag }}
+    {{ 'components.css' | asset_url | stylesheet_tag }}
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+    {{ 'storefront.css' | asset_url | stylesheet_tag }}
+    {{ 'section-sanan-featured-product.css' | asset_url | stylesheet_tag }}
+    {{ 'sanan-mega-menu.css' | asset_url | stylesheet_tag }}
+
+    <style>
+      /* Sanan Relief Design System Global Overrides */
+      html {
+        font-size: 16px !important;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif) !important;
+        background-color: var(--color-background, #F7FBFB) !important;
+        color: var(--color-primary-text, #111111) !important;
+        letter-spacing: normal !important;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading, 'DM Serif Display', Georgia, serif);
+      }
+    </style>
+
+    <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'storefront.js' | asset_url }}" defer="defer"></script>
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
